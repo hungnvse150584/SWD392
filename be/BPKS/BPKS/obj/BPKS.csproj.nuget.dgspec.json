@@ -45,9 +45,33 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Ado": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.28, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BPKS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a23b3280fd354001282b3816f8150a5e939e45e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abe9a42158461687b97112f2d18cef183f166b89")]
 [assembly: System.Reflection.AssemblyProductAttribute("BPKS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BPKS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
