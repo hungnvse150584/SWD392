@@ -1,0 +1,6 @@
+@BPKS_HostAddress = http://localhost:5078
+
+GET {{BPKS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
