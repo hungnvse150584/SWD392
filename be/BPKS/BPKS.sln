@@ -16,7 +16,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingSolution.ViewModels"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.WebApp", "Booking.WebApp\Booking.WebApp.csproj", "{A229ABF5-E13E-4DAD-BB4E-E21D67933310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Data", "Booking.Data\Booking.Data.csproj", "{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Data", "Booking.Data\Booking.Data.csproj", "{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Domain", "2.Domain", "{41B4AFDF-38DB-4030-A9B9-DD2CAD56DE6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Hosts", "3.Hosts", "{03E9B081-4196-4FFE-978A-7D5DFA0CD9E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Application", "Booking.Application\Booking.Application.csproj", "{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +46,10 @@ Global
 		{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +57,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{129A17A1-61EE-4608-90B7-2AC248069CB4} = {FF9D7ABA-E875-4D82-857F-38127FAB56F9}
 		{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF} = {FF9D7ABA-E875-4D82-857F-38127FAB56F9}
+		{A229ABF5-E13E-4DAD-BB4E-E21D67933310} = {03E9B081-4196-4FFE-978A-7D5DFA0CD9E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21564CFA-827D-4E23-9A68-46B55704DA3D}
