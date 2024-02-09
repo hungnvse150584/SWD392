@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.Sales
+namespace BookingSolution.ViewModels.Sales
 {
     public class OrderDetailVm
     {

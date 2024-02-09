@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.System.Languages
+namespace BookingSolution.ViewModels.System.Languages
 {
     public class LanguageVm
     {

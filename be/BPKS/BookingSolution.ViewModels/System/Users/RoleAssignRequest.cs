@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.System.Users
+namespace BookingSolution.ViewModels.System.Users
 {
     public class RoleAssignRequest
     {

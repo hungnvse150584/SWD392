@@ -69,6 +69,16 @@
             "related": ".xml"
           }
         }
+      },
+      "BookingSolution.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BookingSolution.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookingSolution.Utilities.dll": {}
+        }
       }
     }
   },
@@ -173,10 +183,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BookingSolution.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../BookingSolution.Utilities/BookingSolution.Utilities.csproj",
+      "msbuildProject": "../BookingSolution.Utilities/BookingSolution.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BookingSolution.Utilities >= 1.0.0",
       "FluentValidation >= 11.9.0",
       "Microsoft.AspNetCore.Http.Features >= 2.2.0"
     ]
@@ -213,7 +229,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+              "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

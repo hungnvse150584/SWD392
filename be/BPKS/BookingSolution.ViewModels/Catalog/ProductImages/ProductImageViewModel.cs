@@ -1,4 +1,4 @@
-﻿namespace eShopSolution.ViewModels.Catalog.ProductImages
+﻿namespace BookingSolution.ViewModels.Catalog.ProductImages
 {
     public class ProductImageViewModel
     {

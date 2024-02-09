@@ -11,4 +11,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Catalog\Parents\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookingSolution.Utilities\BookingSolution.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

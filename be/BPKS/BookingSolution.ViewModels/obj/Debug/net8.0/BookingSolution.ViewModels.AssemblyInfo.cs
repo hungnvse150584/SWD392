@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookingSolution.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18d3b36b37424315c21ca778a8f4f3378223c446")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dbebae797fee747416b5d3bc89bc8f7d0a48e7d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookingSolution.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookingSolution.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

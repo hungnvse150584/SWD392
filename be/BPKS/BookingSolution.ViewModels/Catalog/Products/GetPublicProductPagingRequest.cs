@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using BookingSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.Catalog.Products
+namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class GetPublicProductPagingRequest : PagingRequestBase
     {

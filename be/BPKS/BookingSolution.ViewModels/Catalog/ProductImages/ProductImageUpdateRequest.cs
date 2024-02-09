@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.Catalog.ProductImages
+namespace BookingSolution.ViewModels.Catalog.ProductImages
 {
     public class ProductImageUpdateRequest
     {
