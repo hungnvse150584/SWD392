@@ -7,3 +7,6 @@
 - Microsoft.EntityFrameworkCore.Sql
 - Microsoft.EntityFrameworkCore.Tools
 - Microsoft.EntityFrameworkCore.Design
+## Install database
+- dotnet ef migrations add InitialCreate
+- dotnet ef database update
