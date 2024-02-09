@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6+icz/ik3r1X9Tv8yNNkuzS29zETT6zxAeZBhVb2yElvnOE1V4yllZZxw+ZTGy4ySljIwN1+fSALJU6sniaMZA==",
+  "dgSpecHash": "lB9hxpSmY1DHPna9qMbNHg3YQfpFip2oGwRPV6wN9hqiK3k8k8RSAwiej/FrGyE3fV+14in3C3iY5C+Xu2tJTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\documentformat.openxml\\3.0.1\\documentformat.openxml.3.0.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\documentformat.openxml.framework\\3.0.1\\documentformat.openxml.framework.3.0.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\google.ads.common\\9.5.3\\google.ads.common.9.5.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\google.apis\\1.36.1\\google.apis.1.36.1.nupkg.sha512",
@@ -69,6 +71,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\system.io.compression.zipfile\\4.3.0\\system.io.compression.zipfile.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
