@@ -15,7 +15,7 @@ namespace BPKS.EF
         {
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
 
-            base.OnModelCreating(modelBuilder);
+            //base.OnModelCreating(modelBuilder);
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

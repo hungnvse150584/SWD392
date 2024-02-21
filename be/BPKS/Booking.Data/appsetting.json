@@ -1,5 +1,3 @@
-{
-  "ConnectionStrings": {
-    "BPKS": "Server= Yu;UseId= sa; Password= 12345;Trusted_Connection=True;"
-  }
+"ConnectionStrings": {
+    "BPKS": "Server=.;Database=BPKS;UserId=sa;Password=12345;"
 }
