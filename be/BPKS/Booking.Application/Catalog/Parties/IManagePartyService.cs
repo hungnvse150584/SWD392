@@ -12,8 +12,8 @@ namespace Booking.Application.Catalog.Parties
 
         Task<int> Delete(int productId);
 
-        Task<List<PartyViewModel>> GetAll();
+        Task<List<PartyVm>> GetAll();
 
-        Task<PagedResult<PartyViewModel>> GetAllPaging(GetManagePartyPagingRequest request);
+        Task<PagedResult<PartyVm>> GetAllPaging(GetManagePartyPagingRequest request);
     }
 }

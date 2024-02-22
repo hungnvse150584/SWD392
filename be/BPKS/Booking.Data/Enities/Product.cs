@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Booking.Data.Enities;
+using System;
 using System.Collections.Generic;
 
-namespace z.Enities;
+namespace Booking.Data.Enities;
 
 public partial class Product
 {

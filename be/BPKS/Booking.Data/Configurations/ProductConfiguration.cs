@@ -1,4 +1,4 @@
-﻿using BPKS.Entities;
+﻿using Booking.Data.Enities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -2502,6 +2502,7 @@
           "Booking.WebApp": "1.0.0",
           "BookingSolution.Utilities": "1.0.0",
           "BookingSolution.ViewModels": "1.0.0",
+          "DocumentFormat.OpenXml": "3.0.1",
           "Google.Ads.Common": "9.5.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2"
         },

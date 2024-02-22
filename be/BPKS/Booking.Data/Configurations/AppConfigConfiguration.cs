@@ -8,8 +8,11 @@ namespace Booking.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<AppConfig> builder)
         {
-            builder.HasKey(x => x.OAuth2PrivateKey); // Đặt khóa chính là Id
-            builder.Property(x => x.RetryCount).IsRequired(true);
+            builder.ToTable("AppConfigs");
+
+            builder.HasKey(x => x.OAuth2PrivateKey);
+
+            builder.Property(x => x.Value).IsRequired(true);
         }
     }
 }

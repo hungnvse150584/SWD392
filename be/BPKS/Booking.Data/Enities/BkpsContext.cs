@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace z.Enities;
+namespace Booking.Data.Enities;
 
 public partial class BkpsContext : DbContext
 {

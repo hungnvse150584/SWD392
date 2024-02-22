@@ -1,8 +1,8 @@
 ﻿using Booking.Application.Catalog.Parties.Dtos;
+using Booking.Data.Enities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Common;
 using BPKS.EF;
-using BPKS.Entities;
 
 namespace Booking.Application.Catalog.Parties
 {
@@ -23,9 +23,9 @@ namespace Booking.Application.Catalog.Parties
                 PhoneContact = request.PhoneContact,
                 Place = request.Place,
                 //ThumbnailUrl = request.ThumbnailUrl,
-                DayStart = request.DayStart,
-                DayEnd = request.DayEnd,
-                CreatedDate = DateTime.Now,
+                //DayStart = request.DayStart,
+                //DayEnd = request.DayEnd,
+                //CreatedDate = DateTime.Now,
                 PartyStatus = request.PartyStatus,
                 //PartyTranslations = new List<PartyTranslation>()
                 //{
@@ -48,12 +48,12 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
-        public Task<List<PartyViewModel>> GetAll()
+        public Task<List<PartyVm>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task<PagedResult<PartyViewModel>> GetAllPaging(GetManagePartyPagingRequest request)
+        public Task<PagedResult<PartyVm>> GetAllPaging(GetManagePartyPagingRequest request)
         {
             throw new NotImplementedException();
         }
