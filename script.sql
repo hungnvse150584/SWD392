@@ -79,6 +79,19 @@ CREATE TABLE ListRoom (
 	ListRoomStatus nvarchar(500),
 );
 
+CREATE TABLE AppConfig (
+    [Key] nvarchar(50) PRIMARY KEY,
+    Value nvarchar(500),
+);
+
+CREATE TABLE Feedback (
+    	FeedBackId INT IDENTITY(1,1) PRIMARY KEY,
+	ParentId int,
+	PartyId int,
+    	PartyHostId int,
+	Score int,
+	Feedback nvarchar(2000),
+);
 
 ALTER TABLE ListParty
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
