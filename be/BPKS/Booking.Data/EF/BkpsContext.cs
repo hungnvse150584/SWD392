@@ -1,8 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Booking.Data.Entities;
 
+<<<<<<< Updated upstream:be/BPKS/Booking.Data/Enities/BkpsContext.cs
 namespace Booking.Data.Enities;
+=======
+<<<<<<< HEAD:be/BPKS/Booking.Data/EF/BkpsContext.cs
+namespace Booking.Data.EF;
+=======
+namespace Booking.Data.Enities;
+>>>>>>> d881a6cbe332f76d45828e55c578ac0177c81aa3:be/BPKS/Booking.Data/Enities/BkpsContext.cs
+>>>>>>> Stashed changes:be/BPKS/Booking.Data/EF/BkpsContext.cs
 
 public partial class BkpsContext : DbContext
 {
@@ -16,6 +25,10 @@ public partial class BkpsContext : DbContext
     }
 
     public virtual DbSet<Account> Accounts { get; set; }
+
+    public virtual DbSet<AppConfig> AppConfigs { get; set; }
+
+    public virtual DbSet<FeedBack> FeedBacks { get; set; }
 
     public virtual DbSet<ListParty> ListParties { get; set; }
 
@@ -49,6 +62,31 @@ public partial class BkpsContext : DbContext
             entity.Property(e => e.PhoneNumber).HasMaxLength(255);
             entity.Property(e => e.Status).HasMaxLength(255);
             entity.Property(e => e.UserName).HasMaxLength(255);
+        });
+
+        modelBuilder.Entity<AppConfig>(entity =>
+        {
+            entity.HasKey(e => e.Key).HasName("PK__AppConfi__C41E0288FAA7AA0E");
+
+            entity.ToTable("AppConfig");
+
+            entity.Property(e => e.Key).HasMaxLength(50);
+            entity.Property(e => e.Value).HasMaxLength(500);
+        });
+
+        modelBuilder.Entity<FeedBack>(entity =>
+        {
+            entity.HasKey(e => e.FeedBackId).HasName("PK__FeedBack__E2CB3B87680F6CD7");
+
+            entity.ToTable("FeedBack");
+
+            entity.Property(e => e.Feedback1)
+                .HasMaxLength(2000)
+                .HasColumnName("Feedback");
+
+            entity.HasOne(d => d.Party).WithMany(p => p.FeedBacks)
+                .HasForeignKey(d => d.PartyId)
+                .HasConstraintName("FK__FeedBack__PartyI__4BAC3F29");
         });
 
         modelBuilder.Entity<ListParty>(entity =>

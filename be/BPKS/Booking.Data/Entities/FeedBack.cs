@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Booking.Data.Enities;
+namespace Booking.Data.Entities;
 
-public partial class ListParty
+public partial class FeedBack
 {
-    public int ListPartyId { get; set; }
+    public int FeedBackId { get; set; }
 
     public int? ParentId { get; set; }
 
@@ -13,7 +13,9 @@ public partial class ListParty
 
     public int? PartyHostId { get; set; }
 
-    public string? ListPartyStatus { get; set; }
+    public int? Score { get; set; }
+
+    public string? Feedback1 { get; set; }
 
     public virtual Party? Party { get; set; }
 }
