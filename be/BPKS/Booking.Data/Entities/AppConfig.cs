@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Booking.Data.Entities;
-
-public partial class AppConfig
+namespace Booking.Data.Entities
 {
-    public string Key { get; set; } = null!;
 
-    public string? Value { get; set; }
+    public partial class AppConfig
+    {
+        public string Key { get; set; }
+
+        public string Value { get; set; }
+    }
 }

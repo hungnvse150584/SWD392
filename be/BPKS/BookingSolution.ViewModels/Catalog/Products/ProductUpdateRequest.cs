@@ -7,18 +7,23 @@ namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class ProductUpdateRequest
     {
-        public int Id { get; set; }
-        public string Name { set; get; }
-        public string Description { set; get; }
-        public string Details { set; get; }
-        public string SeoDescription { set; get; }
-        public string SeoTitle { set; get; }
+        public int ProductId { get; set; }
 
-        public string SeoAlias { get; set; }
-        public string LanguageId { set; get; }
+        public int? PartyHostId { get; set; }
 
-        public bool? IsFeatured { get; set; }
+        public string? ProductName { get; set; }
 
-        public IFormFile ThumbnailImage { get; set; }
+        public string? ProductUrl { get; set; }
+
+        public string? ProductType { get; set; }
+
+        public string? ProductStyle { get; set; }
+
+        public double? Price { get; set; }
+
+        public string? ProductStatus { get; set; }
+
+        //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
+
     }
 }

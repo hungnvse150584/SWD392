@@ -8,23 +8,22 @@ namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class ProductCreateRequest
     {
-        public decimal Price { set; get; }
-        public decimal OriginalPrice { set; get; }
-        public int Stock { set; get; }
+        //public int ProductId { get; set; }
 
-        [Required(ErrorMessage = "Bạn phải nhập tên sản phẩm")]
-        public string Name { set; get; }
+        //public int? partyhostid { get; set; }
 
-        public string Description { set; get; }
-        public string Details { set; get; }
-        public string SeoDescription { set; get; }
-        public string SeoTitle { set; get; }
+        public string? Productname { get; set; }
 
-        public string SeoAlias { get; set; }
-        public string LanguageId { set; get; }
+        public string? ProductUrl { get; set; }
 
-        public bool? IsFeatured { get; set; }
+        public string? ProductType { get; set; }
 
-        public IFormFile ThumbnailImage { get; set; }
+        public string? ProductStyle { get; set; }
+
+        public double? Price { get; set; }
+
+        public string? Productstatus { get; set; }
+
+        //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
     }
 }

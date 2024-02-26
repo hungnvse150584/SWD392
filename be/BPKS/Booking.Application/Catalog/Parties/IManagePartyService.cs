@@ -1,7 +1,6 @@
 ﻿using Booking.Application.Catalog.Parties.Dtos;
 using BookingSolution.ViewModels.Common;
 
-
 namespace Booking.Application.Catalog.Parties
 {
     public interface IManagePartyService
@@ -10,7 +9,7 @@ namespace Booking.Application.Catalog.Parties
 
         Task<int> Update(PartyUpdateRequest request);
 
-        Task<int> Delete(int productId);
+        Task<int> Delete(int partyId);
 
         Task<List<PartyVm>> GetAll();
 

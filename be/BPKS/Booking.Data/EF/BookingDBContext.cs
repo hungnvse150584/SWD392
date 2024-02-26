@@ -1,9 +1,8 @@
 ﻿using Booking.Data.Configurations;
-using Booking.Data.Enities;
-using Google.Api.Ads.Common.Lib;
+using Booking.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace BPKS.EF
+namespace Booking.Data.EF
 {
     public class BookingDBContext : DbContext
     {
@@ -22,12 +21,12 @@ namespace BPKS.EF
             //Order
 
             //Data seeding
-            //modelBuilder.Entity<AppConfig>().HasData(
-            //    new AppConfig() { Key = "HomeTitle", Value = "This is home page of BookingSolution" },
-            //    new AppConfig() { Key = "HomeKeyword", Value = "This is keyword of BookingSolution" },
-            //    new AppConfig() { Key = "HomeDescription", Value = "This is description of BookingSolution" }
-            //    );
-            //base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<AppConfig>().HasData(
+                new AppConfig() { Key = "hometitle", Value = "this is home page of bookingsolution" },
+                new AppConfig() { Key = "homekeyword", Value = "this is keyword of bookingsolution" },
+                new AppConfig() { Key = "homedescription", Value = "this is description of bookingsolution" }
+                );
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<AppConfig> AppConfigs { get; set; }

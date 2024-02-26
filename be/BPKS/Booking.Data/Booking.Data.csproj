@@ -15,7 +15,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Booking.WebApp\Booking.WebApp.csproj" />
     <ProjectReference Include="..\BookingSolution.Utilities\BookingSolution.Utilities.csproj" />
-    <ProjectReference Include="..\BookingSolution.ViewModels\BookingSolution.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

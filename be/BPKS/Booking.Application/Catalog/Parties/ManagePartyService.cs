@@ -1,8 +1,8 @@
 ﻿using Booking.Application.Catalog.Parties.Dtos;
-using Booking.Data.Enities;
+using Booking.Data.EF;
+using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Common;
-using BPKS.EF;
 
 namespace Booking.Application.Catalog.Parties
 {
@@ -26,15 +26,7 @@ namespace Booking.Application.Catalog.Parties
                 //DayStart = request.DayStart,
                 //DayEnd = request.DayEnd,
                 //CreatedDate = DateTime.Now,
-                PartyStatus = request.PartyStatus,
-                //PartyTranslations = new List<PartyTranslation>()
-                //{
-                //    new PartyTranslation()
-                //    {
-
-                //    }
-                //}
-
+                //PartyStatus = request.PartyStatus,
             };
             _context.Parties.Add(party);
             return await _context.SaveChangesAsync();

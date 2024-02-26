@@ -14,7 +14,7 @@ namespace Booking.Application.Catalog.Parties.Dtos
         public string PhoneContact { get; set; }
         public string Place { get; set; }
         //public double Rate { get; set; }
-        //public string ThumbnailUrl { get; set; }
+        public string ThumbnailUrl { get; set; }
         public DateTime DayStart { get; set; }
         public DateTime DayEnd { get; set; }
         public DateTime CreatedDate { get; set; }

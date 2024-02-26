@@ -1,32 +1,24 @@
-﻿using eShopSolution.ViewModels.Catalog.Categories;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace eShopSolution.ViewModels.Catalog.Products
+﻿namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class ProductVm
     {
-        public int Id { set; get; }
-        public decimal Price { set; get; }
-        public decimal OriginalPrice { set; get; }
-        public int Stock { set; get; }
-        public int ViewCount { set; get; }
-        public DateTime DateCreated { set; get; }
+        public int ProductId { get; set; }
 
-        public string Name { set; get; }
-        public string Description { set; get; }
-        public string Details { set; get; }
-        public string SeoDescription { set; get; }
-        public string SeoTitle { set; get; }
+        public int? partyhostid { get; set; }
 
-        public string SeoAlias { get; set; }
-        public string LanguageId { set; get; }
+        public string? productname { get; set; }
 
-        public bool? IsFeatured { get; set; }
+        public string? producturl { get; set; }
 
-        public string ThumbnailImage { get; set; }
+        public string? producttype { get; set; }
 
-        public List<string> Categories { get; set; } = new List<string>();
+        public string? productstyle { get; set; }
+
+        public double? price { get; set; }
+
+        public string? productstatus { get; set; }
+
+        //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
+
     }
 }

@@ -1,4 +1,4 @@
-﻿using Google.Api.Ads.Common.Lib;
+﻿using Booking.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -10,7 +10,7 @@ namespace Booking.Data.Configurations
         {
             builder.ToTable("AppConfigs");
 
-            builder.HasKey(x => x.OAuth2PrivateKey);
+            builder.HasKey(x => x.Key);
 
             builder.Property(x => x.Value).IsRequired(true);
         }
