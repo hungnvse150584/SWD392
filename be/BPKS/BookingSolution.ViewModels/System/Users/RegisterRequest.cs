@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace 
-    .ViewModels.System.Users
+namespace BookingSolution.ViewModels.System.Users
 {
     public class RegisterRequest
     {

@@ -2,25 +2,11 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Booking.Data.Entities;
-<<<<<<< Updated upstream
-using Booking.Data.Enities;
 
+namespace Booking.Data.EF { 
 
-
-
-namespace Booking.Data.EF;
-
-
-
-
-public partial class BkpsContext : DbContext
-{
-    public BkpsContext()
-=======
-namespace Booking.Data.EF {
     public partial class BkpsContext : DbContext
->>>>>>> Stashed changes
-    {
+{
         public BkpsContext()
         {
         }

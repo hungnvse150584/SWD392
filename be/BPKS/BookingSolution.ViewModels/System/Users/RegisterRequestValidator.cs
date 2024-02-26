@@ -3,9 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace 
-    
-    .ViewModels.System.Users
+namespace BookingSolution.ViewModels.System.Users
 {
     public class RegisterRequestValidator : AbstractValidator<RegisterRequest>
     {

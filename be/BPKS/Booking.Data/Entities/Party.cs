@@ -2,16 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-<<<<<<< Updated upstream
-
-namespace Booking.Data.Enities;
-
-
-
-public partial class Party
-=======
 namespace Booking.Data.Entities
->>>>>>> Stashed changes
 {
     public partial class Party
     {

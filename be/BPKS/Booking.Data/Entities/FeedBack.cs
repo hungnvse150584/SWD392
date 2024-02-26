@@ -1,8 +1,4 @@
-﻿using Booking.Data.Enities;
-using System;
-using System.Collections.Generic;
-
-namespace Booking.Data.Entities
+﻿namespace Booking.Data.Entities
 {
 
     public partial class FeedBack

@@ -1,0 +1,6 @@
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.csproj.AssemblyReference.cache
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.AssemblyInfoInputs.cache
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.AssemblyInfo.cs
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.csproj.CoreCompileInputs.cache
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.sourcelink.json
