@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Booking.Data.Enities;
+using System;
 using System.Collections.Generic;
 
 namespace Booking.Data.Entities;

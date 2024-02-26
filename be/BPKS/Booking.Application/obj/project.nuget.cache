@@ -1,14 +1,6 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "L3E2jFq48qGGJmxnTUsQmOsSCJL95ml1W3J/lctnj3lxLSBlSa/f/FKD4KDnK7TRYkb2OKQQ6Ng4/9S+NVD5iQ==",
-=======
-<<<<<<< HEAD
-  "dgSpecHash": "Mzfg7KUpV4/HFiMgyby1kZLIw6ptByxj+kgZFeCPvKpK8s+AQdusfNFAp/q6GcvkIKblmQQuaf3ER3QiZd964w==",
-=======
-  "dgSpecHash": "L3E2jFq48qGGJmxnTUsQmOsSCJL95ml1W3J/lctnj3lxLSBlSa/f/FKD4KDnK7TRYkb2OKQQ6Ng4/9S+NVD5iQ==",
->>>>>>> d881a6cbe332f76d45828e55c578ac0177c81aa3
->>>>>>> Stashed changes
+  "dgSpecHash": "opkx4wiZZJCp3Iptqmtn4nKYvIhAWJwj5OedSGV/b4jgizjCRTNi/nZxFuBjFBwPDzRgfXSlTkZ9ppqlAQ3mXw==",
   "success": true,
   "projectFilePath": "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
   "expectedPackageFiles": [
@@ -156,5 +148,12 @@
     "C:\\Users\\HDuc\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\HDuc\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\Booking.Application\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
