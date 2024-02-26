@@ -9,7 +9,7 @@ namespace Booking.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.ToTable("Products");
+            builder.ToTable("Product");
 
             builder.HasKey(x => x.ProductId);
 

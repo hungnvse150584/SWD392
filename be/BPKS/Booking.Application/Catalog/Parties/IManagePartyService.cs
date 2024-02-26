@@ -1,4 +1,4 @@
-﻿using Booking.Application.Catalog.Parties.Dtos;
+﻿using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Common;
 
 namespace Booking.Application.Catalog.Parties

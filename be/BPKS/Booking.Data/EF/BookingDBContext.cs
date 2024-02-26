@@ -31,6 +31,7 @@ namespace Booking.Data.EF
 
         public DbSet<AppConfig> AppConfigs { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ListProduct> ListProducts { get; set; }
         public DbSet<Party> Parties { get; set; }
     }
 }

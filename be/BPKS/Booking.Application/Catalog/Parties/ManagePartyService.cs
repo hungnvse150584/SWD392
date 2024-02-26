@@ -1,7 +1,7 @@
-﻿using Booking.Application.Catalog.Parties.Dtos;
-using Booking.Data.EF;
+﻿using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
+using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Common;
 
 namespace Booking.Application.Catalog.Parties
@@ -54,5 +54,6 @@ namespace Booking.Application.Catalog.Parties
         {
             throw new NotImplementedException();
         }
+
     }
 }

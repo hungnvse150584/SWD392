@@ -9,8 +9,6 @@ namespace BookingSolution.ViewModels.Catalog.Products
     {
         public string Keyword { get; set; }
 
-        public string LanguageId { get; set; }
-
         public int? CategoryId { get; set; }
     }
 }

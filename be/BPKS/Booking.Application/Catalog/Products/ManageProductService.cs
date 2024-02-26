@@ -1,8 +1,8 @@
-﻿using Booking.Application.Catalog.Parties.Dtos;
-using Booking.Data.EF;
+﻿using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Products;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,9 +66,23 @@ namespace Booking.Application.Catalog.Products
             return await _context.SaveChangesAsync();
         }
 
-        public Task<List<ProductVm>> GetAll()
+        public async Task<List<ProductVm>> GetAll()
         {
-            throw new NotImplementedException();
+            var products = await _context.Products
+                .Select(p => new ProductVm
+                {
+                    ProductId = p.ProductId,
+                    PartyHostId = p.PartyHostId,
+                    ProductName = p.ProductName,
+                    ProductUrl = p.ProductUrl,
+                    ProductType = p.ProductType,
+                    ProductStyle = p.ProductStyle,
+                    Price = p.Price,
+                    ProductStatus = p.ProductStatus
+                })
+                .ToListAsync();
+
+            return products;
         }
 
         public Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request)

@@ -4,21 +4,20 @@
     {
         public int ProductId { get; set; }
 
-        public int? partyhostid { get; set; }
+        public int? PartyHostId { get; set; }
 
-        public string? productname { get; set; }
+        public string? ProductName { get; set; }
 
-        public string? producturl { get; set; }
+        public string? ProductUrl { get; set; }
 
-        public string? producttype { get; set; }
+        public string? ProductType { get; set; }
 
-        public string? productstyle { get; set; }
+        public string? ProductStyle { get; set; }
 
-        public double? price { get; set; }
+        public double? Price { get; set; }
 
-        public string? productstatus { get; set; }
+        public string? ProductStatus { get; set; }
 
         //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
-
     }
 }
