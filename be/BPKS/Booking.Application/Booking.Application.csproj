@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Catalog\Parents\" />
+    <Folder Include="PartyHosts\" />
   </ItemGroup>
 
   <ItemGroup>

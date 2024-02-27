@@ -22,17 +22,18 @@ namespace Booking.Application.Catalog.Products
         {
             var product = new Product()
             {
+
                 ProductName = request.Productname,
                 ProductUrl = request.ProductUrl,
                 ProductType = request.ProductType,
                 ProductStyle = request.ProductStyle,
                 Price = request.Price,
-                
+
                 //ThumbnailUrl = request.ThumbnailUrl,
                 //DayStart = request.DayStart,
                 //DayEnd = request.DayEnd,
                 //CreatedDate = DateTime.Now,
-                //PartyStatus = request.PartyStatus,
+                ProductStatus = request.Productstatus,
             };
             _context.Products.Add(product);
             return await _context.SaveChangesAsync();
@@ -94,27 +95,32 @@ namespace Booking.Application.Catalog.Products
 
         }
 
+     
+
         public async Task<ProductVm> GetById(int productId)
         {
-            var product = await _context.Products.FindAsync(productId);
+            var product = await _context.Products
+                                  .Where(p => p.ProductId == productId)
+                                  .Select(p => new ProductVm
+                                  {
+                                      ProductId = p.ProductId,
+                                      PartyHostId = p.PartyHostId,
+                                      ProductName = p.ProductName,
+                                      ProductUrl = p.ProductUrl,
+                                      ProductType = p.ProductType,
+                                      ProductStyle = p.ProductStyle,
+                                      Price = p.Price,
+                                      ProductStatus = p.ProductStatus
+                                  })
+                                  .FirstOrDefaultAsync();
+
             if (product == null)
             {
-                return null;
+                throw new BookingException($"Cannot find a product with ID: {productId}");
             }
 
-            var productVm = new ProductVm
-            {
-                ProductId = product.ProductId,
-                PartyHostId = product.PartyHostId,
-                ProductName = product.ProductName,
-                ProductUrl = product.ProductUrl,
-                ProductType = product.ProductType,
-                ProductStyle = product.ProductStyle,
-                Price = product.Price,
-                ProductStatus = product.ProductStatus
-            };
-
-            return productVm;
+            return product;
         }
+        
     }
 }

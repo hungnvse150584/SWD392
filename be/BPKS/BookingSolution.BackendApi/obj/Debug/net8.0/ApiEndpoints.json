@@ -18,9 +18,45 @@
     "Order": 0,
     "Parameters": [
       {
+<<<<<<< HEAD
+        "Name": "PartyHostId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Productname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductStyle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Productstatus",
+        "Type": "System.String",
+        "IsRequired": false
+=======
         "Name": "request",
         "Type": "BookingSolution.ViewModels.Catalog.Products.ProductCreateRequest",
         "IsRequired": true
+>>>>>>> 0d3e9e6289bee105ce2721919ecfe441cbe6be57
       }
     ],
     "ReturnTypes": []

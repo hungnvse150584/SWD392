@@ -4,6 +4,7 @@ using Booking.Data.EF;
 using BookingSolution.Utilities.Constants;
 using DocumentFormat.OpenXml.Bibliography;
 using Google;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Booking.Application.Catalog.Products;
