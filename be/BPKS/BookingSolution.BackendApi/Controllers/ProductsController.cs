@@ -1,5 +1,6 @@
 ﻿using Booking.Application.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Products;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -55,8 +56,24 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+<<<<<<< Updated upstream
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] RoomCreateRequest request)
+=======
+<<<<<<< HEAD:be/BPKS/BookingSolution.BackendApi/Controllers/ProductController.cs
+
+
+
+
+
+        //[Authorize(Roles = "1")]
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
+=======
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] RoomCreateRequest request)
+>>>>>>> 0d3e9e6289bee105ce2721919ecfe441cbe6be57:be/BPKS/BookingSolution.BackendApi/Controllers/ProductsController.cs
+>>>>>>> Stashed changes
         {
             try
             {
@@ -65,11 +82,22 @@ namespace BookingSolution.BackendApi.Controllers
                     return BadRequest();
 
                 var product = await _manageProductService.GetById(productId);
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD:be/BPKS/BookingSolution.BackendApi/Controllers/ProductController.cs
+                return CreatedAtAction(nameof(GetById), new { id = productId }, product);
+                //return Ok("ok");
+=======
+>>>>>>> Stashed changes
                 if (product == null)
                     return NotFound();
 
                 // Trả về thông báo thành công và sản phẩm đã tạo
                 return Ok("Success");
+<<<<<<< Updated upstream
+=======
+>>>>>>> 0d3e9e6289bee105ce2721919ecfe441cbe6be57:be/BPKS/BookingSolution.BackendApi/Controllers/ProductsController.cs
+>>>>>>> Stashed changes
             }
             catch (Exception ex)
             {
@@ -78,7 +106,7 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] ProductUpdateRequest request)
         {

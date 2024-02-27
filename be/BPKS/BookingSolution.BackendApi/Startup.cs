@@ -30,7 +30,16 @@ namespace BookingSolution.BackendApi
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManagePartyService, ManagePartyService >();
+<<<<<<< Updated upstream
             //services.AddTransient<UserManager, ManagePartyService>();
+=======
+<<<<<<< HEAD
+            services.AddTransient<IManageProductService, ManageProductService>();
+            
+=======
+            //services.AddTransient<UserManager, ManagePartyService>();
+>>>>>>> 0d3e9e6289bee105ce2721919ecfe441cbe6be57
+>>>>>>> Stashed changes
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>

@@ -22,17 +22,18 @@ namespace Booking.Application.Catalog.Products
         {
             var product = new Product()
             {
+
                 ProductName = request.Productname,
                 ProductUrl = request.ProductUrl,
                 ProductType = request.ProductType,
                 ProductStyle = request.ProductStyle,
                 Price = request.Price,
-                
+
                 //ThumbnailUrl = request.ThumbnailUrl,
                 //DayStart = request.DayStart,
                 //DayEnd = request.DayEnd,
                 //CreatedDate = DateTime.Now,
-                //PartyStatus = request.PartyStatus,
+                ProductStatus = request.Productstatus,
             };
             _context.Products.Add(product);
             return await _context.SaveChangesAsync();
@@ -62,7 +63,10 @@ namespace Booking.Application.Catalog.Products
             {
                 throw new BookingException($"Cannot find a product: {productId}");
             }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
             _context.Products.Remove(product);
             return await _context.SaveChangesAsync();
         }
@@ -94,8 +98,37 @@ namespace Booking.Application.Catalog.Products
 
         }
 
+<<<<<<< Updated upstream
         public async Task<RoomVm> GetById(int productId)
         {
+=======
+        public async Task<ProductVm> GetById(int productId)
+        {
+            var product = await _context.Products
+                                  .Where(p => p.ProductId == productId)
+                                  .Select(p => new ProductVm
+                                  {
+                                      ProductId = p.ProductId,
+                                      PartyHostId = p.PartyHostId,
+                                      ProductName = p.ProductName,
+                                      ProductUrl = p.ProductUrl,
+                                      ProductType = p.ProductType,
+                                      ProductStyle = p.ProductStyle,
+                                      Price = p.Price,
+                                      ProductStatus = p.ProductStatus
+                                  })
+                                  .FirstOrDefaultAsync();
+
+            if (product == null)
+            {
+                throw new BookingException($"Cannot find a product with ID: {productId}");
+            }
+
+            return product;
+        }
+        public async Task<RoomVm> GetById(int productId)
+        {
+>>>>>>> Stashed changes
             var product = await _context.Products.FindAsync(productId);
             if (product == null)
             {
