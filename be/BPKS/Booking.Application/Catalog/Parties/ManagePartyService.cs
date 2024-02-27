@@ -8,6 +8,8 @@ namespace Booking.Application.Catalog.Parties
 {
     public class ManagePartyService : IManagePartyService
     {
+        private readonly BookingDbContext _context;
+        public ManagePartyService(BookingDbContext context)
         {
             _context = context;
         }
@@ -34,7 +36,10 @@ namespace Booking.Application.Catalog.Parties
         {
             var party = await _context.Parties.FindAsync(partyId);
             if (party != null) throw new BookingException($"Cannot find a party: {partyId}");
-            _context.Parties.Remove(party);
+            else
+            {
+                _context.Parties.Remove(party);
+            }
             return await _context.SaveChangesAsync();
         }
 

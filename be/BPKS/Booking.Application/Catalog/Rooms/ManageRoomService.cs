@@ -39,7 +39,7 @@ namespace Booking.Application.Catalog.Rooms
             };
             _context.Rooms.Add(room);
             return await _context.SaveChangesAsync();
-            return room.RoomId;
+           
         }
         public async Task<int> Update(RoomUpdateRequest request)
         {

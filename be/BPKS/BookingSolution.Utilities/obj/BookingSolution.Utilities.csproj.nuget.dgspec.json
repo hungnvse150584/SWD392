@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {}
+    "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+    "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+        "projectUniqueName": "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
         "projectName": "BookingSolution.Utilities",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\obj\\",
+        "projectPath": "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+        "packagesPath": "C:\\Users\\HDuc\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HDuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ku2JZEB0r2iqlRVAzA2egtMib4Vo/YybSPAIfXQABoZN4ZElNXv3SYXLaOQpW1RsT7lGYJPF0W8v8bHlR2c4aA==",
+  "dgSpecHash": "7beLX8qZVHVClX0khyWDYeRD9tfw/EIMQpZ9oVZLfRZJ4MH4oH1aLSAZIPPl8cTgC4n2CDO7hMh8Pt1Ns/13aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+  "projectFilePath": "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

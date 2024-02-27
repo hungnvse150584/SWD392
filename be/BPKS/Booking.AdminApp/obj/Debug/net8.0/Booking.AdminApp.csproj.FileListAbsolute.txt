@@ -473,3 +473,16 @@ C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.AdminApp\obj\Debug
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.genruntimeconfig.cache
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\ref\Booking.AdminApp.dll
 >>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.csproj.AssemblyReference.cache
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.AssemblyInfoInputs.cache
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.AssemblyInfo.cs
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.csproj.CoreCompileInputs.cache
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.MvcApplicationPartsAssemblyInfo.cs
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.RazorAssemblyInfo.cache
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.RazorAssemblyInfo.cs
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.sourcelink.json
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.dll
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\refint\Booking.AdminApp.dll
+D:\Project\Code\FU\SWD291\SWD392\be\BPKS\Booking.AdminApp\obj\Debug\net8.0\Booking.AdminApp.pdb
