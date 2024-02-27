@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "W1H5dLDjVVuMMafw0NjQXKIqvPNQAbDlYN6clNAgrqk=",
+  "Hash": "sEaO8U74NT9VsY8F/tW4hIs1Q1sl1YPCwJ8JjluuGaE=",
   "Source": "BookingSolution.BackendApi",
   "BasePath": "_content/BookingSolution.BackendApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "D:\\Project\\Code\\FU\\SWD291\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+      "Identity": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
       "Version": 2,
       "Source": "Booking.WebApp",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

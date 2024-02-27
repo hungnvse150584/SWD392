@@ -298,3 +298,5 @@ D:\Project\Code\FU\SWD291\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\ne
 D:\Project\Code\FU\SWD291\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.pdb
 D:\Project\Code\FU\SWD291\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.genruntimeconfig.cache
 D:\Project\Code\FU\SWD291\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\ref\BookingSolution.BackendApi.dll
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

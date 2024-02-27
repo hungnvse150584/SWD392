@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
     "Method": "GetAll",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,15 +10,14 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
     "Method": "Create",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Products",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-<<<<<<< HEAD
         "Name": "PartyHostId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
@@ -52,19 +51,14 @@
         "Name": "Productstatus",
         "Type": "System.String",
         "IsRequired": false
-=======
-        "Name": "request",
-        "Type": "BookingSolution.ViewModels.Catalog.Products.ProductCreateRequest",
-        "IsRequired": true
->>>>>>> 0d3e9e6289bee105ce2721919ecfe441cbe6be57
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
     "Method": "Update",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Products",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -78,9 +72,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
     "Method": "GetById",
-    "RelativePath": "api/Product/{productId}",
+    "RelativePath": "api/Products/{productId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -94,9 +88,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
     "Method": "Delete",
-    "RelativePath": "api/Product/{productId}",
+    "RelativePath": "api/Products/{productId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -110,9 +104,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
     "Method": "Get",
-    "RelativePath": "api/Product/public-paging",
+    "RelativePath": "api/Products/public-paging",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

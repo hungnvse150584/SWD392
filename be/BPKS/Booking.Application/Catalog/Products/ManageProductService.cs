@@ -18,7 +18,7 @@ namespace Booking.Application.Catalog.Products
         {
             _context = context;
         }
-        public async Task<int> Create(RoomCreateRequest request)
+        public async Task<int> Create(ProductCreateRequest request)
         {
             var product = new Product()
             {
@@ -63,18 +63,14 @@ namespace Booking.Application.Catalog.Products
             {
                 throw new BookingException($"Cannot find a product: {productId}");
             }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
             _context.Products.Remove(product);
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<List<RoomVm>> GetAll()
+        public async Task<List<Product>> GetAll()
         {
             var products = await _context.Products
-                .Select(p => new RoomVm
+                .Select(p => new Product
                 {
                     ProductId = p.ProductId,
                     PartyHostId = p.PartyHostId,
@@ -90,7 +86,7 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
-        public Task<List<RoomVm>> GetAllPaging(GetPublicProductPagingRequest request)
+        public Task<List<Product>> GetAllPaging(GetPublicProductPagingRequest request)
         {
             //var query = from p in _context.Products
             //            join pt in _context.
@@ -98,10 +94,8 @@ namespace Booking.Application.Catalog.Products
 
         }
 
-<<<<<<< Updated upstream
-        public async Task<RoomVm> GetById(int productId)
-        {
-=======
+     
+
         public async Task<ProductVm> GetById(int productId)
         {
             var product = await _context.Products
@@ -126,28 +120,25 @@ namespace Booking.Application.Catalog.Products
 
             return product;
         }
-        public async Task<RoomVm> GetById(int productId)
+        
+
+
+        Task<List<ProductVm>> IManageProductService.GetAll()
         {
->>>>>>> Stashed changes
-            var product = await _context.Products.FindAsync(productId);
-            if (product == null)
-            {
-                return null;
-            }
-
-            var productVm = new RoomVm
-            {
-                ProductId = product.ProductId,
-                PartyHostId = product.PartyHostId,
-                ProductName = product.ProductName,
-                ProductUrl = product.ProductUrl,
-                ProductType = product.ProductType,
-                ProductStyle = product.ProductStyle,
-                Price = product.Price,
-                ProductStatus = product.ProductStatus
-            };
-
-            return productVm;
+            throw new NotImplementedException();
         }
+
+        Task<List<ProductVm>> IManageProductService.GetAllPaging(GetPublicProductPagingRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ProductVm> IManageProductService.GetById(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
     }
 }

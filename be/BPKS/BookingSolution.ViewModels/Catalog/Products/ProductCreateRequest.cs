@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BookingSolution.ViewModels.Catalog.Products
 {
-    public class RoomCreateRequest
+    public class ProductCreateRequest
     {
         //public int ProductId { get; set; }
 

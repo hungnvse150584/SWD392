@@ -1,6 +1,6 @@
 ﻿namespace BookingSolution.ViewModels.Catalog.Products
 {
-    public class RoomVm
+    public class ProductVm
     {
         public int ProductId { get; set; }
 

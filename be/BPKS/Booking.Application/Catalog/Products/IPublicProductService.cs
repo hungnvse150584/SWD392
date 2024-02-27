@@ -5,8 +5,8 @@ namespace Booking.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-        Task<PagedResult<RoomVm>> GetAllByStyle(GetPublicProductPagingRequest request);
+        Task<PagedResult<ProductVm>> GetAllByStyle(GetPublicProductPagingRequest request);
 
-        Task<List<RoomVm>> GetAll();
+        Task<List<ProductVm>> GetAll();
     }
 }

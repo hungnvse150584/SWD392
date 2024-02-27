@@ -2,7 +2,9 @@
 using Booking.Application.Catalog.Products;
 using Booking.Data.EF;
 using BookingSolution.Utilities.Constants;
+using BookingSolution.ViewModels.System.Users;
 using DocumentFormat.OpenXml.Bibliography;
+using FluentValidation.AspNetCore;
 using Google;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -30,16 +32,9 @@ namespace BookingSolution.BackendApi
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManagePartyService, ManagePartyService >();
-<<<<<<< Updated upstream
-            //services.AddTransient<UserManager, ManagePartyService>();
-=======
-<<<<<<< HEAD
             services.AddTransient<IManageProductService, ManageProductService>();
-            
-=======
-            //services.AddTransient<UserManager, ManagePartyService>();
->>>>>>> 0d3e9e6289bee105ce2721919ecfe441cbe6be57
->>>>>>> Stashed changes
+             services.AddControllers()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
