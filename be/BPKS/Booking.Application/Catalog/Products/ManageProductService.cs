@@ -36,6 +36,7 @@ namespace Booking.Application.Catalog.Products
             };
             _context.Products.Add(product);
             return await _context.SaveChangesAsync();
+            return product.ProductId;
         }
         public async Task<int> Update(ProductUpdateRequest request)
         {
@@ -91,6 +92,11 @@ namespace Booking.Application.Catalog.Products
             //            join pt in _context.
             throw new NotImplementedException();
 
+        }
+
+        public Task<ProductVm> GetById(int productId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

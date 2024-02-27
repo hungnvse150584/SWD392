@@ -2,8 +2,10 @@
 using Booking.Application.Catalog.Products;
 using Booking.Data.EF;
 using BookingSolution.Utilities.Constants;
+using DocumentFormat.OpenXml.Bibliography;
 using Google;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 namespace BookingSolution.BackendApi
 {
@@ -28,6 +30,11 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IManagePartyService, ManagePartyService >();
 
             services.AddControllersWithViews();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Party Demo", Version = "v1" });
+            }
+                );
         }
 
         //http
@@ -46,6 +53,11 @@ namespace BookingSolution.BackendApi
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Party V1");
+            });
 
             app.UseAuthorization();
 

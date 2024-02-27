@@ -9,5 +9,6 @@ namespace Booking.Application.Catalog.Products
         Task<int> Delete(int productId);
         Task<List<ProductVm>> GetAll();
         Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request);
+        Task<ProductVm> GetById(int productId);
     }
 }
