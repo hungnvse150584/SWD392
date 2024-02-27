@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
-namespace Booking.Data.Entities;
-
-public partial class Role
+namespace Booking.Data.Entities
 {
-    public int RoleId { get; set; }
 
-    public string? RoleName { get; set; }
+    public partial class Role
+    {
+        public int RoleId { get; set; }
 
-    public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
+        public string? RoleName { get; set; }
+
+
+    }
 }

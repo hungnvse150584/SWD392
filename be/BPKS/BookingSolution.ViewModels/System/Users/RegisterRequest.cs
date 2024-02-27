@@ -25,8 +25,14 @@ namespace BookingSolution.ViewModels.System.Users
         [Display(Name = "Full Name")]
         public string FullName { get; set; }
 
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
+
+        [Display(Name = "Address")]
+        public string Address { get; set; }
 
         [Display(Name = "Password")]
         [DataType(DataType.Password)]

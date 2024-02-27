@@ -1,5 +1,6 @@
 ﻿using Booking.Data.Configurations;
 using Booking.Data.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Booking.Data.EF
@@ -35,6 +36,12 @@ namespace Booking.Data.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<ListProduct> ListProducts { get; set; }
         public DbSet<Party> Parties { get; set; }
+<<<<<<< Updated upstream
         public DbSet<Room> Rooms { get; set; }
+=======
+        //public DbSet<Account> Accounts { get; set; }
+        //public DbSet<Role> Roles { get; set; }
+
+>>>>>>> Stashed changes
     }
 }

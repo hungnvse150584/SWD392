@@ -13,8 +13,8 @@ namespace Booking.Application.Catalog.Products
 {
     public class PublicProductService : IPublicProductService
     {
-        private readonly BookingDBContext _context;
-        public PublicProductService(BookingDBContext context)
+        private readonly BkpsContext _context;
+        public PublicProductService(BkpsContext context)
         {
             _context = context;
         }

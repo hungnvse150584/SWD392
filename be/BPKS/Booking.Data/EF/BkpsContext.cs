@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Booking.Data.Entities;
+using Booking.Data.Configurations;
 
 namespace Booking.Data.EF;
 
@@ -42,6 +43,22 @@ public partial class BkpsContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+        //Category(Party)
+        modelBuilder.ApplyConfiguration(new ProductConfiguration());
+        
+        //Order
+
+        //Data seeding
+        modelBuilder.Entity<AppConfig>().HasData(
+            new AppConfig() { Key = "hometitle", Value = "this is home page of bookingsolution" },
+            new AppConfig() { Key = "homekeyword", Value = "this is keyword of bookingsolution" },
+            new AppConfig() { Key = "homedescription", Value = "this is description of bookingsolution" }
+            );
+
+
+
         modelBuilder.Entity<Account>(entity =>
         {
             entity.HasKey(e => e.UserId).HasName("PK__Account__1788CC4C16258973");
@@ -57,9 +74,7 @@ public partial class BkpsContext : DbContext
             entity.Property(e => e.Status).HasMaxLength(255);
             entity.Property(e => e.UserName).HasMaxLength(255);
 
-            entity.HasOne(d => d.RoleNavigation).WithMany(p => p.Accounts)
-                .HasForeignKey(d => d.Role)
-                .HasConstraintName("FK__Account__Role__3C69FB99");
+           
         });
 
         modelBuilder.Entity<AppConfig>(entity =>
@@ -186,8 +201,8 @@ public partial class BkpsContext : DbContext
             entity.Property(e => e.RoomType).HasMaxLength(50);
             entity.Property(e => e.RoomUrl).HasMaxLength(1000);
         });
-
-        OnModelCreatingPartial(modelBuilder);
+        base.OnModelCreating(modelBuilder);
+        
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

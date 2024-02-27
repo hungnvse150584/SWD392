@@ -1,9 +1,10 @@
 ﻿using Booking.Application.Catalog.Parties;
 using Booking.Application.Catalog.Products;
+using Booking.Application.Users;
 using Booking.Data.EF;
+using Booking.Data.Entities;
 using BookingSolution.Utilities.Constants;
-using DocumentFormat.OpenXml.Bibliography;
-using Google;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -23,19 +24,30 @@ namespace BookingSolution.BackendApi
         //Call run time
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BookingDBContext>(options =>
-                options.UseSqlServer(
-                Configuration.GetConnectionString(SystemConstants.MainConnectionString),
-                    options => options.EnableRetryOnFailure()));
+            services.AddDbContext<BkpsContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
+
+            //services.AddIdentity<Account, Role>()
+            //    .AddEntityFrameworkStores<BookingDBContext>()
+            //    .AddDefaultTokenProviders();
 
             //Khai báo
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
+<<<<<<< Updated upstream
             services.AddTransient<IManagePartyService, ManagePartyService>();
 
             services.AddScoped<IManageRoomService, ManageRoomService>();
             services.AddTransient<IPublicRoomService, PublicRoomService>();
             services.AddTransient<IManageRoomService, ManageRoomService>();
+=======
+            services.AddTransient<IManagePartyService, ManagePartyService >();
+            services.AddTransient<UserManager<Account>, UserManager<Account>>();
+            services.AddTransient<SignInManager<Account>, SignInManager <Account>>();
+            services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
+            services.AddTransient<IUserService, UserService>();
+
+>>>>>>> Stashed changes
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
