@@ -93,6 +93,11 @@ CREATE TABLE Feedback (
 	Feedback nvarchar(2000),
 );
 
+CREATE TABLE Role (
+	RoleId INT PRIMARY KEY,
+	RoleName nvarchar(100)
+);
+
 ALTER TABLE ListParty
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
 
@@ -115,4 +120,11 @@ ADD FOREIGN KEY (RoomId) REFERENCES Room(RoomId);
 ALTER TABLE Feedback
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
 
+ALTER TABLE Account
+ADD FOREIGN KEY (Role) REFERENCES Role(RoleId);
 
+
+
+INSERT INTO Role (RoleId, RoleName) VALUES (1, N'Party Host');
+INSERT INTO Role (RoleId, RoleName) VALUES (2, N'Parent');
+INSERT INTO Role (RoleId, RoleName) VALUES (3, N'Admin');
