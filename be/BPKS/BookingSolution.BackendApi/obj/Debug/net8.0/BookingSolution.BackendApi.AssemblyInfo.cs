@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookingSolution.BackendApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b9deae148e4b6b6788667835c661fd165bfa1cc")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0176d81de0677b29d697ab0312852e1618749f9c")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("BookingSolution.BackendApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookingSolution.BackendApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

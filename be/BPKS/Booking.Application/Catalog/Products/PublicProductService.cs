@@ -19,13 +19,13 @@ namespace Booking.Application.Catalog.Products
             _context = context;
         }
 
-        public async Task<List<ProductVm>> GetAll()
+        public async Task<List<RoomVm>> GetAll()
         {
             // Truy vấn tất cả các sản phẩm từ cơ sở dữ liệu
             var products = await _context.Products.ToListAsync();
 
             // Chuyển đổi danh sách sản phẩm sang đối tượng ProductVm
-            var productVms = products.Select(p => new ProductVm
+            var productVms = products.Select(p => new RoomVm
             {
                 ProductId = p.ProductId,
                 PartyHostId = p.PartyHostId,
@@ -41,7 +41,7 @@ namespace Booking.Application.Catalog.Products
         }
 
         //test
-        public Task<PagedResult<ProductVm>> GetAllByStyle(GetPublicProductPagingRequest request)
+        public Task<PagedResult<RoomVm>> GetAllByStyle(GetPublicProductPagingRequest request)
         {
             throw new NotImplementedException();
         }

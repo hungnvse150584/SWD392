@@ -6,11 +6,11 @@ using System.Text;
 
 namespace BookingSolution.ViewModels.Catalog.Products
 {
-    public class ProductCreateRequest
+    public class RoomCreateRequest
     {
         //public int ProductId { get; set; }
 
-        //public int? partyhostid { get; set; }
+        public int? PartyHostId { get; set; }
 
         public string? Productname { get; set; }
 

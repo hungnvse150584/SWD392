@@ -18,7 +18,7 @@ namespace Booking.Application.Catalog.Products
         {
             _context = context;
         }
-        public async Task<int> Create(ProductCreateRequest request)
+        public async Task<int> Create(RoomCreateRequest request)
         {
             var product = new Product()
             {
@@ -67,10 +67,10 @@ namespace Booking.Application.Catalog.Products
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<List<ProductVm>> GetAll()
+        public async Task<List<RoomVm>> GetAll()
         {
             var products = await _context.Products
-                .Select(p => new ProductVm
+                .Select(p => new RoomVm
                 {
                     ProductId = p.ProductId,
                     PartyHostId = p.PartyHostId,
@@ -86,7 +86,7 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
-        public Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request)
+        public Task<List<RoomVm>> GetAllPaging(GetPublicProductPagingRequest request)
         {
             //var query = from p in _context.Products
             //            join pt in _context.
@@ -94,7 +94,7 @@ namespace Booking.Application.Catalog.Products
 
         }
 
-        public async Task<ProductVm> GetById(int productId)
+        public async Task<RoomVm> GetById(int productId)
         {
             var product = await _context.Products.FindAsync(productId);
             if (product == null)
@@ -102,7 +102,7 @@ namespace Booking.Application.Catalog.Products
                 return null;
             }
 
-            var productVm = new ProductVm
+            var productVm = new RoomVm
             {
                 ProductId = product.ProductId,
                 PartyHostId = product.PartyHostId,
