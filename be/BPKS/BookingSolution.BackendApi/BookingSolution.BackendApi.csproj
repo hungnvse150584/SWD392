@@ -7,18 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-=======
-    <None Remove="json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="json" />
-  </ItemGroup>
-
-  <ItemGroup>
->>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
