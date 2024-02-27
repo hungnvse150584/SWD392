@@ -1,37 +1,208 @@
-﻿using Booking.Data.Configurations;
+﻿using Microsoft.EntityFrameworkCore;
 using Booking.Data.Entities;
-using Microsoft.EntityFrameworkCore;
+using Booking.Data.Configurations;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Booking.Data.EF
 {
-    public class BookingDBContext : DbContext
+
+    public partial class BookingDbContext : IdentityDbContext<Account, Role, Guid>
     {
-        public BookingDBContext(DbContextOptions options) : base(options)
+        public BookingDbContext()
         {
-            //options.UseSqlServer
         }
+
+        public BookingDbContext(DbContextOptions<BookingDbContext> options)
+            : base(options)
+        {
+        }
+
+        public virtual DbSet<Account> Accounts { get; set; }
+
+        public virtual DbSet<AppConfig> AppConfigs { get; set; }
+
+        public virtual DbSet<Feedback> Feedbacks { get; set; }
+
+        public virtual DbSet<ListParty> ListParties { get; set; }
+
+        public virtual DbSet<ListProduct> ListProducts { get; set; }
+
+        public virtual DbSet<ListRoom> ListRooms { get; set; }
+
+        public virtual DbSet<Party> Parties { get; set; }
+
+        public virtual DbSet<Product> Products { get; set; }
+
+        public virtual DbSet<Role> Roles { get; set; }
+
+        public virtual DbSet<Room> Rooms { get; set; }
+
+        //    protected override void onconfiguring(dbcontextoptionsbuilder optionsbuilder)
+        //#warning to protect potentially sensitive information in your connection string, you should move it out of source code. you can avoid scaffolding the connection string by using the name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. for more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?linkid=723263.
+        //        => optionsbuilder.usesqlserver("server=(local);database=bkps;uid=sa;pwd=12345;trustservercertificate=true;");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Configure using Fluent API
-            //Cart
+            modelBuilder.ApplyConfiguration(new AccountConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
-            //Category(Party)
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
-            //Order
 
-            //Data seeding
+
             modelBuilder.Entity<AppConfig>().HasData(
                 new AppConfig() { Key = "hometitle", Value = "this is home page of bookingsolution" },
                 new AppConfig() { Key = "homekeyword", Value = "this is keyword of bookingsolution" },
                 new AppConfig() { Key = "homedescription", Value = "this is description of bookingsolution" }
                 );
+
+
+
+            modelBuilder.Entity<Account>(entity =>
+            {
+                entity.HasKey(e => e.UserId).HasName("PK__Account__1788CC4C16258973");
+
+                entity.ToTable("Account");
+
+                entity.Property(e => e.Address).HasMaxLength(255);
+                entity.Property(e => e.AvatarUrl).HasMaxLength(500);
+                entity.Property(e => e.Email).HasMaxLength(255);
+                entity.Property(e => e.FullName).HasMaxLength(255);
+                entity.Property(e => e.Password).HasMaxLength(255);
+                entity.Property(e => e.PhoneNumber).HasMaxLength(255);
+                entity.Property(e => e.Status).HasMaxLength(255);
+                entity.Property(e => e.UserName).HasMaxLength(255);
+
+
+            });
+
+            modelBuilder.Entity<AppConfig>(entity =>
+            {
+                entity.HasKey(e => e.Key).HasName("PK__AppConfi__C41E028839D1676F");
+
+                entity.ToTable("AppConfig");
+
+                entity.Property(e => e.Key).HasMaxLength(50);
+                entity.Property(e => e.Value).HasMaxLength(500);
+            });
+
+            modelBuilder.Entity<Feedback>(entity =>
+            {
+                entity.HasKey(e => e.FeedBackId).HasName("PK__Feedback__E2CB3B87B174E4E6");
+
+                entity.ToTable("Feedback");
+
+                entity.Property(e => e.Feedback1)
+                    .HasMaxLength(2000)
+                    .HasColumnName("Feedback");
+
+                entity.HasOne(d => d.Party).WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.PartyId)
+                    .HasConstraintName("FK__Feedback__PartyI__3B75D760");
+            });
+
+            modelBuilder.Entity<ListParty>(entity =>
+            {
+                entity.HasKey(e => e.ListPartyId).HasName("PK__ListPart__CD4E0484680C6096");
+
+                entity.ToTable("ListParty");
+
+                entity.Property(e => e.ListPartyStatus).HasMaxLength(500);
+
+                entity.HasOne(d => d.Party).WithMany(p => p.ListParties)
+                    .HasForeignKey(d => d.PartyId)
+                    .HasConstraintName("FK__ListParty__Party__35BCFE0A");
+            });
+
+            modelBuilder.Entity<ListProduct>(entity =>
+            {
+                entity.HasKey(e => e.ListProductId).HasName("PK__ListProd__BB3E314FADB6C270");
+
+                entity.ToTable("ListProduct");
+
+                entity.Property(e => e.ListProductStatus).HasMaxLength(500);
+
+                entity.HasOne(d => d.Party).WithMany(p => p.ListProducts)
+                    .HasForeignKey(d => d.PartyId)
+                    .HasConstraintName("FK__ListProdu__Party__36B12243");
+
+                entity.HasOne(d => d.Product).WithMany(p => p.ListProducts)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK__ListProdu__Produ__38996AB5");
+
+                entity.HasOne(d => d.Room).WithMany(p => p.ListProducts)
+                    .HasForeignKey(d => d.RoomId)
+                    .HasConstraintName("FK__ListProdu__RoomI__37A5467C");
+            });
+
+            modelBuilder.Entity<ListRoom>(entity =>
+            {
+                entity.HasKey(e => e.ListRoomId).HasName("PK__ListRoom__226F7FF07AF232EF");
+
+                entity.ToTable("ListRoom");
+
+                entity.Property(e => e.ListRoomStatus).HasMaxLength(500);
+
+                entity.HasOne(d => d.Party).WithMany(p => p.ListRooms)
+                    .HasForeignKey(d => d.PartyId)
+                    .HasConstraintName("FK__ListRoom__PartyI__398D8EEE");
+
+                entity.HasOne(d => d.Room).WithMany(p => p.ListRooms)
+                    .HasForeignKey(d => d.RoomId)
+                    .HasConstraintName("FK__ListRoom__RoomId__3A81B327");
+            });
+
+            modelBuilder.Entity<Party>(entity =>
+            {
+                entity.HasKey(e => e.PartyId).HasName("PK__Party__1640CD3337288F2D");
+
+                entity.ToTable("Party");
+
+                entity.Property(e => e.Description).HasMaxLength(1000);
+                entity.Property(e => e.PartyName).HasMaxLength(255);
+                entity.Property(e => e.PartyStatus).HasMaxLength(500);
+                entity.Property(e => e.PhoneContact).HasMaxLength(50);
+                entity.Property(e => e.Place).HasMaxLength(255);
+                entity.Property(e => e.ThumbnailUrl).HasMaxLength(500);
+            });
+
+            modelBuilder.Entity<Product>(entity =>
+            {
+                entity.HasKey(e => e.ProductId).HasName("PK__Product__B40CC6CDD91D78CF");
+
+                entity.ToTable("Product");
+
+                entity.Property(e => e.ProductName).HasMaxLength(255);
+                entity.Property(e => e.ProductStatus).HasMaxLength(500);
+                entity.Property(e => e.ProductStyle).HasMaxLength(100);
+                entity.Property(e => e.ProductType).HasMaxLength(50);
+                entity.Property(e => e.ProductUrl).HasMaxLength(1000);
+            });
+
+            modelBuilder.Entity<Role>(entity =>
+            {
+                entity.HasKey(e => e.RoleId).HasName("PK__Role__8AFACE1A1CAC3A68");
+
+                entity.ToTable("Role");
+
+                entity.Property(e => e.RoleId).ValueGeneratedNever();
+                entity.Property(e => e.RoleName).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<Room>(entity =>
+            {
+                entity.HasKey(e => e.RoomId).HasName("PK__Room__32863939AF1B1178");
+
+                entity.ToTable("Room");
+
+                entity.Property(e => e.RoomName).HasMaxLength(255);
+                entity.Property(e => e.RoomStatus).HasMaxLength(500);
+                entity.Property(e => e.RoomType).HasMaxLength(50);
+                entity.Property(e => e.RoomUrl).HasMaxLength(1000);
+            });
             base.OnModelCreating(modelBuilder);
+
         }
 
-        public DbSet<AppConfig> AppConfigs { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ListProduct> ListProducts { get; set; }
-        public DbSet<Party> Parties { get; set; }
+        //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

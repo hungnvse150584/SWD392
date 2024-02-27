@@ -1,3 +1,4 @@
+﻿
 ﻿using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
@@ -8,13 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Booking.Application.Catalog.Products
 {
     public class ManageProductService : IManageProductService
     {
-        private readonly BookingDBContext _context;
-        public ManageProductService(BookingDBContext context)
+        private readonly BookingDbContext _context;
+        public ManageProductService(BookingDbContext context)
         {
             _context = context;
         }
@@ -63,14 +63,25 @@ namespace Booking.Application.Catalog.Products
             {
                 throw new BookingException($"Cannot find a product: {productId}");
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
             _context.Products.Remove(product);
             return await _context.SaveChangesAsync();
         }
 
+<<<<<<< HEAD
         public async Task<List<Product>> GetAll()
         {
             var products = await _context.Products
                 .Select(p => new Product
+=======
+        public async Task<List<ProductVm>> GetAll()
+        {
+            var products = await _context.Products
+                .Select(p => new ProductVm
+>>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
                 {
                     ProductId = p.ProductId,
                     PartyHostId = p.PartyHostId,
@@ -86,7 +97,11 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
+<<<<<<< HEAD
         public Task<List<Product>> GetAllPaging(GetPublicProductPagingRequest request)
+=======
+        public Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request)
+>>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
         {
             //var query = from p in _context.Products
             //            join pt in _context.
@@ -121,6 +136,7 @@ namespace Booking.Application.Catalog.Products
             return product;
         }
         
+<<<<<<< HEAD
 
 
         Task<List<ProductVm>> IManageProductService.GetAll()
@@ -140,5 +156,7 @@ namespace Booking.Application.Catalog.Products
 
 
 
+=======
+>>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
     }
 }

@@ -1,14 +1,22 @@
 ﻿using Booking.Application.Catalog.Parties;
 using Booking.Application.Catalog.Products;
+using Booking.Application.Users;
 using Booking.Data.EF;
+using Booking.Data.Entities;
 using BookingSolution.Utilities.Constants;
+<<<<<<< HEAD
 using BookingSolution.ViewModels.System.Users;
 using DocumentFormat.OpenXml.Bibliography;
 using FluentValidation.AspNetCore;
 using Google;
+=======
+using Microsoft.Extensions.DependencyInjection;
+>>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Booking.Application.Catalog.Products;
+using Booking.Application.Catalog.Rooms;
 
 namespace BookingSolution.BackendApi
 {
@@ -23,18 +31,35 @@ namespace BookingSolution.BackendApi
         //Call run time
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BookingDBContext>(options =>
-                options.UseSqlServer(
-                Configuration.GetConnectionString(SystemConstants.MainConnectionString),
-                    options => options.EnableRetryOnFailure()));
+            services.AddDbContext<BookingDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
+
+            services.AddIdentity<Account, Role>()
+                .AddEntityFrameworkStores<BookingDbContext>()
+                .AddDefaultTokenProviders();
 
             //Khai báo
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
+
+            services.AddTransient<IManagePartyService, ManagePartyService>();
+
+            services.AddScoped<IManageRoomService, ManageRoomService>();
+            services.AddTransient<IPublicRoomService, PublicRoomService>();
+            services.AddTransient<IManageRoomService, ManageRoomService>();
+
             services.AddTransient<IManagePartyService, ManagePartyService >();
+<<<<<<< HEAD
             services.AddTransient<IManageProductService, ManageProductService>();
              services.AddControllers()
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
+=======
+            services.AddTransient<UserManager<Account>, UserManager<Account>>();
+            services.AddTransient<SignInManager<Account>, SignInManager <Account>>();
+            services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
+            services.AddTransient<IUserService, UserService>();
+
+>>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
@@ -66,7 +91,7 @@ namespace BookingSolution.BackendApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Product V1");
-                c.SwaggerEndpoint("/                                                n", "Swagger Party V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Party V1");
 
             });
 
