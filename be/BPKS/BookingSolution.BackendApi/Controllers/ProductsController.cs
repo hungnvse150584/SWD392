@@ -56,29 +56,10 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-<<<<<<< HEAD
         [HttpPost]
-
-
-
-
-
-
-
         //[Authorize(Roles = "1")]
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
-=======
-
-
-
-
-
-   
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ProductCreateRequest request)
-
->>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
         {
             try
             {
@@ -87,23 +68,14 @@ namespace BookingSolution.BackendApi.Controllers
                     return BadRequest();
 
                 var product = await _manageProductService.GetById(productId);
-<<<<<<< HEAD
                 return CreatedAtAction(nameof(GetById), new { id = productId }, product);
                 //return Ok("ok");
-=======
-
                 return CreatedAtAction(nameof(GetById), new { id = productId }, product);
->>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
-
                 if (product == null)
                     return NotFound();
 
                 // Trả về thông báo thành công và sản phẩm đã tạo
                 return Ok("Success");
-<<<<<<< HEAD
-=======
-
->>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
             }
             catch (Exception ex)
             {
