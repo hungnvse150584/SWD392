@@ -13,8 +13,8 @@ namespace Booking.Application.Catalog.Rooms
 {
     public class ManageRoomService : IManageRoomService
     {
-        private readonly BookingDBContext _context;
-        public ManageRoomService(BookingDBContext context)
+        private readonly BookingDbContext _context;
+        public ManageRoomService(BookingDbContext context)
         {
             _context = context;
         }

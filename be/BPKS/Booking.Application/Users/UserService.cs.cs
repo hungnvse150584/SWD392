@@ -39,7 +39,7 @@ namespace Booking.Application.Users
             var claims = new[]
             {
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.GivenName, user.FullName),
+                new Claim(ClaimTypes.GivenName, user.UserName),
                 new Claim(ClaimTypes.Role, string.Join(",", roles))
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"]));

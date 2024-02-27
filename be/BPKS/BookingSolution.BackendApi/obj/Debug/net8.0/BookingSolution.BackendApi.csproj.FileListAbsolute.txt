@@ -1,10 +1,3 @@
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.csproj.AssemblyReference.cache
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.AssemblyInfoInputs.cache
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.AssemblyInfo.cs
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.csproj.CoreCompileInputs.cache
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.sourcelink.json
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.deps.json
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.runtimeconfig.json
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.exe
@@ -89,7 +82,14 @@ C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.Utilities.pdb
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.ViewModels.pdb
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.pdb
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.csproj.AssemblyReference.cache
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.AssemblyInfoInputs.cache
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.AssemblyInfo.cs
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.csproj.CoreCompileInputs.cache
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.sourcelink.json
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\admin\User\Desktop\ky6\SWD392\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\staticwebassets\msbuild.BookingSolution.BackendApi.Microsoft.AspNetCore.StaticWebAssets.props

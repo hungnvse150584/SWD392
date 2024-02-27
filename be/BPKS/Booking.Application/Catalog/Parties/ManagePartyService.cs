@@ -8,8 +8,8 @@ namespace Booking.Application.Catalog.Parties
 {
     public class ManagePartyService : IManagePartyService
     {
-        private readonly BkpsContext _context;
-        public ManagePartyService(BkpsContext context)
+        private readonly BookingDbContext _context;
+        public ManagePartyService(BookingDbContext context)
         {
             _context = context;
         }

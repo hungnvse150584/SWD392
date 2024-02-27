@@ -24,30 +24,29 @@ namespace BookingSolution.BackendApi
         //Call run time
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BkpsContext>(options =>
+            services.AddDbContext<BookingDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 
-            //services.AddIdentity<Account, Role>()
-            //    .AddEntityFrameworkStores<BookingDBContext>()
-            //    .AddDefaultTokenProviders();
+            services.AddIdentity<Account, Role>()
+                .AddEntityFrameworkStores<BookingDbContext>()
+                .AddDefaultTokenProviders();
 
             //Khai báo
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
-<<<<<<< Updated upstream
+
             services.AddTransient<IManagePartyService, ManagePartyService>();
 
             services.AddScoped<IManageRoomService, ManageRoomService>();
             services.AddTransient<IPublicRoomService, PublicRoomService>();
             services.AddTransient<IManageRoomService, ManageRoomService>();
-=======
+
             services.AddTransient<IManagePartyService, ManagePartyService >();
             services.AddTransient<UserManager<Account>, UserManager<Account>>();
             services.AddTransient<SignInManager<Account>, SignInManager <Account>>();
             services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
             services.AddTransient<IUserService, UserService>();
 
->>>>>>> Stashed changes
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
@@ -79,7 +78,7 @@ namespace BookingSolution.BackendApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Product V1");
-                c.SwaggerEndpoint("/                                                n", "Swagger Party V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Party V1");
 
             });
 

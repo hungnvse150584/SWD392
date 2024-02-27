@@ -15,8 +15,8 @@ namespace Booking.Application.Catalog.Rooms
 {
     public class PublicRoomService : IPublicRoomService
     {
-        private readonly BookingDBContext _context;
-        public PublicRoomService(BookingDBContext context)
+        private readonly BookingDbContext _context;
+        public PublicRoomService(BookingDbContext context)
         {
             _context = context;
         }

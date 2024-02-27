@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Booking.Data.Entities
 {
 
-    public partial class Role
+    public partial class Role : IdentityRole<Guid>
     {
         public int RoleId { get; set; }
 

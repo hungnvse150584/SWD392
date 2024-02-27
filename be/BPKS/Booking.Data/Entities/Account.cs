@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Booking.Data.Entities
 {
-    public partial class Account
+    public partial class Account : IdentityUser<Guid>
     {
         public int UserId { get; set; }
 
