@@ -7,7 +7,11 @@
       "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\admin\\user\\desktop\\ky6\\swd392\\swd392\\be\\bpks\\booking.application\\catalog\\products\\manageproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|c:\\users\\admin\\user\\desktop\\ky6\\swd392\\swd392\\be\\bpks\\bookingsolution.backendapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\booking.application\\catalog\\products\\manageproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\products\\manageproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Startup.cs",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Startup.cs",
+              "ToolTip": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Startup.cs",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Startup.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAkwD4AAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T07:56:07.581Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +45,14 @@
               "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ProductController.cs",
               "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEgAAAANAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T07:48:11.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ManageProductService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Products\\ManageProductService.cs",
               "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Products\\ManageProductService.cs",
@@ -43,8 +60,7 @@
               "RelativeToolTip": "Booking.Application\\Catalog\\Products\\ManageProductService.cs",
               "ViewState": "AQIAAFUAAAAAAAAAAAAIwHUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T07:43:19.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-27T07:43:19.113Z"
             }
           ]
         }

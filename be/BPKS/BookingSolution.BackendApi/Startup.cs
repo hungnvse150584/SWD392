@@ -33,7 +33,9 @@ namespace BookingSolution.BackendApi
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Party Demo", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Product Demo", Version = "v1" });
+                c.SwaggerDoc("v2", new OpenApiInfo { Title = "Swagger Party Demo", Version = "v1" });
+
             }
                 );
         }
@@ -57,7 +59,9 @@ namespace BookingSolution.BackendApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Party V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Product V1");
+                c.SwaggerEndpoint("/                                                n", "Swagger Party V1");
+
             });
 
             app.UseAuthorization();
