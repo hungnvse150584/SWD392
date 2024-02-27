@@ -18,6 +18,8 @@ namespace Booking.Data.EF
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             //Category(Party)
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
+
+            modelBuilder.ApplyConfiguration(new RoomConfiguration());
             //Order
 
             //Data seeding
@@ -33,5 +35,6 @@ namespace Booking.Data.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<ListProduct> ListProducts { get; set; }
         public DbSet<Party> Parties { get; set; }
+        public DbSet<Room> Rooms { get; set; }
     }
 }

@@ -56,7 +56,7 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] RoomCreateRequest request)
+        public async Task<IActionResult> Create([FromBody] ProductCreateRequest request)
         {
             try
             {

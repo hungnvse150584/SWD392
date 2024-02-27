@@ -6,6 +6,8 @@ using DocumentFormat.OpenXml.Bibliography;
 using Google;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Booking.Application.Catalog.Products;
+using Booking.Application.Catalog.Rooms;
 
 namespace BookingSolution.BackendApi
 {
@@ -28,7 +30,11 @@ namespace BookingSolution.BackendApi
             //Khai báo
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
-            services.AddTransient<IManagePartyService, ManagePartyService >();
+            services.AddTransient<IManagePartyService, ManagePartyService>();
+
+            services.AddScoped<IManageRoomService, ManageRoomService>();
+            services.AddTransient<IPublicRoomService, PublicRoomService>();
+            services.AddTransient<IManageRoomService, ManageRoomService>();
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>

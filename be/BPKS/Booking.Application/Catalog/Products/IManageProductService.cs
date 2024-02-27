@@ -4,11 +4,11 @@ namespace Booking.Application.Catalog.Products
 {
     public interface IManageProductService
     {
-        Task<int> Create(RoomCreateRequest request);
+        Task<int> Create(ProductCreateRequest request);
         Task<int> Update(ProductUpdateRequest request);
         Task<int> Delete(int productId);
-        Task<List<RoomVm>> GetAll();
-        Task<List<RoomVm>> GetAllPaging(GetPublicProductPagingRequest request);
-        Task<RoomVm> GetById(int productId);
+        Task<List<ProductVm>> GetAll();
+        Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request);
+        Task<ProductVm> GetById(int productId);
     }
 }
