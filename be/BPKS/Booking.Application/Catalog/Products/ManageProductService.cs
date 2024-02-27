@@ -41,28 +41,28 @@ namespace Booking.Application.Catalog.Products
         public async Task<int> Update(ProductUpdateRequest request)
         {
             var product = await _context.Products.FindAsync(request.ProductId);
-            if (product == null) throw new Exception($"Cannot find a product with id:{request.ProductId}.");
+            if (product == null)
+            {
+                throw new Exception($"Cannot find a product with id:{request.ProductId}.");
+            }
 
             product.ProductName = request.ProductName;
             product.ProductUrl = request.ProductUrl;
             product.ProductType = request.ProductType;
             product.ProductStyle = request.ProductStyle;
             product.Price = request.Price;
-                //ProductUrl = request.ProductUrl,
-                //ProductType = request.ProductType,
-                //ProductStyle = request.ProductStyle,
-                //Price = request.Price,
-                //ThumbnailUrl = request.ThumbnailUrl,
-                //DayStart = request.DayStart,
-                //DayEnd = request.DayEnd,
-                //CreatedDate = DateTime.Now,
-                //PartyStatus = request.PartyStatus,
+
             return await _context.SaveChangesAsync();
         }
+
         public async Task<int> Delete(int productId)
         {
             var product = await _context.Products.FindAsync(productId);
-            if (product != null) throw new BookingException($"Cannot find a product: {productId}");
+            if (product == null)
+            {
+                throw new BookingException($"Cannot find a product: {productId}");
+            }
+
             _context.Products.Remove(product);
             return await _context.SaveChangesAsync();
         }
@@ -94,9 +94,27 @@ namespace Booking.Application.Catalog.Products
 
         }
 
-        public Task<ProductVm> GetById(int productId)
+        public async Task<ProductVm> GetById(int productId)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.FindAsync(productId);
+            if (product == null)
+            {
+                return null;
+            }
+
+            var productVm = new ProductVm
+            {
+                ProductId = product.ProductId,
+                PartyHostId = product.PartyHostId,
+                ProductName = product.ProductName,
+                ProductUrl = product.ProductUrl,
+                ProductType = product.ProductType,
+                ProductStyle = product.ProductStyle,
+                Price = product.Price,
+                ProductStatus = product.ProductStatus
+            };
+
+            return productVm;
         }
     }
 }

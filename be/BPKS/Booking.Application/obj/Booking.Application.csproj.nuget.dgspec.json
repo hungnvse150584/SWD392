@@ -1,38 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj": {}
+    "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj": {
+    "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
         "projectName": "Booking.Application",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\obj\\",
+        "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
               }
             }
           }
@@ -77,35 +76,34 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
+    "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj",
         "projectName": "Booking.Data",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\obj\\",
+        "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
               }
             }
           }
@@ -158,35 +156,34 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
+    "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
         "projectName": "Booking.WebApp",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\obj\\",
+        "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\Booking.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj"
               }
             }
           }
@@ -234,24 +231,23 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+    "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
         "projectName": "BookingSolution.Utilities",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\obj\\",
+        "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -294,32 +290,31 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
+    "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
         "projectName": "BookingSolution.ViewModels",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\obj\\",
+        "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+              "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\SWD392\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
               }
             }
           }

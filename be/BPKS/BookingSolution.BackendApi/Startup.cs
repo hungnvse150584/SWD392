@@ -26,6 +26,7 @@ namespace BookingSolution.BackendApi
                     options => options.EnableRetryOnFailure()));
 
             //Khai báo
+            services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManagePartyService, ManagePartyService >();
 
