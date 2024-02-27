@@ -4,6 +4,7 @@ using Booking.Data.EF;
 using BookingSolution.Utilities.Constants;
 using DocumentFormat.OpenXml.Bibliography;
 using Google;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -29,6 +30,7 @@ namespace BookingSolution.BackendApi
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManagePartyService, ManagePartyService >();
+            //services.AddTransient<UserManager, ManagePartyService>();
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
