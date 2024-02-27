@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "PnA3wg8fKHvLmnt0z6rz7fg977edUXVioULdU9kprTQeX6ntb+4QMzGfV/OH//T8xOuqt647qweVh8mo9XPxRQ==",
+  "dgSpecHash": "N9a84wBORD11vF7WXCEiiTkZHzFy8ZI2qIVcQ03q5mqyN2+Hiy1TbxcWtr/ORIuVnkRZugRlpzW9jKQhqXFjag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+  "projectFilePath": "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    "C:\\Users\\Admins\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Admins\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Admins\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\Admins\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\Admins\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }

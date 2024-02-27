@@ -309,3 +309,14 @@ C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\ne
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 =======
 >>>>>>> 8dee79aba3dc08f0b50fef06c28bb3d587a8c95e
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.csproj.AssemblyReference.cache
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.AssemblyInfoInputs.cache
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.AssemblyInfo.cs
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.csproj.CoreCompileInputs.cache
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.MvcApplicationPartsAssemblyInfo.cs
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.MvcApplicationPartsAssemblyInfo.cache
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.sourcelink.json
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.dll
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\refint\BookingSolution.BackendApi.dll
+D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.pdb

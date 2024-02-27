@@ -8288,36 +8288,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Admins\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
+      "projectUniqueName": "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
       "projectName": "Booking.Application",
-      "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.Application\\obj\\",
+      "projectPath": "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\Booking.Application\\Booking.Application.csproj",
+      "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+      "outputPath": "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\Booking.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
-              "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj"
+            "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
+              "projectPath": "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj"
             },
-            "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
-              "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+            "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+              "projectPath": "D:\\FPT\\s7\\SWD\\prj\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
             }
           }
         }

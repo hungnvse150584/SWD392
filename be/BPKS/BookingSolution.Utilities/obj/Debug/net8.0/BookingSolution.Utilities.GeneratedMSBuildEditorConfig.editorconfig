@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookingSolution.Utilities
-build_property.ProjectDir = C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.Utilities\
+build_property.ProjectDir = D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
