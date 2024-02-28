@@ -44,9 +44,10 @@ namespace BookingSolution.BackendApi
             services.AddTransient<UserManager<Account>, UserManager<Account>>();
             services.AddTransient<SignInManager<Account>, SignInManager <Account>>();
             services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
+
             services.AddTransient<IUserService, UserService>();
 
-            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
+            //services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
 
 
             services.AddControllersWithViews();

@@ -39,7 +39,7 @@ namespace Booking.Application.Users
             var claims = new[]
             {
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.GivenName,user.FullName),
+                //new Claim(ClaimTypes.GivenName,user.FullName),
                 new Claim(ClaimTypes.Role, string.Join(",", roles)),
                 new Claim(ClaimTypes.Name, request.UserName)
             };
@@ -68,7 +68,7 @@ namespace Booking.Application.Users
             }
             user = new Account()
             {
-                FullName = request.FullName,
+                //FullName = request.FullName,
                 Email = request.Email,
                 UserName = request.UserName,
                 PhoneNumber = request.PhoneNumber,
