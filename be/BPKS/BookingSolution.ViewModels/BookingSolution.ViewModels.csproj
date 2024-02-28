@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Catalog\Parents\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BookingSolution.Utilities\BookingSolution.Utilities.csproj" />
   </ItemGroup>
 

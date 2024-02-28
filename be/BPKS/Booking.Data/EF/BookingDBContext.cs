@@ -19,6 +19,7 @@ namespace Booking.Data.EF
             //Category(Party)
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             //Order
+            modelBuilder.ApplyConfiguration(new ParentConfiguration());
 
             //Data seeding
             modelBuilder.Entity<AppConfig>().HasData(
@@ -33,5 +34,6 @@ namespace Booking.Data.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<ListProduct> ListProducts { get; set; }
         public DbSet<Party> Parties { get; set; }
+        public DbSet<Parent> Parents { get; set; }
     }
 }

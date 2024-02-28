@@ -1,4 +1,5 @@
-﻿using Booking.Application.Catalog.Parties;
+﻿using Booking.Application.Catalog.Parents;
+using Booking.Application.Catalog.Parties;
 using Booking.Application.Catalog.Products;
 using Booking.Data.EF;
 using BookingSolution.Utilities.Constants;
@@ -29,7 +30,8 @@ namespace BookingSolution.BackendApi
             services.AddScoped<IManageProductService, ManageProductService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
             services.AddTransient<IManagePartyService, ManagePartyService >();
-
+            services.AddScoped<IManageParentService, ManageParentService>();
+            services.AddTransient<IPublicParentService, PublicParentService>();
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {

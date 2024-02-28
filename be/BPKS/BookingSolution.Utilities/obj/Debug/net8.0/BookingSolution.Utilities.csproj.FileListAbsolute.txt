@@ -22,3 +22,15 @@ C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\refint\BookingSolution.Utilities.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.pdb
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\ref\BookingSolution.Utilities.dll
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\bin\Debug\net8.0\BookingSolution.Utilities.deps.json
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\bin\Debug\net8.0\BookingSolution.Utilities.dll
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\bin\Debug\net8.0\BookingSolution.Utilities.pdb
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.AssemblyInfoInputs.cache
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.AssemblyInfo.cs
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.csproj.CoreCompileInputs.cache
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.sourcelink.json
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.dll
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\refint\BookingSolution.Utilities.dll
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.pdb
+D:\FPT\1_SWD392\Clone\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\ref\BookingSolution.Utilities.dll

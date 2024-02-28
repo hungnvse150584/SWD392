@@ -56,6 +56,23 @@ namespace Booking.Data.EF {
                 entity.Property(e => e.UserName).HasMaxLength(255);
             });
 
+
+            modelBuilder.Entity<Parent>(entity =>
+            {
+                entity.HasKey(e => e.ParentId).HasName("PK__Parent__B47CC54C9BCAAD2B");
+
+                entity.ToTable("Parent");
+
+                entity.Property(e => e.Address).HasMaxLength(255);
+                entity.Property(e => e.UserUrl).HasMaxLength(500);
+                entity.Property(e => e.Email).HasMaxLength(255);
+                entity.Property(e => e.FullName).HasMaxLength(255);
+                entity.Property(e => e.Password).HasMaxLength(255);
+                entity.Property(e => e.PhoneNumber).HasMaxLength(255);
+                entity.Property(e => e.Status).HasMaxLength(255);
+                entity.Property(e => e.UserName).HasMaxLength(255);
+            });
+
             modelBuilder.Entity<AppConfig>(entity =>
             {
                 entity.HasKey(e => e.Key).HasName("PK__AppConfi__C41E0288FAA7AA0E");

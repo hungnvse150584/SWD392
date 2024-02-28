@@ -1,5 +1,121 @@
 [
   {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "GetAll",
+    "RelativePath": "api/Parent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "Create",
+    "RelativePath": "api/Parent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.Catalog.Parents.ParentCreateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "Update",
+    "RelativePath": "api/Parent",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.Catalog.Parents.ParentUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "GetById",
+    "RelativePath": "api/Parent/{parentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "Delete",
+    "RelativePath": "api/Parent/{parentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "Get",
+    "RelativePath": "api/Parent/public-paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ParentController",
+    "Method": "GetSortedParents",
+    "RelativePath": "api/Parent/Sort",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookingSolution.BackendApi.Controllers.ProductController",
     "Method": "GetAll",
     "RelativePath": "api/Product",
