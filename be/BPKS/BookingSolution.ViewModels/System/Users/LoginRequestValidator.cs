@@ -1,8 +1,4 @@
-﻿using BookingSolution.ViewModels.System.Users;
-using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using FluentValidation;
 
 namespace BookingSolution.ViewModels.System.Users
 {

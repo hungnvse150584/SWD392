@@ -5,15 +5,13 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Booking.Data.EF
 {
-
-    public partial class BookingDbContext : IdentityDbContext<Account, Role, Guid>
+    public class BookingDbContext : IdentityDbContext<Account, Role, Guid>
     {
-        public BookingDbContext()
-        {
-        }
+        //public BookingDbContext()
+        //{
+        //}
 
-        public BookingDbContext(DbContextOptions<BookingDbContext> options)
-            : base(options)
+        public BookingDbContext(DbContextOptions<BookingDbContext> options) : base(options)
         {
         }
 
@@ -54,7 +52,6 @@ namespace Booking.Data.EF
                 new AppConfig() { Key = "homekeyword", Value = "this is keyword of bookingsolution" },
                 new AppConfig() { Key = "homedescription", Value = "this is description of bookingsolution" }
                 );
-
 
 
             modelBuilder.Entity<Account>(entity =>

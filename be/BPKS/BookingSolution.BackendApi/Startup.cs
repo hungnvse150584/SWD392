@@ -12,7 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using Booking.Application.Catalog.Products;
 using Booking.Application.Catalog.Rooms;
 
 namespace BookingSolution.BackendApi
@@ -39,17 +38,15 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IPublicProductService, PublicProductService>();
 
             services.AddTransient<IManagePartyService, ManagePartyService>();
-
             services.AddScoped<IManageRoomService, ManageRoomService>();
             services.AddTransient<IPublicRoomService, PublicRoomService>();
-            services.AddTransient<IManageRoomService, ManageRoomService>();
-
             services.AddTransient<IManageProductService, ManageProductService>();
-             services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
             services.AddTransient<UserManager<Account>, UserManager<Account>>();
             services.AddTransient<SignInManager<Account>, SignInManager <Account>>();
             services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
             services.AddTransient<IUserService, UserService>();
+
+            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
 
 
             services.AddControllersWithViews();

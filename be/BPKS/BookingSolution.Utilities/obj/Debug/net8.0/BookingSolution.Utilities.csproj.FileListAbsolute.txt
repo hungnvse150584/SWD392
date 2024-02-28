@@ -10,15 +10,3 @@ C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\refint\BookingSolution.Utilities.dll
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.pdb
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\ref\BookingSolution.Utilities.dll
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\bin\Debug\net8.0\BookingSolution.Utilities.deps.json
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\bin\Debug\net8.0\BookingSolution.Utilities.dll
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\bin\Debug\net8.0\BookingSolution.Utilities.pdb
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.GeneratedMSBuildEditorConfig.editorconfig
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.AssemblyInfoInputs.cache
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.AssemblyInfo.cs
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.csproj.CoreCompileInputs.cache
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.sourcelink.json
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.dll
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\refint\BookingSolution.Utilities.dll
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\BookingSolution.Utilities.pdb
-D:\FPT\s7\SWD\prj\SWD392\be\BPKS\BookingSolution.Utilities\obj\Debug\net8.0\ref\BookingSolution.Utilities.dll

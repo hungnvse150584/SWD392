@@ -22,12 +22,13 @@ namespace BookingSolution.BackendApi.Controllers
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var resultToken = await _userService.Authencate(request);
-            if(string.IsNullOrEmpty(resultToken))
+            var result = await _userService.Authencate(request);
+
+            if (string.IsNullOrEmpty(result.ResultObj))
             {
                 return BadRequest("Username or password is incorrent.");
             }
-            return Ok(resultToken);
+            return Ok(result);
         }
 
         [HttpPost("register")]
@@ -38,11 +39,11 @@ namespace BookingSolution.BackendApi.Controllers
                 return BadRequest(ModelState);
 
             var result = await _userService.Register(request);
-            if (!result)
+            if (!result.IsSuccessed)
             {
-                return BadRequest("Register is unsuccessful");
+                return BadRequest(result);
             }
-            return Ok();
+            return Ok(result);
         }
     }
 }
