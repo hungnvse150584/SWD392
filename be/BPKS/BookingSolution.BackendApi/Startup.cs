@@ -94,8 +94,8 @@ namespace BookingSolution.BackendApi
                     });
             });
 
-            string issuer = Configuration.GetValue<string>("this is my custom Secret key for authentication");
-            string signingKey = Configuration.GetValue<string>("this is my custom Secret key for authentication");
+            string issuer = Configuration.GetValue<string>("Tokens:Issuer");
+            string signingKey = Configuration.GetValue<string>("Tokens:Key");
             byte[] signingKeyBytes = System.Text.Encoding.UTF8.GetBytes(signingKey);
 
             services.AddAuthentication(opt =>
