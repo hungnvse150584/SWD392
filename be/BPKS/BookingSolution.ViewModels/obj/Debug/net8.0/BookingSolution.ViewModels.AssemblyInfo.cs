@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookingSolution.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58222f7dcf44ee39c5df9ac763816beda523429a")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e1901278560dab13cc999ed2cba336b02e40bfa")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("BookingSolution.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookingSolution.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

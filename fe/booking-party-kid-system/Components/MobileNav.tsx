@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import React from "react";
 
@@ -20,7 +21,7 @@ const MobileNav = ({ nav, closeNav }: Props) => {
         <div className="nav-link-mobile">Review</div>
         <div className="nav-link-mobile">Contact</div>
         <a
-          href=""
+          href="/loginPage"
           className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-medium tracking-tighter text-white bg-gray-800 rounded-lg group"
         >
           <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-600 rounded-full group-hover:w-56 group-hover:h-56"></span>

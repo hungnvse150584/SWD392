@@ -2,6 +2,9 @@ import { Bars3Icon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import React from "react";
 
+
+
+
 interface Props {
   openNav: ()=>void
 }
@@ -31,7 +34,7 @@ const Navbar = ({ openNav }: Props) => {
             Contact
           </a>
           <a
-            href=""
+            href="/loginPage"
             className="relative hidden lg:inline-flex items-center justify-center px-10 py-3 overflow-hidden font-medium tracking-tighter text-white bg-gray-800 rounded-lg group"
           >
             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-600 rounded-full group-hover:w-56 group-hover:h-56"></span>
