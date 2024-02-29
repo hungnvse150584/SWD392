@@ -3,18 +3,25 @@ GO
 
 use BKPS;
 GO
-CREATE TABLE Account (
-    UserId INT IDENTITY(1,1) PRIMARY KEY,
-	UserName nvarchar(255),
-    Password NVARCHAR(255),
-	FullName nvarchar(255),
-    Email NVARCHAR(255),
-	PhoneNumber NVARCHAR(255),
-    AvatarUrl nvarchar(500),
-	CreatedDate Date,
-    Address nvarchar(255),
-	Role int,
-	Status nvarchar(255),
+CREATE TABLE [dbo].[Account] (
+[Id]                   UNIQUEIDENTIFIER  NOT NULL,
+[Email]                NVARCHAR (256) NULL,
+[EmailConfirmed]       BIT            NOT NULL,
+[PasswordHash]         NVARCHAR (MAX) NULL,
+[SecurityStamp]        NVARCHAR (MAX) NULL,
+[PhoneNumber]          NVARCHAR (MAX) NULL,
+[PhoneNumberConfirmed] BIT            NOT NULL,
+[TwoFactorEnabled]     BIT            NOT NULL,
+[LockoutEndDateUtc]    DATETIME       NULL,
+[LockoutEnabled]       BIT            NOT NULL,
+[AccessFailedCount]    INT            NOT NULL,
+[UserName]             NVARCHAR (256) NOT NULL,
+[NormalizedUserName]   NVARCHAR (MAX) NULL,
+[ConcurrencyStamp]   NVARCHAR (MAX) NULL,
+[NormalizedEmail]   NVARCHAR (MAX) NULL,
+[LockoutEnd]           DateTimeOffset(7)            NULL   
+
+CONSTRAINT [PK_dbo.Account] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
 CREATE TABLE Party (
@@ -93,10 +100,57 @@ CREATE TABLE Feedback (
 	Feedback nvarchar(2000),
 );
 
-CREATE TABLE Role (
-	RoleId INT PRIMARY KEY,
-	RoleName nvarchar(100)
+CREATE TABLE [dbo].[Roles] (
+[Id]   UNIQUEIDENTIFIER  NOT NULL,
+[Name] NVARCHAR (256) NOT NULL,
+CONSTRAINT [PK_dbo.Roles] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [RoleNameIndex]
+ON [dbo].[Roles]([Name] ASC);
+
+CREATE UNIQUE NONCLUSTERED INDEX [UserNameIndex]
+ON [dbo].[Account]([UserName] ASC);
+
+CREATE TABLE [dbo].[AspNetUserRoles] (
+[UserId] UNIQUEIDENTIFIER  NOT NULL,
+[RoleId] UNIQUEIDENTIFIER  NOT NULL,
+CONSTRAINT [PK_dbo.AspNetUserRoles] PRIMARY KEY CLUSTERED ([UserId] ASC, [RoleId] ASC),
+CONSTRAINT [FK_dbo.AspNetUserRoles_dbo.AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[Roles] ([Id]) ON DELETE CASCADE,
+CONSTRAINT [FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Account] ([Id]) ON DELETE CASCADE
+ );
+
+CREATE NONCLUSTERED INDEX [IX_UserId]
+ON [dbo].[AspNetUserRoles]([UserId] ASC);
+
+CREATE NONCLUSTERED INDEX [IX_RoleId]
+ON [dbo].[AspNetUserRoles]([RoleId] ASC);
+
+CREATE TABLE [dbo].[UserLogins] (
+[LoginProvider] NVARCHAR (128) NOT NULL,
+[ProviderKey]   NVARCHAR (128) NOT NULL,
+[UserId]       UNIQUEIDENTIFIER  NOT NULL,
+CONSTRAINT [PK_dbo.AspNetUserLogins] PRIMARY KEY CLUSTERED ([LoginProvider] ASC, [ProviderKey] ASC, [UserId] ASC),
+CONSTRAINT [FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Account] ([Id]) ON DELETE CASCADE
+);
+
+CREATE NONCLUSTERED INDEX [IX_UserId]
+ON [dbo].[UserLogins]([UserId] ASC);
+
+
+
+CREATE TABLE [dbo].[UserClaims] (
+[Id]         INT            IDENTITY (1, 1) NOT NULL,
+[UserId]    UNIQUEIDENTIFIER  NOT NULL,
+[ClaimType]  NVARCHAR (MAX) NULL,
+[ClaimValue] NVARCHAR (MAX) NULL,
+CONSTRAINT [PK_dbo.AspNetUserClaims] PRIMARY KEY CLUSTERED ([Id] ASC),
+CONSTRAINT [FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Account] ([Id]) ON DELETE CASCADE
+);
+
+CREATE NONCLUSTERED INDEX [IX_UserId]
+ON [dbo].[UserClaims]([UserId] ASC);
 
 ALTER TABLE ListParty
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
@@ -120,11 +174,10 @@ ADD FOREIGN KEY (RoomId) REFERENCES Room(RoomId);
 ALTER TABLE Feedback
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
 
-ALTER TABLE Account
-ADD FOREIGN KEY (Role) REFERENCES Role(RoleId);
 
 
 
-INSERT INTO Role (RoleId, RoleName) VALUES (1, N'Party Host');
-INSERT INTO Role (RoleId, RoleName) VALUES (2, N'Parent');
-INSERT INTO Role (RoleId, RoleName) VALUES (3, N'Admin');
+
+INSERT INTO Roles (Id, Name) VALUES (1, N'Party Host');
+INSERT INTO Roles (Id, Name) VALUES (2, N'Parent');
+INSERT INTO Roles (Id, Name) VALUES (3, N'Admin');

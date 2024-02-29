@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Booking.Data.Entities;
 using Booking.Data.Configurations;
+
+using Microsoft.AspNetCore.Identity;
+
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Booking.Data.EF
@@ -56,19 +59,7 @@ namespace Booking.Data.EF
 
             modelBuilder.Entity<Account>(entity =>
             {
-                entity.HasKey(e => e.UserId).HasName("PK__Account__1788CC4C16258973");
-
                 entity.ToTable("Account");
-
-                entity.Property(e => e.Address).HasMaxLength(255);
-                entity.Property(e => e.AvatarUrl).HasMaxLength(500);
-                entity.Property(e => e.Email).HasMaxLength(255);
-                entity.Property(e => e.FullName).HasMaxLength(255);
-                entity.Property(e => e.Password).HasMaxLength(255);
-                entity.Property(e => e.PhoneNumber).HasMaxLength(255);
-                entity.Property(e => e.Status).HasMaxLength(255);
-                entity.Property(e => e.UserName).HasMaxLength(255);
-
 
             });
 
@@ -177,12 +168,11 @@ namespace Booking.Data.EF
 
             modelBuilder.Entity<Role>(entity =>
             {
-                entity.HasKey(e => e.RoleId).HasName("PK__Role__8AFACE1A1CAC3A68");
+               
 
-                entity.ToTable("Role");
+                entity.ToTable("Roles");
 
-                entity.Property(e => e.RoleId).ValueGeneratedNever();
-                entity.Property(e => e.RoleName).HasMaxLength(100);
+                
             });
 
             modelBuilder.Entity<Room>(entity =>
@@ -196,6 +186,14 @@ namespace Booking.Data.EF
                 entity.Property(e => e.RoomType).HasMaxLength(50);
                 entity.Property(e => e.RoomUrl).HasMaxLength(1000);
             });
+
+            modelBuilder.Entity <IdentityUserClaim<Guid>>().ToTable("UserClaims");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new {x.UserId, x.RoleId });
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("UserLogins").HasKey(x => x.UserId);
+            //modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AspNetUserClaims");
+            // modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AspNetUserClaims").HasKey(x => x.UserId);
+  
+
             base.OnModelCreating(modelBuilder);
 
         }

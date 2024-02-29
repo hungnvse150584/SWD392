@@ -57,6 +57,7 @@ namespace Booking.Application.Users
 
         public async Task<ApiResult<bool>> Register(RegisterRequest request)
         {
+
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user != null)
             {
@@ -68,11 +69,12 @@ namespace Booking.Application.Users
             }
             user = new Account()
             {
+                
                 //FullName = request.FullName,
                 Email = request.Email,
-                UserName = request.UserName,
+                UserName = request.UserName.Trim(),
                 PhoneNumber = request.PhoneNumber,
-                Address = request.Address
+                //Address = request.Address
             };
             var result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded)

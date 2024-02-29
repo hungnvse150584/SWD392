@@ -13,9 +13,10 @@ namespace Booking.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Role> builder)
         {
-            builder.ToTable("Role");
+            builder.ToTable("Roles");
 
-            builder.Property(x => x.RoleName).HasMaxLength(200).IsRequired();
+            
+            
 
         }
     }

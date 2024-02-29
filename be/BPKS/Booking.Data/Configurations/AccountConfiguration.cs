@@ -15,7 +15,7 @@ namespace Booking.Data.Configurations
         public void Configure(EntityTypeBuilder<Account> builder)
         {
             builder.ToTable("Account");
-            builder.Property(x => x.FullName).IsRequired().HasMaxLength(200);
+            
 
         }
     }
