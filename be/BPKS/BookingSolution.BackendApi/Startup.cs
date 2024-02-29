@@ -54,11 +54,13 @@ namespace BookingSolution.BackendApi
 
             services.AddTransient<IUserService, UserService>();
 
-            services.AddControllers()
-                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
+            services.AddControllers();
+
+            //services.AddControllers()
+            //    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
 
 
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Product Demo", Version = "v1" });
@@ -136,7 +138,10 @@ namespace BookingSolution.BackendApi
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseAuthentication();
             app.UseRouting();
+            app.UseAuthorization();
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -144,8 +149,6 @@ namespace BookingSolution.BackendApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Party V1");
 
             });
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

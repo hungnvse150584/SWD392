@@ -18,6 +18,7 @@ namespace BookingSolution.BackendApi.Controllers
             _manageProductService = manageProductService;
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAll()
         {
             try
@@ -56,7 +57,6 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpPost]
         //[Authorize(Roles = "1")]
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
@@ -68,14 +68,11 @@ namespace BookingSolution.BackendApi.Controllers
                     return BadRequest();
 
                 var product = await _manageProductService.GetById(productId);
-                return CreatedAtAction(nameof(GetById), new { id = productId }, product);
-                //return Ok("ok");
-                return CreatedAtAction(nameof(GetById), new { id = productId }, product);
                 if (product == null)
                     return NotFound();
 
                 // Trả về thông báo thành công và sản phẩm đã tạo
-                return Ok("Success");
+                return CreatedAtAction(nameof(GetById), new { id = productId }, product);
             }
             catch (Exception ex)
             {

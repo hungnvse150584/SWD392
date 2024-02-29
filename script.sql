@@ -103,6 +103,9 @@ CREATE TABLE Feedback (
 CREATE TABLE [dbo].[AspNetRoles] (
 [Id]   UNIQUEIDENTIFIER NOT NULL,
 [Name] NVARCHAR (256) NOT NULL,
+[NormalizedUserName] NVARCHAR(MAX) NULL,
+[ConcurrencyStamp] NVARCHAR(MAX) NULL, 
+
 CONSTRAINT [PK_dbo.AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 GO
@@ -223,8 +226,10 @@ VALUES
 -- Insert dữ liệu mẫu vào bảng AppConfig
 INSERT INTO AppConfig ([Key], Value)
 VALUES
-    ('Key1', 'Value1'),
-    ('Key2', 'Value2');
+    ('HomeDescription', 'This is description of Booking'),
+    ('HomeKeyword', 'This is keyword of Booking');
+    ('HomeTitle', 'This is home page of Booking');
+
 
 -- Insert dữ liệu mẫu vào bảng Feedback
 INSERT INTO Feedback (ParentId, PartyId, PartyHostId, Score, Feedback)
@@ -233,10 +238,12 @@ VALUES
     (2, 2, 2, 5, 'Excellent service');
 
 -- Insert dữ liệu mẫu vào bảng AspNetRoles
-INSERT INTO [dbo].[AspNetRoles] ([Id], [Name])
-VALUES 
-    ('33333333-3333-3333-3333-333333333333', 'Admin'),
-    ('44444444-4444-4444-4444-444444444444', 'User');
+INSERT INTO [dbo].[AspNetRoles] ([Id], [Name], [NormalizedUserName], [ConcurrencyStamp])
+VALUES
+    ('role_id_1', 'RoleName1', 'normalized_username_1', 'concurrency_stamp_1'),
+    ('role_id_2', 'RoleName2', 'normalized_username_2', 'concurrency_stamp_2'),
+    ('role_id_3', 'RoleName3', 'normalized_username_3', 'concurrency_stamp_3');
+
 
 -- Insert dữ liệu mẫu vào bảng AspNetUserRoles
 INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId])
