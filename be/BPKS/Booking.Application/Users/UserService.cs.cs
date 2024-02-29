@@ -12,12 +12,12 @@ namespace Booking.Application.Users
 {
     public class UserService : IUserService
     {
-        private readonly UserManager<Account> _userManager;
-        private readonly SignInManager<Account> _signInManager;
+        private readonly UserManager<AspNetUsers> _userManager;
+        private readonly SignInManager<AspNetUsers> _signInManager;
         private readonly RoleManager<Role> _roleManager;
         private readonly IConfiguration _config;
 
-        public UserService(UserManager<Account> userManager, SignInManager<Account> signInManager, RoleManager<Role> roleManager, IConfiguration config)
+        public UserService(UserManager<AspNetUsers> userManager, SignInManager<AspNetUsers> signInManager, RoleManager<Role> roleManager, IConfiguration config)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -43,11 +43,14 @@ namespace Booking.Application.Users
                 new Claim(ClaimTypes.Role, string.Join(",", roles)),
                 new Claim(ClaimTypes.Name, request.UserName)
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"]));
+
+            //link fix bug :https://stackoverflow.com/questions/47279947/idx10603-the-algorithm-hs256-requires-the-securitykey-keysize-to-be-greater
+            //Điều đó đã giải quyết được vấn đề của tôi vì số HmacSha256trong dòng SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256)phải lớn hơn 128 bit.Tóm lại, chỉ cần sử dụng một chuỗi dài làm khóa.
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var token = new JwtSecurityToken(_config["Tokens:Issuer"],
-                _config["Tokens:Issuer"],
+            var token = new JwtSecurityToken(_config["this is my custom Secret key for authentication"],
+                _config["this is my custom Secret key for authentication"],
                 claims,
                 expires: DateTime.Now.AddHours(3),
                 signingCredentials: creds);
@@ -67,11 +70,11 @@ namespace Booking.Application.Users
             {
                 return new ApiErrorResult<bool>("Emai đã tồn tại");
             }
-             user = new Account()
+             user = new AspNetUsers()
             {
-                
-                //FullName = request.FullName,
-                Email = request.Email,
+
+                 //FullName = request.FullName,
+                 Email = request.Email,
                 UserName = request.UserName.Trim(),
                 PhoneNumber = request.PhoneNumber,
                 //Address = request.Address

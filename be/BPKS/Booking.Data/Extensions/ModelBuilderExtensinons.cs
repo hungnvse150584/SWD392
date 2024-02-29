@@ -18,9 +18,6 @@ namespace Booking.Data.Extensions
                new AppConfig() { Key = "HomeKeyword", Value = "This is keyword of eShopSolution" },
                new AppConfig() { Key = "HomeDescription", Value = "This is description of eShopSolution" }
                );
-
-
-
         }
     }
 }

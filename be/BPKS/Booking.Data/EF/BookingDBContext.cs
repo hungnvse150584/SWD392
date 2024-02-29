@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Booking.Data.EF
 {
-    public class BookingDbContext : IdentityDbContext<Account, Role, Guid>
+    public class BookingDbContext : IdentityDbContext<AspNetUsers, Role, Guid>
     {
         //public BookingDbContext()
         //{
@@ -18,7 +18,7 @@ namespace Booking.Data.EF
         {
         }
 
-        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
 
         public virtual DbSet<AppConfig> AppConfigs { get; set; }
 
@@ -44,7 +44,7 @@ namespace Booking.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AccountConfiguration());
+            modelBuilder.ApplyConfiguration(new AspNetUsersConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
@@ -57,9 +57,9 @@ namespace Booking.Data.EF
                 );
 
 
-            modelBuilder.Entity<Account>(entity =>
+            modelBuilder.Entity<AspNetUsers>(entity =>
             {
-                entity.ToTable("Account");
+                entity.ToTable("AspNetUsers");
 
             });
 
@@ -187,11 +187,8 @@ namespace Booking.Data.EF
                 entity.Property(e => e.RoomUrl).HasMaxLength(1000);
             });
 
-            modelBuilder.Entity<IdentityUser>().ToTable("Account").Property(p => p.Id).HasColumnName("Id");
-            modelBuilder.Entity<Account>().ToTable("Account").Property(p => p.Id).HasColumnName("Id");
-         
-          
-            
+            //modelBuilder.Entity<IdentityUser>().ToTable("AspNetUsers").Property(p => p.Id).HasColumnName("Id");
+            //modelBuilder.Entity<AspNetUsers>().ToTable("AspNetUsers").Property(p => p.Id).HasColumnName("Id");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
 
             modelBuilder.Entity <IdentityUserClaim<Guid>>().ToTable("UserClaims");

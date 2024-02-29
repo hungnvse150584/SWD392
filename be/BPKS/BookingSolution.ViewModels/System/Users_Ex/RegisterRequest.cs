@@ -7,11 +7,11 @@ namespace BookingSolution.ViewModels.System.Users_Ex
 {
     public class RegisterRequest
     {
-        [Display(Name = "Tên")]
-        public string FirstName { get; set; }
+        //[Display(Name = "Tên")]
+        //public string FirstName { get; set; }
 
-        [Display(Name = "Họ")]
-        public string LastName { get; set; }
+        //[Display(Name = "Họ")]
+        //public string LastName { get; set; }
 
         [Display(Name = "Ngày sinh")]
         [DataType(DataType.Date)]
