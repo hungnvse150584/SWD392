@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Booking.Data.Entities
 {
-    [Table("Account")]
+    
     public partial class Account : IdentityUser<Guid>
     {
      //public int UserId { get; set; }

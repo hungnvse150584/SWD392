@@ -67,7 +67,7 @@ namespace Booking.Application.Users
             {
                 return new ApiErrorResult<bool>("Emai đã tồn tại");
             }
-            user = new Account()
+             user = new Account()
             {
                 
                 //FullName = request.FullName,

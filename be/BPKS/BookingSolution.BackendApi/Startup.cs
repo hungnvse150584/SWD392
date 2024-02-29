@@ -27,12 +27,17 @@ namespace BookingSolution.BackendApi
         //Call run time
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<BookingDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 
-            services.AddIdentity<Account, Role>()
+      
+
+            services.AddIdentity<Account, Role>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<BookingDbContext>()
                 .AddDefaultTokenProviders();
+
+         
 
             //Khai báo
             services.AddTransient<IPublicProductService, PublicProductService>();
@@ -48,7 +53,7 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IUserService, UserService>();
 
             //services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
-
+           
 
             services.AddControllersWithViews();
             services.AddSwaggerGen(c =>

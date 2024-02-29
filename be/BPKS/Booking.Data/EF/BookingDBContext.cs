@@ -187,6 +187,13 @@ namespace Booking.Data.EF
                 entity.Property(e => e.RoomUrl).HasMaxLength(1000);
             });
 
+            modelBuilder.Entity<IdentityUser>().ToTable("Account").Property(p => p.Id).HasColumnName("Id");
+            modelBuilder.Entity<Account>().ToTable("Account").Property(p => p.Id).HasColumnName("Id");
+         
+          
+            
+            modelBuilder.Entity<IdentityRole>().ToTable("Roles");
+
             modelBuilder.Entity <IdentityUserClaim<Guid>>().ToTable("UserClaims");
             modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new {x.UserId, x.RoleId });
             modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("UserLogins").HasKey(x => x.UserId);
