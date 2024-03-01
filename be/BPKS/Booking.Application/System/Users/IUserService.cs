@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Booking.Application.Users
+namespace Booking.Application.System.Users
 {
     public interface IUserService
     {

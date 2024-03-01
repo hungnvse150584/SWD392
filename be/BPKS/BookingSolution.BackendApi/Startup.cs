@@ -1,6 +1,5 @@
 ﻿using Booking.Application.Catalog.Parties;
 using Booking.Application.Catalog.Products;
-using Booking.Application.Users;
 using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Constants;
@@ -15,6 +14,8 @@ using Microsoft.OpenApi.Models;
 using Booking.Application.Catalog.Rooms;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Booking.Application.System.Users;
+using Booking.Application.System.Roles;
 
 namespace BookingSolution.BackendApi
 {
@@ -35,7 +36,7 @@ namespace BookingSolution.BackendApi
 
       
 
-            services.AddIdentity<AspNetUsers, Role>()
+            services.AddIdentity<AspNetUser, AppNetRole>()
                 .AddEntityFrameworkStores<BookingDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -43,16 +44,19 @@ namespace BookingSolution.BackendApi
 
             //Khai báo
             services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService, ManageProductService>();
 
             services.AddTransient<IManagePartyService, ManagePartyService>();
             services.AddScoped<IManageRoomService, ManageRoomService>();
+
             services.AddTransient<IPublicRoomService, PublicRoomService>();
-            services.AddTransient<IManageProductService, ManageProductService>();
-            services.AddTransient<UserManager<AspNetUsers>, UserManager<AspNetUsers>>();
-            services.AddTransient<SignInManager<AspNetUsers>, SignInManager <AspNetUsers>>();
-            services.AddTransient<RoleManager<Role>, RoleManager<Role>>();
+
+            services.AddTransient<UserManager<AspNetUser>, UserManager<AspNetUser>>();
+            services.AddTransient<SignInManager<AspNetUser>, SignInManager <AspNetUser>>();
+            services.AddTransient<RoleManager<AppNetRole>, RoleManager<AppNetRole>>();
 
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IRoleService, RoleService>();
 
             services.AddControllers();
 

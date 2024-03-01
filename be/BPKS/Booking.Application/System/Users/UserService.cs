@@ -8,16 +8,16 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Booking.Application.Users
+namespace Booking.Application.System.Users
 {
     public class UserService : IUserService
     {
-        private readonly UserManager<AspNetUsers> _userManager;
-        private readonly SignInManager<AspNetUsers> _signInManager;
-        private readonly RoleManager<Role> _roleManager;
+        private readonly UserManager<AspNetUser> _userManager;
+        private readonly SignInManager<AspNetUser> _signInManager;
+        private readonly RoleManager<AppNetRole> _roleManager;
         private readonly IConfiguration _config;
 
-        public UserService(UserManager<AspNetUsers> userManager, SignInManager<AspNetUsers> signInManager, RoleManager<Role> roleManager, IConfiguration config)
+        public UserService(UserManager<AspNetUser> userManager, SignInManager<AspNetUser> signInManager, RoleManager<AppNetRole> roleManager, IConfiguration config)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -46,11 +46,17 @@ namespace Booking.Application.Users
 
             //link fix bug :https://stackoverflow.com/questions/47279947/idx10603-the-algorithm-hs256-requires-the-securitykey-keysize-to-be-greater
             //Điều đó đã giải quyết được vấn đề của tôi vì số HmacSha256trong dòng SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256)phải lớn hơn 128 bit.Tóm lại, chỉ cần sử dụng một chuỗi dài làm khóa.
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"));
+            //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"));
+            //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            //var token = new JwtSecurityToken(_config["this is my custom Secret key for authentication"],
+            //    _config["this is my custom Secret key for authentication"],
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var token = new JwtSecurityToken(_config["this is my custom Secret key for authentication"],
-                _config["this is my custom Secret key for authentication"],
+            var token = new JwtSecurityToken(_config["Tokens:Issuer"],
+                _config["Tokens:Issuer"],
+            
                 claims,
                 expires: DateTime.Now.AddHours(3),
                 signingCredentials: creds);
@@ -70,11 +76,11 @@ namespace Booking.Application.Users
             {
                 return new ApiErrorResult<bool>("Emai đã tồn tại");
             }
-             user = new AspNetUsers()
+            user = new AspNetUser()
             {
 
-                 //FullName = request.FullName,
-                 Email = request.Email,
+                //FullName = request.FullName,
+                Email = request.Email,
                 UserName = request.UserName.Trim(),
                 PhoneNumber = request.PhoneNumber,
                 //Address = request.Address

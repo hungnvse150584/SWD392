@@ -5,10 +5,8 @@ using System.Collections.Generic;
 namespace Booking.Data.Entities
 {
 
-    public partial class Role : IdentityRole<Guid>
+    public class AppNetRole : IdentityRole<Guid>
     {
-      
-
 
     }
 }

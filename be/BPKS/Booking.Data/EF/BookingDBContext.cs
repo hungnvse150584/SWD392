@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Booking.Data.EF
 {
-    public class BookingDbContext : IdentityDbContext<AspNetUsers, Role, Guid>
+    public class BookingDbContext : IdentityDbContext<AspNetUser, AppNetRole, Guid>
     {
         //public BookingDbContext()
         //{
@@ -18,7 +18,7 @@ namespace Booking.Data.EF
         {
         }
 
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
 
         public virtual DbSet<AppConfig> AppConfigs { get; set; }
 
@@ -34,7 +34,7 @@ namespace Booking.Data.EF
 
         public virtual DbSet<Product> Products { get; set; }
 
-        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<AppNetRole> AppNetRoles { get; set; }
 
         public virtual DbSet<Room> Rooms { get; set; }
 
@@ -44,8 +44,8 @@ namespace Booking.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AspNetUsersConfiguration());
-            modelBuilder.ApplyConfiguration(new RoleConfiguration());
+            modelBuilder.ApplyConfiguration(new AspNetUserConfiguration());
+            modelBuilder.ApplyConfiguration(new AppNetRoleConfiguration());
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
 
@@ -57,7 +57,7 @@ namespace Booking.Data.EF
                 );
 
 
-            modelBuilder.Entity<AspNetUsers>(entity =>
+            modelBuilder.Entity<AspNetUser>(entity =>
             {
                 entity.ToTable("AspNetUsers");
 
@@ -166,11 +166,11 @@ namespace Booking.Data.EF
                 entity.Property(e => e.ProductUrl).HasMaxLength(1000);
             });
 
-            modelBuilder.Entity<Role>(entity =>
+            modelBuilder.Entity<AppNetRole>(entity =>
             {
                
 
-                entity.ToTable("Roles");
+                entity.ToTable("AppNetRoles");
 
                 
             });
@@ -189,7 +189,7 @@ namespace Booking.Data.EF
 
             //modelBuilder.Entity<IdentityUser>().ToTable("AspNetUsers").Property(p => p.Id).HasColumnName("Id");
             //modelBuilder.Entity<AspNetUsers>().ToTable("AspNetUsers").Property(p => p.Id).HasColumnName("Id");
-            modelBuilder.Entity<IdentityRole>().ToTable("Roles");
+            //modelBuilder.Entity<IdentityRole>().ToTable("AspNetRoles");
 
             modelBuilder.Entity <IdentityUserClaim<Guid>>().ToTable("UserClaims");
             modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new {x.UserId, x.RoleId });

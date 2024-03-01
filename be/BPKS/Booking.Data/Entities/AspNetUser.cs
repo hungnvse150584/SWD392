@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Booking.Data.Entities
 {
     
-    public partial class AspNetUsers : IdentityUser<Guid>
+    public partial class AspNetUser : IdentityUser<Guid>
     {
         //public int UserId { get; set; }
 

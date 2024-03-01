@@ -10,9 +10,9 @@ using Booking.Data.Entities;
 
 namespace Booking.Data.Configurations
 {
-    internal class AspNetUsersConfiguration : IEntityTypeConfiguration<AspNetUsers>
+    internal class AspNetUserConfiguration : IEntityTypeConfiguration<AspNetUser>
     {
-        public void Configure(EntityTypeBuilder<AspNetUsers> builder)
+        public void Configure(EntityTypeBuilder<AspNetUser> builder)
         {
             builder.ToTable("AspNetUsers");
         }

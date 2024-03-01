@@ -1,4 +1,4 @@
-﻿using Booking.Application.Users;
+﻿using Booking.Application.System.Users;
 using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
