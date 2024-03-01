@@ -9,7 +9,7 @@ namespace BookingSolution.ViewModels.Common
         public ApiSuccessResult(T resultObj)
         {
             IsSuccessed = true;
-            ResultObj = resultObj;
+            Token = resultObj;
         }
 
         public ApiSuccessResult()

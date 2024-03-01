@@ -43,8 +43,7 @@ namespace BookingSolution.BackendApi
          
 
             //Khai báo
-            services.AddTransient<IPublicProductService, PublicProductService>();
-            services.AddTransient<IManageProductService, ManageProductService>();
+            services.AddTransient<IProductService, ProductService>();
 
             services.AddTransient<IManagePartyService, ManagePartyService>();
             services.AddScoped<IManageRoomService, ManageRoomService>();

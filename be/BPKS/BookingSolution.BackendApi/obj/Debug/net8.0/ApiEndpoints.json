@@ -105,7 +105,7 @@
   },
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
-    "Method": "Get",
+    "Method": "GetAllPaging",
     "RelativePath": "api/Products/public-paging",
     "HttpMethod": "GET",
     "IsController": true,
@@ -231,24 +231,8 @@
   },
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
-    "Method": "Authencate",
-    "RelativePath": "api/Users/authenticate",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "BookingSolution.ViewModels.System.Users.LoginRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
     "Method": "Register",
-    "RelativePath": "api/Users/register",
+    "RelativePath": "api/Users",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -281,6 +265,48 @@
       {
         "Name": "ConfirmPassword",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "Authencate",
+    "RelativePath": "api/Users/authenticate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.System.Users.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "GetAllPaging",
+    "RelativePath": "api/Users/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

@@ -8,29 +8,21 @@ namespace Booking.Data.Entities
     
     public partial class AspNetUser : IdentityUser<Guid>
     {
-        //public int UserId { get; set; }
-
-        // public string? UserName { get; set; }
-
-        //public string? Password { get; set; }
-
-        //public string? FullName { get; set; }
-
-        //public string? Email { get; set; }
-
-        //public string? PhoneNumber { get; set; }
-
-        // public string? AvatarUrl { get; set; }
-
-        // public DateOnly? CreatedDate { get; set; }
-
-        // public string? Address { get; set; }
-
-        //public int? Role { get; set; }
-
-        //public string? Status { get; set; }
-
-
-
+        public override Guid Id { get; set; }
+        public override string Email { get; set; }
+        public override bool EmailConfirmed { get; set; }
+        public override string PasswordHash { get; set; }
+        public override string SecurityStamp { get; set; }
+        public override string PhoneNumber { get; set; }
+        public override bool PhoneNumberConfirmed { get; set; }
+        public override bool TwoFactorEnabled { get; set; }
+        public override DateTimeOffset? LockoutEnd { get; set; }
+        //public override DateTimeOffset? LockoutEndDateUtc { get; set; }
+        public override bool LockoutEnabled { get; set; }
+        public override int AccessFailedCount { get; set; }
+        public override string UserName { get; set; }
+        public override string NormalizedUserName { get; set; }
+        public override string? ConcurrencyStamp { get; set; }
+        public override string NormalizedEmail { get; set; }
     }
 }

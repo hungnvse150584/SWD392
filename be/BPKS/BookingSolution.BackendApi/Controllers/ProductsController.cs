@@ -10,12 +10,10 @@ namespace BookingSolution.BackendApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IPublicProductService _publicProductService;
-        private readonly IManageProductService _manageProductService;
-        public ProductsController(IPublicProductService publicProductService, IManageProductService manageProductService)
+        private readonly IProductService _productService;
+        public ProductsController(IProductService productService)
         {
-            _publicProductService = publicProductService;
-            _manageProductService = manageProductService;
+            _productService = productService;
         }
         [HttpGet]
         [Authorize]
@@ -23,7 +21,7 @@ namespace BookingSolution.BackendApi.Controllers
         {
             try
             {
-                var products = await _publicProductService.GetAll();
+                var products = await _productService.GetAll();
                 return Ok(products);
             }
             catch (Exception ex)
@@ -33,9 +31,9 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
         [HttpGet("public-paging")]
-        public async Task<IActionResult> Get([FromQuery] GetPublicProductPagingRequest request)
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetPublicProductPagingRequest request)
         {
-            var products = await _publicProductService.GetAllByStyle(request);
+            var products = await _productService.GetAllByStyle(request);
             return Ok(products);
         }
 
@@ -45,7 +43,7 @@ namespace BookingSolution.BackendApi.Controllers
         {
             try
             {
-                var products = await _manageProductService.GetById(productId);
+                var products = await _productService.GetById(productId);
                 if (products == null)
                     return BadRequest("Cannot find product");
                 return Ok(products);
@@ -63,11 +61,11 @@ namespace BookingSolution.BackendApi.Controllers
         {
             try
             {
-                var productId = await _manageProductService.Create(request);
+                var productId = await _productService.Create(request);
                 if (productId == 0)
                     return BadRequest();
 
-                var product = await _manageProductService.GetById(productId);
+                var product = await _productService.GetById(productId);
                 if (product == null)
                     return NotFound();
 
@@ -87,7 +85,7 @@ namespace BookingSolution.BackendApi.Controllers
         {
             try
             {
-                var affectedRessult = await _manageProductService.Update(request);
+                var affectedRessult = await _productService.Update(request);
                 if (affectedRessult == 0)
                     return BadRequest();
 
@@ -105,7 +103,7 @@ namespace BookingSolution.BackendApi.Controllers
         {
             try
             {
-                var affectedResult = await _manageProductService.Delete(productId);
+                var affectedResult = await _productService.Delete(productId);
                 if (affectedResult == 0)
                     return BadRequest();
                 return Ok();

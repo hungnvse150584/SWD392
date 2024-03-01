@@ -1,7 +1,9 @@
 ﻿using Booking.Data.Entities;
+using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -62,6 +64,40 @@ namespace Booking.Application.System.Users
                 signingCredentials: creds);
 
             return new ApiSuccessResult<string>(new JwtSecurityTokenHandler().WriteToken(token));
+        }
+
+        public async Task<PagedResult<UserVm>> GetUsersPaging(GetUserPagingRequest request)
+        {
+            var query = _userManager.Users;
+            if(!string.IsNullOrEmpty(request.Keyword))
+            {
+                query = query.Where(x => x.UserName.Contains(request.Keyword)
+                || x.PhoneNumber.Contains(request.Keyword));
+            }
+
+            //3. Paging
+            int totalRow = await query.CountAsync();
+
+            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .Select(x => new UserVm()
+                {
+                    UserName = x.UserName,
+                    PhoneNumber = x.PhoneNumber,
+                    Email = x.Email,
+                    Id = x.Id,
+
+                }).ToListAsync();
+
+            //4. Select and projection
+            var pagedResult = new PagedResult<UserVm>()
+            {
+                TotalRecords = totalRow,
+                //PageSize = request.PageSize,
+                //PageIndex = request.PageIndex,
+                Items = data
+            };
+            return pagedResult;
         }
 
         public async Task<ApiResult<bool>> Register(RegisterRequest request)

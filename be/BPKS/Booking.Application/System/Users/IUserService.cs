@@ -13,5 +13,7 @@ namespace Booking.Application.System.Users
         Task<ApiResult<string>> Authencate(LoginRequest request);
 
         Task<ApiResult<bool>> Register(RegisterRequest request);
+
+        Task<PagedResult<UserVm>> GetUsersPaging(GetUserPagingRequest request);
     }
 }
