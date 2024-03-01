@@ -1,4 +1,4 @@
-﻿CREATE DATABASE BKPS
+﻿CREATE DATABASE BKPS;
 GO
 
 use BKPS;
@@ -227,7 +227,7 @@ VALUES
 INSERT INTO AppConfig ([Key], Value)
 VALUES
     ('HomeDescription', 'This is description of Booking'),
-    ('HomeKeyword', 'This is keyword of Booking');
+    ('HomeKeyword', 'This is keyword of Booking'),
     ('HomeTitle', 'This is home page of Booking');
 
 
@@ -240,16 +240,16 @@ VALUES
 -- Insert dữ liệu mẫu vào bảng AspNetRoles
 INSERT INTO [dbo].[AspNetRoles] ([Id], [Name], [NormalizedUserName], [ConcurrencyStamp])
 VALUES
-    ('role_id_1', 'RoleName1', 'normalized_username_1', 'concurrency_stamp_1'),
-    ('role_id_2', 'RoleName2', 'normalized_username_2', 'concurrency_stamp_2'),
-    ('role_id_3', 'RoleName3', 'normalized_username_3', 'concurrency_stamp_3');
+  ('33333333-3333-3333-3333-333333333333', 'RoleName1', 'normalized_username_1', 'concurrency_stamp_1'),
+  ('44444444-4444-4444-4444-444444444444', 'RoleName2', 'normalized_username_2', 'concurrency_stamp_2'),
+  ('55555555-5555-5555-5555-555555555555', 'RoleName3', 'normalized_username_3', 'concurrency_stamp_3');
 
+  -- Insert dữ liệu mẫu vào bảng AspNetUserRoles
 
--- Insert dữ liệu mẫu vào bảng AspNetUserRoles
 INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId])
-VALUES 
-    ('11111111-1111-1111-1111-111111111111', '33333333-3333-3333-3333-333333333333'),
-    ('22222222-2222-2222-2222-222222222222', '44444444-4444-4444-4444-444444444444');
+VALUES
+  ('11111111-1111-1111-1111-111111111111', '33333333-3333-3333-3333-333333333333'),
+  ('22222222-2222-2222-2222-222222222222', '44444444-4444-4444-4444-444444444444');
 
 -- Insert dữ liệu mẫu vào bảng AspNetUserLogins
 INSERT INTO [dbo].[AspNetUserLogins] ([LoginProvider], [ProviderKey], [UserId])
