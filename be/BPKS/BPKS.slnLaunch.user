@@ -3,12 +3,11 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Name": "BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
+        "Name": "Booking.AdminApp\\Booking.AdminApp.csproj",
+        "Action": "Start"
       },
       {
-        "Name": "Booking.AdminApp\\Booking.AdminApp.csproj",
+        "Name": "BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj",
         "Action": "Start",
         "DebugTarget": ""
       }

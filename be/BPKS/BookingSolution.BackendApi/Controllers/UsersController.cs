@@ -17,7 +17,7 @@ namespace BookingSolution.BackendApi.Controllers
         }
         [HttpPost("authenticate")]
         [AllowAnonymous]
-        public async Task<IActionResult> Authencate([FromForm] LoginRequest request)
+        public async Task<IActionResult> Authencate([FromBody] LoginRequest request)
         {
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
