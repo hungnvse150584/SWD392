@@ -15,7 +15,7 @@ namespace BookingSolution.BackendApi.Controllers
         {
             _productService = productService;
         }
-        [HttpGet]
+        [HttpGet("GetAll")]
         [Authorize]
         public async Task<IActionResult> GetAll()
         {

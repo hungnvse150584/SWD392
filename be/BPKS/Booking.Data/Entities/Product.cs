@@ -13,7 +13,7 @@ public partial class Product
 
     public string? ProductUrl { get; set; }
 
-    public string? ProductType { get; set; }
+    public int? ProductType { get; set; }
 
     public string? ProductStyle { get; set; }
 

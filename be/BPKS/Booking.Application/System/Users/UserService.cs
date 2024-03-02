@@ -139,7 +139,13 @@ namespace Booking.Application.System.Users
             var user = await _userManager.FindByIdAsync(id.ToString());
             user.PhoneNumber = request.PhoneNumber;
             user.Email = request.Email;
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
+            user.Dob = DateTime.ParseExact(request.Dob, "dd/MM/yyyy", null);
+
+
             var result = await _userManager.UpdateAsync(user);
+
             if (result.Succeeded)
             {
                 return new ApiSuccessResult<bool>();
@@ -161,6 +167,9 @@ namespace Booking.Application.System.Users
                 PhoneNumber = user.PhoneNumber,
                 Id = user.Id,
                 UserName = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Dob = user.Dob.ToShortDateString(),
                 //Roles = roles
             };
             return new ApiSuccessResult<UserVm>(userVm);

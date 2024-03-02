@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using FluentValidation.AspNetCore;
 using LazZiya.ExpressLocalization;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Booking.WebApp.LocalizationResources;
 using BookingSolution.ViewModels.System.Users;
+using Booking.ApiIntegration;
+using System.Globalization;
 //using Booking.AdminApp;
 
 namespace Booking.WebApp
@@ -29,11 +30,11 @@ namespace Booking.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
-           // var cultures = new[]
-           //{
-           //     new CultureInfo("en"),
-           //     new CultureInfo("vi"),
-           // };
+            var cultures = new[]
+           {
+                new CultureInfo("en"),
+                new CultureInfo("vi"),
+            };
 
             services.AddControllersWithViews()
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>())
@@ -78,12 +79,12 @@ namespace Booking.WebApp
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddTransient<ISlideApiClient, SlideApiClient>();
-            //services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<ISlideApiClient, SlideApiClient>();
+            services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<IUserApiClient, UserApiClient>();
 
 
             //services.AddTransient<ICategoryApiClient, CategoryApiClient>();
-            //services.AddTransient<IUserApiClient, UserApiClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

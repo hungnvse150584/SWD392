@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav-link {
+        @apply relative text-black font-bold cursor-pointer text-[17px] lg:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center uppercase hidden;
+    }
+
+    .nav-link-mobile {
+        @apply relative mb-[2rem] text-white font-bold cursor-pointer text-[25px] lg:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center uppercase;
+    }
+
+    .heading {
+        @apply text-center text-[#333] text-[22px] sm:text-[30px] md:text-[38px] font-bold capitalize
+    }
+
+    .destination__h1 {
+        @apply text-black mt-[1rem] text-[20px] text-center font-semibold
+    }
+
+    .destination__p {
+        @apply text-black text-[17px] text-center opacity-70 font-semibold
+    }
+
+    .footer__heading {
+        @apply mb-[1.5rem] text-black text-[20px] font-bold
+    }
+
+    .footer__link {
+        @apply block mb-[1rem] text-gray-600 text-[16px] hover:text-red-500 transition-all duration-100 w-fit
+    }
+
+    .footer__icon {
+        @apply w-[2.3rem] h-[2.3rem] flex cursor-pointer items-center justify-center rounded-full hover:opacity-60 transition-all duration-200
+    }
+}

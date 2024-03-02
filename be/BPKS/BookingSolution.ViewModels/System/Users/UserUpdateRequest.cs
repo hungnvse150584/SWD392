@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BookingSolution.ViewModels.System.Users
 {
@@ -21,6 +22,13 @@ namespace BookingSolution.ViewModels.System.Users
 
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
+
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }   
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        [Display(Name = "Day Of Birth")]
+        public string Dob { get; set; }
 
         //[Display(Name = "Address")]
         //public string Address { get; set; }

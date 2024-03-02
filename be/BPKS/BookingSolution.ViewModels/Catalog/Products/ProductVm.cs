@@ -13,7 +13,7 @@ namespace BookingSolution.ViewModels.Catalog.Products
         public string? ProductUrl { get; set; }
 
         //food or dink
-        public string? ProductType { get; set; }
+        public int? ProductType { get; set; }
 
         //phân loại food hoặc dink 
         
