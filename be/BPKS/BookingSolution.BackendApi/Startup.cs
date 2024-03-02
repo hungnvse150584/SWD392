@@ -11,8 +11,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Booking.Application.System.Users;
 using Booking.Application.System.Roles;
-using Booking.AdminApp.Services;
 using Booking.Common;
+using Booking.ApiIntegration;
+using System.Net.Http;
 
 namespace BookingSolution.BackendApi
 {
@@ -37,8 +38,9 @@ namespace BookingSolution.BackendApi
                 .AddEntityFrameworkStores<BookingDbContext>()
                 .AddDefaultTokenProviders();
 
-         
 
+
+            services.AddHttpClient();
             //Khai báo
             services.AddTransient<IProductService, ProductService>();
 

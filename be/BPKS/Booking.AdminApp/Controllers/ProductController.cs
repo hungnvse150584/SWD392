@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Booking.AdminApp.Services;
+using Booking.ApiIntegration;
 using BookingSolution.Utilities.Constants;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;

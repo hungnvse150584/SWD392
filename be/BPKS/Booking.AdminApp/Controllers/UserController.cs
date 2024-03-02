@@ -1,4 +1,4 @@
-﻿using Booking.AdminApp.Services;
+﻿using Booking.ApiIntegration;
 using BookingSolution.Utilities.Constants;
 using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authentication;

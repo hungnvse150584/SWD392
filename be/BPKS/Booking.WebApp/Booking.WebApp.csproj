@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Booking.ApiIntegration\Booking.ApiIntegration.csproj" />
     <ProjectReference Include="..\BookingSolution.Utilities\BookingSolution.Utilities.csproj" />
     <ProjectReference Include="..\BookingSolution.ViewModels\BookingSolution.ViewModels.csproj" />
   </ItemGroup>
