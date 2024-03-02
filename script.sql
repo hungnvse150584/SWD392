@@ -19,7 +19,10 @@ CREATE TABLE [dbo].[AspNetUsers] (
 [NormalizedUserName]   NVARCHAR (MAX) NULL,
 [ConcurrencyStamp]   NVARCHAR (MAX) NULL,
 [NormalizedEmail]   NVARCHAR (MAX) NULL,
-[LockoutEnd]           DateTimeOffset(7)            NULL   
+[LockoutEnd]           DateTimeOffset(7)            NULL,
+FirstName NVARCHAR (256) Null,
+LastName nvarchar (256) null,
+Dob date null,
 
 CONSTRAINT [PK_dbo.AspNetUsers] PRIMARY KEY CLUSTERED ([Id] ASC)
 );

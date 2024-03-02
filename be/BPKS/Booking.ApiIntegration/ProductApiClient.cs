@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using System.Numerics;
 using System.Text;
 
 namespace Booking.ApiIntegration
@@ -63,8 +64,9 @@ namespace Booking.ApiIntegration
 
             requestContent.Add(new StringContent(request.Productname ?? ""), "productName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
-            
-            requestContent.Add(new StringContent(request.ProductType ?? ""), "productType");
+
+            requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "productType");
+
             requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
             requestContent.Add(new StringContent(request.Productstatus ?? ""), "productStatus");
@@ -104,7 +106,7 @@ namespace Booking.ApiIntegration
 
             requestContent.Add(new StringContent(request.ProductName ?? ""), "productName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
-            requestContent.Add(new StringContent(request.ProductType ?? ""), "productType");
+            requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "productType");
             requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
             requestContent.Add(new StringContent(request.ProductStatus ?? ""), "productStatus");

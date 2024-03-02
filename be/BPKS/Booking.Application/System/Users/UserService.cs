@@ -167,6 +167,9 @@ namespace Booking.Application.System.Users
                 PhoneNumber = user.PhoneNumber,
                 Id = user.Id,
                 UserName = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Dob = user.Dob.ToShortDateString(),
                 //Roles = roles
             };
             return new ApiSuccessResult<UserVm>(userVm);

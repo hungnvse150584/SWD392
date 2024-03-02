@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
+
 namespace Booking.Data.EF
 {
     public class BookingDbContext : IdentityDbContext<AspNetUser, AppNetRole, Guid>
@@ -37,6 +38,8 @@ namespace Booking.Data.EF
         public virtual DbSet<AppNetRole> AppNetRoles { get; set; }
 
         public virtual DbSet<Room> Rooms { get; set; }
+
+        public virtual DbSet<ProductType> ProductTypes { get; set; }
 
         //    protected override void onconfiguring(dbcontextoptionsbuilder optionsbuilder)
         //#warning to protect potentially sensitive information in your connection string, you should move it out of source code. you can avoid scaffolding the connection string by using the name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. for more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?linkid=723263.
@@ -188,6 +191,17 @@ namespace Booking.Data.EF
                 entity.Property(e => e.RoomStatus).HasMaxLength(500);
                 entity.Property(e => e.RoomType).HasMaxLength(50);
                 entity.Property(e => e.RoomUrl).HasMaxLength(1000);
+            });
+
+            modelBuilder.Entity<ProductType>(entity =>
+            {
+                entity.HasKey(e => e.Id).HasName("PK__ProductT__3214EC07CFFC8627");
+
+                entity.ToTable("ProductType");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.ProductTypeName).HasMaxLength(255);
+                entity.Property(e => e.Status).HasMaxLength(500);
             });
 
             //modelBuilder.Entity<IdentityUser>().ToTable("AspNetUsers").Property(p => p.Id).HasColumnName("Id");

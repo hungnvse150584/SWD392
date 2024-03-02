@@ -22,6 +22,13 @@ namespace BookingSolution.ViewModels.System.Users
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
+        [Display(Name = "FirstName")]
+        public string FirstName { get; set; }
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        [Display(Name = "Birthday")]
+        public string Dob { get; set; }
+
         //[Display(Name = "Address")]
         //public string Address { get; set; }
 
