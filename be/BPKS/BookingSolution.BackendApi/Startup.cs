@@ -37,8 +37,8 @@ namespace BookingSolution.BackendApi
                 .AddEntityFrameworkStores<BookingDbContext>()
                 .AddDefaultTokenProviders();
 
-         
 
+            services.AddHttpClient();
             //Khai báo
             services.AddTransient<IProductService, ProductService>();
 
@@ -54,8 +54,6 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IStorageService, FileStorageService>();
-
-
             services.AddTransient<IProductApiClient, ProductApiClient>();
 
             services.AddControllers();
