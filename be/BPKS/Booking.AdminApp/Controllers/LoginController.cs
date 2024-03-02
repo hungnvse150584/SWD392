@@ -34,14 +34,19 @@ namespace Booking.AdminApp.Controllers
                 return View(ModelState);
 
             var token = await _userApiClient.Authenticate(request);
-            var userPrincipal = this.ValidateToken(token);
+            if (token.Token == null)
+            {
+                ModelState.AddModelError("", token.Message);
+                return View();
+            }
+            var userPrincipal = this.ValidateToken(token.Token);
             var authProperties = new AuthenticationProperties
             {
                 ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
                 IsPersistent = false
             };
             //HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, _configuration[SystemConstants.AppSettings.DefaultLanguageId]);
-            HttpContext.Session.SetString("Token", token);
+            HttpContext.Session.SetString("Token", token.Token);
             await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         userPrincipal,

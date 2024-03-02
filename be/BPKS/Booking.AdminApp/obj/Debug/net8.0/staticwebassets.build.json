@@ -1,13 +1,21 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "91lyoX8Oa3m4UttpmsDoJtgjUaNhj/+giuuAbFXdmg0=",
+=======
+  "Hash": "nmmhpuiRh+7CGebI2bOLzOhgiXqdCfA0276t10UcBEA=",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
   "Source": "Booking.AdminApp",
   "BasePath": "_content/Booking.AdminApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "Version": 2,
       "Source": "Booking.WebApp",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +30,28 @@
     {
       "Name": "Booking.AdminApp\\wwwroot",
       "Source": "Booking.AdminApp",
+<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.AdminApp.styles.css",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.AdminApp.styles.css",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "Booking.AdminApp.styles.css",
       "AssetKind": "All",
@@ -45,6 +64,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.AdminApp.styles.css"
     },
     {
@@ -52,6 +72,15 @@
       "SourceId": "Booking.AdminApp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Booking.AdminApp.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Booking.AdminApp.bundle.scp.css",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "Booking.AdminApp.bundle.scp.css",
       "AssetKind": "All",
@@ -64,6 +93,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Booking.AdminApp.bundle.scp.css"
     },
     {
@@ -71,6 +101,15 @@
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Booking.AdminApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-area-demo.js",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "assets/demo/chart-area-demo.js",
       "AssetKind": "All",
@@ -86,10 +125,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\demo\\chart-area-demo.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-bar-demo.js",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-bar-demo.js",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "assets/demo/chart-bar-demo.js",
       "AssetKind": "All",
@@ -105,10 +151,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\demo\\chart-bar-demo.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-pie-demo.js",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-pie-demo.js",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "assets/demo/chart-pie-demo.js",
       "AssetKind": "All",
@@ -124,10 +177,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\demo\\chart-pie-demo.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\datatables-demo.js",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\datatables-demo.js",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "assets/demo/datatables-demo.js",
       "AssetKind": "All",
@@ -143,10 +203,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\demo\\datatables-demo.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\img\\error-404-monochrome.svg",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\img\\error-404-monochrome.svg",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "assets/img/error-404-monochrome.svg",
       "AssetKind": "All",
@@ -162,10 +229,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\error-404-monochrome.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\styles.css",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\styles.css",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -181,10 +255,17 @@
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\datatables-simple-demo.js",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\datatables-simple-demo.js",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "js/datatables-simple-demo.js",
       "AssetKind": "All",
@@ -200,10 +281,17 @@
       "OriginalItemSpec": "wwwroot\\js\\datatables-simple-demo.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\scripts.js",
       "SourceId": "Booking.AdminApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\scripts.js",
+      "SourceId": "Booking.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "BasePath": "_content/Booking.AdminApp",
       "RelativePath": "js/scripts.js",
       "AssetKind": "All",

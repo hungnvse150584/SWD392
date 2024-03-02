@@ -34,14 +34,14 @@ namespace Booking.AdminApp.Controllers
             };
             var data =await _userApiClient.GetUsersPaging(request);
             ViewBag.Keyword = keyword;
-            return View(data);
+            return View(data.Token);
         }
         
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             HttpContext.Session.Remove("Token");
-            return RedirectToAction("Login", "User");
+            return RedirectToAction("Index", "Login");
         }
        
 
@@ -57,8 +57,42 @@ namespace Booking.AdminApp.Controllers
             if(!ModelState.IsValid)
                return View(ModelState);
             var result = await _userApiClient.RegisterUser(request);
-            if (result)
+            if (result.IsSuccessed)
                 return RedirectToAction("Index");
+            return View(request);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var result = await _userApiClient.GetById(id);
+            if (result.IsSuccessed)
+            {
+                var user = result.Token;
+                var updateRequest = new UserUpdateRequest()
+                {
+                    Id=user.Id,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                };
+                return View(updateRequest);
+            }
+            return RedirectToAction("Error", "Home");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(UserUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var result = await _userApiClient.UpdateUser(request.Id, request);
+            if (result.IsSuccessed)
+            {
+                TempData["result"] = "Cập nhật người dùng thành công";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", result.Message);
             return View(request);
         }
     }

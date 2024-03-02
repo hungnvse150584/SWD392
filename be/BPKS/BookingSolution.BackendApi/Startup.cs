@@ -3,11 +3,6 @@ using Booking.Application.Catalog.Products;
 using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Constants;
-using BookingSolution.ViewModels.System.Users;
-using DocumentFormat.OpenXml.Bibliography;
-using FluentValidation.AspNetCore;
-using Google;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -16,6 +11,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Booking.Application.System.Users;
 using Booking.Application.System.Roles;
+using Booking.AdminApp.Services;
+using Booking.Common;
 
 namespace BookingSolution.BackendApi
 {
@@ -56,6 +53,10 @@ namespace BookingSolution.BackendApi
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IStorageService, FileStorageService>();
+
+
+            services.AddTransient<IProductApiClient, ProductApiClient>();
 
             services.AddControllers();
 

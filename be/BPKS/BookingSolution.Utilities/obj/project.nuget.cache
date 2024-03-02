@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "4EKDWJiEbchSMswC7kyWdO8bOWOAs1o8u6ZuKHLKzrOlfSBeN45PUTgCrN1CwyRj6EXmBa7ZDs9lELTBntfRUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+=======
+  "dgSpecHash": "joW58zw7x2blb/LZn4wok9b9/WA8FrOeNm3mMaXI8fzKvZVfWKHsYdDhNPrYPmG4m5rAAxN7iPIH84YzJcDvFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
   "expectedPackageFiles": [],
   "logs": []
 }

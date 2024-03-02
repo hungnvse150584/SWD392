@@ -14,6 +14,7 @@ C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\net8.0\refint\BookingSolution.ViewModels.dll
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\net8.0\BookingSolution.ViewModels.pdb
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\net8.0\ref\BookingSolution.ViewModels.dll
+<<<<<<< HEAD
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.ViewModels\bin\Debug\net8.0\BookingSolution.ViewModels.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.ViewModels\bin\Debug\net8.0\BookingSolution.ViewModels.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.ViewModels\bin\Debug\net8.0\BookingSolution.ViewModels.pdb
@@ -46,3 +47,5 @@ C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\n
 C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\net8.0\refint\BookingSolution.ViewModels.dll
 C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\net8.0\BookingSolution.ViewModels.pdb
 C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\BookingSolution.ViewModels\obj\Debug\net8.0\ref\BookingSolution.ViewModels.dll
+=======
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3

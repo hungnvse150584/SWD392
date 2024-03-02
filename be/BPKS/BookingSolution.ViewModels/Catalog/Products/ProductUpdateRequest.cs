@@ -13,6 +13,8 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public string? ProductName { get; set; }
 
+        public IFormFile ThumbnailImage { get; set; }
+
         public string? ProductUrl { get; set; }
 
         public string? ProductType { get; set; }

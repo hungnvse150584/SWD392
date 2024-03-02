@@ -33,7 +33,7 @@ namespace BookingSolution.BackendApi.Controllers
             //{
             //    HttpContext.Session.SetString("Token", result.Token);
             //}
-            return Ok(result.Token);
+            return Ok(result);
         }
 
         [HttpPost]
@@ -59,6 +59,27 @@ namespace BookingSolution.BackendApi.Controllers
             return Ok(products);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] UserUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await _userService.Update(id, request);
+            if (!result.IsSuccessed)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var user = await _userService.GetById(id);
+            return Ok(user);
+        }
 
     }
 }

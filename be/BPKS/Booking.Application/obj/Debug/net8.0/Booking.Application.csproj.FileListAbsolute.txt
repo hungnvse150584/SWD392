@@ -25,6 +25,7 @@ C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Applica
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\refint\Booking.Application.dll
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.pdb
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\ref\Booking.Application.dll
+<<<<<<< HEAD
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.deps.json
@@ -79,3 +80,7 @@ C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\B
 C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\refint\Booking.Application.dll
 C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.pdb
 C:\Users\ASUS\Desktop\ki-6\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\ref\Booking.Application.dll
+=======
+C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\en\Booking.WebApp.resources.dll
+C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\vi\Booking.WebApp.resources.dll
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3

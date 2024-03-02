@@ -3,7 +3,6 @@ using BookingSolution.ViewModels.System.Users;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
-
 namespace Booking.AdminApp.Services
 {
     public class UserApiClient : IUserApiClient
@@ -17,28 +16,31 @@ namespace Booking.AdminApp.Services
             _configuration = configuration;
             _httpContextAccessor = httpContextAccessor;
         }
-        public async Task<string> Authenticate(LoginRequest request)
+        public async Task<ApiResult<string>> Authenticate(LoginRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:7286");
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            var response = await client.PostAsync("/api/users/authenticate", httpContent);
+            if (response.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<ApiSuccessResult<string>>(await response.Content.ReadAsStringAsync());
+            }
 
-            var response = await client.PostAsync("/api/Users/authenticate", httpContent);
-            var token = await response.Content.ReadAsStringAsync();
-            return token;
+            return JsonConvert.DeserializeObject<ApiErrorResult<string>>(await response.Content.ReadAsStringAsync());
         }
+    
 
-        public async Task<PagedResult<UserVm>> GetUsersPaging(GetUserPagingRequest request)
+
+
+    public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         {
             var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
-            //var response = await client.GetAsync($"/api/Users/paging?&keyword={request.Keyword}&PageIndex={request.PageIndex}&PageSize={request.PageSize}");
-            //        var response = await client.GetAsync($"/api/Users/paging?pageIndex=" +
-            //$"{request.PageIndex}&pageSize={request.PageSize}&keyword={request.Keyword}");
-            // Tạo một danh sách các tham số truy vấn
             var queryParameters = new List<string>();
 
             // Kiểm tra và thêm tham số 'keyword' vào danh sách nếu có giá trị
@@ -60,11 +62,11 @@ namespace Booking.AdminApp.Services
             var response = await client.GetAsync(url);
 
             var body = await response.Content.ReadAsStringAsync();
-            var users = JsonConvert.DeserializeObject<PagedResult<UserVm>>(body);
+            var users = JsonConvert.DeserializeObject<ApiSuccessResult<PagedResult<UserVm>>>(body);
             return users;
         }
 
-        public async Task<bool> RegisterUser(RegisterRequest request)
+        public async Task<ApiResult<bool>> RegisterUser(RegisterRequest request)
         {
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
@@ -84,21 +86,43 @@ namespace Booking.AdminApp.Services
 
             var response = await client.PostAsync($"/api/Users", formData);
             var result = await response.Content.ReadAsStringAsync();
-            return response.IsSuccessStatusCode;
-               
+            if (response.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(result);
+
+            return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(result);
+
         }
-        //    public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPagings(GetUserPagingRequest request)
-        //{
-        //    var client = _httpClientFactory.CreateClient();
-        //    var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
+        public async Task<ApiResult<bool>> UpdateUser(Guid id, UserUpdateRequest request)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
 
-        //    client.BaseAddress = new Uri(_configuration["BaseAddress"]);
-        //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
-        //    
-        //    var body = await response.Content.ReadAsStringAsync();
-        //    var users = JsonConvert.DeserializeObject<ApiSuccessResult<PagedResult<UserVm>>>(body);
-        //    return users;
-        //}
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
 
+            var json = JsonConvert.SerializeObject(request);
+            var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PutAsync($"/api/Users/{id}", httpContent);
+            var result = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(result);
+
+            return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(result);
+        }
+
+        public async Task<ApiResult<UserVm>> GetById(Guid id)
+        {
+            var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+            var response = await client.GetAsync($"/api/Users/{id}");
+            var body = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiSuccessResult<UserVm>>(body);
+
+            return JsonConvert.DeserializeObject<ApiErrorResult<UserVm>>(body);
+        }
     }
 }
