@@ -18,5 +18,7 @@ namespace BookingSolution.ViewModels.System.Users_Ex
         [Display(Name = "Email")]
         public string Email { get; set; }
 
+        [Display(Name = "Address")]
+        public string Address { get; set; }
     }
 }

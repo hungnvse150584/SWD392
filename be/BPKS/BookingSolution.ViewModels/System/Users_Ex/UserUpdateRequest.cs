@@ -24,5 +24,8 @@ namespace BookingSolution.ViewModels.System.Users_Ex
 
         [Display(Name = "Số điện thoại")]
         public string PhoneNumber { get; set; }
+
+        [Display(Name = "Address")]
+        public string Address { get; set; }
     }
 }

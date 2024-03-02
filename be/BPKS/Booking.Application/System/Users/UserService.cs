@@ -120,7 +120,10 @@ namespace Booking.Application.System.Users
                 Email = request.Email,
                 UserName = request.UserName.Trim(),
                 PhoneNumber = request.PhoneNumber,
-                //Address = request.Address
+                Address = request.Address,
+                FirstName = request.FirstName,
+                LastName = request.LastName, 
+                Dob = request.Dob
             };
             var result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded)
@@ -139,6 +142,7 @@ namespace Booking.Application.System.Users
             var user = await _userManager.FindByIdAsync(id.ToString());
             user.PhoneNumber = request.PhoneNumber;
             user.Email = request.Email;
+            user.Address = request.Address;
             user.FirstName = request.FirstName;
             user.LastName = request.LastName;
             user.Dob = DateTime.ParseExact(request.Dob, "dd/MM/yyyy", null);
@@ -165,11 +169,12 @@ namespace Booking.Application.System.Users
             {
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
                 Id = user.Id,
-                UserName = user.UserName,
+                UserName = user.UserName,   
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                Dob = user.Dob.ToShortDateString(),
+                Dob = user.Dob
                 //Roles = roles
             };
             return new ApiSuccessResult<UserVm>(userVm);
