@@ -303,11 +303,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+      "projectName": "BookingSolution.ViewModels",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
       "projectName": "BookingSolution.ViewModels",
       "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\obj\\",
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -323,8 +331,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
+            "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+=======
             "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
               "projectPath": "C:\\Users\\admin\\User\\Desktop\\ky6\\PRN221\\Assignment\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+>>>>>>> 749eaf8fdaec9966affaaa87e005d440cf8e7dc3
             }
           }
         }
