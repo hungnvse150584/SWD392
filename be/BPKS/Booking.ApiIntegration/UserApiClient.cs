@@ -81,12 +81,14 @@ namespace Booking.ApiIntegration
             formData.Add(new StringContent(request.Email), "Email");
             formData.Add(new StringContent(request.Password), "Password");
             formData.Add(new StringContent(request.UserName), "UserName");
+            formData.Add(new StringContent(request.FirstName), "FirstName");
+            formData.Add(new StringContent(request.LastName), "LastName");
             formData.Add(new StringContent(request.ConfirmPassword), "ConfirmPassword");
-            formData.Add(new StringContent(request.Address), "Address");
+            //formData.Add(new StringContent(request.Address), "Address");
             formData.Add(new StringContent(request.PhoneNumber), "PhoneNumber");
+            formData.Add(new StringContent(request.Dob.ToString("yyyy-MM-dd")), "Dob");
 
-
-            var response = await client.PostAsync($"/api/Users", formData);
+            var response = await client.PostAsync($"/api/Users/Register", formData);
             var result = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode)
                 return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(result);

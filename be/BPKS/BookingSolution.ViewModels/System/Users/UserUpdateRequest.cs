@@ -28,7 +28,8 @@ namespace BookingSolution.ViewModels.System.Users
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Day Of Birth")]
-        public string Dob { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime Dob { get; set; }
 
         //[Display(Name = "Address")]
         //public string Address { get; set; }

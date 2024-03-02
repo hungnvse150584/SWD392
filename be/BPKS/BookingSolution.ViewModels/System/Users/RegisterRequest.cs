@@ -18,7 +18,14 @@ namespace BookingSolution.ViewModels.System.Users
         //public string? Address { get; set; }
         //public int? Role { get; set; }
         //public string? Status { get; set; }
+        [Display(Name = "Tên")]
+        public string FirstName { get; set; }
 
+        [Display(Name = "Họ")]
+        public string LastName { get; set; }
+        [Display(Name = "Ngày sinh")]
+        [DataType(DataType.Date)]
+        public DateTime Dob { get; set; }
         [Display(Name = "User Name")]
         public string UserName { get; set; }
 
@@ -31,8 +38,8 @@ namespace BookingSolution.ViewModels.System.Users
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
-        [Display(Name = "Address")]
-        public string Address { get; set; }
+        //[Display(Name = "Address")]
+        //public string Address { get; set; }
 
         [Display(Name = "Password")]
         [DataType(DataType.Password)]

@@ -115,8 +115,9 @@ namespace Booking.Application.System.Users
             }
             user = new AspNetUser()
             {
-
-                //FullName = request.FullName,
+                FirstName =request.FirstName,
+                LastName =request.LastName,
+                Dob = request.Dob,
                 Email = request.Email,
                 UserName = request.UserName.Trim(),
                 PhoneNumber = request.PhoneNumber,
@@ -141,7 +142,7 @@ namespace Booking.Application.System.Users
             user.Email = request.Email;
             user.FirstName = request.FirstName;
             user.LastName = request.LastName;
-            user.Dob = DateTime.ParseExact(request.Dob, "dd/MM/yyyy", null);
+            user.Dob = request.Dob;
 
 
             var result = await _userManager.UpdateAsync(user);
@@ -169,7 +170,7 @@ namespace Booking.Application.System.Users
                 UserName = user.UserName,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                Dob = user.Dob.ToShortDateString(),
+                Dob = user.Dob,
                 //Roles = roles
             };
             return new ApiSuccessResult<UserVm>(userVm);

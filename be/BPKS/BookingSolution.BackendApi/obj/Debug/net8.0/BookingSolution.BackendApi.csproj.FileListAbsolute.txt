@@ -601,15 +601,15 @@ C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\LazZiya.ExpressLocalization.dll
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\en\Booking.WebApp.resources.dll
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\vi\Booking.WebApp.resources.dll
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.runtimeconfig.json
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.staticwebassets.runtime.json
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.exe
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.runtimeconfig.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.exe
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.staticwebassets.runtime.json
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.exe
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.BackendApi.staticwebassets.runtime.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.BackendApi.exe
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.BackendApi.deps.json
@@ -1169,6 +1169,7 @@ C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\ne
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.AdminApp.dll
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.ApiIntegration.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.Application.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.Data.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.dll
@@ -1179,6 +1180,7 @@ C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\ne
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.Data.pdb
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.Utilities.pdb
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.ViewModels.pdb
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.ApiIntegration.pdb
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.pdb
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\en\Booking.WebApp.resources.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\vi\Booking.WebApp.resources.dll
