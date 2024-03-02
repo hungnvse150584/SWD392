@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BookingSolution.ViewModels.System.Products
 {
-    public class ProductsDeleteRequest
+    public class ProductDeleteRequest
     {
         public int ProductId { get; set; }
     }

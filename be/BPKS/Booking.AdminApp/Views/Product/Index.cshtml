@@ -1,0 +1,106 @@
+﻿@using BookingSolution.ViewModels.Common;
+@model PagedResult<BookingSolution.ViewModels.Catalog.Products.ProductVm>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Danh sách sản phẩm</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <a class="btn btn-success" asp-action="Create" asp-controller="Product">Tạo mới</a>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <form asp-action="Index" method="get">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
+                            </div>
+                            <div class="cold-md-3">
+                                <button type="submit" class="btn btn-primary">Tìm</button>
+                                <button type="button" onclick="window.location.href='/Product/Index'" class="btn btn-dark">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            @* <th>
+                                Product Id
+                            </th> *@
+                            @* <th>
+                                Party Host Id
+                            </th> *@
+                            <th>
+                                Product Name
+                            </th>
+                            <th>
+                                Image
+                            </th>
+                            <th>
+                                Product Type
+                            </th>
+                            <th>
+                                ProductStyle
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Product status
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductUrl)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductType)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductStyle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Price)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductStatus)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                                    @Html.ActionLink("Details", "Details", new {  id=item.ProductId  }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @await Component.InvokeAsync("Page", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+

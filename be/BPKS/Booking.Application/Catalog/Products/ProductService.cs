@@ -1,31 +1,34 @@
-﻿
-﻿using Booking.Data.EF;
+﻿using Booking.Common;
+using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Net.Http.Headers;
 namespace Booking.Application.Catalog.Products
 {
     public class ProductService : IProductService
     {
+        private readonly IStorageService _storageService;
         private readonly BookingDbContext _context;
+        private const string USER_CONTENT_FOLDER_NAME = "user-content";
+
+
         public ProductService(BookingDbContext context)
         {
             _context = context;
         }
         public async Task<int> Create(ProductCreateRequest request)
         {
+
+            
             var product = new Product()
             {
 
                 ProductName = request.Productname,
-                ProductUrl = request.ProductUrl,
+                ProductUrl = await this.SaveFile(request.ThumbnailImage),
                 ProductType = request.ProductType,
                 ProductStyle = request.ProductStyle,
                 Price = request.Price,
@@ -49,7 +52,7 @@ namespace Booking.Application.Catalog.Products
             }
 
             product.ProductName = request.ProductName;
-            product.ProductUrl = request.ProductUrl;
+            product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
             product.ProductType = request.ProductType;
             product.ProductStyle = request.ProductStyle;
             product.Price = request.Price;
@@ -147,5 +150,14 @@ namespace Booking.Application.Catalog.Products
         {
             throw new NotImplementedException();
         }
+
+        private async Task<string> SaveFile(IFormFile file)
+        {
+            var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim();
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+            await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
+            return "/" + USER_CONTENT_FOLDER_NAME + "/" + fileName;
+        }
     }
+
 }

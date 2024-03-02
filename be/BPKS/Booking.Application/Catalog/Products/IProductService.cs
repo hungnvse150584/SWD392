@@ -12,5 +12,7 @@ namespace Booking.Application.Catalog.Products
         Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request);
         Task<ProductVm> GetById(int productId);
         Task<PagedResult<ProductVm>> GetAllByStyle(GetPublicProductPagingRequest request);
+    
+    
     }
 }
