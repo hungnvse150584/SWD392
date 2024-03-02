@@ -60,7 +60,10 @@ namespace Booking.Data.EF
             modelBuilder.Entity<AspNetUser>(entity =>
             {
                 entity.ToTable("AspNetUsers");
-
+                entity.Property(e => e.FirstName).HasMaxLength(255);
+                entity.Property(e => e.LastName).HasMaxLength(255);
+                entity.Property(e => e.Dob)
+                 .HasColumnType("Dob");
             });
 
             modelBuilder.Entity<AppConfig>(entity =>

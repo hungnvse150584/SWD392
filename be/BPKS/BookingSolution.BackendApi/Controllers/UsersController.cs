@@ -36,7 +36,7 @@ namespace BookingSolution.BackendApi.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("Register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromForm] RegisterRequest request)
         {

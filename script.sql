@@ -44,7 +44,7 @@ CREATE TABLE Product (
 	PartyHostId int,
 	ProductName nvarchar(255),
     ProductUrl nvarchar(1000),
-	ProductType nvarchar(50),
+	ProductType int,
 	ProductStyle nvarchar(100),
 	Price float,
 	ProductStatus nvarchar(500),
@@ -60,6 +60,12 @@ CREATE TABLE Room (
 	RoomStatus nvarchar(500),
 );
 
+CREATE TABLE ProductType (
+	Id INT PRIMARY KEY,
+	ProductTypeName nvarchar(255),
+	Status nvarchar(500),
+
+)
 
 CREATE TABLE ListParty (
     ListPartyId INT IDENTITY(1,1) PRIMARY KEY,
@@ -167,6 +173,8 @@ ADD FOREIGN KEY (RoomId) REFERENCES Room(RoomId);
 ALTER TABLE ListProduct
 ADD FOREIGN KEY (ProductId) REFERENCES Product(ProductId);
 
+ALTER TABLE Product
+ADD FOREIGN KEY (ProductType) REFERENCES ProductType(Id);
 
 ALTER TABLE ListRoom
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
@@ -189,12 +197,16 @@ VALUES
     (1, 'Party 1', 'Description for Party 1', '123456789', 'Location 1', 4.5, 'thumbnail_url_1.jpg', '2024-03-01', '2024-03-02', 'Active', '2024-02-29'),
     (2, 'Party 2', 'Description for Party 2', '987654321', 'Location 2', 4.8, 'thumbnail_url_2.jpg', '2024-03-03', '2024-03-04', 'Active', '2024-02-29');
 
+	INSERT INTO dbo.ProductType(Id,ProductTypeName,Status)
+VALUES ('1','Food','active'),
+       ('2','Drink','active');
+
 -- Insert dữ liệu mẫu vào bảng Product
 INSERT INTO Product (PartyHostId, ProductName, ProductUrl, ProductType, ProductStyle, Price, ProductStatus)
 VALUES
-    (1, 'Product 1', 'product_url_1', 'Type 1', 'Style 1', 10.5, 'Active'),
-    (1, 'Product 2', 'product_url_2', 'Type 2', 'Style 2', 15.75, 'Active'),
-    (2, 'Product 3', 'product_url_3', 'Type 3', 'Style 3', 20.0, 'Active');
+    (1, 'Product 1', 'product_url_1', '1', 'Style 1', 10.5, 'Active'),
+    (1, 'Product 2', 'product_url_2', '2', 'Style 2', 15.75, 'Active'),
+    (2, 'Product 3', 'product_url_3', '2', 'Style 3', 20.0, 'Active');
 
 -- Insert dữ liệu mẫu vào bảng Room
 INSERT INTO Room (PartyId, RoomName, RoomUrl, RoomType, Price, RoomStatus)
@@ -262,3 +274,6 @@ INSERT INTO [dbo].[AspNetUserClaims] ([UserId], [ClaimType], [ClaimValue])
 VALUES 
     ('11111111-1111-1111-1111-111111111111', 'claim_type_1', 'claim_value_1'),
     ('22222222-2222-2222-2222-222222222222', 'claim_type_2', 'claim_value_2');
+
+
+
