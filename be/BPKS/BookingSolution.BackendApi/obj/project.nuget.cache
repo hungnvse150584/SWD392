@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LJRSrfHfMh47GdxC+KagKgE3l9V9gbGfpsBSuVFm19Ch9etOpXKNSOvv8qnBi3sYWruGsORvNImRKFemJXusDA==",
+  "dgSpecHash": "zyVyknN6mHH5TJ2JZn806dNJGujFHestsi0GZHVI/Z5GauztphAZ+zVedvk8IQAciGpcItmkv+qeDS8XtrEQQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\ki-6\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
