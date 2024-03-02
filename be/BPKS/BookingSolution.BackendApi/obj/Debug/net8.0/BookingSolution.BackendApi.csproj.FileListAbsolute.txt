@@ -173,11 +173,11 @@ C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.pdb
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\BookingSolution.BackendApi.genruntimeconfig.cache
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\BookingSolution.BackendApi\obj\Debug\net8.0\ref\BookingSolution.BackendApi.dll
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.runtimeconfig.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\Booking.WebApp.exe
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.BackendApi.exe
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.BackendApi.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.BackendApi\bin\Debug\net8.0\BookingSolution.BackendApi.runtimeconfig.json

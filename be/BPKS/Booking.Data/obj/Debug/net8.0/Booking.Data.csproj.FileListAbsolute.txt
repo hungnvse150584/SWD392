@@ -23,10 +23,10 @@ C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Data\ob
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Data\obj\Debug\net8.0\refint\Booking.Data.dll
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Data\obj\Debug\net8.0\Booking.Data.pdb
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Data\obj\Debug\net8.0\ref\Booking.Data.dll
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\Booking.WebApp.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\Booking.WebApp.runtimeconfig.json
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\Booking.WebApp.exe
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\Booking.Data.deps.json
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Data\bin\Debug\net8.0\Booking.Data.dll

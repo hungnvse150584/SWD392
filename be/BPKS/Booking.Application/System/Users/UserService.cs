@@ -19,6 +19,7 @@ namespace Booking.Application.System.Users
         private readonly RoleManager<AppNetRole> _roleManager;
         private readonly IConfiguration _config;
 
+
         public UserService(UserManager<AspNetUser> userManager, SignInManager<AspNetUser> signInManager, RoleManager<AppNetRole> roleManager, IConfiguration config)
         {
             _userManager = userManager;
@@ -66,7 +67,7 @@ namespace Booking.Application.System.Users
             return new ApiSuccessResult<string>(new JwtSecurityTokenHandler().WriteToken(token));
         }
 
-        public async Task<PagedResult<UserVm>> GetUsersPaging(GetUserPagingRequest request)
+        public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         {
             var query = _userManager.Users;
             if(!string.IsNullOrEmpty(request.Keyword))
@@ -93,11 +94,11 @@ namespace Booking.Application.System.Users
             var pagedResult = new PagedResult<UserVm>()
             {
                 TotalRecords = totalRow,
-                //PageSize = request.PageSize,
-                //PageIndex = request.PageIndex,
+                PageSize = request.PageSize,
+                PageIndex = request.PageIndex,
                 Items = data
             };
-            return pagedResult;
+            return new ApiSuccessResult<PagedResult<UserVm>>(pagedResult);
         }
 
         public async Task<ApiResult<bool>> Register(RegisterRequest request)
@@ -128,5 +129,42 @@ namespace Booking.Application.System.Users
             }
             return new ApiErrorResult<bool>("Đăng ký không thành công");
         }
+
+        public async Task<ApiResult<bool>> Update(Guid id, UserUpdateRequest request)
+        {
+            if (await _userManager.Users.AnyAsync(x => x.Email == request.Email && x.Id != id))
+            {
+                return new ApiErrorResult<bool>("Email đã tồn tại");
+            }
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            user.PhoneNumber = request.PhoneNumber;
+            user.Email = request.Email;
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                return new ApiSuccessResult<bool>();
+            }
+            return new ApiErrorResult<bool>("Cập nhật không thành công");
+        }
+
+        public async Task<ApiResult<UserVm>> GetById(Guid id)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            if (user == null)
+            {
+                return new ApiErrorResult<UserVm>("User không tồn tại");
+            }
+            var roles = await _userManager.GetRolesAsync(user);
+            var userVm = new UserVm()
+            {
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Id = user.Id,
+                UserName = user.UserName,
+                //Roles = roles
+            };
+            return new ApiSuccessResult<UserVm>(userVm);
+        }
+
     }
 }

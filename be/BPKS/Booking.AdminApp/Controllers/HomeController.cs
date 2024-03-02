@@ -5,7 +5,6 @@ using System.Diagnostics;
 
 namespace Booking.AdminApp.Controllers
 {
-    [Authorize]
     public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
