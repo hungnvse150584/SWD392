@@ -316,7 +316,7 @@
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
     "Method": "Register",
-    "RelativePath": "api/Users/Register",
+    "RelativePath": "api/Users/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
