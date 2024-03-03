@@ -8,5 +8,6 @@ namespace BookingSolution.ViewModels.Catalog.Parties
 {
     public class PartyDeleteRequest
     {
+        public int PartyId { get; set; }
     }
 }

@@ -104,7 +104,6 @@ CREATE TABLE Feedback (
     	FeedBackId INT IDENTITY(1,1) PRIMARY KEY,
 	ParentId int,
 	PartyId int,
-    	PartyHostId int,
 	Score int,
 	Feedback nvarchar(2000),
 );

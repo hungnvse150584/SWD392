@@ -15,7 +15,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
         public string Place { get; set; }
         //public double Rate { get; set; }
         public string ThumbnailUrl { get; set; }
-        //public DateTime DayStart { get; set; }
+        public DateTime DayStart { get; set; }
         public DateTime DayEnd { get; set; }
         //public DateTime CreatedDate { get; set; }
         public string PartyStatus { get; set; }

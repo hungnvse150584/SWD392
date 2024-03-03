@@ -11,8 +11,6 @@ public partial class Feedback
 
     public int? PartyId { get; set; }
 
-    public int? PartyHostId { get; set; }
-
     public int? Score { get; set; }
 
     public string? Feedback1 { get; set; }

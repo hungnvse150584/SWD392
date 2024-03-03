@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace BookingSolution.ViewModels.System.Rooms
+namespace BookingSolution.ViewModels.Catalog.Rooms
 
 {
     public class RoomDeleteRequest
