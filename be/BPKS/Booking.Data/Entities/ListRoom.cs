@@ -9,7 +9,7 @@ public partial class ListRoom
 
     public int? PartyId { get; set; }
 
-    public int? ParentId { get; set; }
+    public Guid? ParentId { get; set; }
 
     public int? RoomId { get; set; }
 

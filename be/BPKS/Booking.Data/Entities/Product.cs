@@ -7,7 +7,7 @@ public partial class Product
 {
     public int ProductId { get; set; }
 
-    public int? PartyHostId { get; set; }
+    public Guid? PartyHostId { get; set; }
 
     public string? ProductName { get; set; }
 
@@ -22,4 +22,6 @@ public partial class Product
     public string? ProductStatus { get; set; }
 
     public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
+
+    public virtual ProductType? ProductTypes { get; set; }
 }
