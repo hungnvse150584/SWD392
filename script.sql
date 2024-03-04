@@ -153,7 +153,7 @@ CREATE TABLE AspNetRoleClaims(
 RoleId 		UNIQUEIDENTIFIER NOT NULL,
 ClaimType NVarchar(max) Null,
 ClaimValue Nvarchar(max) Null,
-CONSTRAINT [PK_dbo.AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC)
+CONSTRAINT [PK_dbo.AspNetRoleClaims] PRIMARY KEY CLUSTERED ([Id] ASC)
 )
 
 
@@ -258,7 +258,7 @@ VALUES
     ('99999999-9999-9999-9999-999999999999', 2, 5, 'Excellent service');
 
 -- Insert dữ liệu mẫu vào bảng AspNetRoles
-INSERT INTO [dbo].[AspNetRoles] ([Id], [Name], [NormalizedUserName], [ConcurrencyStamp])
+INSERT INTO [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp])
 VALUES
   ('33333333-3333-3333-3333-333333333333', 'RoleName1', 'normalized_username_1', 'concurrency_stamp_1'),
   ('44444444-4444-4444-4444-444444444444', 'RoleName2', 'normalized_username_2', 'concurrency_stamp_2'),
