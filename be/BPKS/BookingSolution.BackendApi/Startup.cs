@@ -56,7 +56,10 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
+
             services.AddTransient<IProductTypeService, ProductTypeService>();
+            services.AddScoped<IProductApiClient, ProductApiClient>();
+
 
             services.AddControllers();
 

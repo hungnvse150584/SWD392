@@ -7,6 +7,6 @@ namespace BookingSolution.ViewModels.Catalog.ProductType
 {
     public class ProductTypeDeleteRequest
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
     }
 }

@@ -88,7 +88,7 @@ namespace Booking.ApiIntegration
             formData.Add(new StringContent(request.PhoneNumber), "PhoneNumber");
             formData.Add(new StringContent(request.Dob.ToString("yyyy-MM-dd")), "Dob");
 
-            var response = await client.PostAsync($"/api/Users/Register", formData);
+            var response = await client.PostAsync($"/api/Users/register", formData);
             var result = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode)
                 return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(result);

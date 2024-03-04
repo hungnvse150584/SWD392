@@ -30,6 +30,7 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
         [HttpGet("public-paging")]
         public async Task<IActionResult> GetAllPaging([FromQuery] GetPublicProductPagingRequest request)
         {
@@ -79,7 +80,7 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] ProductUpdateRequest request)
         {
@@ -104,11 +105,10 @@ namespace BookingSolution.BackendApi.Controllers
             try
             {
                 var affectedResult = await _productService.Delete(productId);
+
                 if (affectedResult == 0)
                     return BadRequest();
                 return Ok();
-
-               
             }
             catch (Exception ex)
             {

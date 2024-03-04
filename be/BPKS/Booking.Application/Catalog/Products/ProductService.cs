@@ -4,6 +4,7 @@ using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
+using DocumentFormat.OpenXml.InkML;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
@@ -22,13 +23,11 @@ namespace Booking.Application.Catalog.Products
         }
         public async Task<int> Create(ProductCreateRequest request)
         {
-
-            
-            var product = new Product()
+           var product = new Product()
             {
 
                 ProductName = request.Productname,
-                ProductUrl = await this.SaveFile(request.ThumbnailImage),
+                ////ProductUrl = await this.SaveFile(request.ThumbnailImage),
                 ProductType = request.ProductType,
                 ProductStyle = request.ProductStyle,
                 Price = request.Price,
@@ -52,7 +51,7 @@ namespace Booking.Application.Catalog.Products
             }
 
             product.ProductName = request.ProductName;
-            product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
+            //product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
             product.ProductType = request.ProductType;
             product.ProductStyle = request.ProductStyle;
             product.Price = request.Price;
@@ -60,12 +59,12 @@ namespace Booking.Application.Catalog.Products
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<int> Delete(int productId)
+        public async Task<int> Delete(int ProductId)
         {
-            var product = await _context.Products.FindAsync(productId);
+            var product = await _context.Products.FindAsync(ProductId);
             if (product == null)
             {
-                throw new BookingException($"Cannot find a product: {productId}");
+                throw new BookingException($"Cannot find a product: {ProductId}");
             }
 
             _context.Products.Remove(product);
@@ -91,12 +90,51 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
-        public Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request)
+        public async Task<PagedResult<ProductView>> GetAllProducType(GetManageProductPagingRequest request)
         {
-            //var query = from p in _context.Products
-            //            join pt in _context.
-            throw new NotImplementedException();
+            //select join
+            var query =
+            from p in _context.Products
+            join pt in _context.ProductTypes on p.ProductType equals pt.Id
+            where p.ProductType == request.ProductType
+            select new { p, pt };
+            //throw new NotImplementedException();
+            //2. filter
+            if (!string.IsNullOrEmpty(request.Keyword))
+                query = query.Where(x => x.pt.ProductTypeName.Contains(request.Keyword));
+            if (request.ProductType != null && request.ProductType != 0)
+            {
+                query = query.Where(p => p.pt.Id == request.ProductType);
+            }
 
+            //3. Paging
+            int totalRow = await query.CountAsync();
+
+            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .Select(x => new ProductView()
+                {
+                    ProductId = x.p.ProductId,
+                    PartyHostId = x.p.PartyHostId,
+                    ProductName = x.pt.ProductTypeName,
+                    
+                    ProductUrl = x.p.ProductUrl,
+                    ProductType = x.pt.Id,
+                    ProductStyle = x.p.ProductStyle,
+                    Price = x.p.Price,
+                    ProductStatus = x.p.ProductStatus
+                   
+                }).ToListAsync();
+
+            //4. Select and projection
+            var pagedResult = new PagedResult<ProductView>()
+            {
+                TotalRecords = totalRow,
+                PageSize = request.PageSize,
+                PageIndex = request.PageIndex,
+                Items = data
+            };
+            return pagedResult;
         }
 
      

@@ -2,7 +2,7 @@
 
 namespace BookingSolution.ViewModels.Catalog.Products
 {
-    public class ProductVm
+    public class ProductView
     {
         public int ProductId { get; set; }
 
@@ -12,7 +12,6 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public string? ProductUrl { get; set; }
 
-        //id
         //food or dink
         public int? ProductType { get; set; }
 
@@ -24,7 +23,7 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public string? ProductStatus { get; set; }
 
-        public IFormFile? ThumbnailImage { get; set; }
+        
 
         //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
     }

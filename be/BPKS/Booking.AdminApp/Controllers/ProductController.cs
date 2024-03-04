@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Booking.ApiIntegration;
+﻿using Booking.ApiIntegration;
 using BookingSolution.Utilities.Constants;
 using BookingSolution.ViewModels.Catalog.Products;
-using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Products;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace  Booking.AdminApp.Controllers
 {
@@ -16,6 +10,7 @@ namespace  Booking.AdminApp.Controllers
     {
         private readonly IProductApiClient _productApiClient;
         private readonly IConfiguration _configuration;
+        //private readonly ITypeApiClient _typeapiClient;
 
         //private readonly ICategoryApiClient _categoryApiClient;
 
@@ -28,22 +23,22 @@ namespace  Booking.AdminApp.Controllers
             //_categoryApiClient = categoryApiClient;
         }
 
-        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 10)
+        public async Task<IActionResult> Index(string keyword,int? ProductType, int pageIndex = 1, int pageSize = 10)
         {
-            var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
+            //var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
 
             var request = new GetManageProductPagingRequest()
             {
                 Keyword = keyword,
                 PageIndex = pageIndex,
-                PageSize = pageSize
+                PageSize = pageSize,
                 //LanguageId = languageId,
-                //CategoryId = categoryId
+                ProductType = ProductType
             };
             var data = await _productApiClient.GetPagings(request);
             ViewBag.Keyword = keyword;
 
-            //var categories = await _categoryApiClient.GetAll(languageId);
+            //var type = await _typeapiClient.GetAll(languageId);
             //ViewBag.Categories = categories.Select(x => new SelectListItem()
             //{
             //    Text = x.Name,
@@ -120,7 +115,7 @@ namespace  Booking.AdminApp.Controllers
                 ProductId = product.ProductId,
                 PartyHostId = product.PartyHostId,
                 ProductName = product.ProductName,
-                //ProductUrl = product.ProductUrl,
+                ProductUrl = product.ProductUrl,
                 ProductStyle = product.ProductStyle,
                 ProductType = product.ProductType,
                 Price = product.Price,
