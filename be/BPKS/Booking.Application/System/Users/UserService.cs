@@ -9,6 +9,11 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using GetUserPagingRequest = BookingSolution.ViewModels.System.Users.GetUserPagingRequest;
+using LoginRequest = BookingSolution.ViewModels.System.Users.LoginRequest;
+using RegisterRequest = BookingSolution.ViewModels.System.Users.RegisterRequest;
+using UserUpdateRequest = BookingSolution.ViewModels.System.Users.UserUpdateRequest;
+using UserVm = BookingSolution.ViewModels.System.Users.UserVm;
 
 namespace Booking.Application.System.Users
 {
@@ -171,9 +176,50 @@ namespace Booking.Application.System.Users
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Dob = user.Dob,
-                //Roles = roles
+                Roles = roles
             };
             return new ApiSuccessResult<UserVm>(userVm);
+        }
+        public async Task<ApiResult<bool>> Delete(Guid id)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            if (user == null)
+            {
+                return new ApiErrorResult<bool>("User không tồn tại");
+            }
+            var reult = await _userManager.DeleteAsync(user);
+            if (reult.Succeeded)
+                return new ApiSuccessResult<bool>();
+
+            return new ApiErrorResult<bool>("Xóa không thành công");
+        }
+        public async Task<ApiResult<bool>> RoleAssign(Guid id, RoleAssignRequest request)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            if (user == null)
+            {
+                return new ApiErrorResult<bool>("Tài khoản không tồn tại");
+            }
+            var removedRoles = request.Roles.Where(x => x.Selected == false).Select(x => x.Name).ToList();
+            foreach (var roleName in removedRoles)
+            {
+                if (await _userManager.IsInRoleAsync(user, roleName) == true)
+                {
+                    await _userManager.RemoveFromRoleAsync(user, roleName);
+                }
+            }
+            await _userManager.RemoveFromRolesAsync(user, removedRoles);
+
+            var addedRoles = request.Roles.Where(x => x.Selected).Select(x => x.Name).ToList();
+            foreach (var roleName in addedRoles)
+            {
+                if (await _userManager.IsInRoleAsync(user, roleName) == false)
+                {
+                    await _userManager.AddToRoleAsync(user, roleName);
+                }
+            }
+
+            return new ApiSuccessResult<bool>();
         }
 
     }

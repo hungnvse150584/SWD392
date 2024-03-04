@@ -44,7 +44,7 @@ namespace BookingSolution.BackendApi
 
             services.AddTransient<IManagePartyService, ManagePartyService>();
             services.AddScoped<IManageRoomService, ManageRoomService>();
-
+            services.AddScoped<IRoleApiClient, RoleApiClient>();
             services.AddTransient<IPublicRoomService, PublicRoomService>();
 
             services.AddTransient<UserManager<AspNetUser>, UserManager<AspNetUser>>();
@@ -55,6 +55,8 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
+            
+
 
             services.AddControllers();
 
