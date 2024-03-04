@@ -1,28 +1,30 @@
-﻿using Booking.Application.Catalog.Rooms;
+﻿using Booking.Application.Catalog.ProductTypes;
+using Booking.Application.Catalog.Rooms;
+using BookingSolution.ViewModels.Catalog.Products;
+using BookingSolution.ViewModels.Catalog.ProductType;
 using BookingSolution.ViewModels.Catalog.Rooms;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookingSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RoomsController : ControllerBase
+    public class ProducTypeController : Controller
     {
-        private readonly IPublicRoomService _publicRoomService;
-        private readonly IManageRoomService _manageRoomService;
-        public RoomsController(IPublicRoomService publicRoomService, IManageRoomService manageProductService)
+        private readonly IProductTypeService _productTypeService;
+       
+        public ProducTypeController(IProductTypeService productTypeService)
         {
-            _publicRoomService = publicRoomService;
-            _manageRoomService = manageProductService;
+            _productTypeService = productTypeService;
+           
         }
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             try
             {
-                var rooms = await _publicRoomService.GetAll();
-                return Ok(rooms);
+                var productTypes = await _productTypeService.GetAll();
+                return Ok(productTypes);
             }
             catch (Exception ex)
             {
@@ -30,22 +32,17 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-        [HttpGet("public-paging")]
-        public async Task<IActionResult> Get([FromQuery] GetPublicRoomPagingRequest request)
-        {
-            var rooms = await _publicRoomService.GetAllByStyle(request);
-            return Ok(rooms);
-        }
+      
 
 
-        [HttpGet("{roomId}")]
-        public async Task<IActionResult> GetById(int roomId)
+        [HttpGet("get{ProductTypeId}")]
+        public async Task<IActionResult> GetById(int ProductTypeId)
         {
             try
             {
-                var rooms = await _manageRoomService.GetById(roomId);
+                var rooms = await _productTypeService.GetById(ProductTypeId);
                 if (rooms == null)
-                    return BadRequest("Cannot find room");
+                    return BadRequest("Cannot find ProductType");
                 return Ok(rooms);
             }
             catch (Exception ex)
@@ -55,16 +52,17 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] RoomCreateRequest request)
+        [HttpPost("create")]
+
+        public async Task<IActionResult> Create([FromBody] ProductTypeCreateRequest request)
         {
             try
             {
-                var productId = await _manageRoomService.Create(request);
-                if (productId == 0)
+                var Id = await _productTypeService.Create(request);
+                if (Id == 0)
                     return BadRequest();
 
-                var product = await _manageRoomService.GetById(productId);
+                var product = await _productTypeService.GetById(Id);
                 if (product == null)
                     return NotFound();
 
@@ -79,12 +77,12 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
 
-        [HttpPut]
-        public async Task<IActionResult> Update([FromBody] RoomUpdateRequest request)
+        [HttpPut("Update")]
+        public async Task<IActionResult> Update([FromBody] ProductTypeUpdateRequest request)
         {
             try
             {
-                var affectedRessult = await _manageRoomService.Update(request);
+                var affectedRessult = await _productTypeService.Update(request);
                 if (affectedRessult == 0)
                     return BadRequest();
 
@@ -97,12 +95,12 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpDelete("{roomId}")]
-        public async Task<IActionResult> Delete(int roomId)
+        [HttpDelete("Delete{Id}")]
+        public async Task<IActionResult> Delete(int Id)
         {
             try
             {
-                var affectedResult = await _manageRoomService.Delete(roomId);
+                var affectedResult = await _productTypeService.Delete(Id);
                 if (affectedResult == 0)
                     return BadRequest();
                 return Ok();
