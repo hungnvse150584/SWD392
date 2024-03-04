@@ -2,7 +2,9 @@
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Parties;
+using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
+using Microsoft.EntityFrameworkCore;
 
 namespace Booking.Application.Catalog.Parties
 {
@@ -43,9 +45,27 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
-        public Task<List<PartyVm>> GetAll()
+        public async Task<List<PartyVm>> GetAll()
         {
-            throw new NotImplementedException();
+            var party = await _context.Parties
+                .Select(p => new PartyVm
+                {
+
+                    PartyId = p.PartyId,
+                    PartyName = p.PartyName,
+                    Description = p.Description,
+                    PhoneContact = p.PhoneContact,
+                    Place = p.Place,
+                    Rate = (double)p.Rate,
+                    ThumbnailUrl = p.ThumbnailUrl,
+                    PartyStatus = p.PartyStatus,
+                    DayStart = (DateOnly)p.DayStart,
+                    DayEnd = (DateOnly)p.DayEnd,
+                    CreatedDate = (DateOnly)p.CreatedDate
+                })
+                .ToListAsync();
+
+            return party;
         }
 
         public Task<PagedResult<PartyVm>> GetAllPaging(GetManagePartyPagingRequest request)
@@ -53,9 +73,30 @@ namespace Booking.Application.Catalog.Parties
             throw new NotImplementedException();
         }
 
-        public Task<int> Update(PartyUpdateRequest request)
+        public async Task<int> Update(PartyUpdateRequest request)
         {
-            throw new NotImplementedException();
+            var party = await _context.Parties.FindAsync(request.PartyId);
+            if (party == null)
+            {
+                throw new Exception($"Cannot find a party with id:{request.PartyId}.");
+            }
+            party.PartyName = request.PartyName;
+            party.Description = request.Description;
+            party.PhoneContact = request.PhoneContact;
+            party.Place = request.Place;
+            party.ThumbnailUrl = request.ThumbnailUrl;
+            party.DayEnd = request.DayEnd;
+            party.PartyStatus = request.PartyStatus;
+            
+            //product.ProductName = request.ProductName;
+            //product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
+            //product.ProductType = request.ProductType;
+            //product.ProductStyle = request.ProductStyle;
+            //product.Price = request.Price;
+
+
+
+            return await _context.SaveChangesAsync();
         }
 
     }
