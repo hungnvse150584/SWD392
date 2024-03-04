@@ -4,9 +4,11 @@ using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
+using Firebase.Storage;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
+using System.Net.Sockets;
 namespace Booking.Application.Catalog.Products
 {
     public class ProductService : IProductService
@@ -14,10 +16,11 @@ namespace Booking.Application.Catalog.Products
         private readonly IStorageService _storageService;
         private readonly BookingDbContext _context;
         private const string USER_CONTENT_FOLDER_NAME = "user-content";
+        private static string Bucket = "bpks-ee4a1.appspot.com";
 
-
-        public ProductService(BookingDbContext context)
+        public ProductService(BookingDbContext context, IStorageService storageService)
         {
+            _storageService = storageService;
             _context = context;
         }
         public async Task<int> Create(ProductCreateRequest request)
@@ -26,7 +29,7 @@ namespace Booking.Application.Catalog.Products
             
             var product = new Product()
             {
-
+                
                 ProductName = request.Productname,
                 ProductUrl = await this.SaveFile(request.ThumbnailImage),
                 ProductType = request.ProductType,
@@ -151,12 +154,46 @@ namespace Booking.Application.Catalog.Products
             throw new NotImplementedException();
         }
 
+
+
+        //private async Task<string> SaveFile(IFormFile file)
+        //{
+        //    var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim();
+        //    var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+        //    var filePath = Path.Combine(USER_CONTENT_FOLDER_NAME, fileName);
+
+
+        //    using (Stream fileStream = new FileStream(filePath, FileMode.Create))
+        //    {
+        //        await file.CopyToAsync(fileStream);
+        //    }
+        //    //await _storageService.SaveFileAsync(steam, fileName);
+
+
+        //    return filePath;
+        //}
+
         private async Task<string> SaveFile(IFormFile file)
         {
+
             var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim();
             var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
-            await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
-            return "/" + USER_CONTENT_FOLDER_NAME + "/" + fileName;
+
+            // Use OpenReadStream() directly to avoid potential stream closing issues
+            //using (var stream = file.OpenReadStream())
+            //{
+            //    await _storageService.SaveFileAsync(stream, fileName);
+            //}
+            var task = new FirebaseStorage(Bucket,
+               new FirebaseStorageOptions
+               {
+                   ThrowOnCancel = true
+               })
+               .Child("images")
+               .Child("ProductImage")
+               .Child(fileName)
+               .PutAsync(file.OpenReadStream());
+            return await task;
         }
     }
 
