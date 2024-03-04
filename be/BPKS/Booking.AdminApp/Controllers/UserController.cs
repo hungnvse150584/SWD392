@@ -38,7 +38,7 @@ namespace Booking.AdminApp.Controllers
                 PageSize = pageSize,
                 PageIndex = pageIndex
             };
-            var data =await _userApiClient.GetUsersPaging(request);
+            var data = await _userApiClient.GetUsersPaging(request);
             ViewBag.Keyword = keyword;
             if (TempData["result"] != null)
             {
@@ -46,26 +46,26 @@ namespace Booking.AdminApp.Controllers
             }
             return View(data.Token);
         }
-        
+
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             HttpContext.Session.Remove("Token");
             return RedirectToAction("Index", "Login");
         }
-       
+
 
         [HttpGet]
         public IActionResult Create()
         {
-          
+
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(RegisterRequest request)
         {
-            if(!ModelState.IsValid)
-               return View(ModelState);
+            if (!ModelState.IsValid)
+                return View(ModelState);
             var result = await _userApiClient.RegisterUser(request);
             if (result.IsSuccessed)
             {
@@ -86,12 +86,12 @@ namespace Booking.AdminApp.Controllers
                 var user = result.Token;
                 var updateRequest = new UserUpdateRequest()
                 {
-                    Id=user.Id,
+                    Id = user.Id,
                     Email = user.Email,
                     PhoneNumber = user.PhoneNumber,
-                    FirstName=user.FirstName,
-                    LastName=user.LastName,
-                    Dob=user.Dob,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Dob = user.Dob,
                 };
                 return View(updateRequest);
             }

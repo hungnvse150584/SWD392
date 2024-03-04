@@ -29,10 +29,10 @@ namespace Booking.ApiIntegration
 
         public async Task<PagedResult<ProductVm>> GetPagings(GetManageProductPagingRequest request)
         {
-            var data = await GetAsync<PagedResult<ProductVm>>(
-                $"/api/products/paging?pageIndex={request.PageIndex}" +
+            var url = $"/api/products/public-paging?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}" +
-                $"&keyword={request.Keyword}");
+                $"&keyword={request.Keyword}";
+            var data = await GetAsync<PagedResult<ProductVm>>(url);
 
             return data;
         }

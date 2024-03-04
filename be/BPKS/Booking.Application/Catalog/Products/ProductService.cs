@@ -23,10 +23,9 @@ namespace Booking.Application.Catalog.Products
             _storageService = storageService;
             _context = context;
         }
+
         public async Task<int> Create(ProductCreateRequest request)
         {
-
-            
             var product = new Product()
             {
                 PartyHostId = request.PartyHostId,
@@ -35,7 +34,6 @@ namespace Booking.Application.Catalog.Products
                 ProductType = request.ProductType,
                 ProductStyle = request.ProductStyle,
                 Price = request.Price,
-
                 //ThumbnailUrl = request.ThumbnailUrl,
                 //DayStart = request.DayStart,
                 //DayEnd = request.DayEnd,
@@ -98,7 +96,7 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
-        public async Task<PagedResult<ProductView>> GetAllProducType(GetManageProductPagingRequest request)
+        public async Task<PagedResult<ProductVm>> GetAllProducType(GetManageProductPagingRequest request)
         {
             //var query = from p in _context.Products
             //            join pt in _context.
@@ -111,7 +109,8 @@ namespace Booking.Application.Catalog.Products
             //throw new NotImplementedException();
             //2. filter
             if (!string.IsNullOrEmpty(request.Keyword))
-                query = query.Where(x => x.pt.ProductTypeName.Contains(request.Keyword));
+                query = query.Where(x => x.p.ProductName.Contains(request.Keyword));
+
             if (request.ProductType != null && request.ProductType != 0)
             {
                 query = query.Where(p => p.pt.Id == request.ProductType);
@@ -122,12 +121,11 @@ namespace Booking.Application.Catalog.Products
 
             var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
                 .Take(request.PageSize)
-                .Select(x => new ProductView()
+                .Select(x => new ProductVm()
                 {
                     ProductId = x.p.ProductId,
                     PartyHostId = x.p.PartyHostId,
                     ProductName = x.pt.ProductTypeName,
-
                     ProductUrl = x.p.ProductUrl,
                     ProductType = x.pt.Id,
                     ProductStyle = x.p.ProductStyle,
@@ -137,7 +135,7 @@ namespace Booking.Application.Catalog.Products
                 }).ToListAsync();
 
             //4. Select and projection
-            var pagedResult = new PagedResult<ProductView>()
+            var pagedResult = new PagedResult<ProductVm>()
             {
                 TotalRecords = totalRow,
                 PageSize = request.PageSize,

@@ -46,6 +46,7 @@ namespace Booking.AdminApp.Controllers
                 IsPersistent = false
             };
             //HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, _configuration[SystemConstants.AppSettings.DefaultLanguageId]);
+
             HttpContext.Session.SetString("Token", token.Token);
             await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme,
