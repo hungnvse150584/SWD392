@@ -4,8 +4,7 @@
     "Projects": [
       {
         "Name": "Booking.AdminApp\\Booking.AdminApp.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
+        "Action": "Start"
       },
       {
         "Name": "BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj",

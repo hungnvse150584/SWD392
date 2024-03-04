@@ -9,7 +9,7 @@ namespace Booking.Application.Catalog.Products
         Task<int> Update(ProductUpdateRequest request);
         Task<int> Delete(int productId);
         Task<List<ProductVm>> GetAll();
-        Task<PagedResult<ProductView>> GetAllProducType(GetManageProductPagingRequest request);
+        Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request);
         Task<ProductVm> GetById(int productId);
         Task<PagedResult<ProductVm>> GetAllByStyle(GetPublicProductPagingRequest request);
     

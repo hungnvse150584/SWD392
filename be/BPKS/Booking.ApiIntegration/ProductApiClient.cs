@@ -1,5 +1,4 @@
 ﻿using BookingSolution.Utilities.Constants;
-using BookingSolution.ViewModels.Catalog.Categories;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
@@ -32,7 +31,8 @@ namespace Booking.ApiIntegration
             var data = await GetAsync<PagedResult<ProductVm>>(
                 $"/api/products/paging?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}" +
-                $"&keyword={request.Keyword})&productType={ request.ProductType}");
+                $"&keyword={request.Keyword}");
+
             return data;
         }
 
@@ -62,12 +62,14 @@ namespace Booking.ApiIntegration
                 requestContent.Add(bytes, "thumbnailImage", request.ThumbnailImage.FileName);
             }
 
-            requestContent.Add(new StringContent(request.Productname.ToString() ?? ""), "productName");
+            requestContent.Add(new StringContent(request.Productname ?? ""), "productName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
+
             requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "productType");
-            requestContent.Add(new StringContent(request.ProductStyle.ToString() ?? ""), "productStyle");
+
+            requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
-            requestContent.Add(new StringContent(request.Productstatus.ToString() ?? ""), "productStatus");
+            requestContent.Add(new StringContent(request.Productstatus ?? ""), "productStatus");
             //requestContent.Add(new StringContent(languageId), "languageId");
             
 
@@ -102,12 +104,12 @@ namespace Booking.ApiIntegration
                 requestContent.Add(bytes, "thumbnailImage", request.ThumbnailImage.FileName);
             }
 
-            requestContent.Add(new StringContent(request.ProductName?.ToString() ?? ""), "productName");
+            requestContent.Add(new StringContent(request.ProductName ?? ""), "productName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
             requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "productType");
-            requestContent.Add(new StringContent(request.ProductStyle?.ToString() ?? ""), "productStyle");
+            requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
-            requestContent.Add(new StringContent(request.ProductStatus?.ToString() ?? ""), "productStatus");
+            requestContent.Add(new StringContent(request.ProductStatus ?? ""), "productStatus");
             //requestContent.Add(new StringContent(languageId), "languageId");
 
             var response = await client.PutAsync($"/api/products/" + request.ProductId, requestContent);

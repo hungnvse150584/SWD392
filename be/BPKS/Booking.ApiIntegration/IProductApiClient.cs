@@ -1,4 +1,4 @@
-﻿  using BookingSolution.ViewModels.Catalog.Products;
+﻿using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
 
 namespace Booking.ApiIntegration

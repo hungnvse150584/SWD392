@@ -8,6 +8,11 @@
         public string? ProductTypeName { get; set; }
 
         public string? Status { get; set; }
+
+
+       
+
+
         //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
     }
 }

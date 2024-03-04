@@ -82,8 +82,6 @@ namespace Booking.WebApp
             services.AddTransient<ISlideApiClient, SlideApiClient>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
             services.AddTransient<IUserApiClient, UserApiClient>();
-            services.AddScoped<IProductApiClient, ProductApiClient>();
-
 
 
             //services.AddTransient<ICategoryApiClient, CategoryApiClient>();

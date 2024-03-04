@@ -39,18 +39,18 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>
+                            @* <th>
                                 Product Id
-                            </th>
-                            <th>
+                            </th> *@
+                            @* <th>
                                 Party Host Id
-                            </th>
+                            </th> *@
                             <th>
                                 Product Name
                             </th>
-                            @* <th>
+                            <th>
                                 Image
-                            </th> *@
+                            </th>
                             <th>
                                 Product Type
                             </th>
@@ -71,17 +71,11 @@
                         {
                             <tr>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.ProductId)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.PartyHostId)
-                                </td>
-                                <td>
                                     @Html.DisplayFor(modelItem => item.ProductName)
                                 </td>
-                                @* <td>
+                                <td>
                                     @Html.DisplayFor(modelItem => item.ProductUrl)
-                                </td> *@
+                                </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.ProductType)
                                 </td>
@@ -103,7 +97,7 @@
                         }
                     </tbody>
                 </table>
-                @await Component.InvokeAsync("Pager", Model)
+                @await Component.InvokeAsync("Page", Model)
             </div>
         </div>
     </div>

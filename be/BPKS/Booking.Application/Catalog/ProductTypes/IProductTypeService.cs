@@ -11,7 +11,7 @@ namespace Booking.Application.Catalog.ProductTypes
     {
         Task<int> Create(ProductTypeCreateRequest request);
         Task<int> Update(ProductTypeUpdateRequest request);
-        Task<int> Delete(int ProductId);
+        Task<int> Delete(int Id);
         Task<List<ProductTypeVm>> GetAll();
         
         Task<ProductTypeVm> GetById(int roomId);

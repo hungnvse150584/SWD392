@@ -12,7 +12,6 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public string? ProductUrl { get; set; }
 
-        //id
         //food or dink
         public int? ProductType { get; set; }
 
