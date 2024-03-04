@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Booking.ApiIntegration;
+﻿using Booking.ApiIntegration;
 using BookingSolution.Utilities.Constants;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
@@ -30,8 +26,7 @@ namespace  Booking.AdminApp.Controllers
 
         public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 10)
         {
-            var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
-
+            //var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
             var request = new GetManageProductPagingRequest()
             {
                 Keyword = keyword,
@@ -39,6 +34,7 @@ namespace  Booking.AdminApp.Controllers
                 PageSize = pageSize
                 //LanguageId = languageId,
                 //CategoryId = categoryId
+
             };
             var data = await _productApiClient.GetPagings(request);
             ViewBag.Keyword = keyword;

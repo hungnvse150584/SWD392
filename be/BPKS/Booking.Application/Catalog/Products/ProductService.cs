@@ -98,15 +98,56 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
-        public Task<List<ProductVm>> GetAllPaging(GetPublicProductPagingRequest request)
+        public async Task<PagedResult<ProductView>> GetAllProducType(GetManageProductPagingRequest request)
         {
             //var query = from p in _context.Products
             //            join pt in _context.
-            throw new NotImplementedException();
+            //select join
+            var query =
+            from p in _context.Products
+            join pt in _context.ProductTypes on p.ProductType equals pt.Id
+            where p.ProductType == request.ProductType
+            select new { p, pt };
+            //throw new NotImplementedException();
+            //2. filter
+            if (!string.IsNullOrEmpty(request.Keyword))
+                query = query.Where(x => x.pt.ProductTypeName.Contains(request.Keyword));
+            if (request.ProductType != null && request.ProductType != 0)
+            {
+                query = query.Where(p => p.pt.Id == request.ProductType);
+            }
 
+            //3. Paging
+            int totalRow = await query.CountAsync();
+
+            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .Select(x => new ProductView()
+                {
+                    ProductId = x.p.ProductId,
+                    PartyHostId = x.p.PartyHostId,
+                    ProductName = x.pt.ProductTypeName,
+
+                    ProductUrl = x.p.ProductUrl,
+                    ProductType = x.pt.Id,
+                    ProductStyle = x.p.ProductStyle,
+                    Price = x.p.Price,
+                    ProductStatus = x.p.ProductStatus
+
+                }).ToListAsync();
+
+            //4. Select and projection
+            var pagedResult = new PagedResult<ProductView>()
+            {
+                TotalRecords = totalRow,
+                PageSize = request.PageSize,
+                PageIndex = request.PageIndex,
+                Items = data
+            };
+            return pagedResult;
         }
 
-     
+
 
         public async Task<ProductVm> GetById(int productId)
         {
