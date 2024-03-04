@@ -28,6 +28,7 @@ namespace BookingSolution.ViewModels.System.Users
         public string LastName { get; set; }
         [Display(Name = "Ngày sinh")]
         public DateTime Dob { get; set; }
+        public IList<string> Roles { get; set; }
 
         //[Display(Name = "Address")]
         //public string Address { get; set; }

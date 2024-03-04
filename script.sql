@@ -110,7 +110,7 @@ CREATE TABLE Feedback (
 CREATE TABLE [dbo].[AspNetRoles] (
 [Id]   UNIQUEIDENTIFIER NOT NULL,
 [Name] NVARCHAR (256) NOT NULL,
-[NormalizedUserName] NVARCHAR(MAX) NULL,
+[NormalizedName] NVARCHAR(MAX) NULL,
 [ConcurrencyStamp] NVARCHAR(MAX) NULL, 
 
 CONSTRAINT [PK_dbo.AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC)
@@ -148,6 +148,13 @@ CONSTRAINT [FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId] FOREIGN KEY ([UserId
 CREATE NONCLUSTERED INDEX [IX_UserId]
 ON [dbo].AspNetUserLogins([UserId] ASC);
 
+CREATE TABLE AspNetRoleClaims(
+[Id]         INT            IDENTITY (1, 1) NOT NULL,
+RoleId 		UNIQUEIDENTIFIER NOT NULL,
+ClaimType NVarchar(max) Null,
+ClaimValue Nvarchar(max) Null,
+CONSTRAINT [PK_dbo.AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC)
+)
 
 
 CREATE TABLE [dbo].AspNetUserClaims (

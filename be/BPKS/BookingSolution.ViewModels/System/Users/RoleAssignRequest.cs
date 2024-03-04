@@ -1,10 +1,9 @@
-﻿
-using BookingSolution.ViewModels.Common;
+﻿using BookingSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookingSolution.ViewModels.System.Users_Ex
+namespace BookingSolution.ViewModels.System.Users
 {
     public class RoleAssignRequest
     {
