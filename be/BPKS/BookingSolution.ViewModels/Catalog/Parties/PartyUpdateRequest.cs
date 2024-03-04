@@ -8,7 +8,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
 {
     public class PartyUpdateRequest
     {
-        //public int PartyId { get; set; }
+        public int PartyId { get; set; }
         public string PartyName { get; set; }
         public string Description { get; set; }
         public string PhoneContact { get; set; }
@@ -16,7 +16,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
         //public double Rate { get; set; }
         public string ThumbnailUrl { get; set; }
         //public DateTime DayStart { get; set; }
-        public DateTime DayEnd { get; set; }
+        public DateOnly DayEnd { get; set; }
         //public DateTime CreatedDate { get; set; }
         public string PartyStatus { get; set; }
     }

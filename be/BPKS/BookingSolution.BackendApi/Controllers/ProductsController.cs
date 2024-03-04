@@ -1,8 +1,18 @@
 ﻿using Booking.Application.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Products;
+using Firebase.Storage;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Auth.Providers;
+
 
 namespace BookingSolution.BackendApi.Controllers
 {
@@ -11,12 +21,15 @@ namespace BookingSolution.BackendApi.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
+        
+      
         public ProductsController(IProductService productService)
         {
+            
             _productService = productService;
         }
         [HttpGet("GetAll")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetAll()
         {
             try
@@ -85,6 +98,7 @@ namespace BookingSolution.BackendApi.Controllers
         {
             try
             {
+              
                 var affectedRessult = await _productService.Update(request);
                 if (affectedRessult == 0)
                     return BadRequest();
@@ -116,5 +130,9 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        
+        
+
     }
 }

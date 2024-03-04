@@ -30,11 +30,11 @@ namespace Booking.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
-            var cultures = new[]
-           {
-                new CultureInfo("en"),
-                new CultureInfo("vi"),
-            };
+           // var cultures = new[]
+           //{
+           //     new CultureInfo("en"),
+           //     new CultureInfo("vi"),
+           // };
 
             services.AddControllersWithViews()
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>())
@@ -64,7 +64,7 @@ namespace Booking.WebApp
                     {
                         //o.SupportedCultures = cultures;
                         //o.SupportedUICultures = cultures;
-                        o.DefaultRequestCulture = new RequestCulture("vi");
+                      //  o.DefaultRequestCulture = new RequestCulture("vi");
                     };
                 });
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

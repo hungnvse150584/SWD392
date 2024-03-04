@@ -29,9 +29,9 @@ CONSTRAINT [PK_dbo.AspNetUsers] PRIMARY KEY CLUSTERED ([Id] ASC)
 
 CREATE TABLE Party (
     PartyId INT IDENTITY(1,1) PRIMARY KEY,
-	PartyHostId int,
+	PartyHostId UNIQUEIDENTIFIER,
 	PartyName nvarchar(255),
-    Description nvarchar(1000),
+    	Description nvarchar(1000),
 	PhoneContact nvarchar(50),
 	Place nvarchar(255),
 	Rate float,
@@ -44,9 +44,9 @@ CREATE TABLE Party (
 
 CREATE TABLE Product (
     ProductId INT IDENTITY(1,1) PRIMARY KEY,
-	PartyHostId int,
+	PartyHostId UNIQUEIDENTIFIER,
 	ProductName nvarchar(255),
-    ProductUrl nvarchar(1000),
+    	ProductUrl nvarchar(1000),
 	ProductType int,
 	ProductStyle nvarchar(100),
 	Price float,
@@ -54,10 +54,9 @@ CREATE TABLE Product (
 );
 
 CREATE TABLE Room (
-    RoomId INT IDENTITY(1,1) PRIMARY KEY,
-	PartyId int,
+    	RoomId INT IDENTITY(1,1) PRIMARY KEY,
 	RoomName nvarchar(255),
-    RoomUrl nvarchar(1000),
+    	RoomUrl nvarchar(1000),
 	RoomType nvarchar(50),
 	Price float,
 	RoomStatus nvarchar(500),
@@ -71,26 +70,26 @@ CREATE TABLE ProductType (
 )
 
 CREATE TABLE ListParty (
-    ListPartyId INT IDENTITY(1,1) PRIMARY KEY,
-	ParentId int,
+    	ListPartyId INT IDENTITY(1,1) PRIMARY KEY,
+	ParentId UNIQUEIDENTIFIER,
 	PartyId int,
-    PartyHostId int,
+    	PartyHostId UNIQUEIDENTIFIER,
 	ListPartyStatus nvarchar(500),
 );
 
 CREATE TABLE ListProduct (
-    ListProductId INT IDENTITY(1,1) PRIMARY KEY,
+    	ListProductId INT IDENTITY(1,1) PRIMARY KEY,
 	PartyId int,
-    RoomId int,
+    	RoomId int,
 	ProductId int,
 	Quantity int,
 	ListProductStatus nvarchar(500),
 );
 
 CREATE TABLE ListRoom (
-    ListRoomId INT IDENTITY(1,1) PRIMARY KEY,
+    	ListRoomId INT IDENTITY(1,1) PRIMARY KEY,
 	PartyId int,
-    ParentId int,
+    	ParentId UNIQUEIDENTIFIER,
 	RoomId int,
 	ListRoomStatus nvarchar(500),
 );
@@ -102,9 +101,8 @@ CREATE TABLE AppConfig (
 
 CREATE TABLE Feedback (
     	FeedBackId INT IDENTITY(1,1) PRIMARY KEY,
-	ParentId int,
+	ParentId UNIQUEIDENTIFIER,
 	PartyId int,
-    	PartyHostId int,
 	Score int,
 	Feedback nvarchar(2000),
 );
@@ -112,7 +110,7 @@ CREATE TABLE Feedback (
 CREATE TABLE [dbo].[AspNetRoles] (
 [Id]   UNIQUEIDENTIFIER NOT NULL,
 [Name] NVARCHAR (256) NOT NULL,
-[NormalizedUserName] NVARCHAR(MAX) NULL,
+[NormalizedName] NVARCHAR(MAX) NULL,
 [ConcurrencyStamp] NVARCHAR(MAX) NULL, 
 
 CONSTRAINT [PK_dbo.AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC)
@@ -197,8 +195,8 @@ VALUES
 -- Insert dữ liệu mẫu vào bảng Party
 INSERT INTO Party (PartyHostId, PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus, CreatedDate)
 VALUES
-    (1, 'Party 1', 'Description for Party 1', '123456789', 'Location 1', 4.5, 'thumbnail_url_1.jpg', '2024-03-01', '2024-03-02', 'Active', '2024-02-29'),
-    (2, 'Party 2', 'Description for Party 2', '987654321', 'Location 2', 4.8, 'thumbnail_url_2.jpg', '2024-03-03', '2024-03-04', 'Active', '2024-02-29');
+    ('11111111-1111-1111-1111-111111111111', 'Party 1', 'Description for Party 1', '123456789', 'Location 1', 4.5, 'thumbnail_url_1.jpg', '2024-03-01', '2024-03-02', 'Active', '2024-02-29'),
+    ('11111111-1111-1111-1111-111111111111', 'Party 2', 'Description for Party 2', '987654321', 'Location 2', 4.8, 'thumbnail_url_2.jpg', '2024-03-03', '2024-03-04', 'Active', '2024-02-29');
 
 	INSERT INTO dbo.ProductType(Id,ProductTypeName,Status)
 VALUES ('1','Food','active'),
@@ -207,22 +205,22 @@ VALUES ('1','Food','active'),
 -- Insert dữ liệu mẫu vào bảng Product
 INSERT INTO Product (PartyHostId, ProductName, ProductUrl, ProductType, ProductStyle, Price, ProductStatus)
 VALUES
-    (1, 'Product 1', 'product_url_1', '1', 'Style 1', 10.5, 'Active'),
-    (1, 'Product 2', 'product_url_2', '2', 'Style 2', 15.75, 'Active'),
-    (2, 'Product 3', 'product_url_3', '2', 'Style 3', 20.0, 'Active');
+    ('11111111-1111-1111-1111-111111111111', 'Product 1', 'product_url_1', '1', 'Style 1', 10.5, 'Active'),
+    ('11111111-1111-1111-1111-111111111111', 'Product 2', 'product_url_2', '2', 'Style 2', 15.75, 'Active'),
+    ('22222222-2222-2222-2222-222222222222', 'Product 3', 'product_url_3', '2', 'Style 3', 20.0, 'Active');
 
 -- Insert dữ liệu mẫu vào bảng Room
-INSERT INTO Room (PartyId, RoomName, RoomUrl, RoomType, Price, RoomStatus)
+INSERT INTO Room (RoomName, RoomUrl, RoomType, Price, RoomStatus)
 VALUES
-    (1, 'Room 1', 'room_url_1', 'Type 1', 50.0, 'Available'),
-    (1, 'Room 2', 'room_url_2', 'Type 2', 75.0, 'Available'),
-    (2, 'Room 3', 'room_url_3', 'Type 3', 100.0, 'Available');
+    ('Room 1', 'room_url_1', 'Type 1', 50.0, 'Available'),
+    ('Room 2', 'room_url_2', 'Type 2', 75.0, 'Available'),
+    ('Room 3', 'room_url_3', 'Type 3', 100.0, 'Available');
 
 -- Insert dữ liệu mẫu vào bảng ListParty
 INSERT INTO ListParty (ParentId, PartyId, PartyHostId, ListPartyStatus)
 VALUES
-    (1, 1, 1, 'Confirmed'),
-    (2, 2, 2, 'Pending');
+    ('22222222-2222-2222-2222-222222222222', 1, '11111111-1111-1111-1111-111111111111', 'Confirmed'),
+    ('99999999-9999-9999-9999-999999999999', 2, '11111111-1111-1111-1111-111111111111', 'Pending');
 
 -- Insert dữ liệu mẫu vào bảng ListProduct
 INSERT INTO ListProduct (PartyId, RoomId, ProductId, Quantity, ListProductStatus)
@@ -247,10 +245,10 @@ VALUES
 
 
 -- Insert dữ liệu mẫu vào bảng Feedback
-INSERT INTO Feedback (ParentId, PartyId, PartyHostId, Score, Feedback)
+INSERT INTO Feedback (ParentId, PartyId, Score, Feedback)
 VALUES
-    (1, 1, 1, 4, 'Good experience'),
-    (2, 2, 2, 5, 'Excellent service');
+    ('99999999-9999-9999-9999-999999999999', 1, 4, 'Good experience'),
+    ('99999999-9999-9999-9999-999999999999', 2, 5, 'Excellent service');
 
 -- Insert dữ liệu mẫu vào bảng AspNetRoles
 INSERT INTO [dbo].[AspNetRoles] ([Id], [Name], [NormalizedUserName], [ConcurrencyStamp])

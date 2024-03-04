@@ -164,12 +164,16 @@ namespace Booking.Data.EF
                 entity.HasKey(e => e.ProductId).HasName("PK__Product__B40CC6CDD91D78CF");
 
                 entity.ToTable("Product");
-
+               
                 entity.Property(e => e.ProductName).HasMaxLength(255);
                 entity.Property(e => e.ProductStatus).HasMaxLength(500);
                 entity.Property(e => e.ProductStyle).HasMaxLength(100);
-                entity.Property(e => e.ProductType).HasMaxLength(50);
+                
                 entity.Property(e => e.ProductUrl).HasMaxLength(1000);
+
+                entity.HasOne(e => e.ProductTypes).WithMany(p => p.Products)
+                .HasForeignKey(d => d.ProductType)
+                .HasConstraintName("FK__Product__Product__44FF419A");
             });
 
             modelBuilder.Entity<AppNetRole>(entity =>
