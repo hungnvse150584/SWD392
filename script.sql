@@ -110,7 +110,7 @@ CREATE TABLE Feedback (
 CREATE TABLE [dbo].[AspNetRoles] (
 [Id]   UNIQUEIDENTIFIER NOT NULL,
 [Name] NVARCHAR (256) NOT NULL,
-[NormalizedUserName] NVARCHAR(MAX) NULL,
+[NormalizedName] NVARCHAR(MAX) NULL,
 [ConcurrencyStamp] NVARCHAR(MAX) NULL, 
 
 CONSTRAINT [PK_dbo.AspNetRoles] PRIMARY KEY CLUSTERED ([Id] ASC)
