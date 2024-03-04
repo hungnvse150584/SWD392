@@ -9,7 +9,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
     public class PartyCreateRequest
     {
         //public int PartyId { get; set; }
-        public int PartyHostId { get; set; }
+        public Guid PartyHostId { get; set; }
         public string PartyName { get; set; }
         public string Description { get; set; }
         public string PhoneContact { get; set; }

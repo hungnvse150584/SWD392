@@ -7,7 +7,7 @@ public partial class Party
 {
     public int PartyId { get; set; }
 
-    public int? PartyHostId { get; set; }
+    public Guid? PartyHostId { get; set; }
 
     public string? PartyName { get; set; }
 

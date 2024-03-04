@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using BookingSolution.ViewModels.Catalog.Firebase;
+
 using System;
 using System.IO;
 using System.Threading.Tasks;

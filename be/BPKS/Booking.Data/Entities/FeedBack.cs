@@ -7,7 +7,7 @@ public partial class Feedback
 {
     public int FeedBackId { get; set; }
 
-    public int? ParentId { get; set; }
+    public Guid? ParentId { get; set; }
 
     public int? PartyId { get; set; }
 

@@ -29,7 +29,7 @@ namespace Booking.Application.Catalog.Products
             
             var product = new Product()
             {
-                
+                PartyHostId = request.PartyHostId,
                 ProductName = request.Productname,
                 ProductUrl = await this.SaveFile(request.ThumbnailImage),
                 ProductType = request.ProductType,
@@ -43,7 +43,11 @@ namespace Booking.Application.Catalog.Products
                 ProductStatus = request.Productstatus,
             };
             _context.Products.Add(product);
+            
+
+           
             return await _context.SaveChangesAsync();
+            
            
         }
         public async Task<int> Update(ProductUpdateRequest request)

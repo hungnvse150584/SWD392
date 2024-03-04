@@ -10,11 +10,11 @@ namespace BookingSolution.ViewModels.Catalog.Products
     {
         //public int ProductId { get; set; }
 
-        public int? PartyHostId { get; set; }
+        public Guid? PartyHostId { get; set; }
 
         public string? Productname { get; set; }
 
-        public string? ProductUrl { get; set; }
+       // public string? ProductUrl { get; set; }
 
         public int? ProductType { get; set; }
 
