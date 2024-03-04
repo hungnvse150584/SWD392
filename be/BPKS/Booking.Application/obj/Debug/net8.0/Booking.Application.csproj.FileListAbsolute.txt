@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.deps.json
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.runtimeconfig.json
 C:\Users\admin\User\Desktop\ky6\PRN221\Assignment\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\appsettings.Development.json
@@ -52,3 +53,36 @@ C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Bo
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\refint\Booking.Application.dll
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.pdb
 C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\ref\Booking.Application.dll
+=======
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.deps.json
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.runtimeconfig.json
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\appsettings.Development.json
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\appsettings.json
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.exe
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.Application.deps.json
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.Application.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.Application.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.ApiIntegration.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.Data.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\BookingSolution.Utilities.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\BookingSolution.ViewModels.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.Data.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\BookingSolution.Utilities.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\BookingSolution.ViewModels.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.ApiIntegration.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\Booking.WebApp.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\en\Booking.WebApp.resources.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\bin\Debug\net8.0\vi\Booking.WebApp.resources.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.csproj.AssemblyReference.cache
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.AssemblyInfoInputs.cache
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.AssemblyInfo.cs
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.csproj.CoreCompileInputs.cache
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.sourcelink.json
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking..A3DD8563.Up2Date
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\refint\Booking.Application.dll
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\Booking.Application.pdb
+D:\FPT\s7\SWD\update\SWD392\be\BPKS\Booking.Application\obj\Debug\net8.0\ref\Booking.Application.dll
+>>>>>>> Stashed changes

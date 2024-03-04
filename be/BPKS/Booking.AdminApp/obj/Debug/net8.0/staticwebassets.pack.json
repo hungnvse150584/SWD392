@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< Updated upstream
       "Id": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Booking.AdminApp.bundle.scp.css",
       "PackagePath": "staticwebassets\\Booking.AdminApp.bundle.scp.css"
     },
@@ -34,6 +35,41 @@
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\scripts.js",
+=======
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Booking.AdminApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Booking.AdminApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\img\\error-404-monochrome.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\datatables-simple-demo.js",
+      "PackagePath": "staticwebassets\\js\\datatables-simple-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\scripts.js",
+>>>>>>> Stashed changes
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {

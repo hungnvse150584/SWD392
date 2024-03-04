@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Booking.AdminApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b031aa139e2a73e5fd19adcbca4d2bb96c588c9")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dad2ab825333319690c321035884248137172f4")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Booking.AdminApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Booking.AdminApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

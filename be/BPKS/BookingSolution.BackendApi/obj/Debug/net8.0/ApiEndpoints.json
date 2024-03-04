@@ -1,6 +1,7 @@
 [
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+<<<<<<< Updated upstream
     "Method": "GetAll",
     "RelativePath": "api/Products",
     "HttpMethod": "GET",
@@ -11,6 +12,8 @@
   },
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+=======
+>>>>>>> Stashed changes
     "Method": "Create",
     "RelativePath": "api/Products",
     "HttpMethod": "POST",
@@ -34,7 +37,11 @@
       },
       {
         "Name": "ProductType",
+<<<<<<< Updated upstream
         "Type": "System.String",
+=======
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+>>>>>>> Stashed changes
         "IsRequired": false
       },
       {
@@ -51,6 +58,14 @@
         "Name": "Productstatus",
         "Type": "System.String",
         "IsRequired": false
+<<<<<<< Updated upstream
+=======
+      },
+      {
+        "Name": "ThumbnailImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+>>>>>>> Stashed changes
       }
     ],
     "ReturnTypes": []
@@ -105,6 +120,19 @@
   },
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+<<<<<<< Updated upstream
+=======
+    "Method": "GetAll",
+    "RelativePath": "api/Products/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+>>>>>>> Stashed changes
     "Method": "GetAllPaging",
     "RelativePath": "api/Products/public-paging",
     "HttpMethod": "GET",
@@ -130,9 +158,63 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< Updated upstream
     "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
     "Method": "GetAll",
     "RelativePath": "api/Rooms",
+=======
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "Create",
+    "RelativePath": "api/ProducType/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.Catalog.ProductType.ProductTypeCreateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/ProducType/Delete{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "GetById",
+    "RelativePath": "api/ProducType/get{ProductTypeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProducType/GetAll",
+>>>>>>> Stashed changes
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -140,6 +222,25 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< Updated upstream
+=======
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "Update",
+    "RelativePath": "api/ProducType/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.Catalog.ProductType.ProductTypeUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+>>>>>>> Stashed changes
     "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
     "Method": "Create",
     "RelativePath": "api/Rooms",
@@ -205,6 +306,19 @@
   },
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+<<<<<<< Updated upstream
+=======
+    "Method": "GetAll",
+    "RelativePath": "api/Rooms/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+>>>>>>> Stashed changes
     "Method": "Get",
     "RelativePath": "api/Rooms/public-paging",
     "HttpMethod": "GET",
@@ -231,13 +345,20 @@
   },
   {
     "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+<<<<<<< Updated upstream
     "Method": "Register",
     "RelativePath": "api/Users",
     "HttpMethod": "POST",
+=======
+    "Method": "Update",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "PUT",
+>>>>>>> Stashed changes
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+<<<<<<< Updated upstream
         "Name": "UserName",
         "Type": "System.String",
         "IsRequired": false
@@ -266,6 +387,32 @@
         "Name": "ConfirmPassword",
         "Type": "System.String",
         "IsRequired": false
+=======
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.System.Users.UserUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "GetById",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+>>>>>>> Stashed changes
       }
     ],
     "ReturnTypes": []
@@ -311,5 +458,59 @@
       }
     ],
     "ReturnTypes": []
+<<<<<<< Updated upstream
+=======
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/Users/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dob",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+>>>>>>> Stashed changes
   }
 ]

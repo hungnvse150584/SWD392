@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {}
+  },
+  "projects": {
+    "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\Booking.ApiIntegration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\Booking.ApiIntegration.csproj",
+        "projectName": "Booking.ApiIntegration",
+        "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\Booking.ApiIntegration.csproj",
+        "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +45,92 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< Updated upstream
               "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
                 "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj"
               },
               "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
                 "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+=======
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+              },
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj",
+        "projectName": "Booking.Data",
+        "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\Booking.Data.csproj",
+        "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj"
+              },
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+>>>>>>> Stashed changes
               }
             }
           }
@@ -71,6 +169,13 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+<<<<<<< Updated upstream
+=======
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+>>>>>>> Stashed changes
             }
           },
           "imports": [
@@ -93,6 +198,7 @@
         }
       }
     },
+<<<<<<< Updated upstream
     "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -104,6 +210,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+        "projectName": "Booking.WebApp",
+        "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Booking.WebApp.csproj",
+        "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,11 +236,22 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< Updated upstream
               "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
                 "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
               },
               "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
                 "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj"
+=======
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\Booking.ApiIntegration.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\Booking.ApiIntegration.csproj"
+              },
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+              },
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj"
+>>>>>>> Stashed changes
               }
             }
           }
@@ -141,6 +271,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< Updated upstream
+=======
+            "LazZiya.ExpressLocalization": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+>>>>>>> Stashed changes
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -169,6 +306,7 @@
         }
       }
     },
+<<<<<<< Updated upstream
     "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -180,6 +318,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+        "projectName": "BookingSolution.Utilities",
+        "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj",
+        "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -229,6 +380,7 @@
         }
       }
     },
+<<<<<<< Updated upstream
     "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -240,6 +392,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+        "projectName": "BookingSolution.ViewModels",
+        "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -253,8 +418,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< Updated upstream
               "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
                 "projectPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+=======
+              "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj": {
+                "projectPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.Utilities\\BookingSolution.Utilities.csproj"
+>>>>>>> Stashed changes
               }
             }
           }
@@ -278,6 +448,13 @@
               "target": "Package",
               "version": "[11.9.0, )"
             },
+<<<<<<< Updated upstream
+=======
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+>>>>>>> Stashed changes
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[2.2.0, )"

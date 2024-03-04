@@ -1,20 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\",
+  "WorkspaceRootPath": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.application\\system\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\system\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\apisuccessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\apisuccessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.backendapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.application\\system\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\system\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\system\\users\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\system\\users\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\system\\users\\userupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\system\\users\\userupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.apiintegration\\userapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\userapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,22 +91,209 @@
     {
       "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}|Booking.Data\\Booking.Data.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.data\\ef\\bookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}|Booking.Data\\Booking.Data.csproj|solutionrelative:booking.data\\ef\\bookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\common\\pagedresultbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\apisuccessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\apisuccessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\components\\pager\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\components\\pager\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> Stashed changes
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\pagedresultbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\pagedresultbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\bookingsolution.viewmodels\\system\\users\\getuserpagingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\system\\users\\getuserpagingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\system\\users_ex\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.apiintegration\\iuserapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\iuserapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\system\\users\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\system\\users\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}|Booking.Data\\Booking.Data.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.data\\entities\\aspnetuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9F8EBFD-3BA6-48CD-95CD-7587A7E6BC0E}|Booking.Data\\Booking.Data.csproj|solutionrelative:booking.data\\entities\\aspnetuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\controllers\\parentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\parentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.application\\system\\users\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\system\\users\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\system\\users_ex\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\system\\users_ex\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\controllers\\partyhostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\partyhostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\controllers\\components\\pagerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\components\\pagerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\selectitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\selectitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\requestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\requestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\common\\pagingrequestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\common\\pagingrequestbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A229ABF5-E13E-4DAD-BB4E-E21D67933310}|Booking.WebApp\\Booking.WebApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A229ABF5-E13E-4DAD-BB4E-E21D67933310}|Booking.WebApp\\Booking.WebApp.csproj|solutionrelative:booking.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A229ABF5-E13E-4DAD-BB4E-E21D67933310}|Booking.WebApp\\Booking.WebApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A229ABF5-E13E-4DAD-BB4E-E21D67933310}|Booking.WebApp\\Booking.WebApp.csproj|solutionrelative:booking.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.backendapi\\bookingsolution.backendapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\bookingsolution.backendapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.application\\catalog\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.application\\common\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\common\\filestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\catalog\\parties\\partydeleterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\parties\\partydeleterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\booking.adminapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\catalog\\products\\productdeleterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\products\\productdeleterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\catalog\\parties\\partycreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\parties\\partycreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\catalog\\products\\productupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\products\\productupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|d:\\fpt\\s7\\swd\\update\\swd392\\be\\bpks\\bookingsolution.viewmodels\\catalog\\products\\productcreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\products\\productcreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\services\\userapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\services\\productapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\services\\slideapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\services\\islideapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\services\\iproductapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -90,11 +307,124 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 17,
+=======
+              "DocumentIndex": 4,
+              "Title": "UserUpdateRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\UserUpdateRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\System\\Users\\UserUpdateRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\UserUpdateRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\System\\Users\\UserUpdateRequest.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T23:31:36.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserApiClient.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\UserApiClient.cs",
+              "RelativeDocumentMoniker": "Booking.ApiIntegration\\UserApiClient.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\UserApiClient.cs",
+              "RelativeToolTip": "Booking.ApiIntegration\\UserApiClient.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAIAwwHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:25:08.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\System\\Users\\UserService.cs",
+              "RelativeDocumentMoniker": "Booking.Application\\System\\Users\\UserService.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\System\\Users\\UserService.cs",
+              "RelativeToolTip": "Booking.Application\\System\\Users\\UserService.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAuwJYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T16:00:56.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\User\\Edit.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\User\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T23:27:53.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T16:01:28.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiSuccessResult.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T15:55:46.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Details.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\User\\Details.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Details.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\User\\Details.cshtml",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAAFUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T18:21:39.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserVm.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwB0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T23:37:44.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAqwE4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T19:45:24.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+>>>>>>> Stashed changes
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Index.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\User\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Index.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Index.cshtml",
               "RelativeToolTip": "Booking.AdminApp\\Views\\User\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFUAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -104,6 +434,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\System\\Users\\UserService.cs",
@@ -111,12 +442,22 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\System\\Users\\UserService.cs",
               "RelativeToolTip": "Booking.Application\\System\\Users\\UserService.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAMwD0AAAAXAAAA",
+=======
+              "DocumentIndex": 9,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Startup.cs",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Startup.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Startup.cs",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Startup.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAMwB8AAAAQAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T22:12:52.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 1,
               "Title": "ApiSuccessResult.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
@@ -124,12 +465,22 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
               "RelativeToolTip": "BookingSolution.ViewModels\\Common\\ApiSuccessResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAAAAAA",
+=======
+              "DocumentIndex": 8,
+              "Title": "BookingDBContext.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\EF\\BookingDBContext.cs",
+              "RelativeDocumentMoniker": "Booking.Data\\EF\\BookingDBContext.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\EF\\BookingDBContext.cs",
+              "RelativeToolTip": "Booking.Data\\EF\\BookingDBContext.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAMwBMAAAAIAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T22:07:25.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 6,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\UserController.cs",
@@ -137,30 +488,430 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\UserController.cs",
               "RelativeToolTip": "Booking.AdminApp\\Controllers\\UserController.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAgwCoAAAAtAAAA",
+=======
+              "DocumentIndex": 12,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\Components\\Pager\\Default.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\Components\\Pager\\Default.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\Components\\Pager\\Default.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\Components\\Pager\\Default.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAMwDcAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T19:10:19.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PagedResultBase.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T15:08:49.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 4,
+=======
+              "DocumentIndex": 14,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAMwCQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T22:14:38.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserApiClient.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\IUserApiClient.cs",
+              "RelativeDocumentMoniker": "Booking.ApiIntegration\\IUserApiClient.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\IUserApiClient.cs",
+              "RelativeToolTip": "Booking.ApiIntegration\\IUserApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:35:57.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Create.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\User\\Create.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Create.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\User\\Create.cshtml",
+              "ViewState": "AQIAACIAAAAAAAAAAAAiwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T22:34:34.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApiResult.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiResult.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\ApiResult.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiResult.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\ApiResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T16:00:45.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\System\\Users\\RegisterRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\RegisterRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\System\\Users\\RegisterRequest.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAuwDEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T22:08:37.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagedResult.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\PagedResult.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagedResult.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\PagedResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T19:43:02.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AspNetUser.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\Entities\\AspNetUser.cs",
+              "RelativeDocumentMoniker": "Booking.Data\\Entities\\AspNetUser.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Data\\Entities\\AspNetUser.cs",
+              "RelativeToolTip": "Booking.Data\\Entities\\AspNetUser.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T22:04:37.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ParentsController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ParentsController.cs",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\ParentsController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ParentsController.cs",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\ParentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:36:49.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserVm.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users_Ex\\UserVm.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\System\\Users_Ex\\UserVm.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users_Ex\\UserVm.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\System\\Users_Ex\\UserVm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:58:59.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\System\\Users\\IUserService.cs",
+              "RelativeDocumentMoniker": "Booking.Application\\System\\Users\\IUserService.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\System\\Users\\IUserService.cs",
+              "RelativeToolTip": "Booking.Application\\System\\Users\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:59:45.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PartyHostsController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\PartyHostsController.cs",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\PartyHostsController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\PartyHostsController.cs",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\PartyHostsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:36:50.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T21:34:49.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\appsettings.Development.json",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\appsettings.Development.json",
+              "RelativeToolTip": "Booking.AdminApp\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T16:08:49.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PagerViewComponent.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\Components\\PagerViewComponent.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\Components\\PagerViewComponent.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\Components\\PagerViewComponent.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\Components\\PagerViewComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T20:02:59.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SelectItem.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\SelectItem.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\SelectItem.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\SelectItem.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\SelectItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T19:58:31.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RequestBase.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\RequestBase.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\RequestBase.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\RequestBase.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\RequestBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T19:39:55.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PagingRequestBase.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagingRequestBase.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Common\\PagingRequestBase.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagingRequestBase.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Common\\PagingRequestBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T19:11:57.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+>>>>>>> Stashed changes
               "Title": "UserApiClient.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\UserApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Services\\UserApiClient.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\UserApiClient.cs",
+<<<<<<< Updated upstream
               "RelativeToolTip": "Booking.AdminApp\\Services\\UserApiClient.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAA3wCEAAABUAAAA",
+=======
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBUAAAAMAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T15:11:28.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T19:20:52.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T18:34:07.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T18:34:04.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-02T18:33:52.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Booking.WebApp\\Program.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\Program.cs",
+              "RelativeToolTip": "Booking.WebApp\\Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwAkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T15:15:59.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BookingSolution.BackendApi\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAACIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T16:06:39.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\appsettings.json",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\appsettings.json",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\appsettings.json",
+              "RelativeToolTip": "BookingSolution.BackendApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T16:00:08.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\appsettings.Development.json",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\appsettings.Development.json",
+              "RelativeToolTip": "BookingSolution.BackendApi\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T16:00:06.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "Booking.WebApp\\appsettings.json",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.WebApp\\appsettings.json",
+              "RelativeToolTip": "Booking.WebApp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T16:00:18.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ProductApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\ProductApiClient.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\ProductApiClient.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T16:02:28.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "SlideApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\SlideApiClient.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\SlideApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T15:34:33.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BookingSolution.BackendApi.http",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\BookingSolution.BackendApi.http",
+              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\BookingSolution.BackendApi.http",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\BookingSolution.BackendApi.http",
+              "RelativeToolTip": "BookingSolution.BackendApi\\BookingSolution.BackendApi.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-03-02T15:57:03.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T15:56:14.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T15:55:55.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+>>>>>>> Stashed changes
               "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\BaseController.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\BaseController.cs",
               "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\BaseController.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\BaseController.cs",
               "RelativeToolTip": "Booking.AdminApp\\Controllers\\BaseController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -169,6 +920,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 2,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\UsersController.cs",
@@ -176,12 +928,20 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\UsersController.cs",
               "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\UsersController.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAIwDIAAAAYAAAA",
+=======
+              "DocumentIndex": 55,
+              "Title": "ISlideApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\ISlideApiClient.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\ISlideApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T15:08:56.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 7,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\LoginController.cs",
@@ -189,12 +949,22 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Booking.AdminApp\\Controllers\\LoginController.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAkwD8AAACGAAAA",
+=======
+              "DocumentIndex": 45,
+              "Title": "FileStorageService.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\Common\\FileStorageService.cs",
+              "RelativeDocumentMoniker": "Booking.Application\\Common\\FileStorageService.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\Common\\FileStorageService.cs",
+              "RelativeToolTip": "Booking.Application\\Common\\FileStorageService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T21:38:50.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 5,
               "Title": "ApiResult.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\ApiResult.cs",
@@ -227,6 +997,14 @@
               "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Products\\ProductVm.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductVm.cs",
               "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Products\\ProductVm.cs",
+=======
+              "DocumentIndex": 44,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Products\\IProductService.cs",
+              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Products\\IProductService.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Products\\IProductService.cs",
+              "RelativeToolTip": "Booking.Application\\Catalog\\Products\\IProductService.cs",
+>>>>>>> Stashed changes
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T21:47:52.286Z",
@@ -234,6 +1012,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 10,
               "Title": "UserVm.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
@@ -241,12 +1020,20 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
               "RelativeToolTip": "BookingSolution.ViewModels\\System\\Users\\UserVm.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+=======
+              "DocumentIndex": 56,
+              "Title": "IProductApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\IProductApiClient.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Services\\IProductApiClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAKAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T21:47:32.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 11,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Create.cshtml",
@@ -254,12 +1041,22 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Create.cshtml",
               "RelativeToolTip": "Booking.AdminApp\\Views\\User\\Create.cshtml",
               "ViewState": "AQIAACcAAAAAAAAAAAAAADwAAAAwAAAA",
+=======
+              "DocumentIndex": 47,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-01T21:44:59.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Login\\Index.cshtml",
@@ -280,12 +1077,34 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Program.cs",
               "RelativeToolTip": "Booking.AdminApp\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAqAAAA",
+=======
+              "DocumentIndex": 46,
+              "Title": "PartyDeleteRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\PartyDeleteRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Parties\\PartyDeleteRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\PartyDeleteRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Parties\\PartyDeleteRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T14:22:20.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ProductDeleteRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductDeleteRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Products\\ProductDeleteRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductDeleteRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Products\\ProductDeleteRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T21:42:37.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 14,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\HomeController.cs",
@@ -293,12 +1112,22 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Booking.AdminApp\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
+=======
+              "DocumentIndex": 49,
+              "Title": "PartyCreateRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\PartyCreateRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Parties\\PartyCreateRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\PartyCreateRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Parties\\PartyCreateRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T21:34:55.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 15,
               "Title": "PagedResultBase.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
@@ -306,12 +1135,22 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
               "RelativeToolTip": "BookingSolution.ViewModels\\Common\\PagedResultBase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+=======
+              "DocumentIndex": 50,
+              "Title": "ProductUpdateRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductUpdateRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Products\\ProductUpdateRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductUpdateRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Products\\ProductUpdateRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T15:07:07.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 16,
               "Title": "GetUserPagingRequest.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\GetUserPagingRequest.cs",
@@ -319,6 +1158,15 @@
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Users\\GetUserPagingRequest.cs",
               "RelativeToolTip": "BookingSolution.ViewModels\\System\\Users\\GetUserPagingRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+=======
+              "DocumentIndex": 51,
+              "Title": "ProductCreateRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductCreateRequest.cs",
+              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Products\\ProductCreateRequest.cs",
+              "ToolTip": "D:\\FPT\\s7\\SWD\\update\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Products\\ProductCreateRequest.cs",
+              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Products\\ProductCreateRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-01T15:48:30.18Z",
               "EditorCaption": ""

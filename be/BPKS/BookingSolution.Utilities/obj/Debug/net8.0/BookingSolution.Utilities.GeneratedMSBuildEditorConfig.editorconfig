@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookingSolution.Utilities
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\ASUS\Desktop\ky7\SWD392\be\BPKS\BookingSolution.Utilities\
+=======
+build_property.ProjectDir = D:\FPT\s7\SWD\update\SWD392\be\BPKS\BookingSolution.Utilities\
+>>>>>>> Stashed changes
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
