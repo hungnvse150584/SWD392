@@ -21,7 +21,11 @@ public partial class Product
 
     public string? ProductStatus { get; set; }
 
+    public string? Description { get; set; }
+
     public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
 
     public virtual ProductType? ProductTypes { get; set; }
+
+
 }

@@ -51,6 +51,7 @@ CREATE TABLE Product (
 	ProductStyle nvarchar(100),
 	Price float,
 	ProductStatus nvarchar(500),
+	Description nvarchar(1000),
 );
 
 CREATE TABLE Room (

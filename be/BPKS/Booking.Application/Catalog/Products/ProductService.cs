@@ -39,6 +39,7 @@ namespace Booking.Application.Catalog.Products
                 //DayEnd = request.DayEnd,
                 //CreatedDate = DateTime.Now,
                 ProductStatus = request.Productstatus,
+                Description = request.Description,
             };
             _context.Products.Add(product);
             
@@ -61,6 +62,7 @@ namespace Booking.Application.Catalog.Products
             product.ProductType = request.ProductType;
             product.ProductStyle = request.ProductStyle;
             product.Price = request.Price;
+            product.Description = request.Description;
 
             return await _context.SaveChangesAsync();
         }
@@ -89,7 +91,8 @@ namespace Booking.Application.Catalog.Products
                     ProductType = p.ProductType,
                     ProductStyle = p.ProductStyle,
                     Price = p.Price,
-                    ProductStatus = p.ProductStatus
+                    ProductStatus = p.ProductStatus,
+                    Description = p.Description,
                 })
                 .ToListAsync();
 
@@ -132,8 +135,8 @@ namespace Booking.Application.Catalog.Products
                     ProductType = x.pt.Id,
                     ProductStyle = x.p.ProductStyle,
                     Price = x.p.Price,
-                    ProductStatus = x.p.ProductStatus
-
+                    ProductStatus = x.p.ProductStatus,
+                    Description = x.p.Description
                 }).ToListAsync();
 
             //4. Select and projection
@@ -162,7 +165,8 @@ namespace Booking.Application.Catalog.Products
                                       ProductType = p.ProductType,
                                       ProductStyle = p.ProductStyle,
                                       Price = p.Price,
-                                      ProductStatus = p.ProductStatus
+                                      ProductStatus = p.ProductStatus,
+                                      Description = p.Description
                                   })
                                   .FirstOrDefaultAsync();
 

@@ -71,6 +71,7 @@ namespace Booking.ApiIntegration
             requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
             requestContent.Add(new StringContent(request.Productstatus ?? ""), "productStatus");
+            requestContent.Add(new StringContent(request.Description ?? ""), "Description");
             //requestContent.Add(new StringContent(languageId), "languageId");
             
 
@@ -111,6 +112,7 @@ namespace Booking.ApiIntegration
             requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
             requestContent.Add(new StringContent(request.ProductStatus ?? ""), "productStatus");
+            requestContent.Add(new StringContent(request.Description ?? ""), "Description");
             //requestContent.Add(new StringContent(languageId), "languageId");
 
             var response = await client.PutAsync($"/api/products/" + request.ProductId, requestContent);
