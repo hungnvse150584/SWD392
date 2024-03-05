@@ -64,22 +64,36 @@
 
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Danh sách
+                            Danh mục
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                @* Party *@
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#partyCollapseAuth" aria-expanded="false" aria-controls="partyCollapseAuth">
+                                    Bữa tiệc
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="partyCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" asp-controller="Party" asp-action="Index">Danh sách bữa tiệc</a>
+                                        <a class="nav-link" asp-controller="Party" asp-action="Create">Tạo bữa tiệc</a>
+                                        @* <a class="nav-link" href="password.html">Forgot Password</a> *@
+                                    </nav>
+                                </div>
+                                @* Món ăn *@
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#menuCollapseAuth" aria-expanded="false" aria-controls="menuCollapseAuth">
                                     Thực đơn
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
-                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                <div class="collapse" id="menuCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
                                         <a class="nav-link" asp-controller="Product" asp-action="Index">Danh sách thực đơn</a>
-                                        <a class="nav-link" href="register.html">Register</a>
-                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                        <a class="nav-link" asp-controller="Product" asp-action="Create">Tạo món</a>
+                                        @* <a class="nav-link" href="password.html">Forgot Password</a> *@
                                     </nav>
                                 </div>
+
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                     Error
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>

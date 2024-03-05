@@ -30,7 +30,6 @@ namespace Booking.Application.Catalog.Products
             {
                 PartyHostId = request.PartyHostId,
                 ProductName = request.Productname,
-                ProductUrl = await this.SaveFile(request.ThumbnailImage),
                 ProductType = request.ProductType,
                 ProductStyle = request.ProductStyle,
                 Price = request.Price,
@@ -40,14 +39,10 @@ namespace Booking.Application.Catalog.Products
                 //CreatedDate = DateTime.Now,
                 ProductStatus = request.Productstatus,
                 Description = request.Description,
+                ProductUrl = await this.SaveFile(request.ThumbnailImage)
             };
             _context.Products.Add(product);
-            
-
-           
             return await _context.SaveChangesAsync();
-            
-           
         }
         public async Task<int> Update(ProductUpdateRequest request)
         {
@@ -58,11 +53,11 @@ namespace Booking.Application.Catalog.Products
             }
 
             product.ProductName = request.ProductName;
-            product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
             product.ProductType = request.ProductType;
             product.ProductStyle = request.ProductStyle;
             product.Price = request.Price;
             product.Description = request.Description;
+            product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
 
             return await _context.SaveChangesAsync();
         }
@@ -130,9 +125,9 @@ namespace Booking.Application.Catalog.Products
                 {
                     ProductId = x.p.ProductId,
                     PartyHostId = x.p.PartyHostId,
-                    ProductName = x.pt.ProductTypeName,
+                    ProductName = x.p.ProductName,
                     ProductUrl = x.p.ProductUrl,
-                    ProductType = x.pt.Id,
+                    ProductType = x.p.ProductType,
                     ProductStyle = x.p.ProductStyle,
                     Price = x.p.Price,
                     ProductStatus = x.p.ProductStatus,
@@ -149,8 +144,6 @@ namespace Booking.Application.Catalog.Products
             };
             return pagedResult;
         }
-
-
 
         public async Task<ProductVm> GetById(int productId)
         {
@@ -203,8 +196,6 @@ namespace Booking.Application.Catalog.Products
             throw new NotImplementedException();
         }
 
-
-
         //private async Task<string> SaveFile(IFormFile file)
         //{
         //    var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim();
@@ -245,5 +236,4 @@ namespace Booking.Application.Catalog.Products
             return await task;
         }
     }
-
 }

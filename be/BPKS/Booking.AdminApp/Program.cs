@@ -35,6 +35,8 @@ builder.Services.AddTransient<IRoleApiClient, RoleApiClient>();
 builder.Services.AddTransient<IProductApiClient, ProductApiClient>();
 //builder.Services.AddTransient<ICategoryApiClient, CategoryApiClient>();
 builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

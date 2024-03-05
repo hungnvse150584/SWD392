@@ -22,9 +22,9 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public double? Price { get; set; }
 
-        public string? Description { get; set; }
-
         public string? Productstatus { get; set; }
+
+        public string? Description { get; set; }
 
         public IFormFile? ThumbnailImage { get; set; }
 
