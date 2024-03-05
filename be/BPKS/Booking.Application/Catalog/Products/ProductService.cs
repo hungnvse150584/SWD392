@@ -104,17 +104,19 @@ namespace Booking.Application.Catalog.Products
             var query =
             from p in _context.Products
             join pt in _context.ProductTypes on p.ProductType equals pt.Id
-            where p.ProductType == request.ProductType
             select new { p, pt };
             //throw new NotImplementedException();
             //2. filter
-            if (!string.IsNullOrEmpty(request.Keyword))
-                query = query.Where(x => x.p.ProductName.Contains(request.Keyword));
+            if (!string.IsNullOrEmpty(request.ProductName))
+                query = query.Where(x => x.p.ProductName.Contains(request.ProductName));
 
             if (request.ProductType != null && request.ProductType != 0)
             {
                 query = query.Where(p => p.pt.Id == request.ProductType);
             }
+
+            if (request.PartyHostId != null)
+                query = query.Where(x => x.p.PartyHostId == request.PartyHostId);
 
             //3. Paging
             int totalRow = await query.CountAsync();

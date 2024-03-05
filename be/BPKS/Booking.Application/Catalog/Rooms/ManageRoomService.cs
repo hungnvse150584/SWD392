@@ -1,11 +1,17 @@
 ﻿using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
+using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Rooms;
+using BookingSolution.ViewModels.Common;
+using Firebase.Storage;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Net.Http.Headers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +20,7 @@ namespace Booking.Application.Catalog.Rooms
     public class ManageRoomService : IManageRoomService
     {
         private readonly BookingDbContext _context;
+        private static string Bucket = "bpks-ee4a1.appspot.com";
         public ManageRoomService(BookingDbContext context)
         {
             _context = context;
@@ -23,19 +30,14 @@ namespace Booking.Application.Catalog.Rooms
             var room = new Room()
             {
                 
-                PartyId = request.PartyId,
+               
                 RoomName = request.RoomName,
-                RoomUrl = request.RoomUrl,
+                RoomUrl = await this.SaveFile( request.RoomUrl),
                 RoomType = request.RoomType,
                
                 Price = request.Price,
                 RoomStatus = request.Roomstatus
-                
-                //ThumbnailUrl = request.ThumbnailUrl,
-                //DayStart = request.DayStart,
-                //DayEnd = request.DayEnd,
-                //CreatedDate = DateTime.Now,
-                //PartyStatus = request.PartyStatus,
+           
             };
             _context.Rooms.Add(room);
             return await _context.SaveChangesAsync();
@@ -48,9 +50,9 @@ namespace Booking.Application.Catalog.Rooms
             {
                 throw new Exception($"Cannot find a Room with id:{request.RoomtId}.");
             }
-            room.PartyId = request.PartyId;
+            
             room.RoomName = request.RoomName;
-            room.RoomUrl = request.RoomUrl;
+            room.RoomUrl = await this.SaveFile(request.RoomUrl);
             room.RoomType = request.RoomType;
             
             room.Price = request.Price;
@@ -77,7 +79,6 @@ namespace Booking.Application.Catalog.Rooms
                 .Select(r => new RoomVm
                 {
                     RoomId = r.RoomId,
-                    PartyId = r.PartyId,
                     RoomName = r.RoomName,
                     RoomUrl = r.RoomUrl,
                     RoomType = r.RoomType,
@@ -89,13 +90,48 @@ namespace Booking.Application.Catalog.Rooms
             return room;
         }
 
-        public Task<List<RoomVm>> GetAllPaging(GetPublicRoomPagingRequest request)
+        public async Task<PagedResult<RoomVm>> GetAllPaging(GetPublicRoomPagingRequest request)
         {
-            //var query = from p in _context.Products
-            //            join pt in _context.
-            throw new NotImplementedException();
+            var query =
+                  from r in _context.Rooms
+                  select new { r };
+
+            //2. filter
+            if (!string.IsNullOrEmpty(request.RoomName))
+                query = query.Where(x => x.r.RoomName.Contains(request.RoomName));
+
+            if (!string.IsNullOrEmpty(request.RoomType))
+                query = query.Where(x => x.r.RoomType.Contains(request.RoomType));
+
+            //3. Paging
+            int totalRow = await query.CountAsync();
+
+            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .Select(x => new RoomVm()
+                {
+                    RoomId = x.r.RoomId,
+                    RoomName = x.r.RoomName,
+                    RoomUrl = x.r.RoomUrl,
+                    RoomType = x.r.RoomType,
+                    Price = x.r.Price,
+                    RoomStatus = x.r.RoomStatus
+
+                }).ToListAsync();
+
+            //4. Select and projection
+            var pagedResult = new PagedResult<RoomVm>()
+            {
+                TotalRecords = totalRow,
+                PageSize = request.PageSize,
+                PageIndex = request.PageIndex,
+                Items = data
+            };
+            return pagedResult;
 
         }
+
+
 
         public async Task<RoomVm> GetById(int roomId)
         {
@@ -108,7 +144,7 @@ namespace Booking.Application.Catalog.Rooms
             var roomVm = new RoomVm
             {
                 RoomId = r.RoomId,
-                PartyId = r.PartyId,
+                
                 RoomName = r.RoomName,
                 RoomUrl = r.RoomUrl,
                 RoomType = r.RoomType,
@@ -118,5 +154,24 @@ namespace Booking.Application.Catalog.Rooms
 
             return roomVm;
         }
+
+        private async Task<string> SaveFile(IFormFile file)
+        {
+
+            var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim();
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+            var task = new FirebaseStorage(Bucket,
+               new FirebaseStorageOptions
+               {
+                   ThrowOnCancel = true
+               })
+               .Child("images")
+               .Child("RoomImage")
+               .Child(fileName)
+               .PutAsync(file.OpenReadStream());
+            return await task;
+        }
+
+        
     }
 }

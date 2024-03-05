@@ -30,15 +30,15 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-        [HttpGet("public-paging")]
+        [HttpGet("Search")]
         public async Task<IActionResult> Get([FromQuery] GetPublicRoomPagingRequest request)
         {
-            var rooms = await _publicRoomService.GetAllByStyle(request);
+            var rooms = await _manageRoomService.GetAllPaging(request);
             return Ok(rooms);
         }
 
 
-        [HttpGet("{roomId}")]
+        [HttpGet("Get{roomId}")]
         public async Task<IActionResult> GetById(int roomId)
         {
             try
@@ -55,8 +55,8 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] RoomCreateRequest request)
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create([FromForm] RoomCreateRequest request)
         {
             try
             {
@@ -79,8 +79,8 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
 
-        [HttpPut]
-        public async Task<IActionResult> Update([FromBody] RoomUpdateRequest request)
+        [HttpPut("Update")]
+        public async Task<IActionResult> Update([FromForm] RoomUpdateRequest request)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpDelete("{roomId}")]
+        [HttpDelete("Delete{roomId}")]
         public async Task<IActionResult> Delete(int roomId)
         {
             try

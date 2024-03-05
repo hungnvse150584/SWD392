@@ -5,15 +5,11 @@
     {
         public int RoomId { get; set; }
 
-        public int? PartyId { get; set; }
-
         public string? RoomName { get; set; }
 
         public string? RoomUrl { get; set; }
 
         public string? RoomType { get; set; }
-
-       
 
         public double? Price { get; set; }
 

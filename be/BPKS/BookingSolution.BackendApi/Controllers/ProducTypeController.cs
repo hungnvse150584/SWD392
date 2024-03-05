@@ -54,7 +54,7 @@ namespace BookingSolution.BackendApi.Controllers
 
         [HttpPost("create")]
 
-        public async Task<IActionResult> Create([FromBody] ProductTypeCreateRequest request)
+        public async Task<IActionResult> Create([FromForm] ProductTypeCreateRequest request)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace BookingSolution.BackendApi.Controllers
 
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Update([FromBody] ProductTypeUpdateRequest request)
+        public async Task<IActionResult> Update([FromForm] ProductTypeUpdateRequest request)
         {
             try
             {

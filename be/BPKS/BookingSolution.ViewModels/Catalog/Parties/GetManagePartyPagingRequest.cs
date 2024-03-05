@@ -11,6 +11,6 @@ namespace BookingSolution.ViewModels.Catalog.Parties
     {
         public string keyword { get; set; }
 
-        public List<int> CategoryIds { get; set; }
+      //  public List<int> CategoryIds { get; set; }
     }
 }

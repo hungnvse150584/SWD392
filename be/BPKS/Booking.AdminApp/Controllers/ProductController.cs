@@ -29,7 +29,7 @@ namespace  Booking.AdminApp.Controllers
             //var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
             var request = new GetManageProductPagingRequest()
             {
-                Keyword = keyword,
+                ProductName = keyword,
                 PageIndex = pageIndex,
                 PageSize = pageSize
                 //LanguageId = languageId,

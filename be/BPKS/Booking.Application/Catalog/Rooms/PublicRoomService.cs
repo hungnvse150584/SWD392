@@ -30,7 +30,6 @@ namespace Booking.Application.Catalog.Rooms
             var roomVms = rooms.Select(r => new RoomVm
             {
                 RoomId = r.RoomId,
-                PartyId = r.PartyId,
                 RoomName = r.RoomName,
                 RoomUrl = r.RoomUrl,
                 RoomType = r.RoomType,

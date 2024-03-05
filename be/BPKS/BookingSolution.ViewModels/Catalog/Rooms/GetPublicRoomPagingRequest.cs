@@ -7,7 +7,9 @@ namespace BookingSolution.ViewModels.Catalog.Rooms
 {
     public class GetPublicRoomPagingRequest : PagingRequestBase
     {
-        public string? RoomStyle { get; set; }
+        public string? RoomName { get; set; }
+        public string? RoomType { get; set; }
+        
 
     }
 }

@@ -16,7 +16,7 @@ namespace Booking.Common
         private readonly string _userContentFolder;
         private const string USER_CONTENT_FOLDER_NAME = "user-content";
         private static string ApiKey = "AIzaSyBT721fJRNgzah4Vs3IoczpHHjiTXmi9jI";
-        private static string Bucket = "bpks-ee4a1.appspot.com";
+        public static string Bucket = "bpks-ee4a1.appspot.com";
         private static string AuthEmail = "bpks@gmail.com";
         private static string AuthPassword = "Abc@123";
 

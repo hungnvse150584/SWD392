@@ -7,7 +7,9 @@ namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class GetManageProductPagingRequest : PagingRequestBase
     {
-        public string Keyword { get; set; }
+        public string? ProductName { get; set; }
+
+        public Guid? PartyHostId { get; set; }
 
        public int? ProductType { get; set; }
 

@@ -31,7 +31,7 @@ namespace Booking.ApiIntegration
         {
             var url = $"/api/products/public-paging?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}" +
-                $"&keyword={request.Keyword}";
+                $"&keyword={request.ProductName}";
             var data = await GetAsync<PagedResult<ProductVm>>(url);
 
             return data;

@@ -9,6 +9,8 @@ namespace BookingSolution.ViewModels.Catalog.Parties
 {
     public class GetPublicPartyPagingRequest : PagingRequestBase
     {
-        public int CategoryId { get; set; }
+       public Guid? PartyHostId { get; set; }
+        public string? PartyName { get; set;}
+        
     }
 }

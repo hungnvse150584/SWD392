@@ -1,4 +1,5 @@
 ﻿using BookingSolution.ViewModels.Catalog.Rooms;
+using BookingSolution.ViewModels.Common;
 
 namespace Booking.Application.Catalog.Rooms
 {
@@ -8,7 +9,7 @@ namespace Booking.Application.Catalog.Rooms
         Task<int> Update(RoomUpdateRequest request);
         Task<int> Delete(int roomId);
         Task<List<RoomVm>> GetAll();
-        Task<List<RoomVm>> GetAllPaging(GetPublicRoomPagingRequest request);
+        Task<PagedResult<RoomVm>> GetAllPaging(GetPublicRoomPagingRequest request);
         Task<RoomVm> GetById(int roomId);
     }
 }

@@ -94,7 +94,7 @@ namespace BookingSolution.BackendApi.Controllers
 
         [Authorize(Roles = "1")]
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] ProductUpdateRequest request)
+        public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
         {
             try
             {

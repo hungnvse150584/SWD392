@@ -21,13 +21,13 @@ public partial class Party
 
     public string? ThumbnailUrl { get; set; }
 
-    public DateOnly? DayStart { get; set; }
+    public DateTime? DayStart { get; set; }
 
-    public DateOnly? DayEnd { get; set; }
+    public DateTime? DayEnd { get; set; }
 
     public string? PartyStatus { get; set; }
 
-    public DateOnly? CreatedDate { get; set; }
+    public DateTime? CreatedDate { get; set; }
 
     public virtual ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
 
