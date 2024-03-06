@@ -7,14 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\bootstrap.min.js" />
-    <Content Remove="wwwroot\js\jquery-3.3.1.min.js" />
-    <Content Remove="wwwroot\js\jquery-ui.min.js" />
-    <Content Remove="wwwroot\js\jquery.nice-select.min.js" />
-    <Content Remove="wwwroot\js\jquery.slicknav.js" />
-    <Content Remove="wwwroot\js\main.js" />
-    <Content Remove="wwwroot\js\mixitup.min.js" />
-    <Content Remove="wwwroot\js\owl.carousel.min.js" />
+    <Compile Remove="wwwroot\lib\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <None Remove="wwwroot\lib\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,44 +19,15 @@
     <None Include="wwwroot\assets\demo\chart-pie-demo.js" />
     <None Include="wwwroot\assets\demo\datatables-demo.js" />
     <None Include="wwwroot\assets\img\error-404-monochrome.svg" />
-    <None Include="wwwroot\js\bootstrap.min.js" />
     <None Include="wwwroot\js\datatables-simple-demo.js" />
-    <None Include="wwwroot\js\jquery-3.3.1.min.js" />
-    <None Include="wwwroot\js\jquery-ui.min.js" />
-    <None Include="wwwroot\js\jquery.nice-select.min.js" />
-    <None Include="wwwroot\js\jquery.slicknav.js" />
-    <None Include="wwwroot\js\main.js" />
-    <None Include="wwwroot\js\mixitup.min.js" />
-    <None Include="wwwroot\js\owl.carousel.min.js" />
     <None Include="wwwroot\js\scripts.js" />
-    <None Include="wwwroot\fonts\ElegantIcons.svg" />
-    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
-    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
-    <None Include="wwwroot\sass\style.scss" />
-    <None Include="wwwroot\sass\_base.scss" />
-    <None Include="wwwroot\sass\_blog-details.scss" />
-    <None Include="wwwroot\sass\_blog-sidebar.scss" />
-    <None Include="wwwroot\sass\_blog.scss" />
-    <None Include="wwwroot\sass\_breadcrumb.scss" />
-    <None Include="wwwroot\sass\_checkout.scss" />
-    <None Include="wwwroot\sass\_contact.scss" />
-    <None Include="wwwroot\sass\_footer.scss" />
-    <None Include="wwwroot\sass\_header.scss" />
-    <None Include="wwwroot\sass\_hero.scss" />
-    <None Include="wwwroot\sass\_home-page.scss" />
-    <None Include="wwwroot\sass\_mixins.scss" />
-    <None Include="wwwroot\sass\_responsive.scss" />
-    <None Include="wwwroot\sass\_shop-details.scss" />
-    <None Include="wwwroot\sass\_shop-grid.scss" />
-    <None Include="wwwroot\sass\_shoping-cart.scss" />
-    <None Include="wwwroot\sass\_sidebar.scss" />
-    <None Include="wwwroot\sass\_variable.scss" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.IdentityModel.Logging" Version="7.4.0" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.4.0" />
@@ -80,37 +47,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\css\bootstrap.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\elegant-icons.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\font-awesome.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\jquery-ui.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\nice-select.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\owl.carousel.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\slicknav.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\css\style.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
