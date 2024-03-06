@@ -1,11 +1,5 @@
 ﻿using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Users;
-using BookingSolution.ViewModels.System.Users_Ex;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GetUserPagingRequest = BookingSolution.ViewModels.System.Users.GetUserPagingRequest;
 using LoginRequest = BookingSolution.ViewModels.System.Users.LoginRequest;
 using RegisterRequest = BookingSolution.ViewModels.System.Users.RegisterRequest;

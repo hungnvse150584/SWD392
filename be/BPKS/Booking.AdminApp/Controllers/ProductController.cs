@@ -24,35 +24,50 @@ namespace  Booking.AdminApp.Controllers
             //_categoryApiClient = categoryApiClient;
         }
 
-        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 10)
+        public async Task<IActionResult> Index(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
-            //var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
             var request = new GetManageProductPagingRequest()
             {
-                ProductName = keyword,
                 PageIndex = pageIndex,
                 PageSize = pageSize
-                //LanguageId = languageId,
-                //CategoryId = categoryId
-
             };
+
+            // Xác định trường cần tìm kiếm dựa trên searchField
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                switch (searchField)
+                {
+                    case "ProductName":
+                        request.ProductName = keyword;
+                        break;
+                    case "ProductType":
+                        request.ProductType = int.TryParse(keyword, out var productType) ? productType : (int?)null;
+                        break;
+                    case "PartyHostId":
+                        request.PartyHostId = Guid.TryParse(keyword, out var partyHostId) ? partyHostId : (Guid?)null;
+                        break;
+                    //default:
+                    //    // Trả về trang với dữ liệu trống
+                    //    return View(new PagedResult<ProductVm>());
+                }
+            }
+
             var data = await _productApiClient.GetPagings(request);
+            //ViewBag.ProductName = keyword;
+            //ViewBag.ProductType = keyword;
+            //ViewBag.PartyHostId= keyword;
+
+            ViewBag.searchField = searchField;
             ViewBag.Keyword = keyword;
-
-            //var categories = await _categoryApiClient.GetAll(languageId);
-            //ViewBag.Categories = categories.Select(x => new SelectListItem()
-            //{
-            //    Text = x.Name,
-            //    Value = x.Id.ToString(),
-            //    Selected = categoryId.HasValue && categoryId.Value == x.Id
-            //});
-
             if (TempData["result"] != null)
             {
                 ViewBag.SuccessMsg = TempData["result"];
             }
+
             return View(data);
         }
+
+
         public async Task<IActionResult> Details(int id)
         {
             var result = await _productApiClient.GetById(id);

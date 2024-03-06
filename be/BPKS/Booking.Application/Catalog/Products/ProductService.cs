@@ -94,7 +94,7 @@ namespace Booking.Application.Catalog.Products
             return products;
         }
 
-        public async Task<PagedResult<ProductVm>> GetAllProducType(GetManageProductPagingRequest request)
+        public async Task<PagedResult<ProductVm>> GetProductsPaging(GetManageProductPagingRequest request)
         {
             //var query = from p in _context.Products
             //            join pt in _context.
@@ -105,8 +105,10 @@ namespace Booking.Application.Catalog.Products
             select new { p, pt };
             //throw new NotImplementedException();
             //2. filter
-            if (!string.IsNullOrEmpty(request.ProductName))
+            if (!string.IsNullOrEmpty(request.ProductName)) 
+            { 
                 query = query.Where(x => x.p.ProductName.Contains(request.ProductName));
+            }
 
             if (request.ProductType != null && request.ProductType != 0)
             {
@@ -114,7 +116,9 @@ namespace Booking.Application.Catalog.Products
             }
 
             if (request.PartyHostId != null)
+            {
                 query = query.Where(x => x.p.PartyHostId == request.PartyHostId);
+            }
 
             //3. Paging
             int totalRow = await query.CountAsync();

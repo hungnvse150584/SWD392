@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\be",
+    "\\be\\BPKS",
+    "\\be\\BPKS\\BookingSolution.ViewModels"
   ],
-  "SelectedNode": "\\BPKS.sln",
   "PreviewInSolutionExplorer": false
 }

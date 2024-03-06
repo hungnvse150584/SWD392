@@ -29,13 +29,33 @@ namespace Booking.ApiIntegration
 
         public async Task<PagedResult<ProductVm>> GetPagings(GetManageProductPagingRequest request)
         {
-            var url = $"/api/products/public-paging?pageIndex={request.PageIndex}" +
-                $"&pageSize={request.PageSize}" +
-                $"&keyword={request.ProductName}";
+            // Tạo URL với các tham số yêu cầu
+            var url = $"/api/products/public-paging?PageIndex={request.PageIndex}&PageSize={request.PageSize}";
+
+            // Thêm tham số tìm kiếm theo tên sản phẩm nếu có
+            if (!string.IsNullOrEmpty(request.ProductName))
+            {
+                url += $"&ProductName={request.ProductName}";
+            }
+
+            // Thêm tham số tìm kiếm theo loại sản phẩm nếu có
+            if (request.ProductType != null && request.ProductType != 0)
+            {
+                url += $"&ProductType={request.ProductType}";
+            }
+
+            // Thêm tham số tìm kiếm theo mã chủ tiệc nếu có
+            if (request.PartyHostId != null && request.PartyHostId != Guid.Empty)
+            {
+                url += $"&PartyHostId={request.PartyHostId}";
+            }
+
+            // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
             var data = await GetAsync<PagedResult<ProductVm>>(url);
 
             return data;
         }
+
 
         public async Task<bool> CreateProduct(ProductCreateRequest request)
         {
@@ -62,7 +82,7 @@ namespace Booking.ApiIntegration
                 ByteArrayContent bytes = new ByteArrayContent(data);
                 requestContent.Add(bytes, "thumbnailImage", request.ThumbnailImage.FileName);
             }
-
+            requestContent.Add(new StringContent(request.PartyHostId.ToString() ?? ""), "PartyHostId");
             requestContent.Add(new StringContent(request.Productname ?? ""), "productName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
             requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "productType");

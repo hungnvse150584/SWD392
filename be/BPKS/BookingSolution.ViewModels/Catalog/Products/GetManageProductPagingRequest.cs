@@ -11,8 +11,9 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public Guid? PartyHostId { get; set; }
 
-       public int? ProductType { get; set; }
+        public int? ProductType { get; set; }
 
-        //public int? CategoryId { get; set; }
+        //public string? Keyword { get; set; }
+
     }
 }

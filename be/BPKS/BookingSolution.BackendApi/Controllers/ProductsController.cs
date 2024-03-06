@@ -46,7 +46,7 @@ namespace BookingSolution.BackendApi.Controllers
         [HttpGet("public-paging")]
         public async Task<IActionResult> GetAllPaging([FromQuery] GetManageProductPagingRequest request)
         {
-            var products = await _productService.GetAllProducType(request);
+            var products = await _productService.GetProductsPaging(request);
             return Ok(products);
         }
 

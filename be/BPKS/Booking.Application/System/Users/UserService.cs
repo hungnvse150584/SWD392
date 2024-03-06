@@ -9,11 +9,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using GetUserPagingRequest = BookingSolution.ViewModels.System.Users.GetUserPagingRequest;
-using LoginRequest = BookingSolution.ViewModels.System.Users.LoginRequest;
-using RegisterRequest = BookingSolution.ViewModels.System.Users.RegisterRequest;
-using UserUpdateRequest = BookingSolution.ViewModels.System.Users.UserUpdateRequest;
-using UserVm = BookingSolution.ViewModels.System.Users.UserVm;
 
 namespace Booking.Application.System.Users
 {
@@ -193,6 +188,7 @@ namespace Booking.Application.System.Users
 
             return new ApiErrorResult<bool>("Xóa không thành công");
         }
+
         public async Task<ApiResult<bool>> RoleAssign(Guid id, RoleAssignRequest request)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
