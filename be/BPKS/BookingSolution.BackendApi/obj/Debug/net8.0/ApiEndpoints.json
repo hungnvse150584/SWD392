@@ -1,0 +1,788 @@
+[
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.PartiesController",
+    "Method": "Create",
+    "RelativePath": "api/Parties/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PartyHostId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneContact",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Place",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DayStart",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DayEnd",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThumbnailUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.PartiesController",
+    "Method": "Delete",
+    "RelativePath": "api/Parties/Delete{roomId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.PartiesController",
+    "Method": "GetById",
+    "RelativePath": "api/Parties/Get{PartyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PartyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.PartiesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Parties/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.PartiesController",
+    "Method": "Get",
+    "RelativePath": "api/Parties/Search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PartyHostId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.PartiesController",
+    "Method": "Update",
+    "RelativePath": "api/Parties/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PartyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneContact",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Place",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DayStart",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DayEnd",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThumbnailUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+    "Method": "Create",
+    "RelativePath": "api/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PartyHostId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Productname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductType",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductStyle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Productstatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThumbnailImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+    "Method": "Update",
+    "RelativePath": "api/Products",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyHostId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThumbnailImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductType",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductStyle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+    "Method": "GetById",
+    "RelativePath": "api/Products/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+    "Method": "Delete",
+    "RelativePath": "api/Products/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Products/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProductsController",
+    "Method": "GetAllPaging",
+    "RelativePath": "api/Products/public-paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PartyHostId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductType",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "Create",
+    "RelativePath": "api/ProducType/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductTypeName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/ProducType/Delete{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "GetById",
+    "RelativePath": "api/ProducType/get{ProductTypeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductTypeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProducType/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.ProducTypeController",
+    "Method": "Update",
+    "RelativePath": "api/ProducType/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductTypeName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RolesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+    "Method": "Create",
+    "RelativePath": "api/Rooms/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RoomName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Roomstatus",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+    "Method": "Delete",
+    "RelativePath": "api/Rooms/Delete{roomId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+    "Method": "GetById",
+    "RelativePath": "api/Rooms/Get{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Rooms/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+    "Method": "Get",
+    "RelativePath": "api/Rooms/Search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RoomName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.RoomsController",
+    "Method": "Update",
+    "RelativePath": "api/Rooms/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RoomtId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomUrl",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoomStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "Update",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.System.Users.UserUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "GetById",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "Delete",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "RoleAssign",
+    "RelativePath": "api/Users/{id}/roles",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.System.Users.RoleAssignRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "Authencate",
+    "RelativePath": "api/Users/authenticate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookingSolution.ViewModels.System.Users.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "GetAllPaging",
+    "RelativePath": "api/Users/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookingSolution.BackendApi.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/Users/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dob",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

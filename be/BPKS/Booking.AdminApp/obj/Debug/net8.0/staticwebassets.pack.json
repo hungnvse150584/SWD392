@@ -1,0 +1,465 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Booking.AdminApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Booking.AdminApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\assets\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\assets\\img\\error-404-monochrome.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\error-404-monochrome.svg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\details\\details-author.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\details-author.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\details\\details-hero.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\details-hero.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\details\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\details\\details-pic.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\sidebar\\sr-1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\sidebar\\sr-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\sidebar\\sr-2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\sidebar\\sr-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\blog\\sidebar\\sr-3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\sidebar\\sr-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\img\\breadcrumb.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\cart\\cart-1.jpg",
+      "PackagePath": "staticwebassets\\img\\cart\\cart-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\cart\\cart-2.jpg",
+      "PackagePath": "staticwebassets\\img\\cart\\cart-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\cart\\cart-3.jpg",
+      "PackagePath": "staticwebassets\\img\\cart\\cart-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\categories\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\cat-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\categories\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\cat-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\categories\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\cat-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\categories\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\cat-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\categories\\cat-5.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\cat-5.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-1.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-2.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-3.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-4.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-5.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-5.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-6.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-6.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-7.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-7.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\featured\\feature-8.jpg",
+      "PackagePath": "staticwebassets\\img\\featured\\feature-8.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\hero\\banner.jpg",
+      "PackagePath": "staticwebassets\\img\\hero\\banner.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\language.png",
+      "PackagePath": "staticwebassets\\img\\language.png"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\latest-product\\lp-1.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-product\\lp-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\latest-product\\lp-2.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-product\\lp-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\latest-product\\lp-3.jpg",
+      "PackagePath": "staticwebassets\\img\\latest-product\\lp-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\payment-item.png",
+      "PackagePath": "staticwebassets\\img\\payment-item.png"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\product-details-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-details-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\product-details-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-details-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\product-details-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-details-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\product-details-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-details-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\product-details-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\product-details-5.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\details\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\details\\thumb-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\discount\\pd-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\discount\\pd-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\discount\\pd-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\discount\\pd-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\discount\\pd-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\discount\\pd-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\discount\\pd-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\discount\\pd-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\discount\\pd-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\discount\\pd-5.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\discount\\pd-6.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\discount\\pd-6.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-10.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-10.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-11.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-11.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-12.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-12.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\img\\product\\product-9.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\product-9.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\datatables-simple-demo.js",
+      "PackagePath": "staticwebassets\\js\\datatables-simple-demo.js"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_base.scss",
+      "PackagePath": "staticwebassets\\sass\\_base.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_blog-details.scss",
+      "PackagePath": "staticwebassets\\sass\\_blog-details.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_blog-sidebar.scss",
+      "PackagePath": "staticwebassets\\sass\\_blog-sidebar.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_blog.scss",
+      "PackagePath": "staticwebassets\\sass\\_blog.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\sass\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_checkout.scss",
+      "PackagePath": "staticwebassets\\sass\\_checkout.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_contact.scss",
+      "PackagePath": "staticwebassets\\sass\\_contact.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_footer.scss",
+      "PackagePath": "staticwebassets\\sass\\_footer.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_header.scss",
+      "PackagePath": "staticwebassets\\sass\\_header.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_hero.scss",
+      "PackagePath": "staticwebassets\\sass\\_hero.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_home-page.scss",
+      "PackagePath": "staticwebassets\\sass\\_home-page.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_mixins.scss",
+      "PackagePath": "staticwebassets\\sass\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_responsive.scss",
+      "PackagePath": "staticwebassets\\sass\\_responsive.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_shop-details.scss",
+      "PackagePath": "staticwebassets\\sass\\_shop-details.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_shop-grid.scss",
+      "PackagePath": "staticwebassets\\sass\\_shop-grid.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_shoping-cart.scss",
+      "PackagePath": "staticwebassets\\sass\\_shoping-cart.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_sidebar.scss",
+      "PackagePath": "staticwebassets\\sass\\_sidebar.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\_variable.scss",
+      "PackagePath": "staticwebassets\\sass\\_variable.scss"
+    },
+    {
+      "Id": "D:\\FPT\\1_SWD392\\Clone\\SWD392\\be\\BPKS\\Booking.AdminApp\\wwwroot\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\sass\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Booking.AdminApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Booking.AdminApp.props",
+      "PackagePath": "build\\Booking.AdminApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Booking.AdminApp.props",
+      "PackagePath": "buildMultiTargeting\\Booking.AdminApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Booking.AdminApp.props",
+      "PackagePath": "buildTransitive\\Booking.AdminApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
