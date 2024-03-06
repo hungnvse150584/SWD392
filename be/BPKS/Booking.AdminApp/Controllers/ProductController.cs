@@ -53,14 +53,17 @@ namespace  Booking.AdminApp.Controllers
             }
             return View(data);
         }
-
+        public async Task<IActionResult> Details(int id)
+        {
+            var result = await _productApiClient.GetById(id);
+            return View(result);
+        }
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
         {
@@ -105,7 +108,6 @@ namespace  Booking.AdminApp.Controllers
         //    return View(roleAssignRequest);
         //}
 
-        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
             var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
@@ -114,13 +116,15 @@ namespace  Booking.AdminApp.Controllers
             var editVm = new ProductUpdateRequest()
             {
                 ProductId = product.ProductId,
-                PartyHostId = product.PartyHostId,
+                //PartyHostId = product.PartyHostId,
                 ProductName = product.ProductName,
                 //ProductUrl = product.ProductUrl,
                 ProductStyle = product.ProductStyle,
                 ProductType = product.ProductType,
                 Price = product.Price,
                 ProductStatus = product.ProductStatus,
+                Description = product.Description,
+                ThumbnailImage = product.ThumbnailImage
             };
             return View(editVm);
         }

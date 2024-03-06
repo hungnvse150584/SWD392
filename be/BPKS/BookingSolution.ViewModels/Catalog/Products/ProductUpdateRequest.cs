@@ -9,13 +9,11 @@ namespace BookingSolution.ViewModels.Catalog.Products
     {
         public int ProductId { get; set; }
 
-        public Guid? PartyHostId { get; set; }
+        //public Guid? PartyHostId { get; set; }
 
         public string? ProductName { get; set; }
 
-        public IFormFile ThumbnailImage { get; set; }
-
-        public string? ProductUrl { get; set; }
+        //public string? ProductUrl { get; set; }
 
         public int? ProductType { get; set; }
 
@@ -23,9 +21,12 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public double? Price { get; set; }
 
+        public string? ProductStatus { get; set; }
+
         public string? Description { get; set; }
 
-        public string? ProductStatus { get; set; }
+        public IFormFile? ThumbnailImage { get; set; }
+
 
         //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
 

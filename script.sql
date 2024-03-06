@@ -195,27 +195,27 @@ ALTER TABLE Feedback
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
 
 -- Insert dữ liệu mẫu vào bảng AspNetUsers
-INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [NormalizedUserName], [ConcurrencyStamp], [NormalizedEmail], [LockoutEnd])
-VALUES 
-    ('11111111-1111-1111-1111-111111111111', 'example1@example.com', 1, 'password_hash_1', 'security_stamp_1', NULL, 0, 0, NULL, 1, 0, 'user1', 'USER1', 'concurrency_stamp_1', 'example1@example.com', NULL),
-    ('22222222-2222-2222-2222-222222222222', 'example2@example.com', 1, 'password_hash_2', 'security_stamp_2', NULL, 0, 0, NULL, 1, 0, 'user2', 'USER2', 'concurrency_stamp_2', 'example2@example.com', NULL);
+--INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [NormalizedUserName], [ConcurrencyStamp], [NormalizedEmail], [LockoutEnd])
+--VALUES 
+--    ('11111111-1111-1111-1111-111111111111', 'example1@example.com', 1, 'password_hash_1', 'security_stamp_1', NULL, 0, 0, NULL, 1, 0, 'user1', 'USER1', 'concurrency_stamp_1', 'example1@example.com', NULL),
+--    ('22222222-2222-2222-2222-222222222222', 'example2@example.com', 1, 'password_hash_2', 'security_stamp_2', NULL, 0, 0, NULL, 1, 0, 'user2', 'USER2', 'concurrency_stamp_2', 'example2@example.com', NULL);
 
 -- Insert dữ liệu mẫu vào bảng Party
-INSERT INTO Party (PartyHostId, PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus, CreatedDate)
-VALUES
-    ('11111111-1111-1111-1111-111111111111', 'Party 1', 'Description for Party 1', '123456789', 'Location 1', 4.5, 'thumbnail_url_1.jpg', '2024-03-01', '2024-03-02', 'Active', '2024-02-29'),
-    ('11111111-1111-1111-1111-111111111111', 'Party 2', 'Description for Party 2', '987654321', 'Location 2', 4.8, 'thumbnail_url_2.jpg', '2024-03-03', '2024-03-04', 'Active', '2024-02-29');
+--INSERT INTO Party (PartyHostId, PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus, CreatedDate)
+--VALUES
+--    ('11111111-1111-1111-1111-111111111111', 'Party 1', 'Description for Party 1', '123456789', 'Location 1', 4.5, 'thumbnail_url_1.jpg', '2024-03-01', '2024-03-02', 'Active', '2024-02-29'),
+--    ('11111111-1111-1111-1111-111111111111', 'Party 2', 'Description for Party 2', '987654321', 'Location 2', 4.8, 'thumbnail_url_2.jpg', '2024-03-03', '2024-03-04', 'Active', '2024-02-29');
 
-	INSERT INTO dbo.ProductType(Id,ProductTypeName,Status)
+INSERT INTO dbo.ProductType(Id,ProductTypeName,Status)
 VALUES ('1','Food','active'),
        ('2','Drink','active');
 
 -- Insert dữ liệu mẫu vào bảng Product
-INSERT INTO Product (PartyHostId, ProductName, ProductUrl, ProductType, ProductStyle, Price, ProductStatus)
+INSERT INTO Product (PartyHostId, ProductName, ProductUrl, ProductType, ProductStyle, Price, ProductStatus, Description)
 VALUES
-    ('11111111-1111-1111-1111-111111111111', 'Product 1', 'product_url_1', '1', 'Style 1', 10.5, 'Active'),
-    ('11111111-1111-1111-1111-111111111111', 'Product 2', 'product_url_2', '2', 'Style 2', 15.75, 'Active'),
-    ('22222222-2222-2222-2222-222222222222', 'Product 3', 'product_url_3', '2', 'Style 3', 20.0, 'Active');
+    ('11111111-1111-1111-1111-111111111111', 'Pizza', 'product_url_1', '1', 'Style 1', 2452000, 'Active', 'ngon'),
+    ('11111111-1111-1111-1111-111111111111', 'Bánh kem', 'product_url_2', '2', 'Style 2', 150000, 'Active', 'ngon'),
+    ('22222222-2222-2222-2222-222222222222', 'Bò nướng', 'product_url_3', '2', 'Style 3', 450000, 'Active', 'ngon');
 
 -- Insert dữ liệu mẫu vào bảng Room
 INSERT INTO Room (RoomName, RoomUrl, RoomType, Price, RoomStatus)
@@ -225,24 +225,24 @@ VALUES
     ('Room 3', 'room_url_3', 'Type 3', 100.0, 'Available');
 
 -- Insert dữ liệu mẫu vào bảng ListParty
-INSERT INTO ListParty (ParentId, PartyId, PartyHostId, ListPartyStatus)
-VALUES
-    ('22222222-2222-2222-2222-222222222222', 1, '11111111-1111-1111-1111-111111111111', 'Confirmed'),
-    ('99999999-9999-9999-9999-999999999999', 2, '11111111-1111-1111-1111-111111111111', 'Pending');
+--INSERT INTO ListParty (ParentId, PartyId, PartyHostId, ListPartyStatus)
+--VALUES
+--    ('22222222-2222-2222-2222-222222222222', 1, '11111111-1111-1111-1111-111111111111', 'Confirmed'),
+--    ('99999999-9999-9999-9999-999999999999', 2, '11111111-1111-1111-1111-111111111111', 'Pending');
 
 -- Insert dữ liệu mẫu vào bảng ListProduct
-INSERT INTO ListProduct (PartyId, RoomId, ProductId, Quantity, ListProductStatus)
-VALUES
-    (1, 1, 1, 2, 'Confirmed'),
-    (1, 2, 2, 1, 'Confirmed'),
-    (2, NULL, 3, 3, 'Pending');
+--INSERT INTO ListProduct (PartyId, RoomId, ProductId, Quantity, ListProductStatus)
+--VALUES
+--    (1, 1, 1, 2, 'Confirmed'),
+--    (1, 2, 2, 1, 'Confirmed'),
+--    (2, NULL, 3, 3, 'Pending');
 
 -- Insert dữ liệu mẫu vào bảng ListRoom
-INSERT INTO ListRoom (PartyId, ParentId, RoomId, ListRoomStatus)
-VALUES
-    (1, NULL, 1, 'Confirmed'),
-    (1, NULL, 2, 'Confirmed'),
-    (2, NULL, NULL, 'Pending');
+--INSERT INTO ListRoom (PartyId, ParentId, RoomId, ListRoomStatus)
+--VALUES
+    --(1, NULL, 1, 'Confirmed'),
+    --(1, NULL, 2, 'Confirmed'),
+    --(2, NULL, NULL, 'Pending');
 
 -- Insert dữ liệu mẫu vào bảng AppConfig
 INSERT INTO AppConfig ([Key], Value)
@@ -253,36 +253,37 @@ VALUES
 
 
 -- Insert dữ liệu mẫu vào bảng Feedback
-INSERT INTO Feedback (ParentId, PartyId, Score, Feedback)
-VALUES
-    ('99999999-9999-9999-9999-999999999999', 1, 4, 'Good experience'),
-    ('99999999-9999-9999-9999-999999999999', 2, 5, 'Excellent service');
+--INSERT INTO Feedback (ParentId, PartyId, Score, Feedback)
+--VALUES
+--    ('99999999-9999-9999-9999-999999999999', 1, 4, 'Good experience'),
+--    ('99999999-9999-9999-9999-999999999999', 2, 5, 'Excellent service');
 
 -- Insert dữ liệu mẫu vào bảng AspNetRoles
 INSERT INTO [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp])
 VALUES
-  ('33333333-3333-3333-3333-333333333333', 'RoleName1', 'normalized_username_1', 'concurrency_stamp_1'),
-  ('44444444-4444-4444-4444-444444444444', 'RoleName2', 'normalized_username_2', 'concurrency_stamp_2'),
-  ('55555555-5555-5555-5555-555555555555', 'RoleName3', 'normalized_username_3', 'concurrency_stamp_3');
+  ('11111111-1111-1111-1111-111111111111', 'admin', 'ADMIN', 'concurrency_stamp_2'),
+  ('22222222-2222-2222-2222-222222222222', 'parent', 'PARENT', 'concurrency_stamp_3'),
+  ('33333333-3333-3333-3333-333333333333', 'partyhost', 'PARTYHOST', 'concurrency_stamp_1');
+
 
   -- Insert dữ liệu mẫu vào bảng AspNetUserRoles
 
-INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId])
-VALUES
-  ('11111111-1111-1111-1111-111111111111', '33333333-3333-3333-3333-333333333333'),
-  ('22222222-2222-2222-2222-222222222222', '44444444-4444-4444-4444-444444444444');
+--INSERT INTO [dbo].[AspNetUserRoles] ([UserId], [RoleId])
+--VALUES
+--  ('11111111-1111-1111-1111-111111111111', '33333333-3333-3333-3333-333333333333'),
+--  ('22222222-2222-2222-2222-222222222222', '44444444-4444-4444-4444-444444444444');
 
 -- Insert dữ liệu mẫu vào bảng AspNetUserLogins
-INSERT INTO [dbo].[AspNetUserLogins] ([LoginProvider], [ProviderKey], [UserId])
-VALUES 
-    ('login_provider_1', 'provider_key_1', '11111111-1111-1111-1111-111111111111'),
-    ('login_provider_2', 'provider_key_2', '22222222-2222-2222-2222-222222222222');
+--INSERT INTO [dbo].[AspNetUserLogins] ([LoginProvider], [ProviderKey], [UserId])
+--VALUES 
+--    ('login_provider_1', 'provider_key_1', '11111111-1111-1111-1111-111111111111'),
+--    ('login_provider_2', 'provider_key_2', '22222222-2222-2222-2222-222222222222');
 
 -- Insert dữ liệu mẫu vào bảng AspNetUserClaims
-INSERT INTO [dbo].[AspNetUserClaims] ([UserId], [ClaimType], [ClaimValue])
-VALUES 
-    ('11111111-1111-1111-1111-111111111111', 'claim_type_1', 'claim_value_1'),
-    ('22222222-2222-2222-2222-222222222222', 'claim_type_2', 'claim_value_2');
+--INSERT INTO [dbo].[AspNetUserClaims] ([UserId], [ClaimType], [ClaimValue])
+--VALUES 
+--    ('11111111-1111-1111-1111-111111111111', 'claim_type_1', 'claim_value_1'),
+--    ('22222222-2222-2222-2222-222222222222', 'claim_type_2', 'claim_value_2');
 
 
 

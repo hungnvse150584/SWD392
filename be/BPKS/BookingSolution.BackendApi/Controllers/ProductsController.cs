@@ -69,7 +69,7 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
         //[Authorize(Roles = "1")]
-        [HttpPost]
+        [HttpPost("Create")]
         public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
         {
             try
@@ -92,13 +92,11 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [Authorize(Roles = "1")]
-        [HttpPut]
+        [HttpPut("Update")]
         public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
         {
             try
             {
-              
                 var affectedRessult = await _productService.Update(request);
                 if (affectedRessult == 0)
                     return BadRequest();
@@ -121,8 +119,6 @@ namespace BookingSolution.BackendApi.Controllers
                 if (affectedResult == 0)
                     return BadRequest();
                 return Ok();
-
-               
             }
             catch (Exception ex)
             {
@@ -130,9 +126,5 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-
-        
-        
-
     }
 }

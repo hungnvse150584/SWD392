@@ -27,6 +27,7 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public IFormFile? ThumbnailImage { get; set; }
 
+
         //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
     }
 }

@@ -39,18 +39,18 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>
+                           @*  <th>
                                 Product Id
-                            </th> 
-                            <th>
+                            </th>  *@
+                            @* <th>
                                 Party Host Id
-                            </th>
+                            </th> *@
                             <th>
                                 Product Name
                             </th>
-                            @* <th>
+                            <th>
                                 Image
-                            </th> *@
+                            </th>
                             <th>
                                 Product Type
                             </th>
@@ -63,24 +63,28 @@
                             <th>
                                 Product status
                             </th>
+                            <th>
+                                Description
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model.Items)
                         {
                             <tr>
-                                <td>
+                               @*  <td>
                                     @Html.DisplayFor(modelItem => item.ProductId)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.PartyHostId)
-                                </td>
+                                </td> *@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.ProductName)
                                 </td>
-                                @* <td>
-                                    @Html.DisplayFor(modelItem => item.ProductUrl)
-                                </td> *@
+                                <td>
+                                    <img src="@item.ProductUrl" alt="Product Image" class="img-fluid" style=" height: 100px;" />
+                                </td>
+
                                 <td>
                                     @Html.DisplayFor(modelItem => item.ProductType)
                                 </td>
@@ -94,9 +98,12 @@
                                     @Html.DisplayFor(modelItem => item.ProductStatus)
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
-                                    @Html.ActionLink("Details", "Details", new {  id=item.ProductId  }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Chi tiết", "Details", new { id = item.ProductId }) |
+                                    @Html.ActionLink("Sửa", "Edit", new { id = item.ProductId }) |
+                                    @Html.ActionLink("Xóa", "Delete", new { id=item.ProductId })
                                 </td>
                             </tr>
                         }
