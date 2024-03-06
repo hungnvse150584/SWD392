@@ -13,6 +13,7 @@ using Booking.Application.System.Users;
 using Booking.Application.System.Roles;
 using Booking.Common;
 using Booking.ApiIntegration;
+using Booking.Application.System.Services;
 
 namespace BookingSolution.BackendApi
 {
@@ -50,12 +51,11 @@ namespace BookingSolution.BackendApi
             services.AddTransient<UserManager<AspNetUser>, UserManager<AspNetUser>>();
             services.AddTransient<SignInManager<AspNetUser>, SignInManager <AspNetUser>>();
             services.AddTransient<RoleManager<AppNetRole>, RoleManager<AppNetRole>>();
-
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
-            
+            services.AddTransient<ISystemService, SystemService>();
 
 
             services.AddControllers();

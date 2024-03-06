@@ -5,7 +5,9 @@ using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 using DocumentFormat.OpenXml.InkML;
+using DocumentFormat.OpenXml.Wordprocessing;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -38,11 +40,24 @@ namespace Booking.Application.Catalog.Parties
                 PartyHostId = request.PartyHostId,
                 PartyStatus = "Active",
                 ThumbnailUrl = await this.SaveFile(request.ThumbnailUrl),
-           
-        };
-            _context.Parties.Add(party);
 
-        
+            };
+            _context.Parties.Add(party);
+            _context.SaveChanges();
+
+            var partyrequest = _context.Parties.FirstOrDefault(p => p.ThumbnailUrl == party.ThumbnailUrl);
+
+            if (partyrequest != null)
+            {
+                var listparty = new ListParty
+                {
+                    PartyHostId = request.PartyHostId,
+                    PartyId = partyrequest?.PartyId,
+                };
+
+                _context.ListParties.Add(listparty);
+            }
+
             return await _context.SaveChangesAsync();
         }
 
@@ -130,7 +145,7 @@ namespace Booking.Application.Catalog.Parties
             var query =
                 from p in _context.Parties
                 select new { p };
-            
+
             //2. filter
             if (!string.IsNullOrEmpty(request.keyword))
                 query = query.Where(x => x.p.PartyName.Contains(request.keyword));
@@ -147,7 +162,7 @@ namespace Booking.Application.Catalog.Parties
                     PartyName = x.p.PartyName,
                     Description = x.p.Description,
                     PhoneContact = x.p.PhoneContact,
-                    Place =     x.p.Place,
+                    Place = x.p.Place,
                     Rate = x.p.Rate,
                     ThumbnailUrl = x.p.ThumbnailUrl,
                     PartyStatus = x.p.PartyStatus,
@@ -275,6 +290,104 @@ namespace Booking.Application.Catalog.Parties
             };
 
             return roomVm;
+        }
+
+        public async Task<PartyUserView> GetPartyDetail(int partyid)
+        {
+            PartyUserView partydetail = new PartyUserView();
+            var query =
+                 from party in _context.Parties
+                 join listroom in _context.ListRooms
+                 on party.PartyId equals listroom.PartyId
+                 join room in _context.Rooms
+                 on listroom.RoomId equals room.RoomId
+                 join listproduct in _context.ListProducts
+                 on room.RoomId equals listproduct.RoomId
+                 join product in _context.Products
+                 on listproduct.ProductId equals product.ProductId
+                 where party.PartyId == partyid
+                 orderby party.PartyId ascending, room.RoomId ascending, product.ProductId
+                 select new { party, room, product };
+            //var data = await query.Select(t =>
+            //partydetail.PartyId != t.party.PartyId ? partydetail.PartyId = t.party.PartyId
+            //: "",
+            //partydetail = t.
+
+            //).ToListAsync(); 
+                foreach (var item in query)
+            {
+                if(item.party.PartyId != partydetail.PartyId)
+                {
+                    partydetail.PartyId = item.party.PartyId;
+                    partydetail.PartyName = item.party.PartyName;
+                    partydetail.DayStart = item.party.DayStart;
+                    partydetail.DayEnd = item.party.DayEnd;
+                    partydetail.PhoneContact = item.party.PhoneContact;
+                    partydetail.Description = item.party.Description;
+                    partydetail.Place = item.party.Place;
+                    partydetail.Rate = item.party.Rate;
+                    partydetail.ThumbnailUrl = item.party.ThumbnailUrl;
+                    partydetail.roomUserViews = new List<RoomUserView>();
+                    partydetail.roomUserViews.Add(new RoomUserView
+                    {
+                        RoomId = item.room.RoomId,
+                        Price = item.room.RoomId,
+                        RoomName = item.room.RoomName,
+                        RoomUrl = item.room.RoomUrl,
+                        RoomType = item.room.RoomType,
+                        
+                    });
+                }
+                if(item.room.RoomId != partydetail.roomUserViews.Last().RoomId)
+                {
+                    var room = new RoomUserView
+                    {
+                        RoomId = item.room.RoomId,
+                        Price = item.room.RoomId,
+                        RoomName = item.room.RoomName,
+                        RoomUrl = item.room.RoomUrl,
+                        RoomType = item.room.RoomType,
+                        productUserViews = new List<ProductUserView>(),
+                    };
+                    partydetail.roomUserViews.Add(room);
+                }
+                if(item.room.RoomId == partydetail.roomUserViews.Last().RoomId)
+                {
+                    partydetail.roomUserViews.Last().productUserViews = new List<ProductUserView>();
+                    var product = new ProductUserView
+                    {
+                        ProductId = item.product.ProductId,
+                        ProductName = item.product.ProductName,
+                        ProductUrl = item.product.ProductUrl,
+                        ProductType = item.product.ProductType,
+                        Description = item.product.Description,
+                        Price = item.product.Price,
+                        ProductStyle = item.product.ProductStyle
+                    };
+                    partydetail.roomUserViews.Last().productUserViews.Add(product);
+                }
+                if(item.product.ProductId != partydetail.roomUserViews.Last().productUserViews.Last().ProductId)
+                {
+                    var product = new ProductUserView
+                    {
+                        ProductId = item.product.ProductId,
+                        Description = item.product.Description,
+                        Price = item.product.Price,
+                        ProductName = item.product.ProductName,
+                        ProductUrl = item.product.ProductUrl,
+                        ProductType = item.product.ProductType,
+                        ProductStyle = item.product.ProductStyle,
+
+                    };
+                    partydetail.roomUserViews.Last().productUserViews.Add(product);
+                }
+                
+
+
+            }
+
+          return partydetail;
+
         }
     }
 }

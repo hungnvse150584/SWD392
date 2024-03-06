@@ -1,6 +1,7 @@
 ﻿using BookingSolution.ViewModels.Catalog.Parties;
 
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 
 namespace Booking.Application.Catalog.Parties
 {
@@ -20,5 +21,7 @@ namespace Booking.Application.Catalog.Parties
         Task<PagedResult<PartyVm>> GetPartyNameNPartyHostPaging(GetPartyNameNPartyHostPaging request);
 
         Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request);
+        Task<PartyUserView> GetPartyDetail(int request);
+
     }
 }

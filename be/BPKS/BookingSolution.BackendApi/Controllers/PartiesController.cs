@@ -2,6 +2,7 @@
 using Booking.Application.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Rooms;
+using BookingSolution.ViewModels.System.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -55,6 +56,24 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpGet("[action]GetPartyDetail{id}")]
+        public async Task<IActionResult> GetPartyDetail(int id)         {
+
+            try
+            {
+                var party = await _managePartyService.GetPartyDetail(id);
+                if (party == null)
+                    return BadRequest("Cannot find Party");
+                return Ok(party);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromForm] PartyCreateRequest request)
         {
@@ -63,7 +82,7 @@ namespace BookingSolution.BackendApi.Controllers
                 var RoomId = await _managePartyService.Create(request);
                 if (RoomId == 0)
                     return BadRequest();
-
+                
                 var room = await _managePartyService.GetById(RoomId);
                 if (room == null)
                     return NotFound();
