@@ -16,11 +16,11 @@ namespace Booking.Application.System.Users
     {
         private readonly UserManager<AspNetUser> _userManager;
         private readonly SignInManager<AspNetUser> _signInManager;
-        private readonly RoleManager<AppNetRole> _roleManager;
+        private readonly RoleManager<AspNetRole> _roleManager;
         private readonly IConfiguration _config;
 
 
-        public UserService(UserManager<AspNetUser> userManager, SignInManager<AspNetUser> signInManager, RoleManager<AppNetRole> roleManager, IConfiguration config)
+        public UserService(UserManager<AspNetUser> userManager, SignInManager<AspNetUser> signInManager, RoleManager<AspNetRole> roleManager, IConfiguration config)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -30,40 +30,41 @@ namespace Booking.Application.System.Users
         public async Task<ApiResult<string>> Authencate(LoginRequest request)
         {
             var user = await _userManager.FindByNameAsync(request.UserName);
-            if (user == null) return new ApiErrorResult<string>("Tài khoản không tồn tại");
+            if (user == null)
+                return new ApiErrorResult<string>("Tài khoản không tồn tại");
 
             var result = await _signInManager.PasswordSignInAsync(user, request.Password, request.RememberMe, true);
             if (!result.Succeeded)
             {
                 return new ApiErrorResult<string>("Đăng nhập không đúng");
             }
+
+            // Lấy vai trò của người dùng
             var roles = await _userManager.GetRolesAsync(user);
-            //login success
-            var claims = new[]
+
+            // Tạo các claim bao gồm vai trò của người dùng
+            var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email, user.Email),
-                //new Claim(ClaimTypes.GivenName,user.FullName),
-                new Claim(ClaimTypes.Role, string.Join(",", roles)),
                 new Claim(ClaimTypes.Name, request.UserName)
             };
 
-            //link fix bug :https://stackoverflow.com/questions/47279947/idx10603-the-algorithm-hs256-requires-the-securitykey-keysize-to-be-greater
-            //Điều đó đã giải quyết được vấn đề của tôi vì số HmacSha256trong dòng SigningCredentials(signinKey, SecurityAlgorithms.HmacSha256)phải lớn hơn 128 bit.Tóm lại, chỉ cần sử dụng một chuỗi dài làm khóa.
-            //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"));
-            //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
 
-            //var token = new JwtSecurityToken(_config["this is my custom Secret key for authentication"],
-            //    _config["this is my custom Secret key for authentication"],
+            // Tạo mã thông báo (token) JWT bao gồm các claim và ký tắt
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(_config["Tokens:Issuer"],
                 _config["Tokens:Issuer"],
-            
                 claims,
                 expires: DateTime.Now.AddHours(3),
                 signingCredentials: creds);
 
+            // Trả về mã thông báo JWT đã tạo
             return new ApiSuccessResult<string>(new JwtSecurityTokenHandler().WriteToken(token));
         }
 
@@ -101,32 +102,45 @@ namespace Booking.Application.System.Users
             return new ApiSuccessResult<PagedResult<UserVm>>(pagedResult);
         }
 
-        public async Task<ApiResult<bool>> Register(RegisterRequest request)
+        public async Task<ApiResult<bool>> Register(RegisterRequest request, string roleName)
         {
-
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user != null)
             {
                 return new ApiErrorResult<bool>("Tài khoản đã tồn tại");
             }
+
             if (await _userManager.FindByEmailAsync(request.Email) != null)
             {
-                return new ApiErrorResult<bool>("Emai đã tồn tại");
+                return new ApiErrorResult<bool>("Email đã tồn tại");
             }
+
             user = new AspNetUser()
             {
-                FirstName =request.FirstName,
-                LastName =request.LastName,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
                 Dob = request.Dob,
                 Email = request.Email,
                 UserName = request.UserName.Trim(),
                 PhoneNumber = request.PhoneNumber,
-                //Address = request.Address
             };
+
             var result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded)
             {
-                return new ApiSuccessResult<bool>();
+                // Thêm người dùng vào vai trò được chỉ định
+                var addToRoleResult = await _userManager.AddToRoleAsync(user, roleName);
+
+                if (addToRoleResult.Succeeded)
+                {
+                    return new ApiSuccessResult<bool>();
+                }
+                else
+                {
+                    // Nếu không thêm được vào vai trò, xóa người dùng đã được tạo
+                    await _userManager.DeleteAsync(user);
+                    return new ApiErrorResult<bool>("Không thể thêm người dùng vào vai trò được chọn");
+                }
             }
             return new ApiErrorResult<bool>("Đăng ký không thành công");
         }

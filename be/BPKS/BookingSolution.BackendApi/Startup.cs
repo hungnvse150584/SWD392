@@ -34,7 +34,7 @@ namespace BookingSolution.BackendApi
 
       
 
-            services.AddIdentity<AspNetUser, AppNetRole>()
+            services.AddIdentity<AspNetUser, AspNetRole>()
                 .AddEntityFrameworkStores<BookingDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -50,7 +50,7 @@ namespace BookingSolution.BackendApi
 
             services.AddTransient<UserManager<AspNetUser>, UserManager<AspNetUser>>();
             services.AddTransient<SignInManager<AspNetUser>, SignInManager <AspNetUser>>();
-            services.AddTransient<RoleManager<AppNetRole>, RoleManager<AppNetRole>>();
+            services.AddTransient<RoleManager<AspNetRole>, RoleManager<AspNetRole>>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IStorageService, FileStorageService>();
@@ -124,6 +124,13 @@ namespace BookingSolution.BackendApi
                     ClockSkew = System.TimeSpan.Zero,
                     IssuerSigningKey = new SymmetricSecurityKey(signingKeyBytes)
                 };
+            });
+
+            // Add authorization policy
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdminRole", policy =>
+                    policy.RequireRole("admin"));
             });
         }
 

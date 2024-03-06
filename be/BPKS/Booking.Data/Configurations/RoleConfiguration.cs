@@ -9,11 +9,11 @@ using Booking.Data.Entities;
 
 namespace Booking.Data.Configurations
 {
-    public class AppNetRoleConfiguration : IEntityTypeConfiguration<AppNetRole>
+    public class AppNetRoleConfiguration : IEntityTypeConfiguration<AspNetRole>
     {
-        public void Configure(EntityTypeBuilder<AppNetRole> builder)
+        public void Configure(EntityTypeBuilder<AspNetRole> builder)
         {
-            builder.ToTable("AppNetRoles");
+            builder.ToTable("AspNetRoles");
 
             
             

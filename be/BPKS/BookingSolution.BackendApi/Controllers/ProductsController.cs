@@ -28,6 +28,8 @@ namespace BookingSolution.BackendApi.Controllers
             
             _productService = productService;
         }
+
+        [Authorize(Roles = "admin")]
         [HttpGet("GetAll")]
         //[Authorize]
         public async Task<IActionResult> GetAll()

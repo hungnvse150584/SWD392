@@ -12,9 +12,9 @@ namespace Booking.Application.System.Roles
 {
     public class RoleService : IRoleService
     {
-        private readonly RoleManager<AppNetRole> _roleManager;
+        private readonly RoleManager<AspNetRole> _roleManager;
 
-        public RoleService(RoleManager<AppNetRole> roleManager)
+        public RoleService(RoleManager<AspNetRole> roleManager)
         {
             _roleManager = roleManager;
         }

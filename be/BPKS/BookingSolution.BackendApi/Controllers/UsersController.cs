@@ -3,6 +3,8 @@ using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace BookingSolution.BackendApi.Controllers
 {
@@ -16,34 +18,46 @@ namespace BookingSolution.BackendApi.Controllers
         {
             _userService = userService;
         }
+
         [HttpPost("authenticate")]
         [AllowAnonymous]
         public async Task<IActionResult> Authencate([FromBody] LoginRequest request)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var result = await _userService.Authencate(request);
 
             if (string.IsNullOrEmpty(result.Token))
             {
-                return BadRequest("Username or password is incorrent.");
+                return BadRequest("Username or password is incorrect.");
             }
-            //else
-            //{
-            //    HttpContext.Session.SetString("Token", result.Token);
-            //}
+
+            // Decode JWT to get user claims including roles
+            var handler = new JwtSecurityTokenHandler();
+            var token = handler.ReadJwtToken(result.Token);
+            var claims = token.Claims;
+
+            // Example of getting roles from claims
+            var roles = claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+
+            // Store roles in HttpContext.User for authorization in subsequent requests
+            var identity = new ClaimsIdentity(claims, "jwt");
+            var principal = new ClaimsPrincipal(identity);
+            HttpContext.User = principal;
+
             return Ok(result);
         }
 
+
         [HttpPost("Register")]
         [AllowAnonymous]
-        public async Task<IActionResult> Register([FromForm] RegisterRequest request)
+        public async Task<IActionResult> Register([FromForm] RegisterRequest request, string rolename)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _userService.Register(request);
+            var result = await _userService.Register(request, rolename);
             if (!result.IsSuccessed)
             {
                 return BadRequest(result);
