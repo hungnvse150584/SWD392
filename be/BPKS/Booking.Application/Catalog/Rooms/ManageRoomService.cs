@@ -27,19 +27,40 @@ namespace Booking.Application.Catalog.Rooms
         }
         public async Task<int> Create(RoomCreateRequest request)
         {
+            var listproducts = request.ProductIds;
+
             var room = new Room()
-            {
-                
-               
+            { 
                 RoomName = request.RoomName,
-                RoomUrl = await this.SaveFile( request.RoomUrl),
+                RoomUrl = request.RoomUrl != null? await this.SaveFile( request.RoomUrl):"",
                 RoomType = request.RoomType,
-               
                 Price = request.Price,
-                RoomStatus = request.Roomstatus
+                RoomStatus = "Pending"
            
             };
             _context.Rooms.Add(room);
+            _context.SaveChanges();
+            var roomrequest = _context.Rooms.FirstOrDefault(r => r.RoomUrl == room.RoomUrl);
+            foreach (var listProduct in listproducts)
+            {
+                var add = new ListProduct { 
+                ListProductStatus = "Active",
+                PartyId = request.PartyId,
+                ProductId = listProduct,
+                RoomId = roomrequest.RoomId,
+                Quantity = 0
+                }; 
+                _context.ListProducts.Add(add);
+            }
+
+            var listroom = new ListRoom
+            {
+                PartyId = request.PartyId,
+                RoomId = roomrequest.RoomId,
+                ListRoomStatus = "Active"
+            };
+            _context.ListRooms.Add(listroom);
+
             return await _context.SaveChangesAsync();
            
         }
@@ -52,7 +73,7 @@ namespace Booking.Application.Catalog.Rooms
             }
             
             room.RoomName = request.RoomName;
-            room.RoomUrl = await this.SaveFile(request.RoomUrl);
+            room.RoomUrl = request.RoomUrl != null?  await this.SaveFile(request.RoomUrl) : "";
             room.RoomType = request.RoomType;
             
             room.Price = request.Price;
