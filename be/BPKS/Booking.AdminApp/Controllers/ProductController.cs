@@ -26,8 +26,11 @@ namespace  Booking.AdminApp.Controllers
 
         public async Task<IActionResult> Index(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
+            //string selectedFilter = filter;
+            //var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
             var request = new GetManageProductPagingRequest()
             {
+                ProductName = keyword,
                 PageIndex = pageIndex,
                 PageSize = pageSize
             };

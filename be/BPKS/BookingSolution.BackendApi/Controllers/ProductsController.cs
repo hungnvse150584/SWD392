@@ -110,6 +110,24 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpPut("UpdateQuantity")]
+        public async Task<IActionResult> UpdateQuantity([FromForm]List<ProductlistRequest> request)
+        {
+            try
+            {
+                var affectedRessult = await _productService.OrderProductQuanity(request);
+                if (affectedRessult == null)
+                    return BadRequest();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
         [HttpDelete("{productId}")]
         public async Task<IActionResult> Delete(int productId)
         {

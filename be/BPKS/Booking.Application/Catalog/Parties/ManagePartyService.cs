@@ -94,7 +94,13 @@ namespace Booking.Application.Catalog.Parties
 
             return party;
         }
+        public Task<List<PartyHistory>> PartyHistory(PartyHistoryRequest request)
+        {
 
+
+
+            throw new NotImplementedException();
+        }
         public async Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request)
         {
             var query =
