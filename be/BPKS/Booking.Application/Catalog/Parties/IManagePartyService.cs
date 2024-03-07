@@ -20,18 +20,23 @@ namespace Booking.Application.Catalog.Parties
         Task<List<PartyVm>> GetAll();
 
         Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request);
+
         Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request);
+        
         Task<int> UpdatePartyStatus(UpdatePartyStatusRequest request);
-      
 
         Task<PartyUserView> GetPartyDetail(int request);
 
         //Task<List<PartyHistory>> PartyHistory(PartyHistoryRequest request);
 
         Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request);
+
         Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request);
+<<<<<<< Updated upstream
 
         Task<int> FeedBack(FeedbackRequest request);
 
+=======
+>>>>>>> Stashed changes
     }
 }

@@ -70,12 +70,12 @@ namespace  Booking.AdminApp.Controllers
             return View(data);
         }
 
-
         public async Task<IActionResult> Details(int id)
         {
             var result = await _productApiClient.GetById(id);
             return View(result);
         }
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -128,8 +128,6 @@ namespace  Booking.AdminApp.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
-            var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
-
             var product = await _productApiClient.GetById(id);
             var editVm = new ProductUpdateRequest()
             {

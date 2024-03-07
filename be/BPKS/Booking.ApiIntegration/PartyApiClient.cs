@@ -55,6 +55,13 @@ namespace Booking.ApiIntegration
             return data;
         }
 
+        public async Task<PartyVm> GetById(int id)
+        {
+            var data = await GetAsync<PartyVm>($"/api/Parties/{id}");
+
+            return data;
+        }
+
         public async Task<bool> CreateParty(PartyCreateRequest request)
         {
             var sessions = _httpContextAccessor
@@ -96,15 +103,52 @@ namespace Booking.ApiIntegration
             return response.IsSuccessStatusCode;
         }
 
-        public Task<bool> DeleteParty(int id)
+        public async Task<bool> UpdateParty(PartyUpdateRequest request)
         {
-            throw new NotImplementedException();
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+            var languageId = _httpContextAccessor.HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+            var requestContent = new MultipartFormDataContent();
+
+            if (request.ThumbnailImage != null)
+            {
+                byte[] data;
+                using (var br = new BinaryReader(request.ThumbnailImage.OpenReadStream()))
+                {
+                    data = br.ReadBytes((int)request.ThumbnailImage.OpenReadStream().Length);
+                }
+                ByteArrayContent bytes = new ByteArrayContent(data);
+                requestContent.Add(bytes, "ThumbnailImage", request.ThumbnailImage.FileName);
+            }
+            //requestContent.Add(new StringContent(request.PartyHostId.ToString()), "PartyHostId");
+            requestContent.Add(new StringContent(request.PartyName ?? ""), "PartyName");
+            requestContent.Add(new StringContent(request.PhoneContact ?? ""), "PhoneContact");
+            requestContent.Add(new StringContent(request.Place ?? ""), "Place");
+            //requestContent.Add(new StringContent("0"), "Rate");
+            //requestContent.Add(new StringContent(DateTime.Now.ToString()), "CreatedDate");
+            //requestContent.Add(new StringContent(request.DayStart.ToString()), "DayStart");
+            requestContent.Add(new StringContent(request.DayEnd.ToString()), "DayEnd");
+            //requestContent.Add(new StringContent("Active"), "PartyStatus");
+            // Assuming SaveFile method returns the file URL asynchronously
+            requestContent.Add(new StringContent(request.Description ?? ""), "Description");
+
+            var response = await client.PostAsync($"/api/Parties/", requestContent);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> DeleteParty(int id)
+        {
+            return await Delete($"/api/Parties/" + id);
         }
 
         
-        public Task<bool> UpdateParty(PartyUpdateRequest request)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BookingSolution.ViewModels.Catalog.Parties;
+using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
@@ -17,5 +18,8 @@ namespace Booking.ApiIntegration
         Task<bool> UpdateParty(PartyUpdateRequest request);
 
         Task<bool> DeleteParty(int id);
+
+        Task<PartyVm> GetById(int id);
+
     }
 }
