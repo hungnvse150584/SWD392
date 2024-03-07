@@ -4,6 +4,7 @@ using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -137,15 +138,34 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
 
+        [HttpPost("FeedBack")]
+        public async Task<IActionResult> Create([FromForm] FeedbackRequest request)
+        {
+            try
+            {
+                var RoomId = await _managePartyService.FeedBack(request);
+                if (RoomId == 0)
+                    return BadRequest();
+
+                // Trả về thông báo thành công và sản phẩm đã tạo
+                return Ok("Success");
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromForm] PartyCreateRequest request)
+        public async Task<IActionResult> Feedback([FromForm] PartyCreateRequest request)
         {
             try
             {
                 var RoomId = await _managePartyService.Create(request);
                 if (RoomId == 0)
                     return BadRequest();
-                
+
                 var room = await _managePartyService.GetById(RoomId);
                 if (room == null)
                     return NotFound();

@@ -11,5 +11,6 @@ namespace Booking.Application.Catalog.Rooms
         Task<List<RoomVm>> GetAll();
         Task<PagedResult<RoomVm>> GetAllPaging(GetPublicRoomPagingRequest request);
         Task<RoomVm> GetById(int roomId);
+        Task<int> AddProduct(AddProductRequest request);
     }
 }

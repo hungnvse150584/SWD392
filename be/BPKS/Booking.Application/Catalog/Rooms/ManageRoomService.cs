@@ -25,6 +25,36 @@ namespace Booking.Application.Catalog.Rooms
         {
             _context = context;
         }
+
+        public Task<int> AddProduct(AddProductRequest request)
+        {
+            var query =
+                from lr in _context.ListRooms
+                join r in _context.Rooms on lr.RoomId equals r.RoomId
+                join p in _context.Parties on lr.PartyId equals p.PartyId
+                select new { r, p };
+
+            query.Select(x => x.r.RoomId == request.RoomId);
+            query.Select(x => x.p.PartyId == request.PartyId);
+
+            if (query.Count() > 0)
+            {
+                foreach (var item in request.listproducts)
+                {
+                    var product = new ListProduct
+                    {
+                        ListProductStatus = "active",
+                        ProductId = item.ProductID,
+                        PartyId = request.PartyId,
+                        RoomId = request.RoomId,
+                    };
+                    _context.ListProducts.Add(product);
+                }
+            }
+            _context.SaveChanges();
+            return query.CountAsync();
+
+        }
         public async Task<int> Create(RoomCreateRequest request)
         {
             var listproducts = request.ProductIds;

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class ProductlistRequest
-    {
-        public int ProductID { get; set; }
+    { 
+        public int? ProductID { get; set; }
         public int Quantity { get; set; }
     }
 }

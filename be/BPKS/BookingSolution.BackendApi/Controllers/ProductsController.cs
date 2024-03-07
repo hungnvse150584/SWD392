@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
+using BookingSolution.ViewModels.Catalog.Rooms;
 
 
 namespace BookingSolution.BackendApi.Controllers
@@ -113,7 +114,7 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
         [HttpPut("UpdateQuantity")]
-        public async Task<IActionResult> UpdateQuantity([FromForm]List<ProductlistRequest> request)
+        public async Task<IActionResult> UpdateQuantity(AddProductRequest request)
         {
             try
             {

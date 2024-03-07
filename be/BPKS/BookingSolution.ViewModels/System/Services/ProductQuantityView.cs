@@ -9,7 +9,7 @@ namespace BookingSolution.ViewModels.Catalog.Products
 {
     public class ProductQuantityView
     {
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
 
         public int Quantity { get; set; }
 
@@ -17,20 +17,20 @@ namespace BookingSolution.ViewModels.Catalog.Products
 
         public string? ProductName { get; set; }
 
-        public string? ProductUrl { get; set; }
+        //public string? ProductUrl { get; set; }
 
         //food or dink
-        public int? ProductType { get; set; }
+        //public int? ProductType { get; set; }
 
         //phân loại food hoặc dink 
 
-        public string? ProductStyle { get; set; }
+        //public string? ProductStyle { get; set; }
 
-        public double? Price { get; set; }
+      //  public double? Price { get; set; }
 
-        public string? ProductStatus { get; set; }
+       // public string? ProductStatus { get; set; }
 
-        public string? Description { get; set; }
+       // public string? Description { get; set; }
 
        // public IFormFile? ThumbnailImage { get; set; }
 

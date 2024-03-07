@@ -3,6 +3,7 @@ using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Products;
+using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Http;
@@ -240,9 +241,37 @@ namespace Booking.Application.Catalog.Products
             return await task;
         }
 
-        public Task<List<ProductQuantityView>> OrderProductQuanity(List<ProductlistRequest> request)
+        public async Task<List<ProductQuantityView>> OrderProductQuanity(AddProductRequest request)
         {
-            throw new NotImplementedException();
+            var query =
+                from lp in _context.ListProducts
+                join p in _context.Parties on lp.PartyId equals p.PartyId
+                join r in _context.Rooms on lp.RoomId equals r.RoomId
+                join product in _context.Products on lp.ProductId equals product.ProductId
+                select new {lp, p, r ,product};
+
+                query.Select(x => x.r.RoomId == request.RoomId);
+                query.Select(x => x.p.PartyId == request.PartyId);
+            var data = new List<ProductQuantityView>();
+           foreach (var item in query)
+            { 
+                if(request.listproducts.Find(x => x.ProductID == item.lp.ProductId)!= null) {
+                    item.lp.Quantity = request.listproducts.Find(x => x.ProductID == item.lp.ProductId).Quantity;
+
+                    data.Add(new ProductQuantityView
+                    {
+                        ProductId = item.lp.ProductId,
+                        ProductName = item.product.ProductName,
+                        Quantity = item.lp.Quantity
+                    });
+                }
+                    
+            }
+
+           _context.SaveChanges();
+            return data;
         }
+
+        
     }
 }

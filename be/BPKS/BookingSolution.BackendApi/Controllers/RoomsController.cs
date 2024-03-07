@@ -78,6 +78,29 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpPost("AddProducts")]
+        public async Task<IActionResult> AddProducts(AddProductRequest request)
+        {
+            try
+            {
+                var productId = await _manageRoomService.AddProduct(request);
+                if (productId == 0)
+                    return BadRequest();
+
+                var product = await _manageRoomService.GetById(productId);
+                if (product == null)
+                    return NotFound();
+
+                // Trả về thông báo thành công và sản phẩm đã tạo
+                return Ok("Success");
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
 
         [HttpPut("Update")]
         public async Task<IActionResult> Update([FromForm] RoomUpdateRequest request)

@@ -2,6 +2,8 @@
 
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Booking.Application.Catalog.Parties
 {
@@ -29,7 +31,7 @@ namespace Booking.Application.Catalog.Parties
         Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request);
         Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request);
 
-
+        Task<int> FeedBack(FeedbackRequest request);
 
     }
 }

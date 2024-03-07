@@ -13,7 +13,7 @@ public partial class Feedback
 
     public int? Score { get; set; }
 
-    public string? Feedback1 { get; set; }
+    public string Feedback1 {  get; set; }
 
     public virtual Party? Party { get; set; }
 }

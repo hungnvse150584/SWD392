@@ -6,6 +6,7 @@ using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
 using DocumentFormat.OpenXml.InkML;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Firebase.Storage;
@@ -396,6 +397,31 @@ namespace Booking.Application.Catalog.Parties
             }
             party.PartyStatus = request.Status;
 
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> FeedBack(FeedbackRequest request)
+        {
+            var query =
+                from lp in _context.ListParties
+                join p in _context.Parties on lp.PartyId equals p.PartyId
+                where lp.ParentId == request.ParentId
+                select lp;
+            query.Select(q => q.PartyId == request.PartyId);
+
+            if(query.Count() > 0)
+            {
+                var feedback = new Feedback
+                {
+                    PartyId = request.PartyId,
+                    Feedback1 = request.Feedback,
+                    ParentId = request.ParentId,
+                    Score = request.Score,
+                };
+                _context.Feedbacks.Add(feedback);
+
+            }
+            
             return await _context.SaveChangesAsync();
         }
     }

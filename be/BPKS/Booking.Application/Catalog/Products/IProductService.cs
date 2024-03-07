@@ -1,4 +1,5 @@
 ﻿using BookingSolution.ViewModels.Catalog.Products;
+using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
 
 namespace Booking.Application.Catalog.Products
@@ -12,7 +13,9 @@ namespace Booking.Application.Catalog.Products
         Task<PagedResult<ProductVm>> GetProductsPaging(GetManageProductPagingRequest request);
         Task<ProductVm> GetById(int productId);
         Task<PagedResult<ProductVm>> GetAllByStyle(GetPublicProductPagingRequest request);
-        Task<List<ProductQuantityView>> OrderProductQuanity(List<ProductlistRequest> request);
+        Task<List<ProductQuantityView>> OrderProductQuanity(AddProductRequest request);
+       
+
 
     }
 }
