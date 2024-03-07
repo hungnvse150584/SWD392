@@ -3,6 +3,7 @@ using Booking.Application.System.Users;
 using Booking.Common;
 using Booking.Data.EF;
 using BookingSolution.ViewModels.Catalog.Parties;
+using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.System.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -97,6 +98,11 @@ namespace Booking.Application.System.Services
         }
 
         public Task<List<PartyVm>> GetPartyInPending()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ProductQuantityView>> OrderProductQuanity(List<ProductlistRequest> request)
         {
             throw new NotImplementedException();
         }

@@ -239,5 +239,10 @@ namespace Booking.Application.Catalog.Products
                .PutAsync(file.OpenReadStream());
             return await task;
         }
+
+        public Task<List<ProductQuantityView>> OrderProductQuanity(List<ProductlistRequest> request)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
