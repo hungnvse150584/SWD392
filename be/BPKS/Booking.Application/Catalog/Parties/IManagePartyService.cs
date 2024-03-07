@@ -14,14 +14,14 @@ namespace Booking.Application.Catalog.Parties
         Task<int> Delete(int partyId);
 
         Task<PartyVm> GetById(int roomId);
-        Task<List<PartyVm>> GetAll();
-        Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request);
-        Task<int> UpdatePartyStatus(UpdatePartyStatusRequest request);
-        Task<PagedResult<PartyVm>> GetPartyNamePaging(GetManagePartyPagingRequest request);
 
-        Task<PagedResult<PartyVm>> GetPartyNameNPartyHostPaging(GetPartyNameNPartyHostPaging request);
+        Task<List<PartyVm>> GetAll();
 
         Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request);
+        Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request);
+        Task<int> UpdatePartyStatus(UpdatePartyStatusRequest request);
+      
+
         Task<PartyUserView> GetPartyDetail(int request);
 
         //Task<List<PartyHistory>> PartyHistory(PartyHistoryRequest request);

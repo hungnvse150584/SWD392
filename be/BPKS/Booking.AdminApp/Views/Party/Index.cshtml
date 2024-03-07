@@ -1,0 +1,142 @@
+﻿@using BookingSolution.ViewModels.Common
+@* @model IEnumerable<BookingSolution.ViewModels.Catalog.Parties.PartyVm> *@
+@model PagedResult<BookingSolution.ViewModels.Catalog.Parties.PartyVm>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Danh sách bữa tiệc</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Danh sách bữa tiệc</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <form asp-action="Index" method="get">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <select name="searchField" class="form-control">
+                                    <option value="PartyName">Tên bữa tiệc</option>
+                                    <option value="Place">Địa điểm</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Tìm</button>
+                                <button type="button" onclick="window.location.href='/Party/Index'" class="btn btn-dark">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                PartyId
+                            </th>
+                            @* <th>
+                                PartyHostId
+                            </th> *@
+                            <th>
+                                PartyName
+                            </th>
+                            
+                            <th>
+                                PhoneContact
+                            </th>
+                            <th>
+                                Place
+                            </th>
+                            <th>
+                                Rate
+                            </th>
+                            <th>
+                                ThumbnailUrl
+                            </th>
+                            <th>
+                                DayStart
+                            </th>
+                            <th>
+                                DayEnd
+                            </th>
+                            @* <th>
+                                CreatedDate
+                            </th> *@
+                            <th>
+                                PartyStatus
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                @foreach (var item in Model.Items) 
+                    {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PartyId)
+                                </td>
+                                @* <td>
+                                    @Html.DisplayFor(modelItem => item.PartyHostId)
+                                </td> *@
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PartyName)
+                                </td>
+                                
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PhoneContact)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Place)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Rate)
+                                </td>
+                                <td>
+                                    <img src="@item.ThumbnailUrl" alt="Pa Image" class="img-fluid" style=" height: 100px;" />
+                                </td>
+                                @* <td>
+                                    @Html.DisplayFor(modelItem => item.ThumbnailUrl)
+                                </td> *@
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DayStart)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DayEnd)
+                                </td>
+                                @* <td>
+                                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                                </td> *@
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PartyStatus)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.PartyId }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.PartyId }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.PartyId })
+                                 </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @await Component.InvokeAsync("Pager", Model)
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
 {
     public class GetManagePartyPagingRequest : PagingRequestBase
     {
-        public string keyword { get; set; }
+        public string ?Keyword { get; set; }
 
       //  public List<int> CategoryIds { get; set; }
     }

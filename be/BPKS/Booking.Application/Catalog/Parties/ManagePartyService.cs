@@ -154,99 +154,14 @@ namespace Booking.Application.Catalog.Parties
 
             //2. filter
             if (!string.IsNullOrEmpty(request.PartyName))
+            {
                 query = query.Where(x => x.p.PartyName.Contains(request.PartyName));
-            if (request.PartyHostId != null)
-                query = query.Where(x => x.p.PartyHostId == request.PartyHostId);
+            }
 
-            //3. Paging
-            int totalRow = await query.CountAsync();
-
-            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
-                .Take(request.PageSize)
-                .Select(x => new PartyVm()
-                {
-                    PartyId = x.p.PartyId,
-                    PartyHostId = x.p.PartyHostId,
-                    PartyName = x.p.PartyName,
-                    Description = x.p.Description,
-                    PhoneContact = x.p.PhoneContact,
-                    Place = x.p.Place,
-                    Rate = x.p.Rate,
-                    ThumbnailUrl = x.p.ThumbnailUrl,
-                    PartyStatus = x.p.PartyStatus,
-                    DayStart = x.p.DayStart,
-                    DayEnd = x.p.DayEnd,
-                    CreatedDate = x.p.CreatedDate
-
-                }).ToListAsync();
-
-            //4. Select and projection
-            var pagedResult = new PagedResult<PartyVm>()
+            if (!string.IsNullOrEmpty(request.Place))
             {
-                TotalRecords = totalRow,
-                PageSize = request.PageSize,
-                PageIndex = request.PageIndex,
-                Items = data
-            };
-            return pagedResult;
-        }
-
-        public async Task<PagedResult<PartyVm>> GetPartyNamePaging(GetManagePartyPagingRequest request)
-        {
-            var query =
-                from p in _context.Parties
-                select new { p };
-
-            //2. filter
-            if (!string.IsNullOrEmpty(request.keyword))
-                query = query.Where(x => x.p.PartyName.Contains(request.keyword));
-
-            //3. Paging
-            int totalRow = await query.CountAsync();
-
-            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
-                .Take(request.PageSize)
-                .Select(x => new PartyVm()
-                {
-                    PartyId = x.p.PartyId,
-                    PartyHostId = x.p.PartyHostId,
-                    PartyName = x.p.PartyName,
-                    Description = x.p.Description,
-                    PhoneContact = x.p.PhoneContact,
-                    Place = x.p.Place,
-                    Rate = x.p.Rate,
-                    ThumbnailUrl = x.p.ThumbnailUrl,
-                    PartyStatus = x.p.PartyStatus,
-                    DayStart = x.p.DayStart,
-                    DayEnd = x.p.DayEnd,
-                    CreatedDate = x.p.CreatedDate
-
-                }).ToListAsync();
-
-            //4. Select and projection
-            var pagedResult = new PagedResult<PartyVm>()
-            {
-                TotalRecords = totalRow,
-                PageSize = request.PageSize,
-                PageIndex = request.PageIndex,
-                Items = data
-            };
-            return pagedResult;
-        }
-
-        public async Task<PagedResult<PartyVm>> GetPartyNameNPartyHostPaging(GetPartyNameNPartyHostPaging request)
-        {
-            var query =
-                from p in _context.Parties
-                select new { p };
-
-            //2. filter
-            if (request.partyhost != Guid.Empty)
-                query = query.Where(x => x.p.PartyHostId == request.partyhost);
-
-            if (!string.IsNullOrEmpty(request.keyword))
-                query = query.Where(x => x.p.PartyName.Contains(request.keyword));
-
+                query = query.Where(x => x.p.Place.Contains(request.Place));
+            }
             //3. Paging
             int totalRow = await query.CountAsync();
 

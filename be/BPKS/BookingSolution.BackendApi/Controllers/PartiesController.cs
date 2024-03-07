@@ -1,6 +1,7 @@
 ﻿using Booking.Application.Catalog.Parties;
 using Booking.Application.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Parties;
+using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.System.Services;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +18,13 @@ namespace BookingSolution.BackendApi.Controllers
         {
             _managePartyService = managePartyService;
         }
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetPublicPartyPagingRequest request)
+        {
+            var parties = await _managePartyService.GetAllPaging(request);
+            return Ok(parties);
+        }
+
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
