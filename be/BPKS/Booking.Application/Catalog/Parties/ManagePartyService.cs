@@ -204,12 +204,12 @@ namespace Booking.Application.Catalog.Parties
                 throw new Exception($"Cannot find a party with id:{request.PartyId}.");
             }
             party.PartyName = request.PartyName;
-            party.Description = request.Description;
             party.PhoneContact = request.PhoneContact;
             party.Place = request.Place;
-            party.ThumbnailUrl = await this.SaveFile(request.ThumbnailUrl);
+            party.ThumbnailUrl = await this.SaveFile(request.ThumbnailImage);
             party.DayEnd = request.DayEnd;
             party.PartyStatus = request.PartyStatus;
+            party.Description = request.Description;
 
             return await _context.SaveChangesAsync();
         }
@@ -400,6 +400,7 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
+<<<<<<< Updated upstream
         public async Task<int> FeedBack(FeedbackRequest request)
         {
             var query =
@@ -424,5 +425,7 @@ namespace Booking.Application.Catalog.Parties
             
             return await _context.SaveChangesAsync();
         }
+=======
+>>>>>>> Stashed changes
     }
 }

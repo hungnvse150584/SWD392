@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,5 +21,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
         public DateTime? DayEnd { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string? PartyStatus { get; set; }
+        public IFormFile? ThumbnailImage { get; set; }
+
     }
 }
