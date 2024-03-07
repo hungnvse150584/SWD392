@@ -11,6 +11,6 @@ namespace BookingSolution.ViewModels.System.Users
         public Guid? ParentId { get; set; }
         public int? PartyId { get; set; }
         public int? Score { get; set; }
-        public string Feedback { get; set; }
+        public string? Feedback { get; set; }
     }
 }

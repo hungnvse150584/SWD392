@@ -10,7 +10,7 @@ namespace BookingSolution.ViewModels.System.Services
 {
     public class PartyUserView
     {
-        public int PartyId { get; set; }
+        public int? PartyId { get; set; }
         //public Guid? PartyHostId { get; set; }
         public string? PartyName { get; set; }
         public string? Description { get; set; }
