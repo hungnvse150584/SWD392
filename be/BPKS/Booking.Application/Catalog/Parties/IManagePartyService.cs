@@ -23,7 +23,10 @@ namespace Booking.Application.Catalog.Parties
         Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request);
         Task<PartyUserView> GetPartyDetail(int request);
 
-        Task<List<PartyHistory>> PartyHistory(PartyHistoryRequest request);
+        //Task<List<PartyHistory>> PartyHistory(PartyHistoryRequest request);
+
+        Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request);
+        Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request);
 
     }
 }

@@ -94,12 +94,57 @@ namespace Booking.Application.Catalog.Parties
 
             return party;
         }
-        public Task<List<PartyHistory>> PartyHistory(PartyHistoryRequest request)
+        public async Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request)
         {
+            var query =
+                from u in _context.AspNetUsers
+                //join lparent in _context.ListParties on u.Id equals lparent.ParentId
+                join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
+                join p in _context.Parties on lpartyhost.PartyId equals p.PartyId
+                where u.Id == request.user
+                select new { u, p };
 
+            var data = query.Select(t => new PartyHistory
+            {
+                CreatedDate = t.p.CreatedDate,
+                DayEnd = t.p.DayEnd,
+                DayStart=t.p.DayStart,
+                Description = t.p.Description,
+                PartyName = t.p.PartyName,
+                PhoneContact = t.p.PhoneContact,
+                Place = t.p.Place,
+                ThumbnailUrl = t.p.ThumbnailUrl,
+                Rate = t.p.Rate,
+                
+            }).ToList();
 
+           return data;
+        }
+        public async Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request)
+        {
+            var query =
+                from u in _context.AspNetUsers
+                join lparent in _context.ListParties on u.Id equals lparent.ParentId
+                //join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
+                join p in _context.Parties on lparent.PartyId equals p.PartyId
+                where u.Id == request.user
+                select new { u, p };
 
-            throw new NotImplementedException();
+            var data = query.Select(t => new PartyHistory
+            {
+                CreatedDate = t.p.CreatedDate,
+                DayEnd = t.p.DayEnd,
+                DayStart = t.p.DayStart,
+                Description = t.p.Description,
+                PartyName = t.p.PartyName,
+                PhoneContact = t.p.PhoneContact,
+                Place = t.p.Place,
+                ThumbnailUrl = t.p.ThumbnailUrl,
+                Rate = t.p.Rate,
+
+            }).ToList();
+
+            return data;
         }
         public async Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request)
         {

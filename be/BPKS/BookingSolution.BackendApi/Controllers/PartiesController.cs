@@ -56,12 +56,49 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpGet("[action]GetPartyDetail{id}")]
+        [HttpGet("GetPartyDetail")]
         public async Task<IActionResult> GetPartyDetail(int id)         {
 
             try
             {
                 var party = await _managePartyService.GetPartyDetail(id);
+                if (party == null)
+                    return BadRequest("Cannot find Party");
+                return Ok(party);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
+        [HttpGet("GetPartyHostHistory")]
+        public async Task<IActionResult> GetPartyHostHistory([FromQuery] PartyHistoryRequest request)
+        {
+
+            try
+            {
+                var party = await _managePartyService.PartyHostHistory(request);
+                if (party == null)
+                    return BadRequest("Cannot find Party");
+                return Ok(party);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpGet("GetParentHistory")]
+        public async Task<IActionResult> GetParentHistory([FromQuery] PartyHistoryRequest request)
+        {
+
+            try
+            {
+                var party = await _managePartyService.ParentHistory(request);
                 if (party == null)
                     return BadRequest("Cannot find Party");
                 return Ok(party);
