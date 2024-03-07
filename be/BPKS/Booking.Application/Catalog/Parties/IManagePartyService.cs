@@ -15,7 +15,8 @@ namespace Booking.Application.Catalog.Parties
 
         Task<PartyVm> GetById(int roomId);
         Task<List<PartyVm>> GetAll();
-
+        Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request);
+        Task<int> UpdatePartyStatus(UpdatePartyStatusRequest request);
         Task<PagedResult<PartyVm>> GetPartyNamePaging(GetManagePartyPagingRequest request);
 
         Task<PagedResult<PartyVm>> GetPartyNameNPartyHostPaging(GetPartyNameNPartyHostPaging request);
@@ -27,6 +28,8 @@ namespace Booking.Application.Catalog.Parties
 
         Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request);
         Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request);
+
+
 
     }
 }

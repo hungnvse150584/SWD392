@@ -440,5 +440,48 @@ namespace Booking.Application.Catalog.Parties
           return partydetail;
 
         }
+
+        public  Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request)
+        {
+            var query =
+                from p in _context.Parties
+                join lp in _context.ListParties on p.PartyHostId equals lp.PartyHostId
+                where p.PartyStatus == request.Status
+                select new {p,lp };
+
+            if (request.Id != Guid.Empty)
+                query = query.Where(x => x.lp.PartyHostId == request.Id);
+            var data = query.Select(x => new PartyVm()
+            {
+                PartyId = x.p.PartyId,
+                PartyHostId = x.p.PartyHostId,
+                PartyName = x.p.PartyName,
+                Description = x.p.Description,
+                PhoneContact = x.p.PhoneContact,
+                Place = x.p.Place,
+                Rate = x.p.Rate,
+                ThumbnailUrl = x.p.ThumbnailUrl,
+                PartyStatus = x.p.PartyStatus,
+                DayStart = x.p.DayStart,
+                DayEnd = x.p.DayEnd,
+                CreatedDate = x.p.CreatedDate
+
+            }).ToListAsync();
+
+            return data;
+
+        }
+
+        public async Task<int> UpdatePartyStatus(UpdatePartyStatusRequest request)
+        {
+            var party = await _context.Parties.FindAsync(request.PartyId);
+            if (party == null)
+            {
+                throw new Exception($"Cannot find a party with id:{request.PartyId}.");
+            }
+            party.PartyStatus = request.Status;
+
+            return await _context.SaveChangesAsync();
+        }
     }
 }

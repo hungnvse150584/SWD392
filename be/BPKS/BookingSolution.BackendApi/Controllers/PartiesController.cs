@@ -110,6 +110,24 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpGet("GetPartyWithStatus")]
+        public async Task<IActionResult> GetPartyWithStatus([FromQuery] GetPartyWithStatus request)
+        {
+
+            try
+            {
+                var party = await _managePartyService.GetPartyWithStatus(request);
+                if (party == null)
+                    return BadRequest("Cannot find Party");
+                return Ok(party);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
 
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromForm] PartyCreateRequest request)
@@ -141,6 +159,25 @@ namespace BookingSolution.BackendApi.Controllers
             try
             {
                 var affectedRessult = await _managePartyService.Update(request);
+                if (affectedRessult == 0)
+                    return BadRequest();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
+        [HttpPut("UpdateStatus")]
+        public async Task<IActionResult> UpdateStatus([FromForm] UpdatePartyStatusRequest request)
+        {
+            try
+            {
+                var affectedRessult = await _managePartyService.UpdatePartyStatus(request);
                 if (affectedRessult == 0)
                     return BadRequest();
 
