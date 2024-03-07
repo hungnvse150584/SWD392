@@ -44,5 +44,7 @@ namespace BookingSolution.ViewModels.System.Users
 
         //[Display(Name = "Chọn đăng kí")]
         //public Guid Role { get; set; }  
+        [Display(Name = "Role Name")]
+        public string RoleName { get; set; }
     }
 }

@@ -52,12 +52,12 @@ namespace BookingSolution.BackendApi.Controllers
 
         [HttpPost("Register")]
         [AllowAnonymous]
-        public async Task<IActionResult> Register([FromForm] RegisterRequest request, string rolename)
+        public async Task<IActionResult> Register([FromForm] RegisterRequest request)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _userService.Register(request, rolename);
+            var result = await _userService.Register(request);
             if (!result.IsSuccessed)
             {
                 return BadRequest(result);

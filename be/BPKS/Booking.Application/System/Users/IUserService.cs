@@ -11,7 +11,7 @@ namespace Booking.Application.System.Users
     public interface IUserService
     {
         Task<ApiResult<string>> Authencate(LoginRequest request);
-        Task<ApiResult<bool>> Register(RegisterRequest request, string roleName);
+        Task<ApiResult<bool>> Register(RegisterRequest request);
         Task<ApiResult<bool>> Update(Guid id, UserUpdateRequest request);
 
         Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request);

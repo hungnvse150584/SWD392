@@ -14,6 +14,7 @@ using Booking.Application.System.Roles;
 using Booking.Common;
 using Booking.ApiIntegration;
 using Booking.Application.System.Services;
+using Booking.Application.Catalog.ProductTypes;
 
 namespace BookingSolution.BackendApi
 {
@@ -56,6 +57,8 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
             services.AddTransient<ISystemService, SystemService>();
+            services.AddScoped<IProductTypeService, ProductTypeService>(); // Thay ProductTypeService bằng tên lớp thực hiện dịch vụ của bạn.
+
 
 
             services.AddControllers();

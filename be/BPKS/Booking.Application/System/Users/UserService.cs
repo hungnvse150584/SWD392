@@ -102,7 +102,7 @@ namespace Booking.Application.System.Users
             return new ApiSuccessResult<PagedResult<UserVm>>(pagedResult);
         }
 
-        public async Task<ApiResult<bool>> Register(RegisterRequest request, string roleName)
+        public async Task<ApiResult<bool>> Register(RegisterRequest request)
         {
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user != null)
@@ -129,7 +129,7 @@ namespace Booking.Application.System.Users
             if (result.Succeeded)
             {
                 // Thêm người dùng vào vai trò được chỉ định
-                var addToRoleResult = await _userManager.AddToRoleAsync(user, roleName);
+                var addToRoleResult = await _userManager.AddToRoleAsync(user, request.RoleName);
 
                 if (addToRoleResult.Succeeded)
                 {

@@ -87,8 +87,39 @@ namespace Booking.ApiIntegration
             //formData.Add(new StringContent(request.Address), "Address");
             formData.Add(new StringContent(request.PhoneNumber), "PhoneNumber");
             formData.Add(new StringContent(request.Dob.ToString("yyyy-MM-dd")), "Dob");
+            formData.Add(new StringContent(request.RoleName), "RoleName");
 
             var response = await client.PostAsync($"/api/Users/register", formData);
+            var result = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(result);
+
+            return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(result);
+
+        }
+        public async Task<ApiResult<bool>> Register(RegisterRequest request)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["BaseAddress"]);
+
+            var json = JsonConvert.SerializeObject(request);
+            //var httpContent = new StringContent(json, Encoding.UTF8, "multipart/form-data");
+            var formData = new MultipartFormDataContent();
+
+            // Thêm các trường dữ liệu từ RegisterRequest vào formData
+            formData.Add(new StringContent(request.Email), "Email");
+            formData.Add(new StringContent(request.Password), "Password");
+            formData.Add(new StringContent(request.UserName), "UserName");
+            formData.Add(new StringContent(request.FirstName), "FirstName");
+            formData.Add(new StringContent(request.LastName), "LastName");
+            formData.Add(new StringContent(request.ConfirmPassword), "ConfirmPassword");
+            //formData.Add(new StringContent(request.Address), "Address");
+            formData.Add(new StringContent(request.PhoneNumber), "PhoneNumber");
+            formData.Add(new StringContent(request.Dob.ToString("yyyy-MM-dd")), "Dob");
+            formData.Add(new StringContent(request.RoleName), "RoleName");
+
+
+            var response = await client.PostAsync($"/api/Registers", formData);
             var result = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode)
                 return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(result);
