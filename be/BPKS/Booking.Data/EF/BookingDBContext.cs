@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Booking.Data.EF
 {
-    public class BookingDbContext : IdentityDbContext<AspNetUser, AppNetRole, Guid>
+    public class BookingDbContext : IdentityDbContext<AspNetUser, AspNetRole, Guid>
     {
         //public BookingDbContext()
         //{
@@ -35,7 +35,7 @@ namespace Booking.Data.EF
 
         public virtual DbSet<Product> Products { get; set; }
 
-        public virtual DbSet<AppNetRole> AppNetRoles { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
 
         public virtual DbSet<Room> Rooms { get; set; }
 
@@ -176,11 +176,11 @@ namespace Booking.Data.EF
                 .HasConstraintName("FK__Product__Product__44FF419A");
             });
 
-            modelBuilder.Entity<AppNetRole>(entity =>
+            modelBuilder.Entity<AspNetRole>(entity =>
             {
                
 
-                entity.ToTable("AppNetRoles");
+                entity.ToTable("AspNetRoles");
 
                 
             });
