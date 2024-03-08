@@ -43,7 +43,9 @@ namespace Booking.Application.Catalog.Products
                 ProductUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : null,
             };
             _context.Products.Add(product);
-            return await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
+            return _context.Products.FirstOrDefault(p => p.ProductUrl == product.ProductUrl).ProductId;
+            
         }
         public async Task<int> Update(ProductUpdateRequest request)
         {

@@ -30,7 +30,8 @@ namespace Booking.Application.Catalog.ProductTypes
                 
             };
             _context.ProductTypes.Add(productType);
-            return await _context.SaveChangesAsync();
+             await _context.SaveChangesAsync();
+            return _context.ProductTypes.FirstOrDefault(p => p.ProductTypeName == productType.ProductTypeName).Id;
         }
 
         public async Task<int> Update(ProductTypeUpdateRequest request)

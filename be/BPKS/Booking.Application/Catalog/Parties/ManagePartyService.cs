@@ -59,8 +59,9 @@ namespace Booking.Application.Catalog.Parties
 
                 _context.ListParties.Add(listparty);
             }
-
-            return await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
+            
+            return partyrequest.PartyId;
         }
 
         public async Task<int> Delete(int partyId)

@@ -91,8 +91,8 @@ namespace Booking.Application.Catalog.Rooms
             };
             _context.ListRooms.Add(listroom);
 
-            return await _context.SaveChangesAsync();
-           
+            await _context.SaveChangesAsync();
+            return roomrequest.RoomId;
         }
         public async Task<int> Update(RoomUpdateRequest request)
         {

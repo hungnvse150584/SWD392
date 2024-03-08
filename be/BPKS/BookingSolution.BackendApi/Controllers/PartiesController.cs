@@ -139,7 +139,7 @@ namespace BookingSolution.BackendApi.Controllers
 
 
         [HttpPost("FeedBack")]
-        public async Task<IActionResult> Create([FromForm] FeedbackRequest request)
+        public async Task<IActionResult> FeedBack([FromForm] FeedbackRequest request)
         {
             try
             {
@@ -158,7 +158,7 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Feedback([FromForm] PartyCreateRequest request)
+        public async Task<IActionResult> Create([FromForm] PartyCreateRequest request)
         {
             try
             {
