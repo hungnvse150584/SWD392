@@ -416,7 +416,7 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
-<<<<<<< Updated upstream
+
         public async Task<int> FeedBack(FeedbackRequest request)
         {
             var query =
@@ -456,7 +456,6 @@ namespace Booking.Application.Catalog.Parties
 
             return await _context.SaveChangesAsync();
         }
-=======
->>>>>>> Stashed changes
+
     }
 }

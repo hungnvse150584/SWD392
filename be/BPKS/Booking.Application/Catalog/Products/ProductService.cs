@@ -40,7 +40,7 @@ namespace Booking.Application.Catalog.Products
                 //CreatedDate = DateTime.Now,
                 ProductStatus = request.Productstatus,
                 Description = request.Description,
-                ProductUrl = await this.SaveFile(request.ThumbnailImage)
+                ProductUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : null,
             };
             _context.Products.Add(product);
             return await _context.SaveChangesAsync();
@@ -52,13 +52,20 @@ namespace Booking.Application.Catalog.Products
             {
                 throw new Exception($"Cannot find a product with id:{request.ProductId}.");
             }
-
+            if(request.ProductName!= null)
             product.ProductName = request.ProductName;
+            if (request.ProductType!= null)
             product.ProductType = request.ProductType;
+            if (request.ProductStyle!= null)
             product.ProductStyle = request.ProductStyle;
+            if (request.ProductStatus!= null)
             product.Price = request.Price;
+            if(request.Description!= null)
             product.Description = request.Description;
-            product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
+            if(request.ThumbnailImage != null)
+            {
+                product.ProductUrl = await this.SaveFile(request.ThumbnailImage);
+            }
 
             return await _context.SaveChangesAsync();
         }

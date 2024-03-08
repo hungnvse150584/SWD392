@@ -32,11 +32,10 @@ namespace Booking.Application.Catalog.Parties
         Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request);
 
         Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request);
-<<<<<<< Updated upstream
+
 
         Task<int> FeedBack(FeedbackRequest request);
 
-=======
->>>>>>> Stashed changes
+
     }
 }

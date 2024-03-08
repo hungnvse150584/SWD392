@@ -5,6 +5,7 @@ using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.System.Languages;
 using BookingSolution.ViewModels.System.Products;
+using BookingSolution.ViewModels.System.Services;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -27,6 +28,13 @@ namespace Booking.AdminApp.Controllers
             _configuration = configuration;
             _partyApiClient = partyApiClient;
             //_categoryApiClient = categoryApiClient;
+        }
+
+        [HttpGet]
+        public IActionResult ViewDetail()
+        {
+            var view = new PartyUserView();
+            return View(view);
         }
 
         public async Task<IActionResult> Index(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
