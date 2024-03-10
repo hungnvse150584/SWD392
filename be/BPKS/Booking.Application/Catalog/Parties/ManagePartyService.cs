@@ -205,13 +205,14 @@ namespace Booking.Application.Catalog.Parties
             {
                 throw new Exception($"Cannot find a party with id:{request.PartyId}.");
             }
-            party.PartyName = request.PartyName;
-            party.PhoneContact = request.PhoneContact;
-            party.Place = request.Place;
-            party.ThumbnailUrl = await this.SaveFile(request.ThumbnailImage);
-            party.DayEnd = request.DayEnd;
-            party.PartyStatus = request.PartyStatus;
-            party.Description = request.Description;
+            
+            party.PartyName = request.PartyName!=null?request.PartyName:party.PartyName;
+            party.PhoneContact = request.PhoneContact != null ? request.PhoneContact : party.PhoneContact;
+            party.Place = request.Place != null ? request.Place : party.Place;
+            party.ThumbnailUrl = request.ThumbnailImage!=null? await this.SaveFile(request.ThumbnailImage):party.ThumbnailUrl;
+            party.DayEnd = request.DayEnd != null ? request.DayEnd : party.DayEnd;
+            party.PartyStatus = request.PartyStatus != null ? request.PartyStatus : party.PartyStatus;
+            party.Description = request.Description != null ? request.Description : party.Description;
 
             return await _context.SaveChangesAsync();
         }

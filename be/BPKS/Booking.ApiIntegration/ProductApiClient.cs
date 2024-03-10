@@ -121,19 +121,20 @@ namespace Booking.ApiIntegration
                     data = br.ReadBytes((int)request.ThumbnailImage.OpenReadStream().Length);
                 }
                 ByteArrayContent bytes = new ByteArrayContent(data);
-                requestContent.Add(bytes, "thumbnailImage", request.ThumbnailImage.FileName);
+                requestContent.Add(bytes, "ThumbnailImage", request.ThumbnailImage.FileName);
             }
 
-            requestContent.Add(new StringContent(request.ProductName ?? ""), "productName");
+            requestContent.Add(new StringContent(request.ProductId.ToString() ?? ""), "ProductId");
+            requestContent.Add(new StringContent(request.ProductName ?? ""), "ProductName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
-            requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "productType");
-            requestContent.Add(new StringContent(request.ProductStyle ?? ""), "productStyle");
-            requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
-            requestContent.Add(new StringContent(request.ProductStatus ?? ""), "productStatus");
+            requestContent.Add(new StringContent(request.ProductType?.ToString() ?? ""), "ProductType");
+            requestContent.Add(new StringContent(request.ProductStyle ?? ""), "ProductStyle");
+            requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "Price");
+            requestContent.Add(new StringContent(request.ProductStatus ?? ""), "ProductStatus");
             requestContent.Add(new StringContent(request.Description ?? ""), "Description");
             //requestContent.Add(new StringContent(languageId), "languageId");
 
-            var response = await client.PutAsync($"/api/products/Update" + request.ProductId, requestContent);
+            var response = await client.PutAsync($"/api/products/Update", requestContent);
             return response.IsSuccessStatusCode;
         }
 

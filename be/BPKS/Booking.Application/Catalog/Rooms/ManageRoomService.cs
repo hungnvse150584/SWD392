@@ -102,12 +102,12 @@ namespace Booking.Application.Catalog.Rooms
                 throw new Exception($"Cannot find a Room with id:{request.RoomtId}.");
             }
             
-            room.RoomName = request.RoomName;
+            room.RoomName = request.RoomName!=null?request.RoomName:room.RoomName;
             room.RoomUrl = request.RoomUrl != null?  await this.SaveFile(request.RoomUrl) : "";
-            room.RoomType = request.RoomType;
+            room.RoomType = request.RoomType != null ? request.RoomType : room.RoomType;
             
-            room.Price = request.Price;
-            room.RoomStatus = request.RoomStatus;
+            room.Price = request.Price != null ? request.Price : room.Price;
+            room.RoomStatus = request.RoomStatus != null ? request.RoomStatus : room.RoomStatus;
 
             return await _context.SaveChangesAsync();
         }

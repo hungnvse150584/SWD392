@@ -42,8 +42,8 @@ namespace Booking.Application.Catalog.ProductTypes
                 throw new Exception($"Cannot find a ProductType with id:{request.Id}.");
             }
             productType.Id = request.Id;
-            productType.ProductTypeName = request.ProductTypeName;
-            productType.Status  = request.Status;
+            productType.ProductTypeName =  request.ProductTypeName!=null?request.ProductTypeName:productType.ProductTypeName;
+            productType.Status  = request.Status != null ? request.Status : productType.Status;
 
             return await _context.SaveChangesAsync();
         }

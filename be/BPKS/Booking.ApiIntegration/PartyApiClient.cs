@@ -57,7 +57,7 @@ namespace Booking.ApiIntegration
 
         public async Task<PartyVm> GetById(int id)
         {
-            var data = await GetAsync<PartyVm>($"/api/Parties/{id}");
+            var data = await GetAsync<PartyVm>($"/api/Parties/Get{id}");
 
             return data;
         }
@@ -128,7 +128,7 @@ namespace Booking.ApiIntegration
                 ByteArrayContent bytes = new ByteArrayContent(data);
                 requestContent.Add(bytes, "ThumbnailImage", request.ThumbnailImage.FileName);
             }
-            //requestContent.Add(new StringContent(request.PartyHostId.ToString()), "PartyHostId");
+            requestContent.Add(new StringContent(request.PartyId.ToString()??""), "PartyId");
             requestContent.Add(new StringContent(request.PartyName ?? ""), "PartyName");
             requestContent.Add(new StringContent(request.PhoneContact ?? ""), "PhoneContact");
             requestContent.Add(new StringContent(request.Place ?? ""), "Place");
@@ -140,7 +140,7 @@ namespace Booking.ApiIntegration
             // Assuming SaveFile method returns the file URL asynchronously
             requestContent.Add(new StringContent(request.Description ?? ""), "Description");
 
-            var response = await client.PostAsync($"/api/Parties/", requestContent);
+            var response = await client.PutAsync($"/api/Parties/Update", requestContent);
             return response.IsSuccessStatusCode;
         }
 
