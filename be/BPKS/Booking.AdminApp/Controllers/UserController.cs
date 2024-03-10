@@ -54,13 +54,13 @@ namespace Booking.AdminApp.Controllers
             return RedirectToAction("Index", "Login");
         }
 
-
         [HttpGet]
         public IActionResult Create()
         {
 
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(RegisterRequest request)
         {
@@ -97,6 +97,7 @@ namespace Booking.AdminApp.Controllers
             }
             return RedirectToAction("Error", "Home");
         }
+
         [HttpPost]
         public async Task<IActionResult> Edit(UserUpdateRequest request)
         {
@@ -113,6 +114,7 @@ namespace Booking.AdminApp.Controllers
             ModelState.AddModelError("", result.Message);
             return View(request);
         }
+
         public async Task<IActionResult> Details(Guid id)
         {
             var result = await _userApiClient.GetById(id);
@@ -126,6 +128,7 @@ namespace Booking.AdminApp.Controllers
                 Id = id
             });
         }
+
         [HttpPost]
         public async Task<IActionResult> Delete(UserDeleteRequest request)
         {

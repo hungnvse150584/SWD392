@@ -55,6 +55,30 @@ namespace Booking.ApiIntegration
             return data;
         }
 
+        public async Task<PagedResult<PartyVm>> GetPagingsParentParty(GetPublicPartyPagingRequest request)
+        {
+            // Tạo URL với các tham số yêu cầu
+            var url = $"/api/Parents/paging?pageIndex={request.PageIndex}" +
+                $"&pageSize={request.PageSize}";
+
+            // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có
+            if (!string.IsNullOrEmpty(request.PartyName))
+            {
+                url += $"&PartyName={request.PartyName}";
+            }
+
+            // Thêm tham số tìm kiếm theo nơi tổ chức nếu có
+            if (!string.IsNullOrEmpty(request.Place))
+            {
+                url += $"&Place={request.Place}";
+            }
+
+            // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
+            var data = await GetAsync<PagedResult<PartyVm>>(url);
+
+            return data;
+        }
+
         public async Task<PartyVm> GetById(int id)
         {
             var data = await GetAsync<PartyVm>($"/api/Parties/Get{id}");

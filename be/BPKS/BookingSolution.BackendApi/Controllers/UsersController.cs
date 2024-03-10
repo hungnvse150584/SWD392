@@ -49,7 +49,6 @@ namespace BookingSolution.BackendApi.Controllers
             return Ok(result);
         }
 
-
         [HttpPost("Register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromForm] RegisterRequest request)
@@ -64,6 +63,7 @@ namespace BookingSolution.BackendApi.Controllers
             }
             return Ok(result);
         }
+
         //http://localhost/api/Users/paging?pageIndex=1&pageSize=10&keyword=
         [HttpGet("paging")]
         public async Task<IActionResult> GetAllPaging([FromQuery] GetUserPagingRequest request)
@@ -87,19 +87,20 @@ namespace BookingSolution.BackendApi.Controllers
             return Ok(result);
         }
 
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
             var user = await _userService.GetById(id);
             return Ok(user);
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _userService.Delete(id);
             return Ok(result);
         }
+
         [HttpPut("{id}/roles")]
         public async Task<IActionResult> RoleAssign(Guid id, [FromBody] RoleAssignRequest request)
         {

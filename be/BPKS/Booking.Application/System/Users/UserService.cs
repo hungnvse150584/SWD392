@@ -39,15 +39,14 @@ namespace Booking.Application.System.Users
                 return new ApiErrorResult<string>("Đăng nhập không đúng");
             }
 
-            // Lấy vai trò của người dùng
-            var roles = await _userManager.GetRolesAsync(user);
-
             // Tạo các claim bao gồm vai trò của người dùng
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Name, request.UserName)
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
+            // Lấy vai trò của người dùng
+            var roles = await _userManager.GetRolesAsync(user);
 
             foreach (var role in roles)
             {

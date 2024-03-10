@@ -81,6 +81,7 @@ namespace Booking.WebApp
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ISlideApiClient, SlideApiClient>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<IRoleApiClient, RoleApiClient>();
             services.AddTransient<IUserApiClient, UserApiClient>();
             services.AddTransient<IPartyApiClient, PartyApiClient>();
 

@@ -1,6 +1,7 @@
 ﻿using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
@@ -12,11 +13,17 @@ namespace Booking.ApiIntegration
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public UserApiClient(IHttpClientFactory httpClientFactory, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
+        private readonly IRoleApiClient _roleApiClient;
+
+        public UserApiClient(IHttpClientFactory httpClientFactory, 
+            IConfiguration configuration, 
+            IHttpContextAccessor httpContextAccessor,
+            IRoleApiClient roleApiClient)
         {
             _httpClientFactory = httpClientFactory;
             _configuration = configuration;
             _httpContextAccessor = httpContextAccessor;
+            this._roleApiClient = roleApiClient;
         }
         public async Task<ApiResult<string>> Authenticate(LoginRequest request)
         {
@@ -33,9 +40,6 @@ namespace Booking.ApiIntegration
 
             return JsonConvert.DeserializeObject<ApiErrorResult<string>>(await response.Content.ReadAsStringAsync());
         }
-
-
-
 
         public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         {
@@ -97,6 +101,7 @@ namespace Booking.ApiIntegration
             return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(result);
 
         }
+
         public async Task<ApiResult<bool>> Register(RegisterRequest request)
         {
             var client = _httpClientFactory.CreateClient();
@@ -127,6 +132,7 @@ namespace Booking.ApiIntegration
             return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(result);
 
         }
+
         public async Task<ApiResult<bool>> UpdateUser(Guid id, UserUpdateRequest request)
         {
             var client = _httpClientFactory.CreateClient();
@@ -159,6 +165,7 @@ namespace Booking.ApiIntegration
 
             return JsonConvert.DeserializeObject<ApiErrorResult<UserVm>>(body);
         }
+
         public async Task<ApiResult<bool>> Delete(Guid id)
         {
             var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");

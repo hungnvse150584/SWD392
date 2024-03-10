@@ -27,6 +27,7 @@ namespace Booking.AdminApp.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Index(LoginRequest request)
         {
@@ -52,8 +53,21 @@ namespace Booking.AdminApp.Controllers
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         userPrincipal,
                         authProperties);
-            return RedirectToAction("Index", "Home");
+            // Check roles
+            var roles = userPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+            if (roles.Contains("admin"))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else if (roles.Contains("parent"))
+            {
+                return RedirectToAction("IndexParty", "Parent");
+            }
+
+            // Default redirect if role not specified
+            return RedirectToAction("Index", "Login");
         }
+
         private ClaimsPrincipal ValidateToken(string jwtToken)
         {
             IdentityModelEventSource.ShowPII = true;
@@ -71,10 +85,10 @@ namespace Booking.AdminApp.Controllers
 
             return principal;
         }
+
         [HttpGet]
         public IActionResult Register()
         {
-
             return View();
         }
         [HttpPost]

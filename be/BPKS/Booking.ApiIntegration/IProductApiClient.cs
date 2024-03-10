@@ -7,6 +7,8 @@ namespace Booking.ApiIntegration
     {
         Task<PagedResult<ProductVm>> GetPagings(GetManageProductPagingRequest request);
 
+        Task<PagedResult<ProductVm>> GetPagingsParentParty(GetManageProductPagingRequest request);
+
         Task<bool> CreateProduct(ProductCreateRequest request);
 
         Task<bool> UpdateProduct(ProductUpdateRequest request);
