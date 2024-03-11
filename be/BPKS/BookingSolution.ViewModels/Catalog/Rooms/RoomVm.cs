@@ -1,4 +1,6 @@
-﻿namespace BookingSolution.ViewModels.Catalog.Rooms
+﻿using Microsoft.AspNetCore.Http;
+
+namespace BookingSolution.ViewModels.Catalog.Rooms
 
 {
     public class RoomVm
@@ -14,6 +16,7 @@
         public double? Price { get; set; }
 
         public string? RoomStatus { get; set; }
+        public IFormFile? ThumbnailImage { get; set; }
 
         //public virtual ICollection<ListProduct> ListProducts { get; set; } = new List<ListProduct>();
     }

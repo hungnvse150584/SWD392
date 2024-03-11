@@ -1,4 +1,5 @@
-﻿using Booking.Data.EF;
+﻿using Azure.Core;
+using Booking.Data.EF;
 using Booking.Data.Entities;
 using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Parties;
@@ -62,7 +63,7 @@ namespace Booking.Application.Catalog.Rooms
             var room = new Room()
             { 
                 RoomName = request.RoomName,
-                RoomUrl = request.RoomUrl != null? await this.SaveFile( request.RoomUrl):"",
+                RoomUrl = request.RoomUrl,
                 RoomType = request.RoomType,
                 Price = request.Price,
                 RoomStatus = "Pending"
@@ -96,14 +97,14 @@ namespace Booking.Application.Catalog.Rooms
         }
         public async Task<int> Update(RoomUpdateRequest request)
         {
-            var room = await _context.Rooms.FindAsync(request.RoomtId);
+            var room = await _context.Rooms.FindAsync(request.RoomId);
             if (room == null)
             {
-                throw new Exception($"Cannot find a Room with id:{request.RoomtId}.");
+                throw new Exception($"Cannot find a Room with id:{request.RoomId}.");
             }
             
             room.RoomName = request.RoomName!=null?request.RoomName:room.RoomName;
-            room.RoomUrl = request.RoomUrl != null?  await this.SaveFile(request.RoomUrl) : "";
+            room.RoomUrl = request.RoomUrl;
             room.RoomType = request.RoomType != null ? request.RoomType : room.RoomType;
             
             room.Price = request.Price != null ? request.Price : room.Price;
@@ -127,7 +128,7 @@ namespace Booking.Application.Catalog.Rooms
         public async Task<List<RoomVm>> GetAll()
         {
             var room = await _context.Rooms
-                .Select(r => new RoomVm
+                .Select( r => new RoomVm
                 {
                     RoomId = r.RoomId,
                     RoomName = r.RoomName,
