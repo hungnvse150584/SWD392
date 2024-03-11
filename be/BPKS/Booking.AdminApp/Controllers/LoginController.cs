@@ -63,6 +63,10 @@ namespace Booking.AdminApp.Controllers
             {
                 return RedirectToAction("IndexParty", "Parent");
             }
+            else if (roles.Contains("partyhost"))
+            {
+                return RedirectToAction("IndexParty", "PartyHost");
+            }
 
             // Default redirect if role not specified
             return RedirectToAction("Index", "Login");

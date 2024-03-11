@@ -12,3 +12,8 @@
 - dotnet ef database update
 ## Install dotnet .8
 dotnet new globaljson --sdk-version 8.0.201
+
+## Template 
+- Admin color : #212529
+- Page color :#9BB9D0
+- #9BB9D0
