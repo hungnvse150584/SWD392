@@ -306,8 +306,8 @@ namespace Booking.Application.Catalog.Parties
                             RoomName = item.room.RoomName,
                             RoomUrl = item.room.RoomUrl,
                             RoomType = item.room.RoomType,
-
-                        });
+                            productUserViews = new List<ProductUserView>()
+                        }) ;
                     }
                     
                 }
@@ -328,7 +328,7 @@ namespace Booking.Application.Catalog.Parties
                     }
                     if (item.room.RoomId == partydetail.roomUserViews.Last().RoomId)
                     {
-                        partydetail.roomUserViews.Last().productUserViews = new List<ProductUserView>();
+                        //partydetail.roomUserViews.Last().productUserViews = new List<ProductUserView>();
                         var product = new ProductUserView
                         {
                             ProductId = item.product.ProductId,

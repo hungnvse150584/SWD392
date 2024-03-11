@@ -77,10 +77,11 @@ namespace Booking.AdminApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult ViewDetailParty()
+        public IActionResult ViewDetailParty(int partyid)
         {
             var view = new PartyUserView();
-            return View(view);
+            var result =  _partyApiClient.GetDetails(partyid);
+            return View(result);
         }
 
         public async Task<IActionResult> IndexParty(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
@@ -91,6 +92,7 @@ namespace Booking.AdminApp.Controllers
                 PageSize = pageSize
             };
 
+           
             // Xác định trường cần tìm kiếm dựa trên searchField
             if (!string.IsNullOrEmpty(keyword))
             {
@@ -112,20 +114,22 @@ namespace Booking.AdminApp.Controllers
             //ViewBag.ProductName = keyword;
             //ViewBag.ProductType = keyword;
             //ViewBag.PartyHostId= keyword;
-
+            
             ViewBag.searchField = searchField;
             ViewBag.Keyword = keyword;
             if (TempData["result"] != null)
             {
                 ViewBag.SuccessMsg = TempData["result"];
             }
+           
 
             return View(data);
         }
 
+
         public async Task<IActionResult> DetailsParty(int id)
         {
-            var result = await _partyApiClient.GetById(id);
+            var result = await _partyApiClient.GetDetails(id);
             return View(result);
         }
     }
