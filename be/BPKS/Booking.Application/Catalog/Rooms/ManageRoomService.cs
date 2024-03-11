@@ -63,7 +63,7 @@ namespace Booking.Application.Catalog.Rooms
             var room = new Room()
             { 
                 RoomName = request.RoomName,
-                RoomUrl = request.RoomUrl,
+                RoomUrl = request.RoomUrl!=null? await this.SaveFile(request.RoomUrl):null,
                 RoomType = request.RoomType,
                 Price = request.Price,
                 RoomStatus = "Pending"
