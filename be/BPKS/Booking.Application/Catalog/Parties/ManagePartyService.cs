@@ -60,7 +60,7 @@ namespace Booking.Application.Catalog.Parties
                 _context.ListParties.Add(listparty);
             }
             await _context.SaveChangesAsync();
-            
+
             return partyrequest.PartyId;
         }
 
@@ -101,7 +101,7 @@ namespace Booking.Application.Catalog.Parties
         {
             var query =
                 from u in _context.AspNetUsers
-                //join lparent in _context.ListParties on u.Id equals lparent.ParentId
+                    //join lparent in _context.ListParties on u.Id equals lparent.ParentId
                 join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
                 join p in _context.Parties on lpartyhost.PartyId equals p.PartyId
                 where u.Id == request.user
@@ -111,17 +111,17 @@ namespace Booking.Application.Catalog.Parties
             {
                 CreatedDate = t.p.CreatedDate,
                 DayEnd = t.p.DayEnd,
-                DayStart=t.p.DayStart,
+                DayStart = t.p.DayStart,
                 Description = t.p.Description,
                 PartyName = t.p.PartyName,
                 PhoneContact = t.p.PhoneContact,
                 Place = t.p.Place,
                 ThumbnailUrl = t.p.ThumbnailUrl,
                 Rate = t.p.Rate,
-                
+
             }).ToList();
 
-           return data;
+            return data;
         }
         public async Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request)
         {
@@ -205,11 +205,11 @@ namespace Booking.Application.Catalog.Parties
             {
                 throw new Exception($"Cannot find a party with id:{request.PartyId}.");
             }
-            
-            party.PartyName = request.PartyName!=null?request.PartyName:party.PartyName;
+
+            party.PartyName = request.PartyName != null ? request.PartyName : party.PartyName;
             party.PhoneContact = request.PhoneContact != null ? request.PhoneContact : party.PhoneContact;
             party.Place = request.Place != null ? request.Place : party.Place;
-            party.ThumbnailUrl = request.ThumbnailImage!=null? await this.SaveFile(request.ThumbnailImage):party.ThumbnailUrl;
+            party.ThumbnailUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : party.ThumbnailUrl;
             party.DayEnd = request.DayEnd != null ? request.DayEnd : party.DayEnd;
             party.PartyStatus = request.PartyStatus != null ? request.PartyStatus : party.PartyStatus;
             party.Description = request.Description != null ? request.Description : party.Description;
@@ -285,7 +285,7 @@ namespace Booking.Application.Catalog.Parties
             //).ToListAsync(); 
             foreach (var item in query)
             {
-                if(item.party.PartyId != partydetail.PartyId)
+                if (item.party.PartyId != partydetail.PartyId)
                 {
                     partydetail.PartyId = item.party.PartyId;
                     partydetail.PartyName = item.party.PartyName;
@@ -297,7 +297,7 @@ namespace Booking.Application.Catalog.Parties
                     partydetail.Rate = item.party.Rate;
                     partydetail.ThumbnailUrl = item.party.ThumbnailUrl;
                     partydetail.roomUserViews = new List<RoomUserView>();
-                    if(item.room != null)
+                    if (item.room != null)
                     {
                         partydetail.roomUserViews.Add(new RoomUserView
                         {
@@ -309,9 +309,9 @@ namespace Booking.Application.Catalog.Parties
                             productUserViews = new List<ProductUserView>()
                         }) ;
                     }
-                    
+
                 }
-                if(partydetail.roomUserViews.Count() > 0)
+                if (partydetail.roomUserViews.Count() > 0)
                 {
                     if (item.room.RoomId != partydetail.roomUserViews.Last().RoomId)
                     {
@@ -362,26 +362,26 @@ namespace Booking.Application.Catalog.Parties
 
                     }
 
-                    
+
                 }
-                
-                
-                
+
+
+
 
 
             }
 
-          return partydetail;
+            return partydetail;
 
         }
 
-        public  Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request)
+        public Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request)
         {
             var query =
                 from p in _context.Parties
                 join lp in _context.ListParties on p.PartyHostId equals lp.PartyHostId
                 where p.PartyStatus == request.Status
-                select new {p,lp };
+                select new { p, lp };
 
             if (request.Id != Guid.Empty)
                 query = query.Where(x => x.lp.PartyHostId == request.Id);
@@ -423,12 +423,12 @@ namespace Booking.Application.Catalog.Parties
         {
             var query =
                 from lp in _context.ListParties
-                join p in _context.Parties on lp.PartyId equals p.PartyId           
+                join p in _context.Parties on lp.PartyId equals p.PartyId
                 where lp.ParentId == request.ParentId
                 select lp;
             query.Select(q => q.PartyId == request.PartyId);
 
-            if(query.Count() > 0)
+            if (query.Count() > 0)
             {
                 var feedback = new Feedback
                 {
@@ -442,7 +442,7 @@ namespace Booking.Application.Catalog.Parties
             }
             await _context.SaveChangesAsync();
 
-            var fquery  =
+            var fquery =
                 from f in _context.Feedbacks
                 join p in _context.Parties on f.PartyId equals p.PartyId
                 where f.PartyId == request.PartyId
@@ -451,9 +451,9 @@ namespace Booking.Application.Catalog.Parties
             var total = fquery.Sum(s => s.f.Score);
 
             var party = await _context.Parties.FindAsync(request.PartyId);
-            if(party != null)
+            if (party != null)
             {
-                party.Rate = Math.Round((double)total/row,1);
+                party.Rate = Math.Round((double)total / row, 1);
             }
 
             return await _context.SaveChangesAsync();

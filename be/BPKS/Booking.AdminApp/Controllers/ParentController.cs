@@ -9,6 +9,7 @@ namespace Booking.AdminApp.Controllers
 {
     public class ParentController : Controller
     {
+        //private readonly IPartyHostApiClient partyHostApiClient;
         private readonly IProductApiClient _productApiClient;
         private readonly IPartyApiClient _partyApiClient;
         private readonly IConfiguration _configuration;

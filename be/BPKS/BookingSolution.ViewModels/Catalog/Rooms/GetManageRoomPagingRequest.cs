@@ -9,6 +9,9 @@ namespace BookingSolution.ViewModels.Catalog.Rooms
     {
         public string Keyword { get; set; }
 
-        public int? CategoryId { get; set; }
+        public string? RoomName { get; set; }
+
+        public string? RoomType { get; set; }
+        public Guid? PartyHostId { get; set; }
     }
 }
