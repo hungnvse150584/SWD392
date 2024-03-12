@@ -63,7 +63,7 @@ namespace Booking.Application.Catalog.Rooms
             var room = new Room()
             { 
                 RoomName = request.RoomName,
-                RoomUrl = request.RoomUrl,
+                RoomUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : null,
                 RoomType = request.RoomType,
                 Price = request.Price,
                 RoomStatus = "Pending"
@@ -104,7 +104,7 @@ namespace Booking.Application.Catalog.Rooms
             }
             
             room.RoomName = request.RoomName!=null?request.RoomName:room.RoomName;
-            room.RoomUrl = request.RoomUrl;
+            room.RoomUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : null;
             room.RoomType = request.RoomType != null ? request.RoomType : room.RoomType;
             
             room.Price = request.Price != null ? request.Price : room.Price;

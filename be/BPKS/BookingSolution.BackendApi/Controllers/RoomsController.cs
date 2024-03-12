@@ -120,7 +120,7 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-        [HttpDelete("Delete{roomId}")]
+        [HttpDelete("Delete/{roomId}")]
         public async Task<IActionResult> Delete(int roomId)
         {
             try

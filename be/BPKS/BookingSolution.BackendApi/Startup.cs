@@ -46,7 +46,7 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IPartyApiClient, PartyApiClient>();
 
             services.AddTransient<IManagePartyService, ManagePartyService>();
-            services.AddScoped<IManageRoomService, ManageRoomService>();
+            services.AddTransient<IManageRoomService, ManageRoomService>();
             services.AddScoped<IRoleApiClient, RoleApiClient>();
             services.AddTransient<IPublicRoomService, PublicRoomService>();
 
@@ -58,6 +58,7 @@ namespace BookingSolution.BackendApi
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<IRoomApiClient, RoomApiClient>();
             services.AddTransient<ISystemService, SystemService>();
             services.AddScoped<IProductTypeService, ProductTypeService>(); // Thay ProductTypeService bằng tên lớp thực hiện dịch vụ của bạn.
 

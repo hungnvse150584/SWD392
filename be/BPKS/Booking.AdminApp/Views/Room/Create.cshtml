@@ -1,0 +1,69 @@
+﻿@model BookingSolution.ViewModels.Catalog.Rooms.RoomCreateRequest
+
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>RoomCreateRequest</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PartyId" class="control-label"></label>
+                <input asp-for="PartyId" class="form-control" />
+                <span asp-validation-for="PartyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartyHostId" class="control-label"></label>
+                <input asp-for="PartyHostId" class="form-control" />
+                <span asp-validation-for="PartyHostId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomName" class="control-label"></label>
+                <input asp-for="RoomName" class="form-control" />
+                <span asp-validation-for="RoomName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomType" class="control-label"></label>
+                <input asp-for="RoomType" class="form-control" />
+                <span asp-validation-for="RoomType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Select Products:</label>
+                @foreach (var product in ViewBag.Products)
+                {
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="ProductIds" value="@product.ProductId"> @product.ProductName
+                        </label>
+                    </div>
+                }
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ThumbnailImage" class="control-label"></label>
+                <input asp-for="ThumbnailImage" class="form-control" />
+                <span asp-validation-for="ThumbnailImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
