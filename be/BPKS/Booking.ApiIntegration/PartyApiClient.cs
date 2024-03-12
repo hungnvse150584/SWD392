@@ -2,6 +2,7 @@
 using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -173,6 +174,11 @@ namespace Booking.ApiIntegration
             return await Delete($"/api/Parties/" + id);
         }
 
-        
+        public async Task<PartyUserView> GetDetails(int id)
+        {
+            var data = await GetAsync<PartyUserView>($"/api/Parties/GetPartyDetail?id={id}");
+
+            return data;
+        }
     }
 }

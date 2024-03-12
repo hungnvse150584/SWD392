@@ -1,0 +1,99 @@
+﻿@model BookingSolution.ViewModels.Catalog.Parties.PartyCreateRequest
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+@section Scripts {
+    <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#txt_details'), {
+                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            })
+            .then(editor => {
+                window.editor = editor;
+            })
+            .catch(err => {
+                console.error(err.stack);
+            });
+    </script>
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Danh sách bữa tiệc</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Danh sách bữa tiệc</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <form asp-action="Index" method="get">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <select name="searchField" class="form-control">
+                                    <option value="PartyName">Tên bữa tiệc</option>
+                                    <option value="Place">Địa điểm</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Tìm</button>
+                                <button type="button" onclick="window.location.href='/Party/Index'" class="btn btn-dark">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="col-md-8">
+                <form asp-action="Create" enctype="multipart/form-data" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="PartyHostId" class="control-label"></label>
+                        <input asp-for="PartyHostId" class="form-control" />
+                        <span asp-validation-for="PartyHostId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PartyName" class="control-label"></label>
+                        <input asp-for="PartyName" class="form-control" />
+                        <span asp-validation-for="PartyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneContact" class="control-label"></label>
+                        <input asp-for="PhoneContact" class="form-control" />
+                        <span asp-validation-for="PhoneContact" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Place" class="control-label"></label>
+                        <input asp-for="Place" class="form-control" />
+                        <span asp-validation-for="Place" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DayStart" class="control-label"></label>
+                        <input asp-for="DayStart" class="form-control" />
+                        <span asp-validation-for="DayStart" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DayEnd" class="control-label"></label>
+                        <input asp-for="DayEnd" class="form-control" />
+                        <span asp-validation-for="DayEnd" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+             </div>
+        </div>
+    </div>
+</div>
