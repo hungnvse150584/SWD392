@@ -199,6 +199,26 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpPut("UpdatePartyDetail")]
+        
+        public async Task<IActionResult> UpdatePartyDetail([FromBody] PartyDetailsUpdateRequest request)
+        {
+            try
+            { 
+
+                var affectedRessult = await _managePartyService.UpdatePartyDetails(request);
+                if (affectedRessult == 0)
+                    return BadRequest();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
 
         [HttpPut("UpdateStatus")]
         public async Task<IActionResult> UpdateStatus([FromForm] UpdatePartyStatusRequest request)
@@ -236,6 +256,7 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
 
     } 
 }

@@ -9,7 +9,7 @@ public partial class ListProduct
 
     public int? PartyId { get; set; }
 
-    public int? RoomId { get; set; }
+    public int RoomId { get; set; }
 
     public int? ProductId { get; set; }
 

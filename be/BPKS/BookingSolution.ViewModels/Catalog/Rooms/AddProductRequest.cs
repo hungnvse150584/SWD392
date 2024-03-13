@@ -10,7 +10,7 @@ namespace BookingSolution.ViewModels.Catalog.Rooms
     public class AddProductRequest
     {
         public int? PartyId { get; set; }
-        public int? RoomId { get; set; }
+        public int RoomId { get; set; }
         public List<ProductlistRequest>? listproducts { get; set; }
     }
 }

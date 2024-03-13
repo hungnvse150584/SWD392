@@ -11,7 +11,7 @@ public partial class ListRoom
 
     public Guid? ParentId { get; set; }
 
-    public int? RoomId { get; set; }
+    public int RoomId { get; set; }
 
     public string? ListRoomStatus { get; set; }
 

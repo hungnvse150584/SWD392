@@ -1,4 +1,4 @@
-﻿@model BookingSolution.ViewModels.System.Services.PartyUserView
+﻿@model BookingSolution.ViewModels.Catalog.Parties.PartyVm
 
 @{
     ViewData["Title"] = "Details";
@@ -78,7 +78,7 @@
                         @Html.DisplayNameFor(model => model.ThumbnailUrl)
                     </dt>
                     <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.ThumbnailUrl)
+                        <img src="@Model.ThumbnailUrl" alt="Pa Image" class="img-fluid" style=" height: 100px;" />
                     </dd>
                     <dt class = "col-sm-2">
                         @Html.DisplayNameFor(model => model.DayStart)
