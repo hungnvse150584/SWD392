@@ -73,15 +73,15 @@ namespace Booking.ApiIntegration
 
             var requestContent = new MultipartFormDataContent();
 
-            if (request.RoomUrl != null)
+            if (request.ThumbnailImage != null)
             {
                 byte[] data;
-                using (var br = new BinaryReader(request.RoomUrl.OpenReadStream()))
+                using (var br = new BinaryReader(request.ThumbnailImage.OpenReadStream()))
                 {
-                    data = br.ReadBytes((int)request.RoomUrl.OpenReadStream().Length);
+                    data = br.ReadBytes((int)request.ThumbnailImage.OpenReadStream().Length);
                 }
                 ByteArrayContent bytes = new ByteArrayContent(data);
-                requestContent.Add(bytes, "ProductUrl", request.RoomUrl.FileName);
+                requestContent.Add(bytes, "ProductUrl", request.ThumbnailImage.FileName);
             }
 
             requestContent.Add(new StringContent(request.PartyHostId.ToString() ?? ""), "PartyHostId");

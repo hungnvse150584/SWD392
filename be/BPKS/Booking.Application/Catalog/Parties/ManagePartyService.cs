@@ -29,6 +29,8 @@ namespace Booking.Application.Catalog.Parties
 
         public async Task<int> Create(PartyCreateRequest request)
         {
+            var listroom = request.RoomId;
+            var listproduct = request.ProductId;
             var party = new Party()
             {
                 PartyName = request.PartyName,
@@ -40,7 +42,7 @@ namespace Booking.Application.Catalog.Parties
                 DayStart = request.DayStart,
                 DayEnd = request.DayEnd,
                 PartyHostId = request.PartyHostId,
-                PartyStatus = "Active",
+                PartyStatus = "Pending",
                 ThumbnailUrl = await this.SaveFile(request.ThumbnailUrl),
 
             };
@@ -48,13 +50,41 @@ namespace Booking.Application.Catalog.Parties
             _context.SaveChanges();
 
             var partyrequest = _context.Parties.FirstOrDefault(p => p.ThumbnailUrl == party.ThumbnailUrl);
+           
+            foreach (var listRoom in listroom)
+            {
+                var add = new ListRoom
+                {
+                    PartyId = partyrequest?.PartyId,
+                    RoomId = listRoom,
+                    ListRoomStatus = "Active",
+                    ParentId = null,
 
+                };
+                _context.ListRooms.Add(add);
+                foreach (var listProduct in listproduct)
+                {
+                    var addproduct = new ListProduct
+                    {
+                        PartyId = partyrequest?.PartyId,
+                        RoomId = listRoom,
+                        ProductId = listProduct,
+                        ListProductStatus = "Active",
+                        Quantity = 0,
+
+                    };
+                    _context.ListProducts.Add(addproduct);
+                }
+            }
+           
+            
             if (partyrequest != null)
             {
                 var listparty = new ListParty
                 {
                     PartyHostId = request.PartyHostId,
                     PartyId = partyrequest?.PartyId,
+                    ListPartyStatus="Active",
                 };
 
                 _context.ListParties.Add(listparty);
