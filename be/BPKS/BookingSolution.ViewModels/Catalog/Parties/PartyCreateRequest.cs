@@ -25,7 +25,9 @@ namespace BookingSolution.ViewModels.Catalog.Parties
         [DataType(DataType.Date)]
         public DateTime DayEnd { get; set; }
         public IFormFile ThumbnailUrl { get; set; }
-       // public DateOnly CreatedDate { get; set; }
+        public List<int> RoomId { get; set; }
+        public List<int> ProductId { get; set; }
+        // public DateOnly CreatedDate { get; set; }
         //public string PartyStatus { get; set; }
 
         //public List<FeedBack> PartyTranslation { get; set; }

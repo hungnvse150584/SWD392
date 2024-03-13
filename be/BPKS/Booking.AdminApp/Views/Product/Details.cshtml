@@ -2,104 +2,212 @@
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout4.cshtml";
 }
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container-fluid px-4">
-    <h1 class="mt-4">Tạo mới người dùng</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Tạo mới người dùng</li>
-    </ol>
-    <div class="card mb-4">
-        <div class="card-header">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Kids - Food and Drinks</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-MJLE5x4b5xqStVH+6vU2Z1NcF0k/yljvPTFVd4Q8TXaIU2kpqd4Bt3juF7MjzxrV" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xs-12">
-                    <form asp-action="Index" method="get">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large" style="width:auto; height: 575.55px"
+                                 src="@Model.ProductUrl" alt="Product Image">
+                        </div>
+                        <div class="product__details__pic__slider owl-carousel">
+                            @* <img data-imgbigurl="img/product/details/product-details-2.jpg"
+                                 src="img/product/details/thumb-1.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
+                                 src="img/product/details/thumb-2.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
+                                 src="img/product/details/thumb-3.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
+                                 src="img/product/details/thumb-4.jpg" alt=""> *@
+                            <!-- Add thumbnail images here if needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
                         <div class="row">
-                            <div class="col-md-3">
-                                <select name="searchField" class="form-control">
-                                    <option value="ProductName">Tên sản phẩm</option>
-                                    <option value="ProductType">Loại sản phẩm</option>
-                                    <option value="PartyHostId">Mã chủ tiệc</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
-                            </div>
-                            <div class="col-md-3">
-                                <button type="submit" class="btn btn-primary">Tìm</button>
-                                <button type="button" onclick="window.location.href='/Product/Index'" class="btn btn-dark">Reset</button>
+                            <div class="col-lg-6 col-md-6">
+                                <h3> @Html.DisplayFor(model => model.ProductName)</h3>
+                                <div class="product__details__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                    <span>(0 reviews)</span>
+                                </div>
+                                <div class="product__details__price">@Html.DisplayFor(model => model.Price) VND</div>
+                                <p>Description: @Html.DisplayFor(model => model.Description)</p>
                             </div>
                         </div>
-                    </form>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="primary-btn">Load</a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <div class="col-lg-6 col-md-6">
+                            <ul>
+                                <li><b>Availability:</b> @Html.DisplayFor(model => model.ProductStatus)</li>
+                                <li><b>Type:</b> <span>@Html.DisplayFor(model => model.ProductType)</span></li>
+                                <li><b>Style:</b> <span>@Html.DisplayFor(model => model.ProductStyle)</span></li>
+                                <li>
+                                    <b>Share on:</b>
+                                    <div class="share">
+                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                        <!-- Your other product details content here -->
+                <div class="col-lg-12">
+                    <div class="product__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                   aria-selected="true">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                                   aria-selected="false">Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                                   aria-selected="false">Reviews <span>(1)</span></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Food and Drink Menu</h6>
+                                    <p>Explore our diverse selection of delicious food and refreshing drinks, carefully crafted to satisfy every taste bud and dietary preference. From mouth-watering appetizers to delectable desserts, we have something for everyone.</p>
+                                    <p>Our menu features fresh, high-quality ingredients sourced locally, ensuring every dish and beverage is bursting with flavor and nutrition. Whether you're craving savory snacks or sweet treats, we guarantee an unforgettable dining experience that will leave you craving for more.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Drink Menu</h6>
+                                    <p>Quench your thirst with our refreshing drink menu. From fruit juices to smoothies, milkshakes to mocktails, we have a variety of options to keep you hydrated and energized. Our drinks are made with fresh fruits and ingredients, ensuring a burst of flavor in every sip.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Customer Reviews</h6>
+                                    <p>Read what our customers have to say about their experience with our products:</p>
+                                    <p>Our product has received rave reviews from satisfied customers all around. Here's what some of them had to say:</p>
+                                    <p>"I recently purchased this product and I'm extremely satisfied with its quality and performance. It exceeded my expectations in every way possible." - John Doe</p>
+                                    <p>"I've been using this product for a while now and I must say, it's been a game-changer for me. It's incredibly versatile and has made my life so much easier." - Jane Smith</p>
+                                    <p>"I was initially hesitant to buy this product, but after reading the reviews, I decided to give it a try. I'm so glad I did because it's been a fantastic addition to my daily routine." - David Johnson</p>
+                                    <p>"This product is simply amazing! It's well-designed, durable, and does exactly what it's supposed to do. I couldn't be happier with my purchase." - Emily Brown</p>
+                                    <p>These are just a few of the many positive reviews we've received from our valued customers. We take pride in delivering top-notch products and exceptional customer service, and we're thrilled to see such positive feedback.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="card-body">
-            <div class="col-md-12 ">
-                <dl class="row">
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.ProductId)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.ProductId)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.PartyHostId)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.PartyHostId)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.ProductName)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.ProductName)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.ProductUrl)
-                    </dt>
-                    @* <td>
-                        <img src="@Model.ProductUrl" alt="Product Image" class="img-fluid" style=" height: 100px;" />
-                    </td> *@
-                    <dd class = "col-sm-10">
-                        @* @Html.DisplayFor(model => model.ProductUrl) *@
-                        <img src="@Model.ProductUrl" alt="Product Image" class="img-fluid" style=" height: 100px;" />
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.ProductType)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.ProductType)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.ProductStyle)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.ProductStyle)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.Price)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.Price)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.ProductStatus)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.ProductStatus)
-                    </dd>
-                    <dt class = "col-sm-2">
-                        @Html.DisplayNameFor(model => model.Description)
-                    </dt>
-                    <dd class = "col-sm-10">
-                        @Html.DisplayFor(model => model.Description)
-                    </dd>
-                </dl>
+    </section>
+    <!-- Product Details Section End -->
+    <!-- Related Product Section Begin -->
+    <!-- No related products for food and drink section -->
+    <!-- Related Product Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Phone: 09394296xx</li>
+                            <li>Email: partyforkid@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest parties and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <p>
+                            © <script>document.write(new Date().getFullYear());</script> Booking Party Kid System. All rights reserved | Made with <i class="fa fa-heart" aria-hidden="true"></i> by Booking Party Kid System
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- JS -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

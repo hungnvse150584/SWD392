@@ -6,6 +6,8 @@ using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Products;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
+using System.Drawing.Printing;
 
 namespace  Booking.AdminApp.Controllers
 {
@@ -13,18 +15,39 @@ namespace  Booking.AdminApp.Controllers
     {
         private readonly IRoomApiClient _roomApiClient;
         private readonly IConfiguration _configuration;
+        private readonly IProductApiClient _productApiClient;
 
         //private readonly ICategoryApiClient _categoryApiClient;
 
         public RoomController(IRoomApiClient roomApiClient,
-            IConfiguration configuration)
-            //ICategoryApiClient categoryApiClient)
+            IConfiguration configuration,
+            IProductApiClient productApiClient)
+        //ICategoryApiClient categoryApiClient)
         {
             _configuration = configuration;
             _roomApiClient = roomApiClient;
+            _productApiClient = productApiClient;
             //_categoryApiClient = categoryApiClient;
         }
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var request = new GetManageProductPagingRequest()
+            {
+                ProductName = null,
+                PageIndex = 1,
+                PageSize = 10
+            };
+            // Gọi service để lấy danh sách sản phẩm từ API
+            var productsPagedResult = await _productApiClient.GetPagings(request); // Sử dụng phương thức GetAll hoặc phương thức tương tự trong service
+            var products = productsPagedResult.Items;
 
+            // Gán danh sách sản phẩm vào ViewBag
+            ViewBag.Products = products;
+            // Gán danh sách sản phẩm vào ViewBag
+
+            return View();
+        }
         public async Task<IActionResult> Index(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
             //string selectedFilter = filter;
@@ -63,6 +86,7 @@ namespace  Booking.AdminApp.Controllers
 
             ViewBag.searchField = searchField;
             ViewBag.Keyword = keyword;
+
             if (TempData["result"] != null)
             {
                 ViewBag.SuccessMsg = TempData["result"];
@@ -77,11 +101,11 @@ namespace  Booking.AdminApp.Controllers
             return View(result);
         }
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
 
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> Create([FromForm] RoomCreateRequest request)
@@ -127,7 +151,7 @@ namespace  Booking.AdminApp.Controllers
         //    return View(roleAssignRequest);
         //}
 
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Update(int id)
         {
             var room = await _roomApiClient.GetById(id);
             var editVm = new RoomUpdateRequest()
@@ -139,14 +163,14 @@ namespace  Booking.AdminApp.Controllers
                 RoomStatus = room.RoomStatus,
                 RoomType = room.RoomType,
                 Price = room.Price,
-                RoomUrl = room.RoomUrl,
+                ThumbnailImage=room.ThumbnailImage,
             };
             return View(editVm);
         }
 
         [HttpPost]
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> Edit([FromForm] RoomUpdateRequest request)
+        public async Task<IActionResult> Update([FromForm] RoomUpdateRequest request)
         {
             if (!ModelState.IsValid)
                 return View(request);

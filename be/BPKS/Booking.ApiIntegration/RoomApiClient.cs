@@ -73,21 +73,27 @@ namespace Booking.ApiIntegration
 
             var requestContent = new MultipartFormDataContent();
 
-            if (request.RoomUrl != null)
+            if (request.ThumbnailImage != null)
             {
                 byte[] data;
-                using (var br = new BinaryReader(request.RoomUrl.OpenReadStream()))
+                using (var br = new BinaryReader(request.ThumbnailImage.OpenReadStream()))
                 {
-                    data = br.ReadBytes((int)request.RoomUrl.OpenReadStream().Length);
+                    data = br.ReadBytes((int)request.ThumbnailImage.OpenReadStream().Length);
                 }
                 ByteArrayContent bytes = new ByteArrayContent(data);
-                requestContent.Add(bytes, "ProductUrl", request.RoomUrl.FileName);
+                requestContent.Add(bytes, "ProductUrl", request.ThumbnailImage.FileName);
             }
+
             requestContent.Add(new StringContent(request.PartyHostId.ToString() ?? ""), "PartyHostId");
+            requestContent.Add(new StringContent(request.PartyId.ToString() ?? ""), "PartyId");
             requestContent.Add(new StringContent(request.RoomName ?? ""), "roomName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
             requestContent.Add(new StringContent(request.RoomType?.ToString() ?? ""), "roomType");
-            //requestContent.Add(new StringContent(request. ?? ""), "roomName");
+            var requestContext = new MultipartFormDataContent();
+            foreach (var productId in request.ProductIds)
+            {
+                requestContent.Add(new StringContent(productId.ToString()), "ProductIds");
+            }
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
             //requestContent.Add(new StringContent(languageId), "languageId");
             
@@ -159,7 +165,7 @@ namespace Booking.ApiIntegration
 
         public async Task<RoomVm> GetById(int id)
         {
-            var data = await GetAsync<RoomVm>($"/api/Rooms/{id}");
+            var data = await GetAsync<RoomVm>($"/api/Rooms/Get{id}");
 
             return data;
         }
@@ -178,7 +184,7 @@ namespace Booking.ApiIntegration
 
         public async Task<bool> DeleteRoom(int id)
         {
-            return await Delete($"/api/Rooms/" + id);
+            return await Delete($"/api/Rooms/Delete/{id}");
         }
 
         public Task<PagedResult<RoomVm>> GetPagingsParentRoom(GetManageRoomPagingRequest request)
