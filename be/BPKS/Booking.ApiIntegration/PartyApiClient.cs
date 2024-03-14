@@ -202,8 +202,10 @@ namespace Booking.ApiIntegration
                 .HttpContext
                 .Session
                 .GetString(SystemConstants.AppSettings.Token);
-
-            var languageId = _httpContextAccessor.HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
+            var userId = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString("UserId");
 
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
@@ -221,7 +223,7 @@ namespace Booking.ApiIntegration
                 ByteArrayContent bytes = new ByteArrayContent(data);
                 requestContent.Add(bytes, "ThumbnailUrl", request.ThumbnailUrl.FileName);
             }
-            requestContent.Add(new StringContent(request.PartyHostId.ToString()), "PartyHostId");
+            requestContent.Add(new StringContent(userId), "PartyHostId");
             requestContent.Add(new StringContent(request.PartyName ?? ""), "PartyName");
             requestContent.Add(new StringContent(request.Description ?? ""), "Description");
             requestContent.Add(new StringContent(request.PhoneContact ?? ""), "PhoneContact");
@@ -231,9 +233,18 @@ namespace Booking.ApiIntegration
             requestContent.Add(new StringContent(request.DayStart.ToString()), "DayStart");
             requestContent.Add(new StringContent(request.DayEnd.ToString()), "DayEnd");
             requestContent.Add(new StringContent("Active"), "PartyStatus");
+            var requestContext = new MultipartFormDataContent();
+            foreach (var productId in request.ProductId)
+            {
+                requestContent.Add(new StringContent(productId.ToString()), "ProductId");
+            }
+            foreach (var roomId in request.RoomId)
+            {
+                requestContent.Add(new StringContent(roomId.ToString()), "RoomId");
+            }
             // Assuming SaveFile method returns the file URL asynchronously
 
-            var response = await client.PostAsync($"/api/Parties/", requestContent);
+            var response = await client.PostAsync($"/api/Parties/Create", requestContent);
             return response.IsSuccessStatusCode;
         }
 

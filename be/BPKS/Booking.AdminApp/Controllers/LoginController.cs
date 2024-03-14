@@ -58,7 +58,7 @@ namespace Booking.AdminApp.Controllers
             var roles = userPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
 
 
-            
+
             var user = await _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
 
             HttpContext.Session.SetString("UserId", user.Token.Items.First().Id.ToString());
@@ -73,7 +73,7 @@ namespace Booking.AdminApp.Controllers
             }
             else if (roles.Contains("partyhost"))
             {
-                return RedirectToAction("IndexHome", "PartyHost");
+                return RedirectToAction("IndexParty", "PartyHost");
             }
 
             // Default redirect if role not specified
