@@ -225,22 +225,7 @@ namespace Booking.Application.Catalog.Rooms
                .PutAsync(file.OpenReadStream());
             return await task;
         }
-        public Task<int> ParentOrder(ParentOrder request)
-        {
-            var listroom = _context.ListRooms.FirstOrDefault(r => r.RoomId == request.RoomId && r.PartyId == request.PartyId);
-            if (listroom != null)
-            {
-                listroom.ParentId = request.parentId;
-                foreach (var item in request.Items)
-                {
-                    var listproduct = _context.ListProducts.FirstOrDefault(p =>
-                    p.PartyId == request.PartyId &&
-                    p.RoomId == request.RoomId &&
-                    p.ProductId == item.ProductId);
-                    if (listproduct != null)
-                        listproduct.Quantity = item.Quantity;
 
-<<<<<<< Updated upstream
         public Task<int> ParentOrder(ParentOrder request)
         {
             var listroom = _context.ListRooms.FirstOrDefault(r => r.RoomId == request.RoomId && r.PartyId == request.PartyId);
@@ -272,10 +257,6 @@ namespace Booking.Application.Catalog.Rooms
             {
                 lisr.ToList().ForEach(l => l.ListRoomStatus = "Success");
             }
-=======
-                }
-            }
->>>>>>> Stashed changes
             return _context.SaveChangesAsync();
         }
     }
