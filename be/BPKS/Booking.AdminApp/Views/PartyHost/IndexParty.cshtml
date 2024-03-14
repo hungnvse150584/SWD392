@@ -4,6 +4,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
+
 <body>
     <!-- Featured Section Begin -->
     <section class="featured spad">
@@ -30,7 +31,7 @@
                         <form asp-action="Index" method="get">
                             <div class="row">
                             <div class="col-md-1">
-                                <button style="margin-left: -100px; " type="button" class="site-btn">Create</button>
+                                <button id="createPartyBtn" style="margin-left: -100px; " type="button" class="site-btn">Create</button>
                             </div>
                                 <div class="col-md-2" style="height: 46px; width: 100%; margin-right:35px">
                                     <select name="searchField" style="font-size: 16px;font-weight: 700;">
@@ -190,3 +191,9 @@
     <!-- Footer Section End -->
 
 </body>
+<script>
+    document.getElementById('createPartyBtn').addEventListener('click', function () {
+        // Chuyển hướng người dùng đến trang PartyHost/CreateParty
+        window.location.href = '/PartyHost/CreateParty';
+    });
+</script>
