@@ -26,7 +26,9 @@ namespace BookingSolution.ViewModels.Catalog.Parties
         public string? Description { get; set; }
 
         public IFormFile? ThumbnailImage { get; set; }
+        public List<int> RoomId { get; set; }
+        public List<int> ProductId { get; set; }
 
-        
+
     }
 }

@@ -243,6 +243,38 @@ namespace Booking.Application.Catalog.Parties
             party.DayEnd = request.DayEnd != null ? request.DayEnd : party.DayEnd;
             party.PartyStatus = request.PartyStatus != null ? request.PartyStatus : party.PartyStatus;
             party.Description = request.Description != null ? request.Description : party.Description;
+            if (request.RoomId != null && request.RoomId.Any())
+            {
+                // Clear existing list of rooms
+                party.ListRooms.Clear();
+
+                // Add rooms from request
+                foreach (var roomId in request.RoomId)
+                {
+                    var room = await _context.Rooms.FindAsync(roomId);
+                    if (room != null)
+                    {
+                        party.ListRooms.Add(new ListRoom { RoomId = roomId });
+                    }
+                }
+            }
+
+            // Update ListProducts
+            if (request.ProductId != null && request.ProductId.Any())
+            {
+                // Clear existing list of products
+                party.ListProducts.Clear();
+
+                // Add products from request
+                foreach (var productId in request.ProductId)
+                {
+                    var product = await _context.Products.FindAsync(productId);
+                    if (product != null)
+                    {
+                        party.ListProducts.Add(new ListProduct { ProductId = productId });
+                    }
+                }
+            }
 
             return await _context.SaveChangesAsync();
         }
