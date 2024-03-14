@@ -2,23 +2,9 @@
 
 @{
     ViewData["Title"] = "Cập nhật sản phẩm";
-    Layout = "~/Views/Shared/_Layout3.cshtml";
+    Layout = "~/Views/Shared/_Layout4.cshtml";
 }
-@section Scripts {
-    <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#txt_details'), {
-                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-            })
-            .then(editor => {
-                window.editor = editor;
-            })
-            .catch(err => {
-                console.error(err.stack);
-            });
-    </script>
-}
+
 <div class="container-fluid px-4">
     <h1 class="mt-4">Danh sách sản phẩm</h1>
     <ol class="breadcrumb mb-4">

@@ -57,7 +57,7 @@ namespace BookingSolution.BackendApi.Controllers
         }
 
         [HttpGet("PartyHostComfirm")]
-        public async Task<IActionResult> PartyHostComfirm(PHostComfirmRequest request)
+        public async Task<IActionResult> PartyHostComfirm([FromQuery] PHostComfirmRequest request)
         {
             try
             {

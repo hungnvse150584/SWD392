@@ -14,6 +14,7 @@ using Firebase.Storage;
 using Google.Apis.Util;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using System.Linq;
 using System.Net.Sockets;
@@ -139,6 +140,9 @@ namespace Booking.Application.Catalog.Parties
                 where u.Id == request.user
                 select new { u, p };
 
+            if(!request.status.IsNullOrEmpty())
+                query =query.Where(x => x.p.PartyStatus == request.status);
+
             var data = query.Select(t => new PartyHistory
             {
                 CreatedDate = t.p.CreatedDate,
@@ -150,7 +154,7 @@ namespace Booking.Application.Catalog.Parties
                 Place = t.p.Place,
                 ThumbnailUrl = t.p.ThumbnailUrl,
                 Rate = t.p.Rate,
-
+                PartyStatus = t.p.PartyStatus
             }).ToList();
 
             return data;
@@ -163,8 +167,11 @@ namespace Booking.Application.Catalog.Parties
                 join lparent in _context.ListParties on u.Id equals lparent.ParentId
                 //join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
                 join p in _context.Parties on lparent.PartyId equals p.PartyId
-                where u.Id == request.user && lparent.ListPartyStatus == "Success"
+                where u.Id == request.user && lparent.ListPartyStatus == "Success" && lparent.ListPartyStatus == "Waiting"
                 select new { u, p };
+
+            if (!request.status.IsNullOrEmpty())
+                query = query.Where(x => x.p.PartyStatus == request.status);
 
             var data = query.Select(t => new PartyHistory
             {
@@ -570,11 +577,12 @@ namespace Booking.Application.Catalog.Parties
             var query =
                 from lp in _context.ListParties
                 join p in _context.Parties on lp.PartyId equals p.PartyId
-                where lp.ParentId == request.ParentId
+                where lp.ParentId == request.ParentId 
+                && p.PartyId == request.PartyId
                 select lp;
-            query.Select(q => q.PartyId == request.PartyId);
-
-            if (query.Count() > 0)
+           var fb = _context.Feedbacks.FirstOrDefault(x=> x.ParentId == request.ParentId && x.PartyId == request.PartyId);
+            if (fb == null) return 0;
+            if (query.Count() > 0 && fb != null)
             {
                 var feedback = new Feedback
                 {
@@ -584,24 +592,28 @@ namespace Booking.Application.Catalog.Parties
                     Score = request.Score,
                 };
                 _context.Feedbacks.Add(feedback);
+                _context.SaveChanges();
 
-            }
-            await _context.SaveChangesAsync();
-
-            var fquery =
+                var fquery =
                 from f in _context.Feedbacks
                 join p in _context.Parties on f.PartyId equals p.PartyId
                 where f.PartyId == request.PartyId
                 select new { f, p };
-            int row = fquery.Count();
-            var total = fquery.Sum(s => s.f.Score);
 
-            var party = await _context.Parties.FindAsync(request.PartyId);
-            if (party != null)
-            {
-                party.Rate = Math.Round((double)total / row, 1);
+                if(fquery.Count() > 0)
+                {
+                    int row = fquery.Count();
+                    var total = fquery.Sum(s => s.f.Score);
+
+                    var party = await _context.Parties.FindAsync(request.PartyId);
+                    if (party != null)
+                    {
+                        party.Rate = Math.Round((double)total / row, 1);
+                    }
+                }
+
+               
             }
-
             return await _context.SaveChangesAsync();
         }
 
@@ -611,9 +623,16 @@ namespace Booking.Application.Catalog.Parties
             if(party!= null)
             {
                 party.PartyStatus = "Active";
-                party.ListParties.ToList().ForEach(p =>  p.ListPartyStatus = "Active");
-                party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Active");
-                party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Active");
+
+                var lp = _context.ListParties.Where(p => p.PartyId == partyId).ToList();
+                lp.ForEach(p => p.ListPartyStatus = "Active");
+                var lr = _context.ListRooms.Where(p => p.PartyId == partyId).ToList();
+                lr.ForEach(p => p.ListRoomStatus = "Active");
+                var lpr = _context.ListProducts.Where(p => p.PartyId == partyId).ToList();
+                lpr.ForEach(p => p.ListProductStatus = "Active");
+                //party.ListParties.ToList().ForEach(p =>  p.ListPartyStatus = "Active");
+                //party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Active");
+                //party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Active");
             }
 
 
@@ -626,9 +645,12 @@ namespace Booking.Application.Catalog.Parties
             if (party != null)
             {
                 party.PartyStatus = "Overdue";
-                party.ListParties.ToList().ForEach(p => p.ListPartyStatus = "Overdue");
-                party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Overdue");
-                party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Overdue");
+                var lp = _context.ListParties.Where(p => p.PartyId == partyId).ToList();
+                lp.ForEach(p => p.ListPartyStatus = "Overdue");
+                var lr = _context.ListRooms.Where(p => p.PartyId == partyId).ToList();
+                lr.ForEach(p => p.ListRoomStatus = "Overdue");
+                var lpr = _context.ListProducts.Where(p => p.PartyId == partyId).ToList();
+                lpr.ForEach(p => p.ListProductStatus = "Overdue");
             }
 
 

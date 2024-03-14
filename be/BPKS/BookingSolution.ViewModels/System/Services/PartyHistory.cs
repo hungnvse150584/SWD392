@@ -19,6 +19,6 @@ namespace BookingSolution.ViewModels.System.Services
         public DateTime? DayStart { get; set; }
         public DateTime? DayEnd { get; set; }
         public DateTime? CreatedDate { get; set; }
-        //public string? PartyStatus { get; set; }
+        public string? PartyStatus { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 
 namespace Booking.ApiIntegration
 {
@@ -25,5 +26,8 @@ namespace Booking.ApiIntegration
         Task<List<RoomVm>> GetLatestRooms(int take);
 
         Task<bool> DeleteRoom(int id);
+        Task<bool> ParentOrder(ParentOrder request);
+        Task<bool> AddProducts(AddProductRequest request);
+        Task<bool> PartyHostComfirm(PHostComfirmRequest request);
     }
 }

@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Delete";
-    Layout = "~/Views/Shared/_Layout3.cshtml";
+    Layout = "~/Views/Shared/_Layout4.cshtml";
 }
 
 div class="container-fluid">
@@ -13,7 +13,7 @@ div class="container-fluid">
 </ol>
 <div class="card mb-4">
     <div class="card-header">
-        <a class="btn btn-success" asp-action="Index" asp-controller="Party">Về danh sách</a>
+        <a class="btn btn-success" asp-action="IndexParty" asp-controller="PartyHost">Về danh sách</a>
     </div>
 
     <div class="card-body">
@@ -27,7 +27,7 @@ div class="container-fluid">
                 </dd>
             </dl>
 
-            <form asp-action="Delete">
+            <form asp-action="DeleteParty">
                 <input asp-for="PartyId" type="hidden" />
                 <input type="submit" value="Xóa" class="btn btn-danger" />
             </form>

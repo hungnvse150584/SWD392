@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>@ViewData["Title"] - Party Host</title>
+    <title>@ViewData["Title"] - Parent</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -54,14 +54,13 @@
                     <li><a href="#">English</a></li>
                 </ul>
             </div>
-            @* account *@
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i></a>
+                <a href="#"><i class="fa fa-user"></i> Login</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a asp-controller="PartyHost" asp-action="IndexHome">Home</a></li>
+                <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li>
                     <a href="#">Pages</a>
@@ -78,10 +77,10 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
         </div>
         <div class="humberger__menu__contact">
             <ul>
@@ -100,7 +99,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa-solid fa-envelope"></i></i> hello@colorlib.com</li>
+                                <li><i class="fa-solid fa-envelope"></i> hello@colorlib.com</li>
                                 <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
@@ -108,10 +107,10 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__social">
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__language">
                                 <img src="img/language.png" alt="">
@@ -140,7 +139,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a asp-controller="PartyHost" asp-action="IndexHome">Home</a></li>
+                            <li class="active"><a href="IndexHome">Home</a></li>
                             <li><a href="./shop-grid.html">Shop</a></li>
                             <li>
                                 <a href="#">Pages</a>
@@ -184,23 +183,13 @@
                             <span style="color: black;">All departments</span>
                         </div>
                         <ul>
-                            <li><a asp-controller="PartyHost" asp-action="IndexHome">Home</a></li>
-
-                            <li><a asp-controller="PartyHost" asp-action="CreateParty">Create Party</a></li>
-                            <li><a asp-controller="PartyHost" asp-action="IndexParty">Party List</a></li>
-                            <li><a href="#">Party Posted</a></li>
-
-                            <li><a href="CreateProduct">Create Product</a></li>
-                            <li><a href="IndexProduct">Product List</a></li>
-
-                            <li><a asp-controller="PartyHost" asp-action="IndexRoom">List Room</a></li>
-
-                            <li><a href="#">Order</a></li>
-                            <li><a href="#">Order Approval</a></li>
-
-                            <li><a href="#">History Order</a></li>
+                            <li><a asp-controller="ParentHost" asp-action="IndexHome">Home</a></li>
+                            <li><a asp-controller="ParentHost" asp-action="IndexParty">Party List</a></li>
+                            <li><a href="@Url.ActionLink("History", "Parent")">History Order</a></li>
                             <li><a href="https://localhost:5001/Login">Logout</a></li>
                             @* <li><a href="#">Ocean Foods</a></li>
+                            <li><a href="#">Butter & Eggs</a></li>
+                            <li><a href="#">Fastfood</a></li>
                             <li><a href="#">Fresh Onion</a></li>
                             <li><a href="#">Papayaya & Crisps</a></li>
                             <li><a href="#">Oatmeal</a></li>
@@ -211,10 +200,10 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="col-md-8 col-xs-12" style=" padding-left: 18px; padding-top: 11px;">
-                            <form asp-action="Index" method="get">
+                            <form asp-action="IndexParty" method="get">
                                 <div class="row">
-                                    <div>
-                                        <select name="searchField" style="height: 46px; width: 120px;font-size: 16px;font-weight: 700;">
+                                    <div class="col-md-2" style="height: 46px; width: 100%; margin-right:35px">
+                                        <select name="searchField" style="font-size: 16px;font-weight: 700;">
                                             <option value="PartyName">Tên bữa tiệc</option>
                                             <option value="Place">Địa điểm</option>
                                         </select>
@@ -259,41 +248,35 @@
             <div class="row">
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
-                        <div class="categories__item">
-                            <img src="~/img/FandD/cupcake.jpg" alt="Delicious Birthday Treats" style="width: 100%; height: 200px; object-fit: cover;">
-                            <h5><a href="#">Delicious Birthday Treats</a></h5>
+                        <div class="categories__item" style="background-image: url('/img/categories/cat-1.jpg'); background-size: cover; background-position: center;">
+                            <h5><a href="#">Birthday Party</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item">
-                            <img src="~/img/FandD/maxresdefault.jpg" alt="Costume Party Eats" style="width: 100%; height: 200px; object-fit: cover;">
-                            <h5><a href="#">Costume Party Eats</a></h5>
+                        <div class="categories__item" style="background-image: url('/img/categories/cat-2.jpg'); background-size: cover; background-position: center;">
+                            <h5><a href="#">Costume Party</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item">
-                            <img src="~/img/FandD/pizzastar.jpg" alt="Themed Party Delicacies" style="width: 100%; height: 200px; object-fit: cover;">
-                            <h5><a href="#">Themed Party Delicacies</a></h5>
+                        <div class="categories__item" style="background-image: url('/img/categories/cat-3.jpg'); background-size: cover; background-position: center;">
+                            <h5><a href="#">Theme Party</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item">
-                            <img src="~/img/FandD/juice.jpg" alt="Outdoor Party Refreshments" style="width: 100%; height: 200px; object-fit: cover;">
-                            <h5><a href="#">Outdoor Party Refreshments</a></h5>
+                        <div class="categories__item" style="background-image: url('/img/categories/cat-4.jpg'); background-size: cover; background-position: center;">
+                            <h5><a href="#">Outdoor Party</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item">
-                            <img src="~/img/FandD/buffer.jpg" alt="Indoor Party Sips & Snacks" style="width: 100%; height: 200px; object-fit: cover;">
-                            <h5><a href="#">Indoor Party Sips & Snacks</a></h5>
+                        <div class="categories__item" style="background-image: url('/img/categories/cat-5.jpg'); background-size: cover; background-position: center;">
+                            <h5><a href="#">Indoor Party</a></h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>\
+    </section>
     <!-- Categories Section End -->
-
     <!-- Product Details Section Begin -->
     <section class="product-details spad">
         <div class="container">
@@ -365,7 +348,6 @@
         </div>
     </section>
     <!-- Product Details Section End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer spad">
         <div class="container">

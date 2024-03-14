@@ -3,12 +3,14 @@ using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -54,6 +56,44 @@ namespace Booking.ApiIntegration
             var data = await GetAsync<PagedResult<PartyVm>>(url);
 
             return data;
+        
+        
+        }
+
+        public async Task<bool> UpdatePartyDetail(PartyDetailsUpdateRequest request)
+        {
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+
+
+            var response = await client.PutAsJsonAsync($"/api/Parties/UpdatePartyDetail", request);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> UpdateStatus(UpdatePartyStatusRequest request)
+        {
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+
+
+            var response = await client.PutAsJsonAsync($"/api/Parties/UpdateStatus", request);
+            return response.IsSuccessStatusCode;
         }
 
         public async Task<PagedResult<PartyVm>> GetPagingsParentParty(GetPublicPartyPagingRequest request)
@@ -79,12 +119,81 @@ namespace Booking.ApiIntegration
 
             return data;
         }
+        public async Task<List<PartyHistory>> GetPartyHostHistory(PartyHistoryRequest request)
+        {
+            // Tạo URL với các tham số yêu cầu
+            var url = $"/api/Parties/GetPartyHostHistory?user={request.user}";
+               
+
+            // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có
+            if (!string.IsNullOrEmpty(request.status))
+            {
+                url += $"&status={request.status}";
+            }
+
+            // Thêm tham số tìm kiếm theo nơi tổ chức nếu có
+           
+
+            // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
+            var data = await GetAsync<List<PartyHistory>>(url);
+
+            return data;
+        }
+
+        public async Task<List<PartyHistory>> GetParentHistory(PartyHistoryRequest request)
+        {
+            // Tạo URL với các tham số yêu cầu
+            var url = $"/api/Parties/GetParentHistory?user={request.user}";
+
+
+            // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có
+            if (!string.IsNullOrEmpty(request.status))
+            {
+                url += $"&status={request.status}";
+            }
+
+            // Thêm tham số tìm kiếm theo nơi tổ chức nếu có
+
+
+            // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
+            var data = await GetAsync<List<PartyHistory>>(url);
+
+            return data;
+        }
 
         public async Task<PartyVm> GetById(int id)
         {
             var data = await GetAsync<PartyVm>($"/api/Parties/Get{id}");
 
             return data;
+        }
+
+        public async Task<bool> PartyComfirm(int id)
+        {
+            var data = await GetAsync<int>($"/api/Parties/PartyComfirm?request={id}");
+
+            return data>0;
+        }
+        public async Task<bool> Checkout(int id)
+        {
+            var data = await GetAsync<int>($"/api/Parties/Checkout?request={id}");
+
+            return data > 0;
+        }
+
+        public async Task<bool> FeedBack(FeedbackRequest request)
+        {
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+            var response = await client.PostAsJsonAsync($"/api/Parties/FeedBack", request);
+            return response.IsSuccessStatusCode;
         }
 
         public async Task<bool> CreateParty(PartyCreateRequest request)
