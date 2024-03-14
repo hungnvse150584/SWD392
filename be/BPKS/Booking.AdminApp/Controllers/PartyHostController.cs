@@ -1,10 +1,14 @@
 ﻿using Booking.ApiIntegration;
+using BookingSolution.Utilities.Constants;
 using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.System.Products;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Common;
+using System.Net.Http.Headers;
 
 namespace Booking.AdminApp.Controllers
 {
@@ -14,18 +18,27 @@ namespace Booking.AdminApp.Controllers
         private readonly IRoomApiClient _roomApiClient;
         private readonly IPartyApiClient _partyApiClient;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IUserApiClient _userApiClient;
+        private readonly IHttpClientFactory _httpClientFactory;
         private static string Bucket = "bpks-ee4a1.appspot.com";
 
 
         public PartyHostController(IProductApiClient productApiClient,
             IPartyApiClient partyApiClient,
             IConfiguration configuration,
-            IRoomApiClient roomApiClient)
+            IRoomApiClient roomApiClient,
+            IHttpContextAccessor httpContextAccessor,
+            IUserApiClient userApiClient,
+            IHttpClientFactory httpClientFactory)
         {
             _partyApiClient = partyApiClient;
             _configuration = configuration;
             _productApiClient = productApiClient;
             _roomApiClient = roomApiClient;
+            _httpContextAccessor = httpContextAccessor;
+            _userApiClient = userApiClient;
+            _httpClientFactory = httpClientFactory;
         }
 
         public async Task<IActionResult> IndexProduct(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
@@ -89,6 +102,14 @@ namespace Booking.AdminApp.Controllers
 
         public async Task<IActionResult> IndexParty(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
+            var sessions = _httpContextAccessor
+    .HttpContext
+    .Session
+    .GetString(SystemConstants.AppSettings.Token);
+            var userId = _httpContextAccessor
+    .HttpContext
+    .Session
+    .GetString("UserId");
             var request = new GetPublicPartyPagingRequest()
             {
                 PageIndex = pageIndex,
@@ -124,6 +145,7 @@ namespace Booking.AdminApp.Controllers
                 ViewBag.SuccessMsg = TempData["result"];
             }
 
+
             return View(data);
         }
 
@@ -135,8 +157,32 @@ namespace Booking.AdminApp.Controllers
 
 
         [HttpGet]
-        public IActionResult CreateParty()
+        public async Task<IActionResult> CreateParty()
         {
+
+            var request = new GetManageProductPagingRequest()
+            {
+                ProductName = null,
+                PageIndex = 1,
+                PageSize = 10
+            };
+            var roomrequest = new GetManageRoomPagingRequest()
+            {
+                RoomName = null,
+                RoomType = null,
+                PageIndex = 1,
+                PageSize = 10
+            };
+            // Gọi service để lấy danh sách sản phẩm từ API
+            var productsPagedResult = await _productApiClient.GetPagings(request); // Sử dụng phương thức GetAll hoặc phương thức tương tự trong service
+            var products = productsPagedResult.Items;
+            var roomsPagedResult = await _roomApiClient.GetPagings(roomrequest); // Sử dụng phương thức GetAll hoặc phương thức tương tự trong service
+            var rooms = roomsPagedResult.Items;
+
+            // Gán danh sách sản phẩm vào ViewBag
+            ViewBag.Products = products;
+            ViewBag.Rooms = rooms;
+            // Gán danh sách sản phẩm vào ViewBag
             return View();
         }
 

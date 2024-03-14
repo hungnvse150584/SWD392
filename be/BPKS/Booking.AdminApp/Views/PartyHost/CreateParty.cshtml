@@ -37,13 +37,13 @@
         </div>
         <div class="card-body">
             <div class="col-md-8">
-                <form asp-action="Create" enctype="multipart/form-data" method="post">
+                <form asp-action="CreateParty" enctype="multipart/form-data" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
+@*                     <div class="form-group" style="display: none;">
                         <label asp-for="PartyHostId" class="control-label"></label>
-                        <input asp-for="PartyHostId" class="form-control" />
+                        <input asp-for="PartyHostId" class="form-control" value="@User.Identity.Name" />
                         <span asp-validation-for="PartyHostId" class="text-danger"></span>
-                    </div>
+                    </div> *@
                     <div class="form-group">
                         <label asp-for="PartyName" class="control-label"></label>
                         <input asp-for="PartyName" class="form-control" />
@@ -75,7 +75,34 @@
                         <span asp-validation-for="DayEnd" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <label class="control-label">Select Products:</label>
+                        @foreach (var product in ViewBag.Products)
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="ProductId" value="@product.ProductId"> @product.ProductName
+                                </label>
+                            </div>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Select Rooms:</label>
+                        @foreach (var room in ViewBag.Rooms)
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="RoomId" value="@room.RoomId"> @room.RoomName
+                                </label>
+                            </div>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ThumbnailUrl" class="control-label"></label>
+                        <input asp-for="ThumbnailUrl" class="form-control" />
+                        <span asp-validation-for="ThumbnailUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="CreateParty" class="btn btn-primary" />
                     </div>
                 </form>
              </div>

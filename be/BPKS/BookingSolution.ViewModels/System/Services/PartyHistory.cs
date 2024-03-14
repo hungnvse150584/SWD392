@@ -8,7 +8,7 @@ namespace BookingSolution.ViewModels.System.Services
 {
     public class PartyHistory
     {
-       // public int PartyId { get; set; }
+        public int PartyId { get; set; }
         //public Guid? PartyHostId { get; set; }
         public string? PartyName { get; set; }
         public string? Description { get; set; }
@@ -20,5 +20,7 @@ namespace BookingSolution.ViewModels.System.Services
         public DateTime? DayEnd { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string? PartyStatus { get; set; }
+        public int RoomId { get; set; }
+   
     }
 }

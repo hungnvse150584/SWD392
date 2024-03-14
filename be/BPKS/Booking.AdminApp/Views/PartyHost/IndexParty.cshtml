@@ -4,6 +4,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
+
 <body>
     <!-- Featured Section Begin -->
     <section class="featured spad">
@@ -29,8 +30,8 @@
                     <div class="col-md-8 col-xs-12" style=" padding-left: 18px; padding-top: 11px;">
                         <form asp-action="Index" method="get">
                             <div class="row">
-                            <div class="col-md-2">
-                                <button style="margin-left: -100px; " type="button" class="site-btn">Create Party</button>
+                            <div class="col-md-1">
+                                <button id="createPartyBtn" style="margin-left: -100px; " type="button" class="site-btn">Create</button>
                             </div>
                                 <div class="col-md-2" style="height: 46px; width: 100%; margin-right:35px">
                                     <select name="searchField" style="font-size: 16px;font-weight: 700;">
@@ -57,8 +58,8 @@
                             <div class="featured__item__pic set-bg" data-setbg="@item.ThumbnailUrl">
                                 <ul class="featured__item__pic__hover">
                                     <li><a href="@Url.Action( "EditParty", new { id = item.PartyId })"><i class="fa-solid fa-pen"></i></a></li>
-                                    <li><a href="@Url.Action("DeleteParty", new { id = item.PartyId })"><i class="fa-regular fa-trash-can"></i></a></li>
                                     <li><a href="@Url.Action("DetailsParty", new { id = item.PartyId })"><i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="@Url.Action("DeleteParty", new { id = item.PartyId })"><i class="fa-regular fa-trash-can"></i></a></li>
                                 </ul>
                             </div>
                             <div class="featured__item__text">
@@ -190,3 +191,9 @@
     <!-- Footer Section End -->
 
 </body>
+<script>
+    document.getElementById('createPartyBtn').addEventListener('click', function () {
+        // Chuyển hướng người dùng đến trang PartyHost/CreateParty
+        window.location.href = '/PartyHost/CreateParty';
+    });
+</script>
