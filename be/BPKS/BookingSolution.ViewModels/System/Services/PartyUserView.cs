@@ -1,12 +1,4 @@
-﻿using BookingSolution.ViewModels.Catalog.Rooms;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookingSolution.ViewModels.System.Services
+﻿namespace BookingSolution.ViewModels.System.Services
 {
     public class PartyUserView
     {

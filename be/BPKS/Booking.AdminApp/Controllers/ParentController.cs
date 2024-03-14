@@ -3,6 +3,8 @@ using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.System.Products;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Booking.AdminApp.Controllers
@@ -71,11 +73,6 @@ namespace Booking.AdminApp.Controllers
             return View(data);
         }
 
-        public async Task<IActionResult> DetailsProduct(int id)
-        {
-            var result = await _productApiClient.GetById(id);
-            return View(result);
-        }
 
         [HttpGet]
         public IActionResult ViewDetailParty(int partyid)
@@ -127,12 +124,27 @@ namespace Booking.AdminApp.Controllers
             return View(data);
         }
 
+        public async Task<IActionResult> DetailsProduct(int id)
+        {
+            var result = await _productApiClient.GetById(id);
+            return View(result);
+        }
+
+        public async Task<IActionResult> DetailsRoom(DetailsRoom detailsRoom)
+        {
+            var party = await _partyApiClient.GetDetails(detailsRoom.PartyId);
+            var result = party.roomUserViews.FirstOrDefault(x => x.RoomId == detailsRoom.RoomId);
+            HttpContext.Session.SetString("PartyId", detailsRoom.PartyId.ToString());
+            //var result = await _productApiClient.GetById(id);
+            return View(result);
+        }
 
         public async Task<IActionResult> DetailsParty(int id)
         {
             var result = await _partyApiClient.GetDetails(id);
             return View(result);
         }
+
         public async Task<IActionResult> History()
         {
 

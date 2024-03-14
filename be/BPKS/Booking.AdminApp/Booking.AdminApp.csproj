@@ -364,6 +364,7 @@
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="font-awesome" Version="4.7.0" />
     <PackageReference Include="Font.Awesome" Version="5.15.4" />
+    <PackageReference Include="jQuery" Version="3.7.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />

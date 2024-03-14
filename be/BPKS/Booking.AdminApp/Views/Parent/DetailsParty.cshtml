@@ -1,21 +1,146 @@
-﻿@model BookingSolution.ViewModels.System.Services.PartyUserView
+﻿@using BookingSolution.ViewModels.System.Services
+@using BookingSolution.ViewModels.System.Users
+@model BookingSolution.ViewModels.System.Services.PartyUserView
 
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout2.cshtml";
+    
 }
 
+<body>
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large" style="width:auto; height: 575.55px"
+                                 src="@Model.ThumbnailUrl" alt="Party Image">
+                        </div>
+                        <div class="product__details__pic__slider owl-carousel">
+                            @if (Model.roomUserViews != null)
+                            {
+                                foreach (var room in Model.roomUserViews)
+                                {
+                                    <div class="item">
+                                        <img src="@room.RoomUrl" alt="Room Image" class="img-fluid" style="height: 100px;" />
+                                        <h7>@room.RoomName</h7>
+                                    </div>
+                                }
+                            }
+                            @* <img data-imgbigurl="img/product/details/product-details-2.jpg"
+                            src="img/product/details/thumb-1.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
+                            src="img/product/details/thumb-2.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
+                            src="img/product/details/thumb-3.jpg" alt="">
+                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
+                            src="img/product/details/thumb-4.jpg" alt=""> *@
+                            <!-- Add thumbnail images here if needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
 
-<div class="container-fluid px-4">
-    <h1>@Model.PartyName</h1>
-    <p>**Description:** @Model.Description</p>
-    <p>**Contact:** @Model.PhoneContact</p>
-    <p>**Place:** @Model.Place</p>
-    <p>**Rate:** @Model.Rate</p>
-    <p>**Date:** @Model.DayStart?.ToString("yyyy-MM-dd") - @Model.DayEnd?.ToString("yyyy-MM-dd")</p>
-    
-    <img src="@Model.ThumbnailUrl" alt="Party Image" class="img-fluid" style=" height: 100px;" />
-  
+                                <h3> @Html.DisplayFor(model => model.PartyName)</h3>
+                                <div class="product__details__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                    <span>(0 reviews)</span>
+                                </div>
+                                <div>Day Start:@Html.DisplayFor(model => model.DayStart)</div>
+                                <div>Day End:@Html.DisplayFor(model => model.DayEnd)</div>
+
+                                <p>Description: @Html.DisplayFor(model => model.Description)</p>
+                            </div>
+                        </div>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="primary-btn">Load</a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <p><b>Phone : </b> <span>@Html.DisplayFor(model => model.PhoneContact)</span></p>
+                                <p><b>Place : </b> <span>@Html.DisplayFor(model => model.Place)</span></p>
+                                <p><b>Rate : </b> <span>@Html.DisplayFor(model => model.Rate)</span></p>
+                            </div>
+                            <div>
+                                <p>
+                                    <b>Share on:</b>
+                                    <span class="share">
+                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                    </span>
+                                    <a asp-controller="PartyHost" asp-action="IndexParty" class="primary-btn">Back to Party List</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Details Section End -->
+
+    <!-- Related Room Section Begin -->
+    <section class="related-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2>Room List</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @if (Model.roomUserViews != null)
+                {
+                    foreach (var room in Model.roomUserViews)
+                    {
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="@room.RoomUrl">
+                                    <!-- Các nút thêm vào yêu thích, chia sẻ, thêm vào giỏ hàng -->
+                                    <ulyy class="product__item__pic__hover">
+                                        @* <li><a href="#"><i class="fa fa-heart"></i></a></li> *@
+                                        @* <li><a href="#"><i class="fa fa-retweet"></i></a></li> *@
+                                        
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        <li><a href="@Url.Action("DetailsRoom",new DetailsRoom{PartyId = Model.PartyId
+                                        , RoomId = room.RoomId})"><i class="fa-solid fa-arrow-right"></i></a></li>
+                                    </ulyy>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">@room.RoomName</a></h6>
+                                    <!-- Giá của phòng -->
+                                    <h5>@room.Price</h5>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+    <!-- Related Room Section End -->
+
+@* 
+
     <h2>Rooms</h2>
     <ul>
         @if (Model.roomUserViews != null)
@@ -45,5 +170,15 @@
                 </li>
             }
         }
-    </ul>
-</div>
+    </ul> *@
+
+    <!-- JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

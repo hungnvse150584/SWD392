@@ -1,12 +1,4 @@
-﻿using BookingSolution.ViewModels.Catalog.Products;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookingSolution.ViewModels.System.Services
+﻿namespace BookingSolution.ViewModels.System.Services
 {
     public class RoomUserView
     {
