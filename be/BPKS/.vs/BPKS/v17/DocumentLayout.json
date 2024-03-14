@@ -3,212 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\bookingsolution.viewmodels\\system\\services\\partyuserview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\system\\services\\partyuserview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_layout4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.application\\catalog\\parties\\managepartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\parties\\managepartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.backendapi\\controllers\\partiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\partiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.backendapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.apiintegration\\iroomapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\iroomapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.apiintegration\\iroleapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\iroleapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.apiintegration\\baseapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\baseapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.application\\catalog\\rooms\\imanageroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\rooms\\imanageroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.application\\catalog\\parties\\publicpartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\parties\\publicpartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.application\\catalog\\parties\\ipublicpartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\parties\\ipublicpartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.application\\catalog\\parties\\imanagepartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\parties\\imanagepartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.application\\catalog\\rooms\\manageroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EF0B36-C3A7-4113-8841-F2B2C4982AD1}|Booking.Application\\Booking.Application.csproj|solutionrelative:booking.application\\catalog\\rooms\\manageroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\catalog\\rooms\\roomvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\rooms\\roomvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\catalog\\parties\\partyvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\parties\\partyvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\catalog\\parties\\getmanagepartypagingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\parties\\getmanagepartypagingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\party\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\party\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\room\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\room\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\room\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\room\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\room\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\room\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\shared\\_layout3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_layout3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\controllers\\partyhostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\editparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\editparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\indexparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\indexparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\partyhostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\partyhostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\controllers\\partycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\partycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\partycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\partyhost\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\partyhost\\indexroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\indexroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\partyhost\\indexproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\indexproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\partyhost\\createparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\createparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.apiintegration\\userapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\userapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\indexhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\indexhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.apiintegration\\roomapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\roomapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\catalog\\rooms\\roomupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\rooms\\roomupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.apiintegration\\productapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2660B940-A0D6-4247-AC76-AAEE8FD81FE4}|Booking.ApiIntegration\\Booking.ApiIntegration.csproj|solutionrelative:booking.apiintegration\\productapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\deleteproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\deleteproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\detailsparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\detailsparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\party\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\party\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\room\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\room\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.viewmodels\\catalog\\rooms\\addproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF91C9CF-F8D1-4680-ABBD-478DB6C85ABF}|BookingSolution.ViewModels\\BookingSolution.ViewModels.csproj|solutionrelative:bookingsolution.viewmodels\\catalog\\rooms\\addproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.backendapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\party\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\party\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\party\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\party\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\party\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\room\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\room\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\updateproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\updateproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\bookingsolution.backendapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BFC3BB5-71D8-4155-938C-86F2DA25585B}|BookingSolution.BackendApi\\BookingSolution.BackendApi.csproj|solutionrelative:bookingsolution.backendapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\partyhost\\indexproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\partyhost\\indexproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\parent\\indexparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\parent\\indexproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\parent\\indexproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\parent\\indexparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\parent\\indexparty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\views\\party\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\party\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\parent\\indexhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\parent\\indexhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\booking.adminapp\\controllers\\parentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\controllers\\parentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|c:\\users\\asus\\desktop\\ky7\\swd392\\be\\bpks\\booking.adminapp\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8198339A-18EA-47AC-A572-BD5B8847DEA7}|Booking.AdminApp\\Booking.AdminApp.csproj|solutionrelative:booking.adminapp\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -218,645 +102,306 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ManageRoomService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Rooms\\ManageRoomService.cs",
-              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Rooms\\ManageRoomService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Rooms\\ManageRoomService.cs",
-              "RelativeToolTip": "Booking.Application\\Catalog\\Rooms\\ManageRoomService.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAuwEYAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T20:16:02.061Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManagePartyService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\ManagePartyService.cs",
-              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Parties\\ManagePartyService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\ManagePartyService.cs",
-              "RelativeToolTip": "Booking.Application\\Catalog\\Parties\\ManagePartyService.cs",
-              "ViewState": "AQIAANwAAAAAAAAAAAAQwBUBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T09:07:40.377Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PartyUserView.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Services\\PartyUserView.cs",
-              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\System\\Services\\PartyUserView.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\System\\Services\\PartyUserView.cs",
-              "RelativeToolTip": "BookingSolution.ViewModels\\System\\Services\\PartyUserView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T03:19:23.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IRoomApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\IRoomApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.ApiIntegration\\IRoomApiClient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\IRoomApiClient.cs",
-              "RelativeToolTip": "Booking.ApiIntegration\\IRoomApiClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:07:33.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RoomsController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\RoomsController.cs",
-              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\RoomsController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\RoomsController.cs",
-              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\RoomsController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAAD4AAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T19:57:57.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IRoleApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\IRoleApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.ApiIntegration\\IRoleApiClient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\IRoleApiClient.cs",
-              "RelativeToolTip": "Booking.ApiIntegration\\IRoleApiClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:07:32.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PartiesController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\PartiesController.cs",
-              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\PartiesController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\PartiesController.cs",
-              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\PartiesController.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAAwLwAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T09:07:10.889Z",
+              "Title": "EditParty.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\EditParty.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\EditParty.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\EditParty.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\EditParty.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:41:50.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "BaseApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\BaseApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.ApiIntegration\\BaseApiClient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\BaseApiClient.cs",
-              "RelativeToolTip": "Booking.ApiIntegration\\BaseApiClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:07:25.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:07:10.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IManageRoomService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Rooms\\IManageRoomService.cs",
-              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Rooms\\IManageRoomService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Rooms\\IManageRoomService.cs",
-              "RelativeToolTip": "Booking.Application\\Catalog\\Rooms\\IManageRoomService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:06:50.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PublicPartyService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\PublicPartyService.cs",
-              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Parties\\PublicPartyService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\PublicPartyService.cs",
-              "RelativeToolTip": "Booking.Application\\Catalog\\Parties\\PublicPartyService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:06:48.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IPublicPartyService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\IPublicPartyService.cs",
-              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Parties\\IPublicPartyService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\IPublicPartyService.cs",
-              "RelativeToolTip": "Booking.Application\\Catalog\\Parties\\IPublicPartyService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:06:46.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IManagePartyService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\IManagePartyService.cs",
-              "RelativeDocumentMoniker": "Booking.Application\\Catalog\\Parties\\IManagePartyService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.Application\\Catalog\\Parties\\IManagePartyService.cs",
-              "RelativeToolTip": "Booking.Application\\Catalog\\Parties\\IManagePartyService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T02:06:43.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RoomVm.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Rooms\\RoomVm.cs",
-              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Rooms\\RoomVm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Rooms\\RoomVm.cs",
-              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Rooms\\RoomVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAUwA8AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T20:28:12.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PartyVm.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\PartyVm.cs",
-              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Parties\\PartyVm.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\PartyVm.cs",
-              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Parties\\PartyVm.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T09:06:09.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GetManagePartyPagingRequest.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\GetManagePartyPagingRequest.cs",
-              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Parties\\GetManagePartyPagingRequest.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Parties\\GetManagePartyPagingRequest.cs",
-              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Parties\\GetManagePartyPagingRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T09:00:41.316Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Index.cshtml",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T15:37:51.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PartyHostController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyHostController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\PartyHostController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyHostController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\PartyHostController.cs",
-              "ViewState": "AQIAAMEAAAAAAAAAAAAAAOEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T07:34:22.567Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "PartyController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\PartyController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\PartyController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwE4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T07:25:59.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "_Layout3.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
-              "ViewState": "AQIAADIBAAAAAAAAAAAAAEABAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-12T07:29:51.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Create.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Room\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Create.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Room\\Create.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACkAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:12:39.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Update.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Room\\Update.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Update.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Room\\Update.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACQAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:13:12.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Index.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Room\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Index.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Room\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T15:37:10.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Create.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Party\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Create.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Party\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T20:31:14.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CreateProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\CreateProduct.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\CreateProduct.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\CreateProduct.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\CreateProduct.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-12T07:43:47.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IndexRoom.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexRoom.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\IndexRoom.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexRoom.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\IndexRoom.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACsAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-12T07:52:35.338Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IndexProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-12T07:53:18.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAmwGMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T15:08:48.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\RoomController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\RoomController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\RoomController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\RoomController.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAuwF8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T14:41:33.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CreateParty.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\CreateParty.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\CreateParty.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\CreateParty.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\CreateParty.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAwAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-12T07:38:35.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "UserApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\UserApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.ApiIntegration\\UserApiClient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\UserApiClient.cs",
-              "RelativeToolTip": "Booking.ApiIntegration\\UserApiClient.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAWwCgAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T14:04:35.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "_Layout2.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
-              "ViewState": "AQIAAAsBAAAAAAAAAAAuwBUBAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T01:24:43.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAE4AAABlAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T01:23:17.45Z"
+              "WhenOpened": "2024-03-14T04:36:54.166Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "RoomApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\RoomApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.ApiIntegration\\RoomApiClient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\RoomApiClient.cs",
-              "RelativeToolTip": "Booking.ApiIntegration\\RoomApiClient.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAgwFoAAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T20:08:36.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAWwCQAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T14:04:35.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Create.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Create.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Create.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAqAAAA",
+              "DocumentIndex": 1,
+              "Title": "_Layout3.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout3.cshtml",
+              "ViewState": "AQIAAIUAAAAAAAAAAIAwwI0AAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:10:47.13Z"
+              "WhenOpened": "2024-03-14T04:34:53.251Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "RoomUpdateRequest.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Rooms\\RoomUpdateRequest.cs",
-              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Rooms\\RoomUpdateRequest.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Rooms\\RoomUpdateRequest.cs",
-              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Rooms\\RoomUpdateRequest.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T07:02:45.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ProductApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\ProductApiClient.cs",
-              "RelativeDocumentMoniker": "Booking.ApiIntegration\\ProductApiClient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.ApiIntegration\\ProductApiClient.cs",
-              "RelativeToolTip": "Booking.ApiIntegration\\ProductApiClient.cs",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAhwLMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T20:16:02.027Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Room\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Delete.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Room\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAeAAAA",
+              "DocumentIndex": 0,
+              "Title": "_Layout4.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout4.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout4.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout4.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout4.cshtml",
+              "ViewState": "AQIAAMwAAAAAAAAAAIAwwLwAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:11:59.809Z"
+              "WhenOpened": "2024-03-14T04:32:04.568Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Delete.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Delete.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAUAAAA",
+              "DocumentIndex": 4,
+              "Title": "PartyHostController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyHostController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\PartyHostController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyHostController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\PartyHostController.cs",
+              "ViewState": "AQIAADcBAAAAAAAAAAAowEgBAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T04:00:20.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PartyController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\PartyController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\PartyController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\PartyController.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAwwI0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T04:22:54.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IndexParty.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexParty.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\IndexParty.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexParty.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\IndexParty.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADMAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:10:57.02Z"
+              "WhenOpened": "2024-03-14T04:12:33.02Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "AddProductRequest.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Rooms\\AddProductRequest.cs",
-              "RelativeDocumentMoniker": "BookingSolution.ViewModels\\Catalog\\Rooms\\AddProductRequest.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.ViewModels\\Catalog\\Rooms\\AddProductRequest.cs",
-              "RelativeToolTip": "BookingSolution.ViewModels\\Catalog\\Rooms\\AddProductRequest.cs",
+              "DocumentIndex": 7,
+              "Title": "_Layout2.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Shared\\_Layout2.cshtml",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:36:36.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IndexHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexHome.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\IndexHome.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexHome.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\IndexHome.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:32:57.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T04:33:25.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DeleteProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\DeleteProduct.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\DeleteProduct.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\DeleteProduct.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\DeleteProduct.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T19:35:15.802Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Program.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Program.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T19:03:27.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Create.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\User\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\User\\Create.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\User\\Create.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEUAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T19:23:35.744Z"
+              "WhenOpened": "2024-03-14T04:28:45.232Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Edit.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Edit.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAGEAAAAsAAAA",
+              "DocumentIndex": 12,
+              "Title": "DetailsParty.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\DetailsParty.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\DetailsParty.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\DetailsParty.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\DetailsParty.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGIAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:11:06.895Z"
+              "WhenOpened": "2024-03-14T04:26:19.053Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Details.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Party\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Details.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Party\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:26:49.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Edit.cshtml",
               "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Party\\Edit.cshtml",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Edit.cshtml",
               "RelativeToolTip": "Booking.AdminApp\\Views\\Party\\Edit.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T18:15:45.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Details.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Details.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Details.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T17:53:37.083Z"
+              "WhenOpened": "2024-03-14T04:23:54.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\UsersController.cs",
+              "DocumentIndex": 10,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Booking.AdminApp\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAwwKUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T04:01:51.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Party\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Delete.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Party\\Delete.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T17:10:06.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "BookingSolution.BackendApi\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAxwCcAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T14:52:50.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Details.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Room\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Room\\Details.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Room\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T17:53:27.778Z"
+              "WhenOpened": "2024-03-14T04:23:49.052Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 16,
+              "Title": "UpdateProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\UpdateProduct.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\UpdateProduct.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\UpdateProduct.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\UpdateProduct.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:04:12.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IndexProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\PartyHost\\IndexProduct.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADoAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:00:19.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAG8AAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:09:29.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IndexProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Parent\\IndexProduct.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Parent\\IndexProduct.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Parent\\IndexProduct.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Parent\\IndexProduct.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:06:23.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "IndexParty.cshtml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Parent\\IndexParty.cshtml",
               "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Parent\\IndexParty.cshtml",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Parent\\IndexParty.cshtml",
               "RelativeToolTip": "Booking.AdminApp\\Views\\Parent\\IndexParty.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAABFAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T14:02:49.674Z"
+              "WhenOpened": "2024-03-14T04:06:28.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Index.cshtml",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Party\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Party\\Index.cshtml",
-              "RelativeToolTip": "Booking.AdminApp\\Views\\Party\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 21,
+              "Title": "IndexHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Parent\\IndexHome.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Parent\\IndexHome.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Parent\\IndexHome.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Parent\\IndexHome.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T15:40:54.865Z"
+              "WhenOpened": "2024-03-14T04:06:26.918Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ParentController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ParentController.cs",
-              "RelativeDocumentMoniker": "Booking.AdminApp\\Controllers\\ParentController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Controllers\\ParentController.cs",
-              "RelativeToolTip": "Booking.AdminApp\\Controllers\\ParentController.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAADgv1YAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-11T14:03:18.612Z"
+              "DocumentIndex": 22,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Booking.AdminApp\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ky7\\SWD392\\be\\BPKS\\Booking.AdminApp\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "Booking.AdminApp\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGgAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T04:04:23.511Z",
+              "EditorCaption": ""
             }
           ]
         }

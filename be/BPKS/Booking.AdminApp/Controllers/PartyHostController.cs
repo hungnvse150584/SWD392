@@ -224,5 +224,131 @@ namespace Booking.AdminApp.Controllers
 
             return View(data);
         }
+
+        public async Task<IActionResult> UpdateProduct(int id)
+        {
+            var product = await _productApiClient.GetById(id);
+            var editVm = new ProductUpdateRequest()
+            {
+                ProductId = product.ProductId,
+                //PartyHostId = product.PartyHostId,
+                ProductName = product.ProductName,
+                //ProductUrl = product.ProductUrl,
+                ProductStyle = product.ProductStyle,
+                ProductType = product.ProductType,
+                Price = product.Price,
+                ProductStatus = product.ProductStatus,
+                Description = product.Description,
+                ThumbnailImage = product.ThumbnailImage
+            };
+            return View(editVm);
+        }
+
+        [HttpPost]
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> UpdateProduct([FromForm] ProductUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View(request);
+
+            var result = await _productApiClient.UpdateProduct(request);
+            if (result)
+            {
+                TempData["result"] = "Cập nhật sản phẩm thành công";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Cập nhật sản phẩm thất bại");
+            return View(request);
+        }
+        [HttpGet]
+        public IActionResult DeleteParty(int id)
+        {
+            return View(new PartyDeleteRequest()
+            {
+                PartyId = id
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteParty(ProductDeleteRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var result = await _partyApiClient.DeleteParty(request.ProductId);
+            if (result)
+            {
+                TempData["result"] = "Xóa sản phẩm thành công";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Xóa không thành công");
+            return View(request);
+        }
+        [HttpGet]
+        public IActionResult DeleteProduct(int id)
+        {
+            return View(new ProductDeleteRequest()
+            {
+                ProductId = id
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(ProductDeleteRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var result = await _productApiClient.DeleteProduct(request.ProductId);
+            if (result)
+            {
+                TempData["result"] = "Xóa sản phẩm thành công";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Xóa không thành công");
+            return View(request);
+        }
+        public IActionResult IndexHome()
+        {
+            var user = User.Identity.Name;
+            return View();
+        }
+        public async Task<IActionResult> EditParty(int id)
+        {
+            var party = await _partyApiClient.GetById(id);
+            var editVm = new PartyUpdateRequest()
+            {
+                PartyId = party.PartyId,
+                PartyName = party.PartyName,
+                PhoneContact = party.PhoneContact,
+                Place = party.Place,
+                DayStart = party.DayStart,
+                DayEnd = party.DayEnd,
+                Description = party.Description,
+                ThumbnailImage = party.ThumbnailImage
+            };
+            return View(editVm);
+        }
+
+        [HttpPost]
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> EditParty([FromForm] PartyUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View(request);
+
+            var result = await _partyApiClient.UpdateParty(request);
+            if (result)
+            {
+                TempData["result"] = "Cập nhật sản phẩm thành công";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Cập nhật sản phẩm thất bại");
+            return View(request);
+        }
     }
 }

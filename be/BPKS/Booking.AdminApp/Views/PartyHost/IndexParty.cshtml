@@ -56,12 +56,9 @@
                         <div class="featured__item">
                             <div class="featured__item__pic set-bg" data-setbg="@item.ThumbnailUrl">
                                 <ul class="featured__item__pic__hover">
-                                    @* update *@
-                                    <li><a href="#"><i class="fa-solid fa-pen"></i></a></li>
-                                    @* detele *@
-                                    <li><a href="#"><i class="fa-regular fa-trash-can"></i></a></li>
-                                    @* details *@
-                                    <li><a href="DetailsParty"><i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="@Url.Action( "EditParty", new { id = item.PartyId })"><i class="fa-solid fa-pen"></i></a></li>
+                                    <li><a href="@Url.Action("DetailsParty", new { id = item.PartyId })"><i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="@Url.Action("DeleteParty", new { id = item.PartyId })"><i class="fa-regular fa-trash-can"></i></a></li>
                                 </ul>
                             </div>
                             <div class="featured__item__text">

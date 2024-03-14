@@ -163,25 +163,6 @@ namespace  Booking.AdminApp.Controllers
             return View(request);
         }
 
-        //private async Task<CategoryAssignRequest> GetCategoryAssignRequest(int id)
-        //{
-        //    var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
-
-        //    var productObj = await _productApiClient.GetById(id);
-        //    //var categories = await _categoryApiClient.GetAll(languageId);
-        //    var categoryAssignRequest = new CategoryAssignRequest();
-        //    //foreach (var role in categories)
-        //    //{
-        //    //    categoryAssignRequest.Categories.Add(new SelectItem()
-        //    //    {
-        //    //        Id = role.Id.ToString(),
-        //    //        Name = role.Name,
-        //    //        //Selected = productObj.Categories.Contains(role.Name)
-        //    //    });
-        //    //}
-        //    //return categoryAssignRequest;
-        //}
-
         [HttpGet]
         public IActionResult Delete(int id)
         {
