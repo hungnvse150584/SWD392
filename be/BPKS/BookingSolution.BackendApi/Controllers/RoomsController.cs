@@ -56,6 +56,24 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpGet("PartyHostComfirm")]
+        public async Task<IActionResult> PartyHostComfirm(PHostComfirmRequest request)
+        {
+            try
+            {
+                var rooms = await _manageRoomService.PHostComfirm(request);
+                if (rooms > 0)
+                    return Ok(rooms);
+
+                return BadRequest("Cannot find room");
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
         [HttpPost("Order")]
         public async Task<IActionResult> ParentOrder(ParentOrder request)
         {

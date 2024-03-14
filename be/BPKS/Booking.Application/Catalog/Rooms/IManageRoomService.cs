@@ -14,6 +14,7 @@ namespace Booking.Application.Catalog.Rooms
         Task<RoomVm> GetById(int roomId);
         Task<int> AddProduct(AddProductRequest request);
         Task<int> ParentOrder(ParentOrder request);
+        Task<int> PHostComfirm(PHostComfirmRequest request);
 
     }
 }

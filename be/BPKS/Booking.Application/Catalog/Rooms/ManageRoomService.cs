@@ -70,7 +70,7 @@ namespace Booking.Application.Catalog.Rooms
                 RoomUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : null,
                 RoomType = request.RoomType,
                 Price = request.Price,
-                RoomStatus = "Pending"
+                RoomStatus = "Active"
            
             };
             _context.Rooms.Add(room);
@@ -110,9 +110,8 @@ namespace Booking.Application.Catalog.Rooms
             room.RoomName = request.RoomName!=null?request.RoomName:room.RoomName;
             room.RoomUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : null;
             room.RoomType = request.RoomType != null ? request.RoomType : room.RoomType;
-            
             room.Price = request.Price != null ? request.Price : room.Price;
-            room.RoomStatus = request.RoomStatus != null ? request.RoomStatus : room.RoomStatus;
+           // room.RoomStatus = request.RoomStatus != null ? request.RoomStatus : room.RoomStatus;
 
             return await _context.SaveChangesAsync();
         }
@@ -158,6 +157,7 @@ namespace Booking.Application.Catalog.Rooms
 
             if (!string.IsNullOrEmpty(request.RoomType))
                 query = query.Where(x => x.r.RoomType.Contains(request.RoomType));
+
 
             //3. Paging
             int totalRow = await query.CountAsync();
@@ -239,11 +239,24 @@ namespace Booking.Application.Catalog.Rooms
                     p.RoomId == request.RoomId &&
                     p.ProductId == item.ProductId);
                     if (listproduct != null)
+                    {
                         listproduct.Quantity = item.Quantity;
-
+                        listproduct.ListProductStatus = "Waiting";
+                    }
                 }
             }
 
+            return _context.SaveChangesAsync();
+        }
+
+        public Task<int> PHostComfirm(PHostComfirmRequest request)
+        {
+            var lisr = _context.ListRooms.Where(r => r.PartyId == request.PartyId && r.RoomId == request.RoomId).ToList();
+
+            if(lisr != null)
+            {
+                lisr.ToList().ForEach(l => l.ListRoomStatus = "Success");
+            }
             return _context.SaveChangesAsync();
         }
     }

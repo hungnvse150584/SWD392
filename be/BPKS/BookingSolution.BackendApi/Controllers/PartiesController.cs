@@ -137,6 +137,43 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
+        [HttpGet("PartyComfirm")]
+        public async Task<IActionResult> PartyComfirm(int request)
+        {
+
+            try
+            {
+                var party = await _managePartyService.ComfirmParty(request);
+                if (party > 0)
+                return Ok(party);
+                return BadRequest("Cannot find Party");
+
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpGet("Checkout")]
+        public async Task<IActionResult> Checkout(int request)
+        {
+
+            try
+            {
+                var party = await _managePartyService.CheckOut(request);
+                if (party > 0)
+                    return Ok(party);
+                return BadRequest("Cannot find Party");
+
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
 
         [HttpPost("FeedBack")]
         public async Task<IActionResult> FeedBack([FromForm] FeedbackRequest request)

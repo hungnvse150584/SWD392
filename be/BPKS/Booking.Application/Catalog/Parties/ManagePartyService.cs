@@ -59,7 +59,7 @@ namespace Booking.Application.Catalog.Parties
                 {
                     PartyId = partyrequest?.PartyId,
                     RoomId = listRoom,
-                    ListRoomStatus = "Active",
+                    ListRoomStatus = "Pending",
                     ParentId = null,
 
                 };
@@ -71,7 +71,7 @@ namespace Booking.Application.Catalog.Parties
                         PartyId = partyrequest?.PartyId,
                         RoomId = listRoom,
                         ProductId = listProduct,
-                        ListProductStatus = "Active",
+                        ListProductStatus = "Pending",
                         Quantity = 0,
 
                     };
@@ -85,7 +85,7 @@ namespace Booking.Application.Catalog.Parties
                 {
                     PartyHostId = request.PartyHostId,
                     PartyId = partyrequest?.PartyId,
-                    ListPartyStatus="Active",
+                    ListPartyStatus= "Pending",
                 };
 
                 _context.ListParties.Add(listparty);
@@ -163,7 +163,7 @@ namespace Booking.Application.Catalog.Parties
                 join lparent in _context.ListParties on u.Id equals lparent.ParentId
                 //join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
                 join p in _context.Parties on lparent.PartyId equals p.PartyId
-                where u.Id == request.user
+                where u.Id == request.user && lparent.ListPartyStatus == "Success"
                 select new { u, p };
 
             var data = query.Select(t => new PartyHistory
@@ -199,6 +199,7 @@ namespace Booking.Application.Catalog.Parties
             {
                 query = query.Where(x => x.p.Place.Contains(request.Place));
             }
+            query = query.Where(x => x.p.PartyStatus == "Active");
             //3. Paging
             int totalRow = await query.CountAsync();
 
@@ -245,7 +246,8 @@ namespace Booking.Application.Catalog.Parties
             party.Place = request.Place != null ? request.Place : party.Place;
             party.ThumbnailUrl = request.ThumbnailImage != null ? await this.SaveFile(request.ThumbnailImage) : party.ThumbnailUrl;
             party.DayEnd = request.DayEnd != null ? request.DayEnd : party.DayEnd;
-            party.PartyStatus = request.PartyStatus != null ? request.PartyStatus : party.PartyStatus;
+            //party.PartyStatus = request.PartyStatus != null ? request.PartyStatus : party.PartyStatus;
+            party.PartyStatus = "Pending";
             party.Description = request.Description != null ? request.Description : party.Description;
             if (request.RoomId != null && request.RoomId.Any())
             {
@@ -258,8 +260,9 @@ namespace Booking.Application.Catalog.Parties
                     var room = await _context.Rooms.FindAsync(roomId);
                     if (room != null)
                     {
-                        party.ListRooms.Add(new ListRoom { RoomId = roomId });
+                        party.ListRooms.Add(new ListRoom { RoomId = roomId, ListRoomStatus = "Pending"});
                     }
+                    
                 }
             }
 
@@ -275,7 +278,7 @@ namespace Booking.Application.Catalog.Parties
                     var product = await _context.Products.FindAsync(productId);
                     if (product != null)
                     {
-                        party.ListProducts.Add(new ListProduct { ProductId = productId });
+                        party.ListProducts.Add(new ListProduct { ProductId = productId,ListProductStatus="Pending" });
                     }
                 }
             }
@@ -305,6 +308,7 @@ namespace Booking.Application.Catalog.Parties
                 //party.ThumbnailUrl = request.ThumbnailUrl != null ? await this.SaveFile(request.ThumbnailUrl) : party.ThumbnailUrl;
                 party.DayEnd = request.DayEnd != null ? request.DayEnd : party.DayEnd;
                 party.Description = request.Description != null ? request.Description : party.Description;
+                party.PartyStatus = "Pending";
                 _context.SaveChanges();
                 
 
@@ -346,14 +350,14 @@ namespace Booking.Application.Catalog.Parties
                         {
                             PartyId = request.PartyId,
                             RoomId = item.Key,
-                            ListRoomStatus = "Active"
+                            ListRoomStatus = "Pending"
                         };
                         _context.ListRooms.Add(listroom);
                         foreach (var p in item)
                         {
                             var product = new ListProduct
                             {
-                                ListProductStatus = "active",
+                                ListProductStatus = "Pending",
                                 ProductId = p.ProductId,
                                 PartyId = request.PartyId,
                                 RoomId = item.Key,
@@ -397,6 +401,7 @@ namespace Booking.Application.Catalog.Parties
             {
                 return null;
             }
+            
 
             var roomVm = new PartyVm
             {
@@ -600,5 +605,34 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
+        public async Task<int> ComfirmParty(int partyId)
+        {
+            var party = _context.Parties.Find(partyId);
+            if(party!= null)
+            {
+                party.PartyStatus = "Active";
+                party.ListParties.ToList().ForEach(p =>  p.ListPartyStatus = "Active");
+                party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Active");
+                party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Active");
+            }
+
+
+            return await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> CheckOut(int partyId)
+        {
+            var party = _context.Parties.Find(partyId);
+            if (party != null)
+            {
+                party.PartyStatus = "Overdue";
+                party.ListParties.ToList().ForEach(p => p.ListPartyStatus = "Overdue");
+                party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Overdue");
+                party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Overdue");
+            }
+
+
+            return await _context.SaveChangesAsync();
+        }
     }
 }

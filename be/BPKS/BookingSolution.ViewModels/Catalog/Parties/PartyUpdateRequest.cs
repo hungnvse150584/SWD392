@@ -22,7 +22,7 @@ namespace BookingSolution.ViewModels.Catalog.Parties
         [DataType(DataType.Date)]
         public DateTime? DayEnd { get; set; }
         
-        public string? PartyStatus { get; set; }
+        //public string? PartyStatus { get; set; }
         public string? Description { get; set; }
 
         public IFormFile? ThumbnailImage { get; set; }

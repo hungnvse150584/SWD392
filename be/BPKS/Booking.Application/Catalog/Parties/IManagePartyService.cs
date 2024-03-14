@@ -36,6 +36,9 @@ namespace Booking.Application.Catalog.Parties
         Task<int> UpdatePartyDetails(PartyDetailsUpdateRequest request);
         Task<int> FeedBack(FeedbackRequest request);
 
+        Task<int> ComfirmParty(int partyId);
+
+        Task<int> CheckOut(int  partyId);
 
     }
 }

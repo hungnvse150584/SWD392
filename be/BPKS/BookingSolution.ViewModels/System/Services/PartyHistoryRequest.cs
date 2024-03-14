@@ -8,7 +8,7 @@ namespace BookingSolution.ViewModels.System.Services
 {
     public class PartyHistoryRequest
     {
-        public Guid user {  get; set; }
+        public Guid? user {  get; set; }
         public string status { get; set; }
     }
 }
