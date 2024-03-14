@@ -137,9 +137,28 @@ namespace Booking.AdminApp.Controllers
         {
 
             var userid = HttpContext.Session.GetString("UserId");
-            //var result = await _partyApiClient.GetDetails();
+            var request = new PartyHistoryRequest
+            {
+                user = Guid.Parse(userid),
+
+            };
+            var result = await _partyApiClient.GetParentHistory(request);
             
-            return View();
+            return View(result);
         }
+        public async Task<IActionResult> DetailsRoomBooked(RoomNParty roomNParty)
+        {
+            var userid = HttpContext.Session.GetString("UserId");
+            var request = new DetailsRoomBookedRequest
+            {
+                Id = Guid.Parse(userid),
+                roomId = roomNParty.roomId,
+                partyId = roomNParty.PartyId,
+
+            };
+            var result = await _partyApiClient.DetailsRoomBooked(request);
+            return View(result);
+        }
+
     }
 }

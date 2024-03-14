@@ -137,6 +137,7 @@ namespace Booking.Application.Catalog.Parties
                     //join lparent in _context.ListParties on u.Id equals lparent.ParentId
                 join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
                 join p in _context.Parties on lpartyhost.PartyId equals p.PartyId
+                
                 where u.Id == request.user
                 select new { u, p };
 
@@ -145,6 +146,7 @@ namespace Booking.Application.Catalog.Parties
 
             var data = query.Select(t => new PartyHistory
             {
+                PartyId = t.p.PartyId,
                 CreatedDate = t.p.CreatedDate,
                 DayEnd = t.p.DayEnd,
                 DayStart = t.p.DayStart,
@@ -167,14 +169,16 @@ namespace Booking.Application.Catalog.Parties
                 join lparent in _context.ListParties on u.Id equals lparent.ParentId
                 //join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
                 join p in _context.Parties on lparent.PartyId equals p.PartyId
-                where u.Id == request.user && lparent.ListPartyStatus == "Success" && lparent.ListPartyStatus == "Waiting"
-                select new { u, p };
+                join lr in _context.ListRooms on p.PartyId equals lr.PartyId
+                where u.Id == request.user 
+                select new { u, p,lr };
 
             if (!request.status.IsNullOrEmpty())
                 query = query.Where(x => x.p.PartyStatus == request.status);
-
+            
             var data = query.Select(t => new PartyHistory
             {
+                PartyId = t.p.PartyId,
                 CreatedDate = t.p.CreatedDate,
                 DayEnd = t.p.DayEnd,
                 DayStart = t.p.DayStart,
@@ -184,7 +188,8 @@ namespace Booking.Application.Catalog.Parties
                 Place = t.p.Place,
                 ThumbnailUrl = t.p.ThumbnailUrl,
                 Rate = t.p.Rate,
-
+                PartyStatus = t.p.PartyStatus,
+                RoomId = t.lr.RoomId,
             }).ToList();
 
             return data;
@@ -655,6 +660,106 @@ namespace Booking.Application.Catalog.Parties
 
 
             return await _context.SaveChangesAsync();
+        }
+
+        public async Task<PartyUserView> DetailsRoomBooked(DetailsRoomBookedRequest request)
+        {
+            PartyUserView partydetail = new PartyUserView();
+            var query =
+                from party in _context.Parties
+                where party.PartyId == request.partyId
+                from listroom in _context.ListRooms.Where(lr => lr.PartyId == party.PartyId).DefaultIfEmpty()
+                from room in _context.Rooms.Where(rt => listroom.RoomId == rt.RoomId).DefaultIfEmpty()
+                from listproduct in _context.ListProducts.Where(lp => lp.RoomId == room.RoomId).DefaultIfEmpty()
+                from product in _context.Products.Where(p1 => listproduct.ProductId == p1.ProductId).DefaultIfEmpty()
+                where room.RoomId == request.roomId
+                select new { party, listroom, room, listproduct, product };
+
+            foreach (var item in query)
+            {
+                if (item.party.PartyId != partydetail.PartyId)
+                {
+                    partydetail.PartyId = item.party.PartyId;
+                    partydetail.PartyName = item.party.PartyName;
+                    partydetail.DayStart = item.party.DayStart;
+                    partydetail.DayEnd = item.party.DayEnd;
+                    partydetail.PhoneContact = item.party.PhoneContact;
+                    partydetail.Description = item.party.Description;
+                    partydetail.Place = item.party.Place;
+                    partydetail.Rate = item.party.Rate;
+                    partydetail.ThumbnailUrl = item.party.ThumbnailUrl;
+                    partydetail.roomUserViews = new List<RoomUserView>();
+                    if (item.room != null)
+                    {
+                        partydetail.roomUserViews.Add(new RoomUserView
+                        {
+                            RoomId = item.room.RoomId,
+                            Price = item.room.RoomId,
+                            RoomName = item.room.RoomName,
+                            RoomUrl = item.room.RoomUrl,
+                            RoomType = item.room.RoomType,
+                            productUserViews = new List<ProductUserView>()
+                        });
+                    }
+
+                }
+                if (partydetail.roomUserViews.Count() > 0)
+                {
+                    if (item.room.RoomId != partydetail.roomUserViews.Last().RoomId)
+                    {
+                        var room = new RoomUserView
+                        {
+                            RoomId = item.room.RoomId,
+                            Price = item.room.RoomId,
+                            RoomName = item.room.RoomName,
+                            RoomUrl = item.room.RoomUrl,
+                            RoomType = item.room.RoomType,
+                            productUserViews = new List<ProductUserView>(),
+                        };
+                        partydetail.roomUserViews.Add(room);
+                    }
+                    if (item.room.RoomId == partydetail.roomUserViews.Last().RoomId)
+                    {
+                        //partydetail.roomUserViews.Last().productUserViews = new List<ProductUserView>();
+                        var product = new ProductUserView
+                        {
+                            ProductId = item.product.ProductId,
+                            ProductName = item.product.ProductName,
+                            ProductUrl = item.product.ProductUrl,
+                            ProductType = item.product.ProductType,
+                            Description = item.product.Description,
+                            Price = item.product.Price,
+                            ProductStyle = item.product.ProductStyle,
+                            Quantity = item.listproduct.Quantity,
+                        };
+                        partydetail.roomUserViews.Last().productUserViews.Add(product);
+                    }
+
+                    if (partydetail.roomUserViews.Last().productUserViews.Count() > 0)
+                    {
+                        if (item.product.ProductId != partydetail.roomUserViews.Last().productUserViews.Last().ProductId)
+                        {
+                            var product = new ProductUserView
+                            {
+                                ProductId = item.product.ProductId,
+                                Description = item.product.Description,
+                                Price = item.product.Price,
+                                ProductName = item.product.ProductName,
+                                ProductUrl = item.product.ProductUrl,
+                                ProductType = item.product.ProductType,
+                                ProductStyle = item.product.ProductStyle,
+                                Quantity = item.listproduct.Quantity,
+                            };
+                            partydetail.roomUserViews.Last().productUserViews.Add(product);
+                        }
+
+                    }
+
+                }
+
+            }
+
+            return partydetail;
         }
     }
 }
