@@ -5,6 +5,7 @@ using BookingSolution.Utilities.Exceptions;
 using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 using Firebase.Storage;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -33,23 +34,26 @@ namespace Booking.Application.Catalog.Rooms
                 from lr in _context.ListRooms
                 join r in _context.Rooms on lr.RoomId equals r.RoomId
                 join p in _context.Parties on lr.PartyId equals p.PartyId
+                where r.RoomId == request.RoomId && p.PartyId == request.PartyId
                 select new { r, p };
 
-            query.Select(x => x.r.RoomId == request.RoomId);
-            query.Select(x => x.p.PartyId == request.PartyId);
+           
 
             if (query.Count() > 0)
             {
                 foreach (var item in request.listproducts)
                 {
-                    var product = new ListProduct
+                    if (!_context.ListProducts.Where(x => x.PartyId == request.PartyId && x.RoomId == request.RoomId && x.ProductId == item.ProductID).Any())
                     {
-                        ListProductStatus = "active",
-                        ProductId = item.ProductID,
-                        PartyId = request.PartyId,
-                        RoomId = request.RoomId,
-                    };
-                    _context.ListProducts.Add(product);
+                        var product = new ListProduct
+                        {
+                            ListProductStatus = "Active",
+                            ProductId = item.ProductID,
+                            PartyId = request.PartyId,
+                            RoomId = request.RoomId,
+                        };
+                        _context.ListProducts.Add(product);
+                    }
                 }
             }
             _context.SaveChanges();
@@ -222,5 +226,25 @@ namespace Booking.Application.Catalog.Rooms
             return await task;
         }
 
+        public Task<int> ParentOrder(ParentOrder request)
+        {
+            var listroom = _context.ListRooms.FirstOrDefault(r => r.RoomId == request.RoomId && r.PartyId == request.PartyId);
+            if (listroom != null)
+            {
+                listroom.ParentId = request.parentId;
+                foreach (var item in request.Items)
+                {
+                    var listproduct = _context.ListProducts.FirstOrDefault(p =>
+                    p.PartyId == request.PartyId &&
+                    p.RoomId == request.RoomId &&
+                    p.ProductId == item.ProductId);
+                    if (listproduct != null)
+                        listproduct.Quantity = item.Quantity;
+
+                }
+            }
+
+            return _context.SaveChangesAsync();
+        }
     }
 }
