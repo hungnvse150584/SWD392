@@ -33,7 +33,7 @@ namespace Booking.Application.Catalog.Parties
 
         Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request);
 
-
+        Task<int> UpdatePartyDetails(PartyDetailsUpdateRequest request);
         Task<int> FeedBack(FeedbackRequest request);
 
 

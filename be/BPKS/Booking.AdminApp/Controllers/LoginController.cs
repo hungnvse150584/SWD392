@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Booking.ApiIntegration;
+using Microsoft.AspNetCore.Http;
 
 namespace Booking.AdminApp.Controllers
 {
@@ -55,6 +56,13 @@ namespace Booking.AdminApp.Controllers
                         authProperties);
             // Check roles
             var roles = userPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+
+
+
+            var user = _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
+
+            HttpContext.Session.SetString("UserId", user.Result.Token.Items.First().Id.ToString());
+
             if (roles.Contains("admin"))
             {
                 return RedirectToAction("Index", "Home");

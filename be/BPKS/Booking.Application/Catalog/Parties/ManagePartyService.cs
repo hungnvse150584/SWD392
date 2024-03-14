@@ -7,6 +7,7 @@ using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
 using BookingSolution.ViewModels.System.Users;
+using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.InkML;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Firebase.Storage;
@@ -14,6 +15,7 @@ using Google.Apis.Util;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
+using System.Linq;
 using System.Net.Sockets;
 
 namespace Booking.Application.Catalog.Parties
@@ -249,6 +251,95 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
+      
+
+        public async Task<int> UpdatePartyDetails (PartyDetailsUpdateRequest request)
+        {
+            
+            var data = await GetPartyDetail(request.PartyId);
+    
+            var listroomdif = new List<int>();
+         
+            if (data == null)
+            {
+                return 0;
+            }
+            else
+            {
+                var party = await _context.Parties.FindAsync(request.PartyId);
+                party.PartyName = request.PartyName != null ? request.PartyName : party.PartyName;
+                party.PhoneContact = request.PhoneContact != null ? request.PhoneContact : party.PhoneContact;
+                party.Place = request.Place != null ? request.Place : party.Place;
+                //party.ThumbnailUrl = request.ThumbnailUrl != null ? await this.SaveFile(request.ThumbnailUrl) : party.ThumbnailUrl;
+                party.DayEnd = request.DayEnd != null ? request.DayEnd : party.DayEnd;
+                party.Description = request.Description != null ? request.Description : party.Description;
+                _context.SaveChanges();
+                
+
+                foreach(var item in data.roomUserViews)
+                {
+                    if (request.roomUserViews.FirstOrDefault(x => x.RoomId == item.RoomId) == null)
+                    {
+                        listroomdif.Add(item.RoomId);
+                    }
+                }
+
+                if(listroomdif.Count > 0)
+                {
+                    var listroom = _context.ListRooms.ToList();
+                    var listproduct = _context.ListProducts.ToList();
+                    
+                    foreach(var item in listroomdif)
+                    {
+                        var room = await _context.ListRooms.FirstOrDefaultAsync(x => x.PartyId == request.PartyId&&x.RoomId == item);
+                        var product = await _context.ListProducts.FirstOrDefaultAsync(x => x.PartyId == request.PartyId && x.RoomId == item);
+                        if (room != null)
+                        {
+                            _context.ListRooms.Remove(room);
+                        }
+                        if(product != null)
+                        {
+                            _context.ListProducts.Remove(product);
+                        }
+                    }
+                       
+                    
+                }
+                if (request.roomUserViews.Count > 0)
+                {
+                    var output = request.roomUserViews.GroupBy(x=> x.RoomId);
+                    foreach (var item in output)
+                    {
+                        var listroom = new ListRoom
+                        {
+                            PartyId = request.PartyId,
+                            RoomId = item.Key,
+                            ListRoomStatus = "Active"
+                        };
+                        _context.ListRooms.Add(listroom);
+                        foreach (var p in item)
+                        {
+                            var product = new ListProduct
+                            {
+                                ListProductStatus = "active",
+                                ProductId = p.ProductId,
+                                PartyId = request.PartyId,
+                                RoomId = item.Key,
+                            };
+                            _context.ListProducts.Add(product);
+                        }
+                    }
+
+                }
+
+               
+
+            }
+
+
+            return await _context.SaveChangesAsync();
+        }
+
 
         private async Task<string> SaveFile(IFormFile file)
         {
@@ -297,9 +388,6 @@ namespace Booking.Application.Catalog.Parties
         public async Task<PartyUserView> GetPartyDetail(int partyid)
         {
             PartyUserView partydetail = new PartyUserView();
-
-
-
             var query =
                 from party in _context.Parties
                 where party.PartyId == partyid
@@ -309,12 +397,6 @@ namespace Booking.Application.Catalog.Parties
                 from product in _context.Products.Where(p1 => listproduct.ProductId == p1.ProductId).DefaultIfEmpty()
                 select new { party, listroom, room, listproduct, product };
 
-            //var data = await query.Select(t =>
-            //partydetail.PartyId != t.party.PartyId ? partydetail.PartyId = t.party.PartyId
-            //: "",
-            //partydetail = t.
-
-            //).ToListAsync(); 
             foreach (var item in query)
             {
                 if (item.party.PartyId != partydetail.PartyId)
