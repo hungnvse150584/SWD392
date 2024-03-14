@@ -58,10 +58,10 @@ namespace Booking.AdminApp.Controllers
             var roles = userPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
 
 
+            
+            var user = await _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
 
-            var user = _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
-
-            HttpContext.Session.SetString("UserId", user.Result.Token.Items.First().Id.ToString());
+            HttpContext.Session.SetString("UserId", user.Token.Items.First().Id.ToString());
 
             if (roles.Contains("admin"))
             {
