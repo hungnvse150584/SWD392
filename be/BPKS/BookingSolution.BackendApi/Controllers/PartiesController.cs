@@ -180,7 +180,6 @@ namespace BookingSolution.BackendApi.Controllers
             }
         }
 
-
         [HttpPut("Update")]
         public async Task<IActionResult> Update([FromForm] PartyUpdateRequest request)
         {
@@ -198,7 +197,6 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-
 
         [HttpPut("UpdateStatus")]
         public async Task<IActionResult> UpdateStatus([FromForm] UpdatePartyStatusRequest request)

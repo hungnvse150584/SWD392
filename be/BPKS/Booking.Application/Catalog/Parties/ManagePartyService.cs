@@ -76,7 +76,6 @@ namespace Booking.Application.Catalog.Parties
                     _context.ListProducts.Add(addproduct);
                 }
             }
-           
             
             if (partyrequest != null)
             {
@@ -127,6 +126,7 @@ namespace Booking.Application.Catalog.Parties
 
             return party;
         }
+
         public async Task<List<PartyHistory>> PartyHostHistory(PartyHistoryRequest request)
         {
             var query =
@@ -153,6 +153,7 @@ namespace Booking.Application.Catalog.Parties
 
             return data;
         }
+
         public async Task<List<PartyHistory>> ParentHistory(PartyHistoryRequest request)
         {
             var query =
@@ -179,6 +180,7 @@ namespace Booking.Application.Catalog.Parties
 
             return data;
         }
+
         public async Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request)
         {
             var query =
@@ -392,12 +394,7 @@ namespace Booking.Application.Catalog.Parties
 
                     }
 
-
                 }
-
-
-
-
 
             }
 
