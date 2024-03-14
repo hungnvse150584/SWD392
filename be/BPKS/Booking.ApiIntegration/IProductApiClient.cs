@@ -1,4 +1,5 @@
 ﻿using BookingSolution.ViewModels.Catalog.Products;
+using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
 
 namespace Booking.ApiIntegration
@@ -13,7 +14,7 @@ namespace Booking.ApiIntegration
 
         Task<bool> UpdateProduct(ProductUpdateRequest request);
 
-        Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request);
+        Task<ApiResult<bool>> CategoryAssign(int id, BookingSolution.ViewModels.Catalog.Products.CategoryAssignRequest request);
 
         Task<ProductVm> GetById(int id);
 
@@ -24,5 +25,6 @@ namespace Booking.ApiIntegration
         Task<List<ProductVm>> GetLatestProducts(int take);
 
         Task<bool> DeleteProduct(int id);
+        Task<bool> UpdateQuantity(AddProductRequest request);
     }
 }

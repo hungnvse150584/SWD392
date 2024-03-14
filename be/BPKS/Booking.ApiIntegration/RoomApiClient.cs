@@ -2,10 +2,12 @@
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Numerics;
 using System.Text;
 
@@ -110,7 +112,6 @@ namespace Booking.ApiIntegration
                 .Session
                 .GetString(SystemConstants.AppSettings.Token);
 
-            var languageId = _httpContextAccessor.HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
 
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
@@ -185,6 +186,65 @@ namespace Booking.ApiIntegration
         public async Task<bool> DeleteRoom(int id)
         {
             return await Delete($"/api/Rooms/Delete/{id}");
+        }
+
+        public async Task<bool> ParentOrder (ParentOrder request)
+        {
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+
+
+            var response = await client.PostAsJsonAsync($"/api/Rooms/Order", request);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> AddProducts(AddProductRequest request)
+        {
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+
+
+            var response = await client.PostAsJsonAsync($"/api/Rooms/AddProducts", request);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> PartyHostComfirm(PHostComfirmRequest request)
+        {
+            var sessions = _httpContextAccessor
+               .HttpContext
+               .Session
+               .GetString(SystemConstants.AppSettings.Token);
+
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+            
+            var url = $"/api/Rooms/PartyHostComfirm?PartyId={request.PartyId}&RoomId={request.RoomId}";
+
+            
+
+            // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
+            var data = await GetAsync<int>(url);
+
+
+            return data>0;
         }
 
         public Task<PagedResult<RoomVm>> GetPagingsParentRoom(GetManageRoomPagingRequest request)

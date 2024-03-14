@@ -1,10 +1,13 @@
 ﻿using BookingSolution.Utilities.Constants;
 using BookingSolution.ViewModels.Catalog.Products;
+using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
+using BookingSolution.ViewModels.System.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Numerics;
 using System.Text;
 
@@ -166,7 +169,7 @@ namespace Booking.ApiIntegration
             return response.IsSuccessStatusCode;
         }
 
-        public async Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request)
+        public async Task<ApiResult<bool>> CategoryAssign(int id, BookingSolution.ViewModels.Catalog.Products.CategoryAssignRequest request)
         {
             var client = _httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_configuration["BaseAddress"]);
@@ -207,6 +210,24 @@ namespace Booking.ApiIntegration
         public async Task<bool> DeleteProduct(int id)
         {
             return await Delete($"/api/products/" + id);
+        }
+
+        public async Task<bool> UpdateQuantity(AddProductRequest request)
+        {
+            var sessions = _httpContextAccessor
+                .HttpContext
+                .Session
+                .GetString(SystemConstants.AppSettings.Token);
+
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemConstants.AppSettings.BaseAddress]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+
+
+
+            var response = await client.PostAsJsonAsync($"/api/Products/UpdateQuantity", request);
+            return response.IsSuccessStatusCode;
         }
 
     }

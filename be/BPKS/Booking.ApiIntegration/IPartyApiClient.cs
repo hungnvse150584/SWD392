@@ -2,6 +2,7 @@
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,15 @@ namespace Booking.ApiIntegration
         Task<PartyVm> GetById(int id);
 
         Task<PartyUserView> GetDetails(int id);
+
+        Task<bool> UpdatePartyDetail(PartyDetailsUpdateRequest request);
+        Task<bool> UpdateStatus(UpdatePartyStatusRequest request);
+        Task<List<PartyHistory>> GetPartyHostHistory(PartyHistoryRequest request);
+        Task<List<PartyHistory>> GetParentHistory(PartyHistoryRequest request);
+        Task<bool> PartyComfirm(int id);
+        Task<bool> Checkout(int id);
+        Task<bool> FeedBack(FeedbackRequest request);
+
 
     }
 }

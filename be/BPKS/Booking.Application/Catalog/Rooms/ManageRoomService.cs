@@ -256,6 +256,9 @@ namespace Booking.Application.Catalog.Rooms
             if(lisr != null)
             {
                 lisr.ToList().ForEach(l => l.ListRoomStatus = "Success");
+                var listpro = _context.ListProducts.Where(p => p.PartyId == request.PartyId && p.RoomId == request.RoomId).ToList();
+                listpro.ForEach(x => x.ListProductStatus = "Success");
+            
             }
             return _context.SaveChangesAsync();
         }
