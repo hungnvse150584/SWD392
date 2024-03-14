@@ -133,5 +133,13 @@ namespace Booking.AdminApp.Controllers
             var result = await _partyApiClient.GetDetails(id);
             return View(result);
         }
+        public async Task<IActionResult> History()
+        {
+
+            var userid = HttpContext.Session.GetString("UserId");
+            //var result = await _partyApiClient.GetDetails();
+            
+            return View();
+        }
     }
 }

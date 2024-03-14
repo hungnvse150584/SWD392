@@ -183,8 +183,6 @@ namespace Booking.Application.Catalog.Rooms
 
         }
 
-
-
         public async Task<RoomVm> GetById(int roomId)
         {
             var r = await _context.Rooms.FindAsync(roomId);
@@ -224,6 +222,5 @@ namespace Booking.Application.Catalog.Rooms
             return await task;
         }
 
-        
     }
 }

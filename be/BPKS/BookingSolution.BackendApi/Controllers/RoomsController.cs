@@ -1,5 +1,6 @@
 ﻿using Booking.Application.Catalog.Rooms;
 using BookingSolution.ViewModels.Catalog.Rooms;
+using BookingSolution.ViewModels.System.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,6 +52,20 @@ namespace BookingSolution.BackendApi.Controllers
             catch (Exception ex)
             {
                 // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPost("Order")]
+        public async Task<IActionResult> ParentOrder(ParentOrder request)
+        {
+            try
+            {
+                var repose = await _manageRoomService.ParentOrder(request);
+                return Ok(repose);
+            }
+            catch(Exception ex)
+            {
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
@@ -138,5 +153,9 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        
+
+
     }
 }
