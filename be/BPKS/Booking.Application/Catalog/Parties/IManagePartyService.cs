@@ -43,5 +43,7 @@ namespace Booking.Application.Catalog.Parties
         Task<int> CheckOut(int  partyId);
         
 
+        Task<PartyUserView> DetailsRoomBooked(DetailsRoomBookedRequest request);
+
     }
 }

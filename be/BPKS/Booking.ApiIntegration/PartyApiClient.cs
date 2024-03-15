@@ -301,5 +301,11 @@ namespace Booking.ApiIntegration
 
             return data;
         }
+        public async Task<PartyUserView> DetailsRoomBooked(DetailsRoomBookedRequest request)
+        {
+            var data = await GetAsync<PartyUserView>($"/api/Parties/DetailsRoomBooked?id={request.Id}&partyId={request.partyId}&roomId={request.roomId}");
+
+            return data;
+        }
     }
 }

@@ -3,6 +3,8 @@ using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.System.Products;
 using BookingSolution.ViewModels.System.Services;
+using BookingSolution.ViewModels.System.Users;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Booking.AdminApp.Controllers
@@ -71,11 +73,6 @@ namespace Booking.AdminApp.Controllers
             return View(data);
         }
 
-        public async Task<IActionResult> DetailsProduct(int id)
-        {
-            var result = await _productApiClient.GetById(id);
-            return View(result);
-        }
 
         [HttpGet]
         public IActionResult ViewDetailParty(int partyid)
@@ -127,19 +124,53 @@ namespace Booking.AdminApp.Controllers
             return View(data);
         }
 
+        public async Task<IActionResult> DetailsProduct(int id)
+        {
+            var result = await _productApiClient.GetById(id);
+            return View(result);
+        }
+
+        public async Task<IActionResult> DetailsRoom(DetailsRoom detailsRoom)
+        {
+            var party = await _partyApiClient.GetDetails(detailsRoom.PartyId);
+            var result = party.roomUserViews.FirstOrDefault(x => x.RoomId == detailsRoom.RoomId);
+            HttpContext.Session.SetString("PartyId", detailsRoom.PartyId.ToString());
+            //var result = await _productApiClient.GetById(id);
+            return View(result);
+        }
 
         public async Task<IActionResult> DetailsParty(int id)
         {
             var result = await _partyApiClient.GetDetails(id);
             return View(result);
         }
+
         public async Task<IActionResult> History()
         {
 
             var userid = HttpContext.Session.GetString("UserId");
-            //var result = await _partyApiClient.GetDetails();
+            var request = new PartyHistoryRequest
+            {
+                user = Guid.Parse(userid),
+
+            };
+            var result = await _partyApiClient.GetParentHistory(request);
             
-            return View();
+            return View(result);
         }
+        public async Task<IActionResult> DetailsRoomBooked(RoomNParty roomNParty)
+        {
+            var userid = HttpContext.Session.GetString("UserId");
+            var request = new DetailsRoomBookedRequest
+            {
+                Id = Guid.Parse(userid),
+                roomId = roomNParty.roomId,
+                partyId = roomNParty.PartyId,
+
+            };
+            var result = await _partyApiClient.DetailsRoomBooked(request);
+            return View(result);
+        }
+
     }
 }

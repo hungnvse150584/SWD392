@@ -33,6 +33,6 @@ namespace Booking.ApiIntegration
         Task<bool> Checkout(int id);
         Task<bool> FeedBack(FeedbackRequest request);
 
-
+        Task<PartyUserView> DetailsRoomBooked(DetailsRoomBookedRequest request);
     }
 }

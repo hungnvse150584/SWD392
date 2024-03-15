@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookingSolution.ViewModels.System.Services
+﻿namespace BookingSolution.ViewModels.System.Services
 {
     public class ProductUserView
     {
@@ -29,6 +22,8 @@ namespace BookingSolution.ViewModels.System.Services
         //public string? ProductStatus { get; set; }
 
         public string? Description { get; set; }
+
+        public int Quantity { get; set; }
 
         //public IFormFile? ThumbnailImage { get; set; }
     }

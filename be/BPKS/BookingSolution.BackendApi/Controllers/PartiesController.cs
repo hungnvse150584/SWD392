@@ -83,7 +83,23 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+        [HttpGet("DetailsRoomBooked")]
+        public async Task<IActionResult> DetailsRoomBooked([FromQuery] DetailsRoomBookedRequest request)
+        {
 
+            try
+            {
+                var party = await _managePartyService.DetailsRoomBooked(request);
+                if (party == null)
+                    return BadRequest("Cannot find Party");
+                return Ok(party);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
 
         [HttpGet("GetPartyHostHistory")]
         public async Task<IActionResult> GetPartyHostHistory([FromQuery] PartyHistoryRequest request)
