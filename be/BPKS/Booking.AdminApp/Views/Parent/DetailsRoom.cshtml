@@ -95,6 +95,8 @@
         </div>
     </div>
     <!-- Humberger End -->
+
+    <!-- Shoping Cart Section Start -->
     <section class="hero hero-normal">
     <div class="container" style="margin-top:100px">
         <div class="row">
@@ -123,7 +125,7 @@
                                     </td>
                                         <td class="shoping__cart__quantity">
                                             <div class="quantity">
-                                                <div class="pro-qty ">
+                                                <div class="pro-qty " >
                                                     <input type="number" min="1" value="1">
                                                 </div>
                                             </div>
@@ -165,13 +167,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="shoping__cart__btns">
-                        <a href="#" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-                        <a href="#" class="primary-btn cart-btn cart-btn-right">
-                            <span class="icon_loading"></span>
-                            Upadate Cart
-                        </a>
-                    </div>
+                     <div class="shoping__cart__btns">
+                            <a asp-controller="Parent" asp-action="IndexParty" style="margin-left:880px" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="shoping__continue">
@@ -184,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                    <div class="col-lg-6">
+                <div class="col-lg-6">
                         <div class="shoping__checkout">
                             <h5>Cart Total</h5>
                             <ul>
@@ -194,11 +192,13 @@
                             </ul>
                             <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
                         </div>
-                    </div>
+                </div>
             </div>
         </div>
-        </section>
+    </div>
+    </section>
         <!-- Shoping Cart Section End -->
+
         <!-- Footer Section Begin -->
         <footer class="footer spad">
             <div class="container">
@@ -270,73 +270,79 @@
             </div>
         </footer>
         <!-- Footer Section End -->
-    <!-- Js Plugins -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <!-- Thêm mã JavaScript sau cùng -->
-    <script>
-        $(document).ready(function () {
-            updateTotal();
 
-            // Sự kiện click nút "+" (tăng số lượng)
-            $('.pro-qty .inc').on('click', function () {
-                // Gọi hàm cập nhật tổng giá
+        <!-- Js Plugins -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Thêm mã JavaScript sau cùng -->
+        <script>
+            $(document).ready(function () {
                 updateTotal();
+
+                // Sự kiện click nút "+" (tăng số lượng)
+                $('.pro-qty .inc').on('click', function () {
+                    // Gọi hàm cập nhật tổng giá
+                    updateTotal();
+                });
+
+                // Sự kiện click nút "-" (giảm số lượng)
+                $('.pro-qty .dec').on('click', function () {
+                    // Gọi hàm cập nhật tổng giá
+                    updateTotal();
+                });
+
+                // Sự kiện change input số lượng
+                $('.pro-qty input').on('change', function () {
+                    // Gọi hàm cập nhật tổng giá
+                    updateTotal();
+                });
             });
 
-            // Sự kiện click nút "-" (giảm số lượng)
-            $('.pro-qty .dec').on('click', function () {
-                // Gọi hàm cập nhật tổng giá
+            // Hàm tính tổng giá
+            function updateTotal() {
+                var subtotal = 0;
+                // Lặp qua mỗi sản phẩm trong giỏ hàng
+                $('tbody tr').each(function () {
+                    var price = parseFloat($(this).find('.shoping__cart__price').text().replace('$', ''));
+                    var quantity = parseInt($(this).find('.pro-qty input').val());
+                    var totalItem = price * quantity;
+                    // Cập nhật giá trị Total của từng sản phẩm
+                    $(this).find('.shoping__cart__total').text('$' + totalItem.toFixed(2));
+                    subtotal += totalItem;
+                });
+                // Hiển thị tổng giá sản phẩm
+                $('#subtotal').text('$' + subtotal.toFixed(2));
+                // Lấy giá của phòng (Room)
+                var roomPrice = parseFloat('@Model.Price');
+                // Lấy số lượng phòng
+                var roomQuantity = parseInt($('.pro-qty input').val());
+                // Tính tổng giá của phòng
+                var roomTotal = roomPrice * roomQuantity;
+                // Cộng giá của phòng vào subtotal
+                subtotal += roomTotal;
+                $('#total').text('$' + subtotal.toFixed(2));
+            }
+
+            // Gọi hàm updateTotal khi trang được tải và sau mỗi lần số lượng sản phẩm thay đổi
+            $(document).ready(function () {
                 updateTotal();
+                $('.pro-qty input').on('change', function () {
+                    updateTotal();
+                });
             });
 
-            // Sự kiện change input số lượng
-            $('.pro-qty input').on('change', function () {
-                // Gọi hàm cập nhật tổng giá
-                updateTotal();
-            });
-        });
-
-        // Hàm tính tổng giá
-        function updateTotal() {
-            var subtotal = 0;
-            // Lặp qua mỗi sản phẩm trong giỏ hàng
-            $('tbody tr').each(function () {
-                var price = parseFloat($(this).find('.shoping__cart__price').text().replace('$', ''));
-                var quantity = parseInt($(this).find('.pro-qty input').val());
-                var totalItem = price * quantity;
-                // Cập nhật giá trị Total của từng sản phẩm
-                $(this).find('.shoping__cart__total').text('$' + totalItem.toFixed(2));
-                subtotal += totalItem;
-            });
-            // Hiển thị tổng giá sản phẩm
-            $('#subtotal').text('$' + subtotal.toFixed(2));
-            // Lấy giá của phòng (Room)
-            var roomPrice = parseFloat('@Model.Price');
-            // Lấy số lượng phòng
-            var roomQuantity = parseInt($('.pro-qty input').val());
-            // Tính tổng giá của phòng
-            var roomTotal = roomPrice * roomQuantity;
-            // Cộng giá của phòng vào subtotal
-            subtotal += roomTotal;
-            $('#total').text('$' + subtotal.toFixed(2));
-        }
-
-        // Gọi hàm updateTotal khi trang được tải và sau mỗi lần số lượng sản phẩm thay đổi
-        $(document).ready(function () {
-            updateTotal();
-            $('.pro-qty input').on('change', function () {
-                updateTotal();
-            });
-        });
-
-    </script>
-
+        </script>
+        <style>
+            .pro-qty .qtybtn {
+                display: none;
+            }
+        </style>
 </body>
