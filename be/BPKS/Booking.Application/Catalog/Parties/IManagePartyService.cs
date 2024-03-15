@@ -24,6 +24,8 @@ namespace Booking.Application.Catalog.Parties
         Task<List<PartyVm>> GetPartyWithStatus(GetPartyWithStatus request);
         
         Task<int> UpdatePartyStatus(UpdatePartyStatusRequest request);
+        Task<int> Approve(int id);
+        Task<int> Rejected(int id);
 
         Task<PartyUserView> GetPartyDetail(int request);
 
@@ -39,6 +41,7 @@ namespace Booking.Application.Catalog.Parties
         Task<int> ComfirmParty(int partyId);
 
         Task<int> CheckOut(int  partyId);
+        
 
     }
 }

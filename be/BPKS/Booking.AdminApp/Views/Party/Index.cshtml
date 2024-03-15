@@ -3,8 +3,8 @@
 @model PagedResult<BookingSolution.ViewModels.Catalog.Parties.PartyVm>
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Party List";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
 <div class="container-fluid px-4">
@@ -29,7 +29,7 @@
                                 <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
                             </div>
                             <div class="col-md-3">
-                                <button type="submit" class="btn btn-primary">Tìm</button>
+                                <button type="submit" class="btn btn-primary">Search</button>
                                 <button type="button" onclick="window.location.href='/Party/Index'" class="btn btn-dark">Reset</button>
                             </div>
                         </div>
@@ -38,67 +38,50 @@
             </div>
         </div>
 
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered">
+       
+@* <div class="page-header">
+    <h3 class="page-title"> Basic Tables </h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Tables</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+        </ol>
+    </nav>
+</div> *@
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+@*                 <h4 class="card-title">Hoverable Table</h4>
+                <p class="card-description">
+                    Add class <code>.table-hover</code>
+                </p> *@
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>
-                                PartyId
-                            </th>
-                            @* <th>
-                                PartyHostId
-                            </th> *@
-                            <th>
-                                PartyName
-                            </th>
-                            
-                            <th>
-                                PhoneContact
-                            </th>
-                            <th>
-                                Place
-                            </th>
-                            <th>
-                                Rate
-                            </th>
-                            <th>
-                                ThumbnailUrl
-                            </th>
-                            <th>
-                                DayStart
-                            </th>
-                            <th>
-                                DayEnd
-                            </th>
-                            @* <th>
-                                CreatedDate
-                            </th> *@
-                            <th>
-                                PartyStatus
-                            </th>
-                            <th>
-                                Description
-                            </th>
-                            <th>
-                                Option
-                            </th>
+                            <th>Id</th>
+                            <th>Party Name</th>
+                            <th>Phone Contact</th>
+                            <th>Place</th>
+                            <th>Image</th>
+                            <th>Status</th>
+                            <th>Funtcion</th>
                         </tr>
                     </thead>
                     <tbody>
-                @foreach (var item in Model.Items) 
-                    {
+                        @foreach (var item in Model.Items)
+                        {
                             <tr>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.PartyId)
                                 </td>
                                 @* <td>
-                                    @Html.DisplayFor(modelItem => item.PartyHostId)
-                                </td> *@
+                            @Html.DisplayFor(modelItem => item.PartyHostId)
+                            </td> *@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.PartyName)
                                 </td>
-                                
+
                                 <td>
                                     @Html.DisplayFor(modelItem => item.PhoneContact)
                                 </td>
@@ -106,40 +89,118 @@
                                     @Html.DisplayFor(modelItem => item.Place)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Rate)
-                                </td>
-                                <td>
                                     <img src="@item.ThumbnailUrl" alt="Pa Image" class="img-fluid" style=" height: 100px;" />
                                 </td>
                                 @* <td>
-                                    @Html.DisplayFor(modelItem => item.ThumbnailUrl)
-                                </td> *@
-                                <td>
+                            @Html.DisplayFor(modelItem => item.ThumbnailUrl)
+                            </td> *@
+@*                                 <td>
                                     @Html.DisplayFor(modelItem => item.DayStart)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.DayEnd)
-                                </td>
+                                </td> *@
                                 @* <td>
-                                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                            @Html.DisplayFor(modelItem => item.CreatedDate)
+                            </td> *@
+                                        <td>
+                                            @{
+                                                string badgeClass = string.Empty;
+                                                switch (item.PartyStatus)
+                                                {
+                                                    case "Pending":
+                                                        badgeClass = "badge badge-warning";
+                                                        break;
+                                                    case "Approve":
+                                                        badgeClass = "badge badge-success";
+                                                        break;
+                                                    case "Rejected":
+                                                        badgeClass = "badge badge-info";
+                                                        break;
+                                                    default:
+                                                        badgeClass = "badge badge-secondary"; // Hoặc class mặc định nếu không có trạng thái nào phù hợp
+                                                        break;
+                                                }
+                                            }
+                                            <label class="@badgeClass">@Html.DisplayFor(modelItem => item.PartyStatus)</label>
+                                        </td>
+
+
+@*                                 <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
                                 </td> *@
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.PartyStatus)
+                                    @* @Html.ActionLink("Edit", "Edit", new { id = item.PartyId }) | *@
+                                    @* @Html.ActionLink("Details", "Details", new { id = item.PartyId }) | *@
+@*                                     @Html.ActionLink("Delete", "Delete", new { id = item.PartyId }) *@
+                                            @if (item.PartyStatus == "Pending")
+                                            {
+                                                <button type="button" class="btn btn-success btn-sm" onclick="approveParty(@item.PartyId)">Duyệt</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="rejectParty(@item.PartyId)">Hủy đơn</button>
+                                            }
+                                            else
+                                            {
+                                                <button type="button" class="btn btn-success btn-sm" disabled>Duyệt</button>
+                                                <button type="button" class="btn btn-danger btn-sm" disabled>Hủy đơn</button>
+                                            }
+                                            <a href="@Url.Action("Details", new { id = item.PartyId })" style="text-decoration: none;">→</a>
+
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Description)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.PartyId }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.PartyId }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.PartyId })
-                                 </td>
                             </tr>
                         }
+                        
                     </tbody>
                 </table>
                 @await Component.InvokeAsync("Pager", Model)
             </div>
         </div>
     </div>
-</div>
+            <script>
+                function approveParty(partyId) {
+                    var approveUrl = "http://localhost:5179/api/Parties/Approve?partyId=" + partyId;
+
+                    fetch(approveUrl, {
+                        method: 'POST',
+                        mode: 'cors'
+                    })
+                        .then(response => {
+                            console.log("Status code:", response.status);
+                            if (response.ok) {
+                                alert("Duyệt thành công!");
+                                location.reload();
+                            } else {
+                                alert("Đã xảy ra lỗi khi duyệt bữa tiệc!");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert("Đã xảy ra lỗi khi duyệt bữa tiệc!");
+                        });
+                }
+
+                function rejectParty(partyId) {
+                    var rejectUrl = "http://localhost:5179/api/Parties/Rejected?partyId=" + partyId;
+
+                    fetch(rejectUrl, {
+                        method: 'POST',
+                        mode: 'cors'
+                    })
+                        .then(response => {
+                            console.log("Status code:", response.status);
+                            if (response.ok) {
+                                alert("Hủy đơn thành công!");
+                                location.reload();
+                            } else {
+                                alert("Đã xảy ra lỗi khi hủy đơn bữa tiệc!");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert("Đã xảy ra lỗi khi hủy đơn bữa tiệc!");
+                        });
+                }
+            </script>
+
+
+
+

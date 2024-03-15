@@ -13,6 +13,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Booking.ApiIntegration
@@ -60,7 +61,7 @@ namespace Booking.ApiIntegration
         
         }
 
-        public async Task<bool> UpdatePartyDetail(PartyDetailsUpdateRequest request)
+    public async Task<bool> UpdatePartyDetail(PartyDetailsUpdateRequest request)
         {
             var sessions = _httpContextAccessor
                 .HttpContext

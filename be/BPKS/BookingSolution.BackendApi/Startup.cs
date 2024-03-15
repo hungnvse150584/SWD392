@@ -65,6 +65,15 @@ namespace BookingSolution.BackendApi
 
 
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", builder =>
+                {
+                    builder.WithOrigins("https://localhost:5001")
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
 
             //services.AddControllers()
             //    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
@@ -154,7 +163,7 @@ namespace BookingSolution.BackendApi
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCors("AllowSpecificOrigin");
             app.UseAuthentication();
             app.UseRouting();
             app.UseAuthorization();

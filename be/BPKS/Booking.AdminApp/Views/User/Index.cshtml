@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Danh sách người dùng";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 @section Scripts {
     <script>
@@ -57,16 +57,18 @@
                         <th>
                             UserName
                         </th>
-                        <th>
+@*                         <th>
                             Id
-                        </th>
+                        </th> *@
                         <th>
                             Email
                         </th>
                         <th>
                             PhoneNumber
                         </th>
-                        <th></th>
+                        <th>
+                            Function
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,9 +78,9 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.UserName)
                             </td>
-                            <td>
+@*                             <td>
                                 @Html.DisplayFor(modelItem => item.Id)
-                            </td>
+                            </td> *@
                             <td>
                                 @Html.DisplayFor(modelItem => item.Email)
                             </td>
