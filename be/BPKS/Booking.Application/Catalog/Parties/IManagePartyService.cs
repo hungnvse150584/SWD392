@@ -1,5 +1,4 @@
 ﻿using BookingSolution.ViewModels.Catalog.Parties;
-
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
 using BookingSolution.ViewModels.System.Users;
@@ -18,6 +17,8 @@ namespace Booking.Application.Catalog.Parties
         Task<PartyVm> GetById(int roomId);
 
         Task<List<PartyVm>> GetAll();
+        Task<PagedResult<PartyVm>> GetPartyApprove(GetPublicPartyPagingRequest request);
+        Task<PagedResult<PartyVm>> GetPartyPartyHostView(GetPublicPartyPagingRequest request);
 
         Task<PagedResult<PartyVm>> GetAllPaging(GetPublicPartyPagingRequest request);
 

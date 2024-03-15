@@ -37,8 +37,9 @@ namespace Booking.ApiIntegration
 
         public async Task<PagedResult<PartyVm>> GetPagings(GetPublicPartyPagingRequest request)
         {
+
             // Tạo URL với các tham số yêu cầu
-            var url = $"/api/Parties/paging?pageIndex={request.PageIndex}" +
+            var url = $"/api/Parties/GetPartyApprove?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}";
 
             // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có
@@ -60,8 +61,34 @@ namespace Booking.ApiIntegration
         
         
         }
+        public async Task<PagedResult<PartyVm>> GetPagingsPartyHostView(GetPublicPartyPagingRequest request)
+        {
 
-    public async Task<bool> UpdatePartyDetail(PartyDetailsUpdateRequest request)
+            // Tạo URL với các tham số yêu cầu
+            var url = $"/api/Parties/GetPartyPartyHostView?PartyHostId={request.PartyHostId}&pageIndex={request.PageIndex}" +
+                $"&pageSize={request.PageSize}";
+
+            // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có
+            if (!string.IsNullOrEmpty(request.PartyName))
+            {
+                url += $"&PartyName={request.PartyName}";
+            }
+
+            // Thêm tham số tìm kiếm theo nơi tổ chức nếu có
+            if (!string.IsNullOrEmpty(request.Place))
+            {
+                url += $"&Place={request.Place}";
+            }
+
+            // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
+            var data = await GetAsync<PagedResult<PartyVm>>(url);
+
+            return data;
+
+
+        }
+
+        public async Task<bool> UpdatePartyDetail(PartyDetailsUpdateRequest request)
         {
             var sessions = _httpContextAccessor
                 .HttpContext
@@ -292,7 +319,7 @@ namespace Booking.ApiIntegration
 
         public async Task<bool> DeleteParty(int id)
         {
-            return await Delete($"/api/Parties/" + id);
+            return await Delete($"/api/Parties/Delete{id}");
         }
 
         public async Task<PartyUserView> GetDetails(int id)

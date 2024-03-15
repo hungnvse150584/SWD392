@@ -110,10 +110,13 @@ namespace Booking.AdminApp.Controllers
     .HttpContext
     .Session
     .GetString("UserId");
+            Guid guid = Guid.Parse(userId);
             var request = new GetPublicPartyPagingRequest()
             {
                 PageIndex = pageIndex,
-                PageSize = pageSize
+                PageSize = pageSize,
+                PartyHostId = guid
+                
             };
 
             // Xác định trường cần tìm kiếm dựa trên searchField
@@ -133,7 +136,7 @@ namespace Booking.AdminApp.Controllers
                 }
             }
 
-            var data = await _partyApiClient.GetPagings(request);
+            var data = await _partyApiClient.GetPagingsPartyHostView(request);
             //ViewBag.ProductName = keyword;
             //ViewBag.ProductType = keyword;
             //ViewBag.PartyHostId= keyword;
@@ -196,7 +199,7 @@ namespace Booking.AdminApp.Controllers
             if (result)
             {
                 TempData["result"] = "Thêm mới sản phẩm thành công";
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexParty");
             }
 
             ModelState.AddModelError("", "Thêm sản phẩm thất bại");
@@ -218,7 +221,7 @@ namespace Booking.AdminApp.Controllers
             if (result)
             {
                 TempData["result"] = "Thêm mới sản phẩm thành công";
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexProduct");
             }
 
             ModelState.AddModelError("", "Thêm sản phẩm thất bại");
@@ -317,16 +320,16 @@ namespace Booking.AdminApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteParty(ProductDeleteRequest request)
+        public async Task<IActionResult> DeleteParty(PartyDeleteRequest request)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            var result = await _partyApiClient.DeleteParty(request.ProductId);
+            var result = await _partyApiClient.DeleteParty(request.PartyId);
             if (result)
             {
-                TempData["result"] = "Xóa sản phẩm thành công";
-                return RedirectToAction("Index");
+                TempData["result"] = "Xóa tiệc thành công";
+                return RedirectToAction("IndexParty");
             }
 
             ModelState.AddModelError("", "Xóa không thành công");
@@ -351,7 +354,7 @@ namespace Booking.AdminApp.Controllers
             if (result)
             {
                 TempData["result"] = "Xóa sản phẩm thành công";
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexProduct");
             }
 
             ModelState.AddModelError("", "Xóa không thành công");

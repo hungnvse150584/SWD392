@@ -344,7 +344,17 @@ namespace BookingSolution.BackendApi.Controllers
             }
 
         }
-
-
+        [HttpGet("GetPartyApprove")]
+        public async Task<IActionResult> GetPartyApprove([FromQuery] GetPublicPartyPagingRequest request)
+        {
+            var parties = await _managePartyService.GetPartyApprove(request);
+            return Ok(parties);
+        }
+        [HttpGet("GetPartyPartyHostView")]
+        public async Task<IActionResult> GetPartyPartyHostView([FromQuery] GetPublicPartyPagingRequest request)
+        {
+            var parties = await _managePartyService.GetPartyPartyHostView(request);
+            return Ok(parties);
+        }
     }
 }
