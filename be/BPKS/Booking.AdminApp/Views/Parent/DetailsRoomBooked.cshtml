@@ -2,73 +2,408 @@
 
 @{
     ViewData["Title"] = "View";
-    Layout = "~/Views/Shared/_Layout1.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
+<body>
+    <!-- Featured Section Begin -->
+    <section class="featured spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Party Info</h2>
+                    </div>
+                </div>
+            </div>
 
-<h1>View</h1>
+        </div>
+    </section>
+    <!-- Featured Section End -->
 
-<div>
-    <h4>PartyUserView</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PartyId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PartyId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PartyName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PartyName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PhoneContact)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PhoneContact)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Place)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Place)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ThumbnailUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            <a src="@Html.DisplayFor(model => model.ThumbnailUrl)"></a>
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DayStart)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DayStart)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DayEnd)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DayEnd)
-        </dd>
-    </dl>
+    <!-- Product Details Section Begin -->
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large" style="width:auto; height: 575.55px"
+                                 src="@Model.ThumbnailUrl" alt="Party Image">
+                        </div>
+                        @* <div class="product__details__pic__slider owl-carousel">
+                            @if (Model.roomUserViews != null)
+                            {
+                                foreach (var room in Model.roomUserViews)
+                                {
+                                    <div class="item">
+                                        <img src="@room.RoomUrl" alt="Room Image" class="img-fluid" style="height: 100px;" />
+                                        <h7>@room.RoomName</h7>
+                                    </div>
+                                }
+                            }
+                        </div> *@
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+
+                                <h3> @Html.DisplayFor(model => model.PartyName)</h3>
+                                <div>
+                                    <div class="shoping__cart__price text-warning" style="font-size: 15px !important">
+                                        @for (int i = 0; i <= 4; i++)
+                                        {
+                                            var temp = Model.Rate - i;
+                                            if (temp > 0 && temp < 1)
+                                            {
+                                                <i class="fas fa-star-half-alt star-icon"></i>
+                                            }
+                                            if (temp > 0 && temp >= 1)
+                                            {
+                                                <i class="fas fa-star star-icon"></i>
+                                            }
+                                            if (temp <= 0)
+                                            {
+                                                <i class="far fa-star star-icon"></i>
+                                            }
+                                        }
+                                        <span class="ms-1" style="font-size: 15px;">
+                                            @Model.Rate
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>Day Start:@Html.DisplayFor(model => model.DayStart)</div>
+                                <div>Day End:@Html.DisplayFor(model => model.DayEnd)</div>
+
+                                <p>Description: @Html.DisplayFor(model => model.Description)</p>
+                            </div>
+                        </div>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="primary-btn">Load</a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <div class="col-lg-6 col-md-6">
+                            <div>
+                                <p><b>Phone : </b> <span>@Html.DisplayFor(model => model.PhoneContact)</span></p>
+                                <p><b>Place : </b> <span>@Html.DisplayFor(model => model.Place)</span></p>
+                                <p><b>Rate : </b> <span>@Html.DisplayFor(model => model.Rate)</span></p>
+                            </div>
+                            <div>
+                                <p>
+                                    <b>Share on:</b>
+                                    <span class="share">
+                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <section class="featured spad" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Room Info</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Banner Begin -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="@Model.roomUserViews.FirstOrDefault()?.RoomUrl" alt="Room Image 1">
+                    </div>
+                </div>
+                @foreach (var room in Model.roomUserViews)
+                {
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="banner__pic">
+                            <div class="banner__pic__info">
+                                <h3><strong>@room.RoomName</strong></h3>
+                                <p>Room Type: @room.RoomType</p>
+                                <p>Price: @room.Price VND</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Featured Section Begin -->
+    <section class="featured spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Menu</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Featured Section End -->
+
+    <!-- Shoping Cart Section Start -->
+    <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="shoping__product">Food and Drink</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var room in Model.roomUserViews)
+                                {
+                                    double totalProductPrice = 0;
+                                    <!-- Hiển thị giá của từng sản phẩm -->
+                                    @foreach (var product in room.productUserViews)
+                                    {
+                                        double productTotalPrice = Convert.ToDouble(product.Price) * product.Quantity;
+                                        totalProductPrice += Convert.ToDouble(product.Price) * product.Quantity;
+                                        <tr>
+                                            <td class="shoping__cart__item">
+                                                <img src="@product.ProductUrl" alt="Product Image" class="img-fluid" style="height: 100px;">
+                                                <h5>@product.ProductName</h5>
+                                            </td>
+                                            <td class="shoping__cart__price">
+                                                $@product.Price
+                                            </td>
+                                            <td class="shoping__cart__quantity">
+                                                @product.Quantity
+                                            </td>
+                                            <td class="shoping__cart__total">
+                                                $@productTotalPrice
+                                            </td>
+                                            @*<td class="shoping__cart__item__close">
+                                                <span class="icon_close"></span>
+                                            </td> *@
+                                        </tr>
+                                    }
+                                    // Tính tổng giá của party
+                                    double totalPrice = totalProductPrice + Convert.ToDouble(room.Price);
+                                    <!-- Hiển thị tổng giá của party -->
+                                    @* <div class="col-lg-6">
+                                        <div class="shoping__checkout">
+                                            <h5>Cart Total</h5>
+                                            <ul>
+                                                <li>Price of Room <span id="roomPrice">$@room.Price</span></li>
+                                                <li>Subtotal <span id="subtotal">$@totalProductPrice</span></li>
+                                                <li>Total <span id="total">$@totalPrice</span></li>
+                                            </ul>
+                                            <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                                        </div>
+                                    </div> *@
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        @* <div class="product__details__pic__item">
+                        <img class="product__details__pic__item--large" style="width:auto; height: 575.55px"
+                        src="@Model.RoomUrl" alt="Room Image">
+                        </div> *@
+                        <div class="product__details__pic__slider owl-carousel">
+                            <!-- Add thumbnail images here if needed -->
+                        </div>
+                    </div>
+                    <div class="product__details__text">
+                        @foreach (var room in Model.roomUserViews)
+                        {
+                            <h3>@room.RoomName</h3>
+                            <div class="product__details__rating">
+                                <!-- Đánh giá sao -->
+                            </div>
+                            <div>
+                                <b>Room Type:</b> @room.RoomType
+                            </div>
+                            <div>
+                                <b>Price:</b> @room.Price
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="shoping__cart__btns">
+                            <a asp-controller="Parent" asp-action="IndexParty" style="margin-left:850px" class="primary-btn cart-btn">CONTINUE BOOKING</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="shoping__continue">
+                            <div class="shoping__discount">
+                                @* <h5>Discount Codes</h5>
+                                <form action="#">
+                                    <input type="text" placeholder="Enter your coupon code">
+                                    <button type="submit" class="site-btn">APPLY COUPON</button>
+                                </form> *@
+                            </div>
+                        </div>
+                    </div>
+                    @foreach (var room in Model.roomUserViews)
+                    {
+                        double totalProductPrice = 0;
+                        <!-- Hiển thị giá của từng sản phẩm -->
+                        @foreach (var product in room.productUserViews)
+                        {
+                            totalProductPrice += Convert.ToDouble(product.Price) * product.Quantity;
+                            @* <tr>
+                                <td class="shoping__cart__item">
+                                    <img src="@product.ProductUrl" alt="Product Image" class="img-fluid" style="height: 100px;">
+                                    <h5>@product.ProductName</h5>
+                                </td>
+                                <td class="shoping__cart__price">
+                                    $@product.Price
+                                </td>
+                                <td class="shoping__cart__quantity">
+                                    <div class="quantity">
+                                        <div class="pro-qty ">
+                                            <input type="number" min="1" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="shoping__cart__total">
+                                    $@product.Price
+                                </td>
+                                <td class="shoping__cart__item__close">
+                                    <span class="icon_close"></span>
+                                </td>
+                            </tr> *@
+                        }
+                        // Tính tổng giá của party
+                        double totalPrice = totalProductPrice + Convert.ToDouble(room.Price);
+                        <!-- Hiển thị tổng giá của party -->
+                        <div class="col-lg-6">
+                            <div class="shoping__checkout">
+                                <h5>Cart Total</h5>
+                                <ul>
+                                    <li>Price of Room <span id="roomPrice">$@room.Price</span></li>
+                                    <li>Subtotal <span id="subtotal">$@totalProductPrice</span></li>
+                                    <li>Total <span id="total">$@totalPrice</span></li>
+                                </ul>
+                                @* <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a> *@
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shoping Cart Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="~\img\payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

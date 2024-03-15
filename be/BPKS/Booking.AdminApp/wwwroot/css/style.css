@@ -1794,7 +1794,7 @@ ol {
 	font-size: 16px;
 	color: #6f6f6f;
 	cursor: pointer;
-	display: inline-block;
+	display: none;
 }
 
 .product__details__tab {
