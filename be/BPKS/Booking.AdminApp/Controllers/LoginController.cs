@@ -62,6 +62,7 @@ namespace Booking.AdminApp.Controllers
             var user = await _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
 
             HttpContext.Session.SetString("UserId", user.Token.Items.First().Id.ToString());
+            HttpContext.Session.SetString("Username", user.Token.Items.First().UserName.ToString());
 
             if (roles.Contains("admin"))
             {

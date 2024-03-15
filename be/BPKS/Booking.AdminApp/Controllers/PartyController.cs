@@ -165,5 +165,7 @@ namespace Booking.AdminApp.Controllers
             ModelState.AddModelError("", "Xóa không thành công");
             return View(request);
         }
+
+
     }
 }

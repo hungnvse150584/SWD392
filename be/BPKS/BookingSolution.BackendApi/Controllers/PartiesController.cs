@@ -1,10 +1,12 @@
-﻿using Booking.Application.Catalog.Parties;
+﻿using Azure.Core;
+using Booking.Application.Catalog.Parties;
 using Booking.Application.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Parties;
 using BookingSolution.ViewModels.Catalog.Products;
 using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.System.Services;
 using BookingSolution.ViewModels.System.Users;
+using DocumentFormat.OpenXml.Office2016.Excel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -306,6 +308,43 @@ namespace BookingSolution.BackendApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+        [HttpPost("Approve")]
+        public async Task<IActionResult> Approve(int partyId)
+        {
+            try
+            {
+                var affectedRessult = await _managePartyService.Approve(partyId);
+                if (affectedRessult == 0)
+                    return BadRequest();
 
-    } 
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPost("Rejected")]
+        public async Task<IActionResult> Rejected(int partyId)
+        {
+            try
+            {
+                var affectedRessult = await _managePartyService.Rejected(partyId);
+                if (affectedRessult == 0)
+                    return BadRequest();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ và trả về lỗi
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+
+        }
+
+
+    }
 }

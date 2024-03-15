@@ -211,7 +211,6 @@ namespace Booking.Application.Catalog.Parties
             {
                 query = query.Where(x => x.p.Place.Contains(request.Place));
             }
-            query = query.Where(x => x.p.PartyStatus == "Active");
             //3. Paging
             int totalRow = await query.CountAsync();
 
@@ -576,7 +575,28 @@ namespace Booking.Application.Catalog.Parties
             return await _context.SaveChangesAsync();
         }
 
+        public async Task<int> Approve(int id)
+        {
+            var party = await _context.Parties.FindAsync(id);
+            if (party == null)
+            {
+                throw new Exception($"Cannot find a party with id:{id}.");
+            }
+            party.PartyStatus = "Approve";
 
+            return await _context.SaveChangesAsync();
+        }
+        public async Task<int> Rejected(int id)
+        {
+            var party = await _context.Parties.FindAsync(id);
+            if (party == null)
+            {
+                throw new Exception($"Cannot find a party with id:{id}.");
+            }
+            party.PartyStatus = "Rejected";
+
+            return await _context.SaveChangesAsync();
+        }
         public async Task<int> FeedBack(FeedbackRequest request)
         {
             var query =

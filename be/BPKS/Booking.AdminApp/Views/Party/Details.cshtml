@@ -2,21 +2,21 @@
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
 
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Tạo mới người dùng</h1>
+    <h1 class="mt-4">Chi tiết buổi tiệc</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Tạo mới người dùng</li>
+@*         <li class="breadcrumb-item active">Tạo mới người dùng</li> *@
     </ol>
     <div class="card mb-4">
         <div class="card-header">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                    <a class="btn btn-success" asp-action="Index" asp-controller="User">Về danh sách</a>
+                    <a class="btn btn-success" asp-action="Index" asp-controller="Party">Về danh sách</a>
                 </div>
                 <div class="col-md-6 col-xs-12">
                     <form asp-action="Index" method="get">
