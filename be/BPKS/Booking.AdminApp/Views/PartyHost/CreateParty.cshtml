@@ -4,14 +4,7 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
-
-<div class="container-fluid px-4">
-    <h1 class="mt-4">Danh sách bữa tiệc</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
-        <li class="breadcrumb-item active">Danh sách bữa tiệc</li>
-    </ol>
-    <div class="card mb-4">
+    @* <div class="card mb-4">
         <div class="card-header">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
@@ -34,78 +27,154 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="card-body">
-            <div class="col-md-8">
+        </div> *@
+    <!-- Checkout Section Begin -->
+    <section class="checkout spad">
+        <div class="container">
+            @* <div class="row">
+            <div class="col-lg-12">
+            <h6>
+            <span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click here</a> to enter your code
+            </h6>
+            </div>
+            </div> *@
+            <div class="checkout__form">
+                <h4>Create Party</h4>
                 <form asp-action="CreateParty" enctype="multipart/form-data" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-@*                     <div class="form-group" style="display: none;">
-                        <label asp-for="PartyHostId" class="control-label"></label>
-                        <input asp-for="PartyHostId" class="form-control" value="@User.Identity.Name" />
-                        <span asp-validation-for="PartyHostId" class="text-danger"></span>
-                    </div> *@
-                    <div class="form-group">
-                        <label asp-for="PartyName" class="control-label"></label>
-                        <input asp-for="PartyName" class="form-control" />
-                        <span asp-validation-for="PartyName" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" class="form-control" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="PhoneContact" class="control-label"></label>
-                        <input asp-for="PhoneContact" class="form-control" />
-                        <span asp-validation-for="PhoneContact" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Place" class="control-label"></label>
-                        <input asp-for="Place" class="form-control" />
-                        <span asp-validation-for="Place" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="DayStart" class="control-label"></label>
-                        <input asp-for="DayStart" class="form-control" />
-                        <span asp-validation-for="DayStart" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="DayEnd" class="control-label"></label>
-                        <input asp-for="DayEnd" class="form-control" />
-                        <span asp-validation-for="DayEnd" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Select Products:</label>
-                        @foreach (var product in ViewBag.Products)
-                        {
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="ProductId" value="@product.ProductId"> @product.ProductName
-                                </label>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6">
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Party Name<span>*</span></p>
+                                        <input asp-for="PartyName" class="form-control">
+                                        <span asp-validation-for="PartyName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Place<span>*</span></p>
+                                        <input asp-for="Place" class="form-control">
+                                        <span asp-validation-for="Place" class="text-danger"></span>
+                                    </div>
+                                </div>
                             </div>
-                        }
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Select Rooms:</label>
-                        @foreach (var room in ViewBag.Rooms)
-                        {
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="RoomId" value="@room.RoomId"> @room.RoomName
-                                </label>
+                            <div class="checkout__input">
+                                <p>Phone Contact<span>*</span></p>
+                                <input asp-for="PhoneContact" class="form-control">
+                                <span asp-validation-for="PhoneContact" class="text-danger"></span>
                             </div>
-                        }
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Day Start<span>*</span></p>
+                                        <input asp-for="DayStart" class="form-control">
+                                        <span asp-validation-for="DayStart" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Day End<span>*</span></p>
+                                        <input asp-for="DayEnd" class="form-control">
+                                        <span asp-validation-for="DayEnd" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Description<span>*</span></p>
+                                <input asp-for="Description" class="form-control">
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Products:</label>
+                                @foreach (var product in ViewBag.Products)
+                                {
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="ProductId" value="@product.ProductId"> @product.ProductName
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Select Rooms:</label>
+                                @foreach (var room in ViewBag.Rooms)
+                                {
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="RoomId" value="@room.RoomId"> @room.RoomName
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                            <div class="checkout__input">
+                                <p>Thumbnail URL<span>*</span></p>
+                                <input asp-for="ThumbnailUrl" class="form-control">
+                                <span asp-validation-for="ThumbnailUrl" class="text-danger"></span>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Thêm nút xác nhận Create -->
                     <div class="form-group">
-                        <label asp-for="ThumbnailUrl" class="control-label"></label>
-                        <input asp-for="ThumbnailUrl" class="form-control" />
-                        <span asp-validation-for="ThumbnailUrl" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="CreateParty" class="btn btn-primary" />
+                        <button type="submit" class="btn btn-primary">Create Party</button>
                     </div>
                 </form>
-             </div>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Section End -->
+<!-- Footer Section Begin -->
+<footer class="footer spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__about__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <ul>
+                        <li>Phone: 09394296xx</li>
+                        <li>Email: partyforkid@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                <div class="footer__widget">
+                    <h6>Useful Links</h6>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="footer__widget">
+                    <h6>Join Our Newsletter Now</h6>
+                    <p>Get E-mail updates about our latest parties and special offers.</p>
+                    <form action="#">
+                        <input type="text" placeholder="Enter your email">
+                        <button type="submit" class="site-btn">Subscribe</button>
+                    </form>
+                    <div class="footer__widget__social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer__copyright">
+                    <p>
+                        © <script>document.write(new Date().getFullYear());</script> Booking Party Kid System. All rights reserved | Made with <i class="fa fa-heart" aria-hidden="true"></i> by Booking Party Kid System
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</footer>
+<!-- Footer Section End -->

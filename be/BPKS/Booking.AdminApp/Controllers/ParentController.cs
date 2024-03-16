@@ -27,6 +27,12 @@ namespace Booking.AdminApp.Controllers
             _productApiClient = productApiClient;
         }
 
+        public IActionResult IndexHome()
+        {
+            var user = User.Identity.Name;
+            return View();
+        }
+
         public async Task<IActionResult> IndexProduct(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
             //string selectedFilter = filter;
@@ -73,15 +79,6 @@ namespace Booking.AdminApp.Controllers
             return View(data);
         }
 
-
-        [HttpGet]
-        public IActionResult ViewDetailParty(int partyid)
-        {
-            var view = new PartyUserView();
-            var result =  _partyApiClient.GetDetails(partyid);
-            return View(result);
-        }
-
         public async Task<IActionResult> IndexParty(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
             var request = new GetPublicPartyPagingRequest()
@@ -90,7 +87,7 @@ namespace Booking.AdminApp.Controllers
                 PageSize = pageSize
             };
 
-           
+
             // Xác định trường cần tìm kiếm dựa trên searchField
             if (!string.IsNullOrEmpty(keyword))
             {
@@ -112,16 +109,24 @@ namespace Booking.AdminApp.Controllers
             //ViewBag.ProductName = keyword;
             //ViewBag.ProductType = keyword;
             //ViewBag.PartyHostId= keyword;
-            
+
             ViewBag.searchField = searchField;
             ViewBag.Keyword = keyword;
             if (TempData["result"] != null)
             {
                 ViewBag.SuccessMsg = TempData["result"];
             }
-           
+
 
             return View(data);
+        }
+
+        [HttpGet]
+        public IActionResult ViewDetailParty(int partyid)
+        {
+            var view = new PartyUserView();
+            var result =  _partyApiClient.GetDetails(partyid);
+            return View(result);
         }
 
         public async Task<IActionResult> DetailsProduct(int id)
@@ -145,19 +150,6 @@ namespace Booking.AdminApp.Controllers
             return View(result);
         }
 
-        public async Task<IActionResult> History()
-        {
-
-            var userid = HttpContext.Session.GetString("UserId");
-            var request = new PartyHistoryRequest
-            {
-                user = Guid.Parse(userid),
-
-            };
-            var result = await _partyApiClient.GetParentHistory(request);
-            
-            return View(result);
-        }
         public async Task<IActionResult> DetailsRoomBooked(RoomNParty roomNParty)
         {
             var userid = HttpContext.Session.GetString("UserId");
@@ -169,6 +161,20 @@ namespace Booking.AdminApp.Controllers
 
             };
             var result = await _partyApiClient.DetailsRoomBooked(request);
+            return View(result);
+        }
+
+        public async Task<IActionResult> History()
+        {
+
+            var userid = HttpContext.Session.GetString("UserId");
+            var request = new PartyHistoryRequest
+            {
+                user = Guid.Parse(userid),
+
+            };
+            var result = await _partyApiClient.GetParentHistory(request);
+            
             return View(result);
         }
 

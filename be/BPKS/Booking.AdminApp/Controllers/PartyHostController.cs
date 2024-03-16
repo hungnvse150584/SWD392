@@ -103,14 +103,15 @@ namespace Booking.AdminApp.Controllers
         public async Task<IActionResult> IndexParty(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
             var sessions = _httpContextAccessor
-    .HttpContext
-    .Session
-    .GetString(SystemConstants.AppSettings.Token);
-            var userId = _httpContextAccessor
-    .HttpContext
-    .Session
-    .GetString("UserId");
+            .HttpContext
+            .Session
+            .GetString(SystemConstants.AppSettings.Token);
+                    var userId = _httpContextAccessor
+            .HttpContext
+            .Session
+            .GetString("UserId");
             Guid guid = Guid.Parse(userId);
+
             var request = new GetPublicPartyPagingRequest()
             {
                 PageIndex = pageIndex,
@@ -158,7 +159,6 @@ namespace Booking.AdminApp.Controllers
             return View(result);
         }
 
-
         [HttpGet]
         public async Task<IActionResult> CreateParty()
         {
@@ -205,6 +205,7 @@ namespace Booking.AdminApp.Controllers
             ModelState.AddModelError("", "Thêm sản phẩm thất bại");
             return View(request);
         }
+
         [HttpGet]
         public IActionResult CreateProduct()
         {
@@ -227,6 +228,7 @@ namespace Booking.AdminApp.Controllers
             ModelState.AddModelError("", "Thêm sản phẩm thất bại");
             return View(request);
         }
+
         public async Task<IActionResult> IndexRoom(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
             //string selectedFilter = filter;
@@ -335,6 +337,7 @@ namespace Booking.AdminApp.Controllers
             ModelState.AddModelError("", "Xóa không thành công");
             return View(request);
         }
+
         [HttpGet]
         public IActionResult DeleteProduct(int id)
         {
@@ -360,11 +363,13 @@ namespace Booking.AdminApp.Controllers
             ModelState.AddModelError("", "Xóa không thành công");
             return View(request);
         }
+
         public IActionResult IndexHome()
         {
             var user = User.Identity.Name;
             return View();
         }
+
         public async Task<IActionResult> EditParty(int id)
         {
             var party = await _partyApiClient.GetById(id);

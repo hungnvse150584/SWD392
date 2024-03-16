@@ -30,15 +30,6 @@
                                     </div>
                                 }
                             }
-                            @* <img data-imgbigurl="img/product/details/product-details-2.jpg"
-                            src="img/product/details/thumb-1.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
-                            src="img/product/details/thumb-2.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
-                            src="img/product/details/thumb-3.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
-                            src="img/product/details/thumb-4.jpg" alt=""> *@
-                            <!-- Add thumbnail images here if needed -->
                         </div>
                     </div>
                 </div>
@@ -46,15 +37,29 @@
                     <div class="product__details__text">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
-
                                 <h3> @Html.DisplayFor(model => model.PartyName)</h3>
-                                <div class="product__details__rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-half"></i>
-                                    <span>(0 reviews)</span>
+                                <div>
+                                    <div class="shoping__cart__price text-warning" style="font-size: 15px !important">
+                                        @for (int i = 0; i <= 4; i++)
+                                        {
+                                            var temp = Model.Rate - i;
+                                            if (temp > 0 && temp < 1)
+                                            {
+                                                <i class="fas fa-star-half-alt star-icon"></i>
+                                            }
+                                            if (temp > 0 && temp >= 1)
+                                            {
+                                                <i class="fas fa-star star-icon"></i>
+                                            }
+                                            if (temp <= 0)
+                                            {
+                                                <i class="far fa-star star-icon"></i>
+                                            }
+                                        }
+                                        <span class="ms-1" style="font-size: 15px;">
+                                            @Model.Rate
+                                        </span>
+                                    </div>
                                 </div>
                                 <div>Day Start:@Html.DisplayFor(model => model.DayStart)</div>
                                 <div>Day End:@Html.DisplayFor(model => model.DayEnd)</div>
