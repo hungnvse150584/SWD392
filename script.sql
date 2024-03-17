@@ -92,6 +92,7 @@ CREATE TABLE ListRoom (
 	PartyId int,
     	ParentId UNIQUEIDENTIFIER,
 	RoomId int,
+	Total float,
 	ListRoomStatus nvarchar(500),
 );
 
@@ -101,7 +102,7 @@ CREATE TABLE AppConfig (
 );
 
 CREATE TABLE Feedback (
-    	FeedBackId INT IDENTITY(1,1) PRIMARY KEY,
+    FeedBackId INT IDENTITY(1,1) PRIMARY KEY,
 	ParentId UNIQUEIDENTIFIER,
 	PartyId int,
 	Score int,
@@ -194,55 +195,67 @@ ADD FOREIGN KEY (RoomId) REFERENCES Room(RoomId);
 ALTER TABLE Feedback
 ADD FOREIGN KEY (PartyId) REFERENCES Party(PartyId);
 
--- Insert dữ liệu mẫu vào bảng AspNetUsers
---INSERT INTO [dbo].[AspNetUsers] ([Id], [Email], [EmailConfirmed], [PasswordHash], [SecurityStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEndDateUtc], [LockoutEnabled], [AccessFailedCount], [UserName], [NormalizedUserName], [ConcurrencyStamp], [NormalizedEmail], [LockoutEnd])
---VALUES 
---    ('11111111-1111-1111-1111-111111111111', 'example1@example.com', 1, 'password_hash_1', 'security_stamp_1', NULL, 0, 0, NULL, 1, 0, 'user1', 'USER1', 'concurrency_stamp_1', 'example1@example.com', NULL),
---    ('22222222-2222-2222-2222-222222222222', 'example2@example.com', 1, 'password_hash_2', 'security_stamp_2', NULL, 0, 0, NULL, 1, 0, 'user2', 'USER2', 'concurrency_stamp_2', 'example2@example.com', NULL);
+-- Birthday Party
+INSERT INTO Party (PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus)
+VALUES ('Birthday Bash!', 'Celebrate a birthday with fun games, music, and cake!', '123-456-7890', 'Party Venue', '50.00', 'https://example.com/birthday_party.jpg', '2024-04-15', '2024-04-15', 'Active');
 
--- Insert dữ liệu mẫu vào bảng Party
---INSERT INTO Party (PartyHostId, PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus, CreatedDate)
---VALUES
---    ('11111111-1111-1111-1111-111111111111', 'Party 1', 'Description for Party 1', '123456789', 'Location 1', 4.5, 'thumbnail_url_1.jpg', '2024-03-01', '2024-03-02', 'Active', '2024-02-29'),
---    ('11111111-1111-1111-1111-111111111111', 'Party 2', 'Description for Party 2', '987654321', 'Location 2', 4.8, 'thumbnail_url_2.jpg', '2024-03-03', '2024-03-04', 'Active', '2024-02-29');
+-- Pool Party
+INSERT INTO Party (PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus)
+VALUES ('Pool Party Fun!', 'Enjoy a day by the pool with food, drinks, and games!', '987-654-3210', 'Host Name House', '25.00', 'https://example.com/pool_party.jpg', '2024-05-25', '2024-05-25', 'Active');
+
+-- Karaoke Night
+INSERT INTO Party (PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus)
+VALUES ('Lets Sing! Karaoke Night', 'Belt out your favorite tunes with friends!', '555-123-4567', 'Karaoke Bar Name', '15.00', 'https://example.com/karaoke_night.jpg', '2024-06-10', '2024-06-10', 'Active');
+
+-- Movie Night
+INSERT INTO Party (PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus)
+VALUES ('Cozy Movie Night In', 'Relax with friends and watch a movie!', 'Host Phone Number', 'Host Address', '100', 'https://example.com/movie_night.jpg', '2024-07-04', '2024-07-04', 'Active');
+
+-- Themed Party (Halloween)
+INSERT INTO Party (PartyName, Description, PhoneContact, Place, Rate, ThumbnailUrl, DayStart, DayEnd, PartyStatus)
+VALUES ('Spooky Halloween Party', 'Dress up in costumes and join the Halloween fun!', '777-321-6543', 'Party Venue', '30.00', 'https://example.com/halloween_party.jpg', '2023-10-31', '2023-10-31', 'Completed');
+
+
 
 INSERT INTO dbo.ProductType(Id,ProductTypeName,Status)
-VALUES ('1','Food','active'),
-       ('2','Drink','active');
+VALUES ('1','Food','Active'),
+       ('2','Drink','Active');
 
 -- Insert dữ liệu mẫu vào bảng Product
 INSERT INTO Product (PartyHostId, ProductName, ProductUrl, ProductType, ProductStyle, Price, ProductStatus, Description)
 VALUES
-    ('11111111-1111-1111-1111-111111111111', 'Pizza', 'product_url_1', '1', 'Style 1', 2452000, 'Active', 'ngon'),
-    ('11111111-1111-1111-1111-111111111111', 'Bánh kem', 'product_url_2', '2', 'Style 2', 150000, 'Active', 'ngon'),
-    ('22222222-2222-2222-2222-222222222222', 'Bò nướng', 'product_url_3', '2', 'Style 3', 450000, 'Active', 'ngon');
+    ('11111111-1111-1111-1111-111111111111', 'Pizza', 'https://firebasestorage.googleapis.com/v0/b/bpks-ee4a1.appspot.com/o/images%2FProductImage%2F1d517f87-9f0a-468b-94e0-788b703982d8.jpg?alt=media&token=e6750202-ede8-4ffb-9099-64b78b940fea', '1', 'Style 1', 2452000, 'Active', 'ngon'),
+    ('11111111-1111-1111-1111-111111111111', 'Bánh kem', 'https://firebasestorage.googleapis.com/v0/b/bpks-ee4a1.appspot.com/o/images%2FProductImage%2F1d517f87-9f0a-468b-94e0-788b703982d8.jpg?alt=media&token=e6750202-ede8-4ffb-9099-64b78b940fea', '1', 'Style 2', 150000, 'Active', 'ngon'),
+    ('22222222-2222-2222-2222-222222222222', 'Nước ép cam', 'https://firebasestorage.googleapis.com/v0/b/bpks-ee4a1.appspot.com/o/images%2FProductImage%2Fd529ac06-28a8-4466-a50b-baee6f004c03.jpg?alt=media&token=e75d2510-afe2-4dc8-9248-246858ef83c7', '2', 'Style 3', 130000, 'Active', 'ngon'),
+    ('22222222-2222-2222-2222-222222222222', 'Nước trái cây', 'https://firebasestorage.googleapis.com/v0/b/bpks-ee4a1.appspot.com/o/images%2FProductImage%2F4509c624-336c-4a4a-8673-41a542a97a4a.jpg?alt=media&token=6edb8680-a7c0-41a4-baa3-c090ef3e870a', '2', 'Style 3', 130000, 'Active', 'ngon'),
+	('22222222-2222-2222-2222-222222222222', 'Bò nướng', 'https://firebasestorage.googleapis.com/v0/b/bpks-ee4a1.appspot.com/o/images%2FProductImage%2Fe04e7c3b-fbc4-470f-a639-a57d019f9d86.jpg?alt=media&token=4f23d9cd-d1c3-48c8-bdc3-48a4299b48b5', '1', 'Style 3', 450000, 'Active', 'ngon');
 
 -- Insert dữ liệu mẫu vào bảng Room
 INSERT INTO Room (RoomName, RoomUrl, RoomType, Price, RoomStatus)
 VALUES
-    ('Room 1', 'room_url_1', 'Type 1', 50.0, 'Available'),
-    ('Room 2', 'room_url_2', 'Type 2', 75.0, 'Available'),
-    ('Room 3', 'room_url_3', 'Type 3', 100.0, 'Available');
+    ('Room 1', 'room_url_1', 'Type 1', 50.0, 'Active'),
+    ('Room 2', 'room_url_2', 'Type 2', 75.0, 'Active'),
+    ('Room 3', 'room_url_3', 'Type 3', 100.0, 'Active');
 
 -- Insert dữ liệu mẫu vào bảng ListParty
---INSERT INTO ListParty (ParentId, PartyId, PartyHostId, ListPartyStatus)
---VALUES
---    ('22222222-2222-2222-2222-222222222222', 1, '11111111-1111-1111-1111-111111111111', 'Confirmed'),
---    ('99999999-9999-9999-9999-999999999999', 2, '11111111-1111-1111-1111-111111111111', 'Pending');
+INSERT INTO ListParty (PartyId, PartyHostId, ListPartyStatus)
+VALUES
+    ( 1, '11111111-1111-1111-1111-111111111111', 'Active'),
+    ( 2, '11111111-1111-1111-1111-111111111111', 'Pending');
 
 -- Insert dữ liệu mẫu vào bảng ListProduct
---INSERT INTO ListProduct (PartyId, RoomId, ProductId, Quantity, ListProductStatus)
---VALUES
---    (1, 1, 1, 2, 'Confirmed'),
---    (1, 2, 2, 1, 'Confirmed'),
---    (2, NULL, 3, 3, 'Pending');
+INSERT INTO ListProduct (PartyId, RoomId, ProductId, Quantity, ListProductStatus)
+VALUES
+    (1, 1, 1, 2, 'Active'),
+    (1, 2, 2, 1, 'Active'),
+    (2, 2, 3, 3, 'Active');
 
 -- Insert dữ liệu mẫu vào bảng ListRoom
---INSERT INTO ListRoom (PartyId, ParentId, RoomId, ListRoomStatus)
---VALUES
-    --(1, NULL, 1, 'Confirmed'),
-    --(1, NULL, 2, 'Confirmed'),
-    --(2, NULL, NULL, 'Pending');
+INSERT INTO ListRoom (PartyId, ParentId, RoomId, ListRoomStatus,Total)
+VALUES
+    (1, NULL, 1, 'Confirmed',10000),
+    (1, NULL, 2, 'Confirmed',10000),
+    (2, NULL, 1, 'Pending',10000);
 
 -- Insert dữ liệu mẫu vào bảng AppConfig
 INSERT INTO AppConfig ([Key], Value)

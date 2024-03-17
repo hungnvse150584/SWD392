@@ -19,7 +19,7 @@ namespace Booking.ApiIntegration
         Task<bool> CreateParty(PartyCreateRequest request);
 
         Task<bool> UpdateParty(PartyUpdateRequest request);
-
+        Task<PagedResult<PartyVm>> GetAllPartyActive();
         Task<bool> DeleteParty(int id);
 
         Task<PartyVm> GetById(int id);

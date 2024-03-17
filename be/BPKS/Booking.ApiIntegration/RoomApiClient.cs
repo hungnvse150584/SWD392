@@ -92,10 +92,10 @@ namespace Booking.ApiIntegration
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
             requestContent.Add(new StringContent(request.RoomType?.ToString() ?? ""), "roomType");
             var requestContext = new MultipartFormDataContent();
-            foreach (var productId in request.ProductIds)
-            {
-                requestContent.Add(new StringContent(productId.ToString()), "ProductIds");
-            }
+            //foreach (var productId in request.ProductIds)
+            //{
+            //    requestContent.Add(new StringContent(productId.ToString()), "ProductIds");
+            //}
             requestContent.Add(new StringContent(request.Price?.ToString() ?? ""), "price");
             //requestContent.Add(new StringContent(languageId), "languageId");
             
