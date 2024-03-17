@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Http
+
+@{
+    var httpContext = HttpContextAccessor.HttpContext;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -55,7 +61,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
+                <a href="#"><i class="fa fa-user"></i>@httpContext.Session.GetString("Username")</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -84,7 +90,7 @@
         </div>
         <div class="humberger__menu__contact">
             <ul>
-                <li><i class="fa-solid fa-envelope"></i> hello@colorlib.com</li>
+                <li><i class="fa-solid fa-envelope"></i>@httpContext.Session.GetString("Email")</li>
                 <li>Free Shipping for all Order of $99</li>
             </ul>
         </div>
@@ -99,7 +105,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa-solid fa-envelope"></i> hello@colorlib.com</li>
+                                <li><i class="fa-solid fa-envelope"></i> @httpContext.Session.GetString("Email")</li>
                                 <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
@@ -122,7 +128,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="#"><i class="fa fa-user"></i>@httpContext.Session.GetString("Username")</a>
                             </div>
                         </div>
                     </div>
@@ -186,7 +192,7 @@
                             <li><a href="#">Home</a></li>
                             <li><a href="IndexParty">Party List</a></li>
                             <li><a href="@Url.ActionLink("History", "Parent")">History Order</a></li>
-                            <li><a href="https://localhost:5001/Login">Logout</a></li>
+                            <li><a method="post" href="@Url.ActionLink("Logout", "User")" ">Logout</a></li>
                             @* <li><a href="#">Ocean Foods</a></li>
                             <li><a href="#">Butter & Eggs</a></li>
                             <li><a href="#">Fastfood</a></li>

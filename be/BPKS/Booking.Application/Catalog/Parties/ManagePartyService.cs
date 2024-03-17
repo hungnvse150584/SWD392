@@ -99,13 +99,41 @@ namespace Booking.Application.Catalog.Parties
         public async Task<int> Delete(int partyId)
         {
             var party = await _context.Parties.FindAsync(partyId);
-            if (party == null) throw new BookingException($"Cannot find a party: {partyId}");
-            else
+            if (party == null)
             {
+                throw new BookingException($"Cannot find a party: {partyId}");
+            }
+
+            if (party.PartyStatus == "Pending")
+            {
+                var listParties = await _context.ListParties.Where(lp => lp.PartyId == partyId).ToListAsync();
+                if (listParties != null && listParties.Any())
+                {
+                    _context.ListParties.RemoveRange(listParties);
+                }
+
+                var listRoom = await _context.ListRooms.Where(lr => lr.PartyId == partyId).ToListAsync();
+                if (listRoom != null && listRoom.Any())
+                {
+                    _context.ListRooms.RemoveRange(listRoom);
+                }
+
+                var listProduct = await _context.ListProducts.Where(lp => lp.PartyId == partyId).ToListAsync();
+                if (listProduct != null && listProduct.Any())
+                {
+                    _context.ListProducts.RemoveRange(listProduct);
+                }
+
                 _context.Parties.Remove(party);
             }
+            else
+            {
+                throw new BookingException($"Party is not pending: {partyId}");
+            }
+
             return await _context.SaveChangesAsync();
         }
+
 
         public async Task<List<PartyVm>> GetAll()
         {

@@ -155,6 +155,11 @@ namespace Booking.AdminApp.Controllers
 
         public async Task<IActionResult> DetailsParty(int id)
         {
+            var userId = _httpContextAccessor
+           .HttpContext
+           .Session
+           .GetString("UserId");
+            Guid guid = Guid.Parse(userId);
             var result = await _partyApiClient.GetById(id);
             return View(result);
         }

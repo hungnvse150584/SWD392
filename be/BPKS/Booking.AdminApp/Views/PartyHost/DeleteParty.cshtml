@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
 
-div class="container-fluid">
+<div class="container-fluid">
 <h1 class="mt-4">Xóa tiệc</h1>
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
@@ -18,6 +18,7 @@ div class="container-fluid">
 
     <div class="card-body">
         <div class="col-md-12">
+            <form asp-action="DeleteParty">
             <dl class="row">
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.PartyId)
@@ -27,7 +28,7 @@ div class="container-fluid">
                 </dd>
             </dl>
 
-            <form asp-action="DeleteParty">
+            
                 <input asp-for="PartyId" type="hidden" />
                 <input type="submit" value="Xóa" class="btn btn-danger" />
             </form>
