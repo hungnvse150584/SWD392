@@ -9,6 +9,8 @@ using System.Security.Claims;
 using System.Text;
 using Booking.ApiIntegration;
 using Microsoft.AspNetCore.Http;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Booking.AdminApp.Controllers
 {
@@ -36,48 +38,51 @@ namespace Booking.AdminApp.Controllers
                 return View(ModelState);
 
             var token = await _userApiClient.Authenticate(request);
-            if (token.Token == null)
+            if (token != null)
             {
-                ModelState.AddModelError("", token.Message);
-                return View();
+                if (token.Token == null)
+                {
+                    ModelState.AddModelError("", token.Message);
+                    return View();
+                }
+                var userPrincipal = this.ValidateToken(token.Token);
+                var authProperties = new AuthenticationProperties
+                {
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
+                    IsPersistent = false
+                };
+                //HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, _configuration[SystemConstants.AppSettings.DefaultLanguageId]);
+
+                HttpContext.Session.SetString("Token", token.Token);
+                await HttpContext.SignInAsync(
+                            CookieAuthenticationDefaults.AuthenticationScheme,
+                            userPrincipal,
+                            authProperties);
+                // Check roles
+                var roles = userPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+
+
+
+                var user = await _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
+
+                HttpContext.Session.SetString("UserId", user.Token.Items.First().Id.ToString());
+                HttpContext.Session.SetString("Username", user.Token.Items.First().UserName.ToString());
+                HttpContext.Session.SetString("Email", user.Token.Items.First().Email.ToString());
+
+                if (roles.Contains("admin"))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else if (roles.Contains("parent"))
+                {
+                    return RedirectToAction("IndexParty", "Parent");
+                }
+                else if (roles.Contains("partyhost"))
+                {
+                    return RedirectToAction("IndexParty", "PartyHost");
+                }
             }
-            var userPrincipal = this.ValidateToken(token.Token);
-            var authProperties = new AuthenticationProperties
-            {
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
-                IsPersistent = false
-            };
-            //HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, _configuration[SystemConstants.AppSettings.DefaultLanguageId]);
-
-            HttpContext.Session.SetString("Token", token.Token);
-            await HttpContext.SignInAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme,
-                        userPrincipal,
-                        authProperties);
-            // Check roles
-            var roles = userPrincipal.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
-
-
-
-            var user = await _userApiClient.GetUsersPaging(new GetUserPagingRequest { Keyword = request.UserName, PageIndex = 1, PageSize = 1 });
-
-            HttpContext.Session.SetString("UserId", user.Token.Items.First().Id.ToString());
-            HttpContext.Session.SetString("Username", user.Token.Items.First().UserName.ToString());
-            HttpContext.Session.SetString("Email", user.Token.Items.First().Email.ToString());
-
-            if (roles.Contains("admin"))
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            else if (roles.Contains("parent"))
-            {
-                return RedirectToAction("IndexParty", "Parent");
-            }
-            else if (roles.Contains("partyhost"))
-            {
-                return RedirectToAction("IndexParty", "PartyHost");
-            }
-
+            ModelState.AddModelError("", "User Name or Passwork incorrect");
             // Default redirect if role not specified
             return RedirectToAction("Index", "Login");
         }
@@ -110,6 +115,11 @@ namespace Booking.AdminApp.Controllers
         {
             if (!ModelState.IsValid)
                 return View(ModelState);
+            if (request != null)
+            {
+
+            }
+
             var result = await _userApiClient.Register(request);
             if (result.IsSuccessed)
             {
