@@ -917,6 +917,18 @@ namespace Booking.Application.Catalog.Parties
             return partydetail;
         }
 
+        //public async Task<List<RoomVm>> GetRoomsByPartyId(int partyId)
+        //{
+        //    var rooms = await _context.ListRooms
+        //        .Where(lr => lr.PartyId == partyId)
+        //        .Select(lr => new RoomVm
+        //        {
+        //            RoomId = lr.RoomId,
+        //            // Include other properties you need from the Room entity
+        //        })
+        //        .ToListAsync();
 
+        //    return rooms;
+        //}
     }
 }

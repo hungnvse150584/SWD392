@@ -9,6 +9,7 @@ using BookingSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Common;
 using System.Net.Http.Headers;
+using System;
 
 namespace Booking.AdminApp.Controllers
 {
@@ -197,17 +198,59 @@ namespace Booking.AdminApp.Controllers
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> CreateParty([FromForm] PartyCreateRequest request)
         {
-            if (!ModelState.IsValid)
-                return View(request);
+            //if (!ModelState.IsValid)
+            //    return View(request);
+            var productrequest = new GetManageProductPagingRequest()
+            {
+                ProductName = null,
+                PageIndex = 1,
+                PageSize = 10
+            };
+            var roomrequest = new GetManageRoomPagingRequest()
+            {
+                RoomName = null,
+                RoomType = null,
+                PageIndex = 1,
+                PageSize = 10
+            };
+            // Gọi service để lấy danh sách sản phẩm từ API
+            var productsPagedResult = await _productApiClient.GetPagings(productrequest); // Sử dụng phương thức GetAll hoặc phương thức tương tự trong service
+            var products = productsPagedResult.Items;
+            var roomsPagedResult = await _roomApiClient.GetPagings(roomrequest); // Sử dụng phương thức GetAll hoặc phương thức tương tự trong service
+            var rooms = roomsPagedResult.Items;
 
+            // Gán danh sách sản phẩm vào ViewBag
+            ViewBag.Products = products;
+            ViewBag.Rooms = rooms;
+            if (request.DayStart <= DateTime.Now)
+            {
+               
+                ModelState.AddModelError("DayStart", "The start date must be after the present.");
+
+                return View(request);
+            }
+
+            // Kiểm tra xem DayEnd phải sau DayStart hay không
+            if (request.DayEnd <= request.DayStart)
+            {
+                ModelState.AddModelError("DayEnd", "The end date must be after the start date.");
+                return View(request);
+            }
+            //if (request.RoomId ==null)
+            //{
+
+            //    ModelState.AddModelError("RoomId", "RoomId is required");
+
+            //    return View(request);
+            //}
             var result = await _partyApiClient.CreateParty(request);
             if (result)
             {
-                TempData["result"] = "Thêm mới sản phẩm thành công";
+                TempData["result"] = "Added new product successfully";
                 return RedirectToAction("IndexParty");
             }
 
-            ModelState.AddModelError("", "Thêm sản phẩm thất bại");
+            ModelState.AddModelError("", "Adding failed products");
             return View(request);
         }
 
@@ -374,10 +417,12 @@ namespace Booking.AdminApp.Controllers
             var user = User.Identity.Name;
             return View();
         }
-
+        [HttpGet]
         public async Task<IActionResult> EditParty(int id)
         {
             var party = await _partyApiClient.GetById(id);
+
+
             var editVm = new PartyUpdateRequest()
             {
                 PartyId = party.PartyId,
@@ -388,7 +433,10 @@ namespace Booking.AdminApp.Controllers
                 DayEnd = party.DayEnd,
                 Description = party.Description,
                 ThumbnailImage = party.ThumbnailImage
-            };
+                
+                
+
+        };
             return View(editVm);
         }
 

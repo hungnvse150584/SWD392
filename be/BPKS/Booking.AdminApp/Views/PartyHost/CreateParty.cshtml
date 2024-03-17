@@ -88,17 +88,22 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Select Products:</label>
+                            <span asp-validation-for="ProductId" class="text-danger"></span>
                                 @foreach (var product in ViewBag.Products)
                                 {
+                                
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="ProductId" value="@product.ProductId"> @product.ProductName
                                         </label>
+
                                     </div>
+                             
                                 }
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Select Rooms:</label>
+                            <label class="control-label">Select Rooms:</label>
+                            <span asp-validation-for="RoomId" class="text-danger"></span>
                                 @foreach (var room in ViewBag.Rooms)
                                 {
                                     <div class="checkbox">

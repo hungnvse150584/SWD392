@@ -261,34 +261,21 @@ namespace Booking.ApiIntegration
         {
             throw new NotImplementedException();
         }
-
-        //public async Task<PagedResult<RoomVm>> GetPagingsParentParty(GetManageRoomPagingRequest request)
+        //public async Task<List<RoomVm>> GetRoomsByPartyId(int partyId)
         //{
-        //    // Tạo URL với các tham số yêu cầu
-        //    var url = $"/api/products/public-paging?PageIndex={request.PageIndex}&PageSize={request.PageSize}";
+        //    // Assuming you have a PartyRoom table that maps parties to rooms
+        //    var roomIds = await _context.PartyRoom
+        //        .Where(pr => pr.PartyId == partyId)
+        //        .Select(pr => pr.RoomId)
+        //        .ToListAsync();
 
-        //    // Thêm tham số tìm kiếm theo tên sản phẩm nếu có
-        //    if (!string.IsNullOrEmpty(request.ProductName))
-        //    {
-        //        url += $"&ProductName={request.ProductName}";
-        //    }
+        //    // Retrieve rooms based on the retrieved room IDs
+        //    var rooms = await _context.Rooms
+        //        .Where(r => roomIds.Contains(r.RoomId))
+        //        .ToListAsync();
 
-        //    // Thêm tham số tìm kiếm theo loại sản phẩm nếu có
-        //    if (request.ProductType != null && request.ProductType != 0)
-        //    {
-        //        url += $"&ProductType={request.ProductType}";
-        //    }
-
-        //    // Thêm tham số tìm kiếm theo mã chủ tiệc nếu có
-        //    if (request.PartyHostId != null && request.PartyHostId != Guid.Empty)
-        //    {
-        //        url += $"&PartyHostId={request.PartyHostId}";
-        //    }
-
-        //    // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
-        //    var data = await GetAsync<PagedResult<ProductVm>>(url);
-
-        //    return data;
+        //    return rooms;
         //}
+
     }
 }
