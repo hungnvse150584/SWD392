@@ -154,7 +154,7 @@ namespace Booking.Application.Catalog.Parties
                     CreatedDate = p.CreatedDate
                 })
                 .ToListAsync();
-            party = party.Where(x => x.PartyStatus == "Active").ToList();
+            party = party.Where(x => x.PartyStatus == "Approve").ToList();
             return party;
         }
 
@@ -745,6 +745,9 @@ namespace Booking.Application.Catalog.Parties
                 where lp.ParentId == request.ParentId 
                 && p.PartyId == request.PartyId
                 select lp;
+          var exits =  _context.ListRooms.FirstOrDefault(x=> x.ParentId ==  request.ParentId&& x.PartyId == request.PartyId && x.RoomId == request.RoomId);
+            if(exits == null )
+                return 0;
            var fb = _context.Feedbacks.FirstOrDefault(x=> x.ParentId == request.ParentId && x.PartyId == request.PartyId);
             if (fb == null) return 0;
             if (query.Count() > 0 && fb != null)
@@ -787,14 +790,14 @@ namespace Booking.Application.Catalog.Parties
             var party = _context.Parties.Find(partyId);
             if(party!= null)
             {
-                party.PartyStatus = "Active";
+                party.PartyStatus = "Approve";
 
                 var lp = _context.ListParties.Where(p => p.PartyId == partyId).ToList();
-                lp.ForEach(p => p.ListPartyStatus = "Active");
+                lp.ForEach(p => p.ListPartyStatus = "Approve");
                 var lr = _context.ListRooms.Where(p => p.PartyId == partyId).ToList();
-                lr.ForEach(p => p.ListRoomStatus = "Active");
+                lr.ForEach(p => p.ListRoomStatus = "Approve");
                 var lpr = _context.ListProducts.Where(p => p.PartyId == partyId).ToList();
-                lpr.ForEach(p => p.ListProductStatus = "Active");
+                lpr.ForEach(p => p.ListProductStatus = "Approve");
                 //party.ListParties.ToList().ForEach(p =>  p.ListPartyStatus = "Active");
                 //party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Active");
                 //party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Active");

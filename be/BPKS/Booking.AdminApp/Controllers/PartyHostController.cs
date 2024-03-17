@@ -169,7 +169,6 @@ namespace Booking.AdminApp.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateParty()
         {
-
             var request = new GetManageProductPagingRequest()
             {
                 ProductName = null,
@@ -256,17 +255,17 @@ namespace Booking.AdminApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateProduct()
+        public async Task<IActionResult> CreateProduct()
         {
             return View();
         }
 
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> CreateProuct([FromForm] ProductCreateRequest request)
+        public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
                 return View(request);
-
+            request.PartyHostId = Guid.Parse( HttpContext.Session.GetString("UserId"));
             var result = await _productApiClient.CreateProduct(request);
             if (result)
             {
