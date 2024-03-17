@@ -80,6 +80,10 @@ namespace BookingSolution.BackendApi.Controllers
             try
             {
                 var repose = await _manageRoomService.ParentOrder(request);
+                if(repose == 0)
+                {
+                    return null;
+                }
                 return Ok(repose);
             }
             catch(Exception ex)

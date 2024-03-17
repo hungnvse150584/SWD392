@@ -21,6 +21,8 @@ namespace BookingSolution.ViewModels.System.Services
         public DateTime? CreatedDate { get; set; }
         public string? PartyStatus { get; set; }
         public int RoomId { get; set; }
+
+        public double Total {  get; set; }
    
     }
 }

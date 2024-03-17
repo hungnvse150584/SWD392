@@ -12,6 +12,7 @@ namespace BookingSolution.ViewModels.System.Services
         public int PartyId { get; set; }
         public int RoomId { get; set; }
         public List<ProductsNQuantity> Items { get; set; }
+        public double Total {  get; set; }
     }
     public class ProductsNQuantity
     {

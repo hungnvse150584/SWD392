@@ -13,6 +13,8 @@ public partial class ListRoom
 
     public int RoomId { get; set; }
 
+    public double Total {  get; set; }
+
     public string? ListRoomStatus { get; set; }
 
     public virtual Party? Party { get; set; }

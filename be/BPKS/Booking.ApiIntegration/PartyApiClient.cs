@@ -35,6 +35,8 @@ namespace Booking.ApiIntegration
             _httpClientFactory = httpClientFactory;
         }
 
+       
+
         public async Task<PagedResult<PartyVm>> GetPagings(GetPublicPartyPagingRequest request)
         {
 
@@ -52,6 +54,10 @@ namespace Booking.ApiIntegration
             if (!string.IsNullOrEmpty(request.Place))
             {
                 url += $"&Place={request.Place}";
+            }
+            if (!string.IsNullOrEmpty(request.Status))
+            {
+                url += $"&Status={request.Status}";
             }
 
             // Thực hiện yêu cầu HTTP GET đến URL đã tạo và nhận kết quả trả về
@@ -147,6 +153,17 @@ namespace Booking.ApiIntegration
 
             return data;
         }
+
+        public async Task<PagedResult<PartyVm>> GetAllPartyActive()
+        {
+            // Tạo URL với các tham số yêu cầu
+            var url = "/api/Parties/GetAll";
+           
+            var data = await GetAsync<PagedResult<PartyVm>>(url);
+
+            return data;
+        }
+
         public async Task<List<PartyHistory>> GetPartyHostHistory(PartyHistoryRequest request)
         {
             // Tạo URL với các tham số yêu cầu
@@ -167,6 +184,8 @@ namespace Booking.ApiIntegration
 
             return data;
         }
+
+
 
         public async Task<List<PartyHistory>> GetParentHistory(PartyHistoryRequest request)
         {

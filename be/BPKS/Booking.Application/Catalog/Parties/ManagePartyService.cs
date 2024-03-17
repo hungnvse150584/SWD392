@@ -154,7 +154,7 @@ namespace Booking.Application.Catalog.Parties
                     CreatedDate = p.CreatedDate
                 })
                 .ToListAsync();
-
+            party = party.Where(x => x.PartyStatus == "Active").ToList();
             return party;
         }
 
@@ -194,10 +194,11 @@ namespace Booking.Application.Catalog.Parties
         {
             var query =
                 from u in _context.AspNetUsers
-                join lparent in _context.ListParties on u.Id equals lparent.ParentId
+                //join lparent in _context.ListParties on u.Id equals lparent.ParentId
                 //join lpartyhost in _context.ListParties on u.Id equals lpartyhost.PartyHostId
-                join p in _context.Parties on lparent.PartyId equals p.PartyId
-                join lr in _context.ListRooms on p.PartyId equals lr.PartyId
+                join lr in _context.ListRooms on u.Id equals lr.ParentId
+                join p in _context.Parties on lr.PartyId equals p.PartyId
+                
                 where u.Id == request.user 
                 select new { u, p,lr };
 
@@ -216,8 +217,9 @@ namespace Booking.Application.Catalog.Parties
                 Place = t.p.Place,
                 ThumbnailUrl = t.p.ThumbnailUrl,
                 Rate = t.p.Rate,
-                PartyStatus = t.p.PartyStatus,
+                PartyStatus = t.lr.ListRoomStatus,
                 RoomId = t.lr.RoomId,
+                Total = t.lr.Total,
             }).ToList();
 
             return data;
@@ -238,6 +240,10 @@ namespace Booking.Application.Catalog.Parties
             if (!string.IsNullOrEmpty(request.Place))
             {
                 query = query.Where(x => x.p.Place.Contains(request.Place));
+            }
+            if(!string.IsNullOrEmpty(request.Status))
+            {
+                query = query.Where(x => x.p.PartyStatus.Contains(request.Status));
             }
             //3. Paging
             int totalRow = await query.CountAsync();
@@ -492,7 +498,7 @@ namespace Booking.Application.Catalog.Parties
                         partydetail.roomUserViews.Add(new RoomUserView
                         {
                             RoomId = item.room.RoomId,
-                            Price = item.room.RoomId,
+                            Price = item.room.Price,
                             RoomName = item.room.RoomName,
                             RoomUrl = item.room.RoomUrl,
                             RoomType = item.room.RoomType,
@@ -508,7 +514,7 @@ namespace Booking.Application.Catalog.Parties
                         var room = new RoomUserView
                         {
                             RoomId = item.room.RoomId,
-                            Price = item.room.RoomId,
+                            Price = item.room.Price,
                             RoomName = item.room.RoomName,
                             RoomUrl = item.room.RoomUrl,
                             RoomType = item.room.RoomType,

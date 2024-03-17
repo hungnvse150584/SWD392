@@ -14,6 +14,6 @@ namespace BookingSolution.ViewModels.Catalog.Parties
        public string? PartyName { get; set;}
 
        public string? Place { get; set; }
-
+        public string? Status { get; set; }
     }
 }

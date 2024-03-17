@@ -62,7 +62,7 @@ namespace Booking.Application.Catalog.Rooms
         }
         public async Task<int> Create(RoomCreateRequest request)
         {
-            var listproducts = request.ProductIds;
+           // var listproducts = request.ProductIds;
 
             var room = new Room()
             { 
@@ -74,30 +74,30 @@ namespace Booking.Application.Catalog.Rooms
            
             };
             _context.Rooms.Add(room);
-            _context.SaveChanges();
-            var roomrequest = _context.Rooms.FirstOrDefault(r => r.RoomUrl == room.RoomUrl);
-            foreach (var listProduct in listproducts)
-            {
-                var add = new ListProduct { 
-                ListProductStatus = "Active",
-                PartyId = request.PartyId,
-                ProductId = listProduct,
-                RoomId = roomrequest.RoomId,
-                Quantity = 0
-                }; 
-                _context.ListProducts.Add(add);
-            }
+            //var roomrequest = _context.Rooms.FirstOrDefault(r => r.RoomUrl == room.RoomUrl);
+            //foreach (var listProduct in listproducts)
+            //{
+            //    var add = new ListProduct { 
+            //    ListProductStatus = "Active",
+            //    PartyId = request.PartyId,
+            //    ProductId = listProduct,
+            //    RoomId = roomrequest.RoomId,
+            //    Quantity = 0
+            //    }; 
+            //    _context.ListProducts.Add(add);
+            //}
 
-            var listroom = new ListRoom
-            {
-                PartyId = request.PartyId,
-                RoomId = roomrequest.RoomId,
-                ListRoomStatus = "Active"
-            };
-            _context.ListRooms.Add(listroom);
+            //var listroom = new ListRoom
+            //{
+            //    PartyId = request.PartyId,
+            //    RoomId = roomrequest.RoomId,
+            //    ListRoomStatus = "Active"
+            //};
+            //_context.ListRooms.Add(listroom);
 
-            await _context.SaveChangesAsync();
-            return roomrequest.RoomId;
+            //await _context.SaveChangesAsync();
+            return _context.SaveChanges();
+            
         }
         public async Task<int> Update(RoomUpdateRequest request)
         {
@@ -226,27 +226,35 @@ namespace Booking.Application.Catalog.Rooms
             return await task;
         }
 
-        public Task<int> ParentOrder(ParentOrder request)
+        public async Task<int> ParentOrder(ParentOrder request)
         {
             var listroom = _context.ListRooms.FirstOrDefault(r => r.RoomId == request.RoomId && r.PartyId == request.PartyId);
+          
+
             if (listroom != null)
             {
-                listroom.ParentId = request.parentId;
-                foreach (var item in request.Items)
+                if (listroom.ParentId == null)
                 {
-                    var listproduct = _context.ListProducts.FirstOrDefault(p =>
-                    p.PartyId == request.PartyId &&
-                    p.RoomId == request.RoomId &&
-                    p.ProductId == item.ProductId);
-                    if (listproduct != null)
-                    {
-                        listproduct.Quantity = item.Quantity;
-                        listproduct.ListProductStatus = "Waiting";
+                    
+                    listroom.ParentId = request.parentId;
+                    listroom.ListRoomStatus = "Waiting";
+                    foreach (var item in request.Items)
+                    {   
+                        var listproduct = _context.ListProducts.FirstOrDefault(p =>
+                        p.PartyId == request.PartyId &&
+                        p.RoomId == request.RoomId &&
+                        p.ProductId == item.ProductId);
+                        if (listproduct != null)
+                        {
+                            listproduct.Quantity = item.Quantity;
+                            listproduct.ListProductStatus = "Waiting";
+                        }
                     }
+                    listroom.Total = request.Total;
                 }
             }
 
-            return _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
         public Task<int> PHostComfirm(PHostComfirmRequest request)

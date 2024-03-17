@@ -1,12 +1,16 @@
-﻿@model BookingSolution.ViewModels.System.Services.RoomUserView
+﻿@using BookingSolution.ViewModels.Catalog.Products
+@model BookingSolution.ViewModels.System.Services.RoomUserView
 
 @{
     ViewData["Title"] = "Room Details";
     Layout = "~/Views/Shared/_Layout2.cshtml";
+   
+    
 }
 
+
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -113,9 +117,15 @@
                             </tr>
                         </thead>
                         <tbody>
+                                
                             @foreach (var product in Model.productUserViews)
                             {
-                                <tr>
+                                   
+                                    <tr>
+                                        <td hidden="" class="product__id__id">
+                                            
+                                            $@product.ProductId>
+                                            </td>
                                     <td class="shoping__cart__item">
                                         <img src="@product.ProductUrl" alt="Product Image" class="img-fluid" style="height: 100px;">
                                         <h5>@product.ProductName</h5>
@@ -125,8 +135,8 @@
                                     </td>
                                         <td class="shoping__cart__quantity">
                                             <div class="quantity">
-                                                <div class="pro-qty " >
-                                                    <input type="number" min="1" value="1">
+                                                <div class="pro-qty" >
+                                                    <input asp-for="@product.Quantity" type="number" min="0" value="1">
                                                 </div>
                                             </div>
                                         </td>
@@ -138,6 +148,7 @@
                                     </td>
                                 </tr>
                             }
+                                
                         </tbody>
                     </table>
                 </div>
@@ -186,7 +197,8 @@
                                 <li>Subtotal <span id="subtotal">$0.00</span></li>
                                 <li>Total <span id="total">$0.00</span></li>
                             </ul>
-                            <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                            <a class="primary-btn" type="submit" id="btnClick">PROCEED TO CHECKOUT</a>
+                            
                         </div>
                 </div>
             </div>
@@ -280,6 +292,8 @@
 
         <!-- Thêm mã JavaScript sau cùng -->
         <script>
+            var data = new Array();
+            var total = 0;
             $(document).ready(function () {
                 updateTotal();
 
@@ -310,6 +324,20 @@
                     var price = parseFloat($(this).find('.shoping__cart__price').text().replace('$', ''));
                     var quantity = parseInt($(this).find('.pro-qty input').val());
                     var totalItem = price * quantity;
+
+                var productid = parseInt($(this).find('.product__id__id').text().replace('$', ''));
+
+                let index = data.findIndex(x => x.Productid == productid)
+
+                if (index >= 0) {
+
+                    data[index] = { Productid: productid, Quantity: quantity }
+                } else if (index = -1) {
+                    data.push({ Productid: productid, Quantity: quantity })
+                }
+                console.log(data);
+                console.log($("RoomId").val());
+
                     // Cập nhật giá trị Total của từng sản phẩm
                     $(this).find('.shoping__cart__total').text('$' + totalItem.toFixed(2));
                     subtotal += totalItem;
@@ -325,6 +353,7 @@
                 // Cộng giá của phòng vào subtotal
                 subtotal += roomTotal;
                 $('#total').text('$' + subtotal.toFixed(2));
+                total = subtotal;
             }
 
             // Gọi hàm updateTotal khi trang được tải và sau mỗi lần số lượng sản phẩm thay đổi
@@ -335,8 +364,52 @@
                 });
             });
 
+       
         </script>
-        <style>
+        
+        <script type="text/javascript">
+            
+            
+
+
+          
+                $("#btnClick").click(function () {
+                    
+                    Save();
+
+
+                });
+        function Save() {
+            var result = {
+                
+                "PartyId" : -1,
+                "RoomId" : @Model.RoomId,
+                "Items": [...data],
+                "Total" : total
+            }
+
+            $.ajax({
+                async: true,
+                type: 'POST',
+                url: '@Url.Action("Order", "Parent")',
+                data: JSON.stringify(result),
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    window.location.href = response.redirectToUrl;
+                },
+                error: function () {
+                    console.error("An error occurred");
+                }
+            });
+
+                    }
+          
+
+        </script>
+
+        
+
+    <style>
             .pro-qty .qtybtn {
                 display: none;
             }
