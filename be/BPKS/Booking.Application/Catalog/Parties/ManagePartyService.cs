@@ -745,9 +745,6 @@ namespace Booking.Application.Catalog.Parties
                 where lp.ParentId == request.ParentId 
                 && p.PartyId == request.PartyId
                 select lp;
-          var exits =  _context.ListRooms.FirstOrDefault(x=> x.ParentId ==  request.ParentId&& x.PartyId == request.PartyId && x.RoomId == request.RoomId);
-            if(exits == null )
-                return 0;
            var fb = _context.Feedbacks.FirstOrDefault(x=> x.ParentId == request.ParentId && x.PartyId == request.PartyId);
             if (fb == null) return 0;
             if (query.Count() > 0 && fb != null)
@@ -926,6 +923,18 @@ namespace Booking.Application.Catalog.Parties
             return partydetail;
         }
 
+        //public async Task<List<RoomVm>> GetRoomsByPartyId(int partyId)
+        //{
+        //    var rooms = await _context.ListRooms
+        //        .Where(lr => lr.PartyId == partyId)
+        //        .Select(lr => new RoomVm
+        //        {
+        //            RoomId = lr.RoomId,
+        //            // Include other properties you need from the Room entity
+        //        })
+        //        .ToListAsync();
 
+        //    return rooms;
+        //}
     }
 }

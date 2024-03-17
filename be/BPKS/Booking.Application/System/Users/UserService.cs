@@ -9,7 +9,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Booking.Application.System.Users
 {
@@ -115,20 +114,6 @@ namespace Booking.Application.System.Users
                 return new ApiErrorResult<bool>("Email đã tồn tại");
             }
 
-            if (request.Dob >= DateTime.Now.AddYears(-18))
-            {
-                return new ApiErrorResult<bool>("Người dùng phải đủ 18 tuổi");
-            }
-            if (request.ConfirmPassword != request.Password)
-            {
-                return new ApiErrorResult<bool>("Mật khẩu phải trùng nhau");
-            }
-            if (request.Password.Length < 6 || request.Password.Any(char.IsUpper) || request.Password.Any(c => !char.IsLetterOrDigit(c)))
-            {
-               
-                return new ApiErrorResult<bool>("Mật khẩu phải có ít nhất 6 ký tự, 1 chữ hoa và 1 ký tự đặc biệt");
-            }
-
             user = new AspNetUser()
             {
                 FirstName = request.FirstName,
@@ -165,16 +150,6 @@ namespace Booking.Application.System.Users
             {
                 return new ApiErrorResult<bool>("Email đã tồn tại");
             }
-
-            if (request.Dob >= DateTime.Now.AddYears(-18))
-            {
-                return new ApiErrorResult<bool>("Người dùng phải đủ 18 tuổi");
-            }
-            if (!IsValidPhoneNumber(request.PhoneNumber))
-            {
-                return new ApiErrorResult<bool>("Số điện thoại phải gồm 10 số");
-            }
-
             var user = await _userManager.FindByIdAsync(id.ToString());
             user.PhoneNumber = request.PhoneNumber;
             user.Email = request.Email;
@@ -256,23 +231,6 @@ namespace Booking.Application.System.Users
             return new ApiSuccessResult<bool>();
         }
 
-        public bool IsValidPhoneNumber(string phoneNumber)
-        {
-            if (phoneNumber.Length != 10 && phoneNumber.Length != 11)
-            {
-                return false;
-            }
-
-            foreach (char c in phoneNumber)
-            {
-                if (!char.IsDigit(c))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
+        
     }
 }

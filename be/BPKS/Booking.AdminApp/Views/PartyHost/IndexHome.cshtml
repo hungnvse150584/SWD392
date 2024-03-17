@@ -1,7 +1,228 @@
-﻿
+﻿@using BookingSolution.ViewModels.Common
+@model PagedResult<BookingSolution.ViewModels.Catalog.Parties.PartyVm>
 @{
-    ViewData["Title"] = "IndexHome";
-    Layout = "~/Views/Shared/_Layout3.cshtml";
+    ViewData["Title"] = "HomePage";
+    Layout = "~/Views/Shared/_Layout4.cshtml";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["result"] != null)
+{
+    <div id="successMessage" class="alert alert-success" role="alert">
+        @TempData["result"]
+    </div>
 }
 
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select the success message element
+        var successMessage = document.getElementById('successMessage');
 
+        // Check if the success message exists
+        if (successMessage) {
+            // Automatically hide the success message after 4 seconds (4000 milliseconds)
+            setTimeout(function () {
+                // Hide the success message by setting its display property to 'none'
+                successMessage.style.display = 'none';
+            }, 4000); // 4 seconds
+        }
+    });
+</script>
+
+<body>
+    <!-- Featured Section Begin -->
+    <section class="featured spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Party List</h2>
+                    </div>
+                    @* <div class="featured__controls">
+                    <ul>
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".oranges">Oranges</li>
+                    <li data-filter=".fresh-meat">Fresh Meat</li>
+                    <li data-filter=".vegetables">Vegetables</li>
+                    <li data-filter=".fastfood">Fastfood</li>
+                    </ul>
+                    </div> *@
+                </div>
+            </div>
+
+            <div class="container" style="display: flex; justify-content: center; padding:50px">
+                <div class="col-md-8 col-xs-12" style=" padding-left: 18px; padding-top: 11px;">
+                    <form asp-action="Index" method="get">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <button id="createPartyBtn" style="margin-left: -100px; " type="button" class="site-btn">Create</button>
+                            </div>
+                            <div class="col-md-2" style="height: 46px; width: 100%; margin-right:35px">
+                                <select name="searchField" style="font-size: 16px;font-weight: 700;">
+                                    <option value="PartyName">Tên bữa tiệc</option>
+                                    <option value="Place">Địa điểm</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input style="height: 45px; width: 100%" type="text" value="@ViewBag.Keyword" name="keyword" />
+                            </div>
+                            <div class="col-md-1" style="height: 45px; width: 100%">
+                                <button type="submit" class="site-btn">Tìm</button>
+                                @* <button type="button" class="site-btn" onclick="window.location.href='/Party/Index'">Reset</button> *@
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row featured__filter" style="z-index: 1;">
+                @foreach (var item in Model.Items)
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                        <div class="featured__item">
+                            <div class="featured__item__pic set-bg" data-setbg="@item.ThumbnailUrl">
+                                <ul class="featured__item__pic__hover">
+                                    <li><a href="@Url.Action( "EditParty", new { id = item.PartyId })"><i class="fa-solid fa-pen"></i></a></li>
+                                    <li><a href="@Url.Action("DetailsParty", new { id = item.PartyId })"><i class="fa-solid fa-arrow-right"></i></a></li>
+                                    <li><a href="@Url.Action("DeleteParty", new { id = item.PartyId })"><i class="fa-regular fa-trash-can"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6><a href="#">@item.PartyName</a></h6>
+                                @* <h5>@item.Rate</h5> *@
+                                <h5>@item.Place</h5>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section class="from-blog spad" style="z-index: 1;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title from-blog__title">
+                        <h2>Latest Parties</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/img/latest-product/1.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> April 15, 2024</li>
+                                <li><i class="fa fa-comment-o"></i> 3</li>
+                            </ul>
+                            <h5><a href="#">Princess Tea Party</a></h5>
+                            <p>An enchanting tea party fit for a princess, complete with tea, snacks, and tiaras!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/img/latest-product/2.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> April 20, 2024</li>
+                                <li><i class="fa fa-comment-o"></i> 2</li>
+                            </ul>
+                            <h5><a href="#">Superhero Adventure</a></h5>
+                            <p>A thrilling superhero-themed party with games, costumes, and heroic activities!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="~/img/latest-product/3.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> April 25, 2024</li>
+                                <li><i class="fa fa-comment-o"></i> 4</li>
+                            </ul>
+                            <h5><a href="#">Under the Sea Adventure</a></h5>
+                            <p>A magical underwater-themed party with mermaids, pirates, and treasure hunts!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more party items here -->
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Phone: 09394296xx</li>
+                            <li>Email: partyforkid@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Join Our Newsletter Now</h6>
+                        <p>Get E-mail updates about our latest parties and special offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <p>
+                            © <script>document.write(new Date().getFullYear());</script> Booking Party Kid System. All rights reserved | Made with <i class="fa fa-heart" aria-hidden="true"></i> by Booking Party Kid System
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+</body>
+<script>
+    document.getElementById('createPartyBtn').addEventListener('click', function () {
+        // Chuyển hướng người dùng đến trang PartyHost/CreateParty
+        window.location.href = '/PartyHost/CreateParty';
+    });
+</script>
