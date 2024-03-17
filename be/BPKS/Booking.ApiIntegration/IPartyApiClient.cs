@@ -15,7 +15,6 @@ namespace Booking.ApiIntegration
     {
         Task<PagedResult<PartyVm>> GetPagings(GetPublicPartyPagingRequest request);
         Task<PagedResult<PartyVm>> GetPagingsPartyHostView(GetPublicPartyPagingRequest request);
-        Task<PagedResult<PartyVm>> GetPagingsParentParty(GetPublicPartyPagingRequest request);
 
         Task<bool> CreateParty(PartyCreateRequest request);
 

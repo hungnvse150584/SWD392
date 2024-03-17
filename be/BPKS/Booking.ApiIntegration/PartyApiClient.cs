@@ -133,7 +133,7 @@ namespace Booking.ApiIntegration
         public async Task<PagedResult<PartyVm>> GetPagingsParentParty(GetPublicPartyPagingRequest request)
         {
             // Tạo URL với các tham số yêu cầu
-            var url = $"/api/Parties/GetPartyApprove?pageIndex={request.PageIndex}" +
+            var url = $"/api/Parents/paging?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}";
 
             // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có
@@ -279,7 +279,7 @@ namespace Booking.ApiIntegration
             requestContent.Add(new StringContent(DateTime.Now.ToString()), "CreatedDate");
             requestContent.Add(new StringContent(request.DayStart.ToString()), "DayStart");
             requestContent.Add(new StringContent(request.DayEnd.ToString()), "DayEnd");
-            requestContent.Add(new StringContent("Approve"), "PartyStatus");
+            requestContent.Add(new StringContent("Active"), "PartyStatus");
             var requestContext = new MultipartFormDataContent();
             foreach (var productId in request.ProductId)
             {
@@ -301,10 +301,6 @@ namespace Booking.ApiIntegration
                 .HttpContext
                 .Session
                 .GetString(SystemConstants.AppSettings.Token);
-            var userId = _httpContextAccessor
-    .HttpContext
-    .Session
-    .GetString("UserId");
 
             var languageId = _httpContextAccessor.HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
 
@@ -330,20 +326,11 @@ namespace Booking.ApiIntegration
             requestContent.Add(new StringContent(request.Place ?? ""), "Place");
             //requestContent.Add(new StringContent("0"), "Rate");
             //requestContent.Add(new StringContent(DateTime.Now.ToString()), "CreatedDate");
-            requestContent.Add(new StringContent(request.DayStart.ToString()), "DayStart");
+            //requestContent.Add(new StringContent(request.DayStart.ToString()), "DayStart");
             requestContent.Add(new StringContent(request.DayEnd.ToString()), "DayEnd");
             //requestContent.Add(new StringContent("Active"), "PartyStatus");
             // Assuming SaveFile method returns the file URL asynchronously
             requestContent.Add(new StringContent(request.Description ?? ""), "Description");
-            var requestContext = new MultipartFormDataContent();
-            foreach (var productId in request.ProductId)
-            {
-                requestContent.Add(new StringContent(productId.ToString()), "ProductId");
-            }
-            foreach (var roomId in request.RoomId)
-            {
-                requestContent.Add(new StringContent(roomId.ToString()), "RoomId");
-            }
 
             var response = await client.PutAsync($"/api/Parties/Update", requestContent);
             return response.IsSuccessStatusCode;
