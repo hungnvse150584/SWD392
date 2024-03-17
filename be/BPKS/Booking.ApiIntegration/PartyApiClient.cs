@@ -39,7 +39,7 @@ namespace Booking.ApiIntegration
         {
 
             // Tạo URL với các tham số yêu cầu
-            var url = $"/api/Parties/GetPartyApprove?pageIndex={request.PageIndex}" +
+            var url = $"/api/Parties/paging?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}";
 
             // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có

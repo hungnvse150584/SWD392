@@ -63,6 +63,7 @@ namespace Booking.AdminApp.Controllers
 
             HttpContext.Session.SetString("UserId", user.Token.Items.First().Id.ToString());
             HttpContext.Session.SetString("Username", user.Token.Items.First().UserName.ToString());
+            HttpContext.Session.SetString("Email", user.Token.Items.First().Email.ToString());
 
             if (roles.Contains("admin"))
             {
@@ -70,11 +71,11 @@ namespace Booking.AdminApp.Controllers
             }
             else if (roles.Contains("parent"))
             {
-                return RedirectToAction("IndexHome", "Parent");
+                return RedirectToAction("IndexParty", "Parent");
             }
             else if (roles.Contains("partyhost"))
             {
-                return RedirectToAction("IndexHome", "PartyHost");
+                return RedirectToAction("IndexParty", "PartyHost");
             }
 
             // Default redirect if role not specified

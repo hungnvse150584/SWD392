@@ -15,16 +15,19 @@ namespace Booking.AdminApp.Controllers
         private readonly IProductApiClient _productApiClient;
         private readonly IPartyApiClient _partyApiClient;
         private readonly IConfiguration _configuration;
+        private readonly IUserApiClient _userApiClient;
         private static string Bucket = "bpks-ee4a1.appspot.com";
 
 
         public ParentController(IProductApiClient productApiClient,
             IPartyApiClient partyApiClient,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            IUserApiClient userApiClient)
         {
             _partyApiClient = partyApiClient;
             _configuration = configuration;
             _productApiClient = productApiClient;
+            _userApiClient = userApiClient;
         }
 
         public IActionResult IndexHome()
@@ -176,6 +179,11 @@ namespace Booking.AdminApp.Controllers
             var result = await _partyApiClient.GetParentHistory(request);
             
             return View(result);
+        }
+        public async Task<IActionResult> Profile(Guid id)
+        {
+            var result = await _userApiClient.GetById(id);
+            return View(result.Token);
         }
 
     }

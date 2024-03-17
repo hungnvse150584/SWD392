@@ -4,6 +4,12 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
 
 <body>
     <!-- Featured Section Begin -->

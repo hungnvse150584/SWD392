@@ -136,12 +136,12 @@
                                             @if (item.PartyStatus == "Pending")
                                             {
                                                 <button type="button" class="btn btn-success btn-sm" onclick="approveParty(@item.PartyId)">Duyệt</button>
-                                                <button type="button" class="btn btn-danger btn-sm" onclick="rejectParty(@item.PartyId)">Hủy đơn</button>
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="rejectParty(@item.PartyId)">Hủy</button>
                                             }
                                             else
                                             {
                                                 <button type="button" class="btn btn-success btn-sm" disabled>Duyệt</button>
-                                                <button type="button" class="btn btn-danger btn-sm" disabled>Hủy đơn</button>
+                                                <button type="button" class="btn btn-danger btn-sm" disabled>Hủy</button>
                                             }
                                             <a href="@Url.Action("Details", new { id = item.PartyId })" style="text-decoration: none;">→</a>
 
