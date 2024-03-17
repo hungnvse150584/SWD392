@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Booking.ApiIntegration;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Booking.AdminApp.Controllers
 {
@@ -9,9 +10,18 @@ namespace Booking.AdminApp.Controllers
     {
         //[Route("")]
         //[Route("index")]
-        public IActionResult Index()
+
+        private readonly ITotalApiClient _totalApiClient;
+        public HomeAdminController(ITotalApiClient totalApiClient)
         {
-            return View();
+            _totalApiClient = totalApiClient;
+        }
+        public async Task<IActionResult> Index()
+        {
+            double TotalCash = await _totalApiClient.GetTotalCash();
+            int TotalPartyBook = await _totalApiClient.GetTotalPartyBooked();
+            int TotalUser = await _totalApiClient.GetTotalUser();
+            return ViewBag(TotalCash,TotalPartyBook,TotalUser);
         }
     }
 }

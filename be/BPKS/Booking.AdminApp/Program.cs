@@ -35,7 +35,8 @@ builder.Services.AddScoped<IPartyApiClient, PartyApiClient>();
 builder.Services.AddTransient<IRoomApiClient, RoomApiClient>();
 //builder.Services.AddTransient<ILanguageApiClient, LanguageApiClient>();
 builder.Services.AddTransient<IProductApiClient, ProductApiClient>();
-//builder.Services.AddTransient<ICategoryApiClient, CategoryApiClient>();
+builder.Services.AddTransient<ITotalApiClient, TotalApiClient>();
+
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 

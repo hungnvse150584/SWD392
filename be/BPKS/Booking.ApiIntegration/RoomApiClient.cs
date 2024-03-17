@@ -87,7 +87,7 @@ namespace Booking.ApiIntegration
             }
 
             requestContent.Add(new StringContent(request.PartyHostId.ToString() ?? ""), "PartyHostId");
-            requestContent.Add(new StringContent(request.PartyId.ToString() ?? ""), "PartyId");
+            
             requestContent.Add(new StringContent(request.RoomName ?? ""), "roomName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
             requestContent.Add(new StringContent(request.RoomType?.ToString() ?? ""), "roomType");
