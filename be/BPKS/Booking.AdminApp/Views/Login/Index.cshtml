@@ -34,12 +34,10 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Đăng nhập</h3></div>
                                 <div class="card-body">
-                                    <form asp-action="Index" asp-controller="Login" method="post">
-
+                                    <form asp-action="Index" asp-controller="Login" method="post" onsubmit="return validateLinks()">
                                         <div asp-validation-summary="All" class="text-danger"></div>
 
                                         <div class="form-group">
-
                                             <label class="small mb-1">Tài khoản</label>
                                             <input class="form-control py-4" asp-for="UserName" type="text" placeholder="Nhập tài khoản" />
                                         </div>
@@ -54,14 +52,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="/User/ForgotPassword">Bạn quên mật khẩu?</a>
-                                            <a class="small" href="/Login/Register">Đăng ký</a>
-                                            <button class="btn btn-primary" type="submit">Đăng nhập</button>
+                                            <div>
+                                                <div>
+                                                    <a id="registerLink" class="small col-12" href="/Login/Register">Đăng ký</a>
+                                                    <br> <!-- Thẻ br để tạo ra một dòng mới -->
+                                                    <a id="forgotPasswordLink" class="small col-12" href="/User/ForgotPassword">Bạn quên mật khẩu?</a>
+                                                </div>
+
+                                            </div>
+
+                                            <button id="layoutAuthentication_content" class="btn btn-primary col-4" type="submit">Đăng nhập</button>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <div class="small">Liên hệ quản trị</div>
                                 </div>
                             </div>
                         </div>
@@ -87,5 +89,29 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/js/scripts.js"></script>
+
+    <style>
+        body.bg-gradient {
+            background: linear-gradient(to bottom right, #007bff, #ff99cc); /* Gradient từ xanh sang hồng */
+        }
+
+        #layoutAuthentication_content {
+            background: linear-gradient(to bottom right, #007bff, #ff99cc); /* Gradient từ xanh sang hồng */
+        }
+
+        function validateLinks() {
+            var registerLink = document.getElementById("registerLink").value.trim();
+            var forgotPasswordLink = document.getElementById("forgotPasswordLink").value.trim();
+            if (registerLink === "" || forgotPasswordLink === "")
+
+        {
+            alert("Vui lòng nhập đầy đủ thông tin cho các liên kết.");
+            return false;
+            // Ngăn form được submit nếu có liên kết bị bỏ trống
+        }
+
+        return true; // Cho phép submit form nếu tất cả các liên kết đã được nhập đầy đủ
+        }
+    </style>
 </body>
 </html>
