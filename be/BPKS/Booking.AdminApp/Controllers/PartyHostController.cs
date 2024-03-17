@@ -262,7 +262,7 @@ namespace Booking.AdminApp.Controllers
         }
 
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> CreateProuct([FromForm] ProductCreateRequest request)
+        public async Task<IActionResult> CreateProduct([FromForm] ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
                 return View(request);
