@@ -31,22 +31,22 @@
 
                                         <div class="form-group">
                                             <label class="small mb-1">Tài khoản</label>
-                                            <input class="form-control py-4" required asp-for="UserName" type="text" placeholder="Nhập tài khoản" />
-                                        </div>
+                                            <input class="form-control py-4" required asp-for="UserName" type="text" placeholder="Enter Usename" />
+                                        </div>  
                                         <div class="form-group">
                                             <label class="small mb-1">Mật khẩu</label>
                                             <input class="form-control py-4" asp-for="Password" type="password" placeholder="Enter password" />
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" required asp-for="RememberMe" type="checkbox" />
+                                                @* <input class="custom-control-input" required asp-for="RememberMe" type="checkbox" /> *@
                                                 <label class="custom-control-label">Nhớ mật khẩu</label>
                                             </div>
                                         </div>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <div>
                                                 <div>
-                                                    <a id="registerLink" class="small col-12" href="/Login/Register">Đăng ký</a>
+                                                    <a id="registerLink" class="small col-12" href="/Login/Register" >Đăng ký</a>
                                                     <br> <!-- Thẻ br để tạo ra một dòng mới -->
                                                     <a id="forgotPasswordLink" class="small col-12" href="/User/ForgotPassword">Bạn quên mật khẩu?</a>
                                                 </div>

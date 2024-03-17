@@ -855,7 +855,7 @@ namespace Booking.Application.Catalog.Parties
                         partydetail.roomUserViews.Add(new RoomUserView
                         {
                             RoomId = item.room.RoomId,
-                            Price = item.room.RoomId,
+                            Price = item.room.Price,
                             RoomName = item.room.RoomName,
                             RoomUrl = item.room.RoomUrl,
                             RoomType = item.room.RoomType,
