@@ -12,27 +12,19 @@
     </ol>
     <div class="card mb-4">
         <div class="card-header">
-            <div class="row">
-                <div class="col-md-6 col-xs-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
                     <a class="btn btn-success" asp-action="Index" asp-controller="User">Về danh sách</a>
                 </div>
-                <div class="col-md-6 col-xs-12">
-                    <form asp-action="Index" method="get">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
-                            </div>
-                            <div class="cold-md-3">
-                                <button type="submit" class="btn btn-primary">Tìm</button>
-                                <button type="button" onclick="window.location.href='/User/Index'" class="btn btn-dark">Reset</button>
-                            </div>
-                        </div>
+                <div class="col-md-8 d-flex">
+                    <form asp-action="Index" method="get" class="d-flex">
+                        <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
+                        <button type="submit" class="btn btn-primary mx-2">Tìm</button>
+                        <button type="button" onclick="window.location.href='/User/Index'" class="btn btn-dark mx-2">Reset</button>
                     </form>
                 </div>
             </div>
         </div>
-
-
         <div class="card-body">
             <div class="col-md-4">
                 <form asp-action="Create">

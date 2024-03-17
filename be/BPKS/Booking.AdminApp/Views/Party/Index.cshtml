@@ -6,6 +6,7 @@
     ViewData["Title"] = "Party List";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <div class="container-fluid px-4">
     <h1 class="mt-4">Danh sách bữa tiệc</h1>
@@ -14,7 +15,7 @@
         <li class="breadcrumb-item active">Danh sách bữa tiệc</li>
     </ol>
     <div class="card mb-4">
-        <div class="card-header">
+        @* <div class="card-header">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
                     <form asp-action="Index" method="get">
@@ -36,74 +37,51 @@
                     </form>
                 </div>
             </div>
+        </div> *@
+        <div class="card-header ">
+            <div class="d-flex justify-content-between align-items-center">
+                <form asp-action="Index" method="get" class="d-flex col-12">
+                    <div class="m-2">
+                        <select name="searchField" style="height:46px; width:auto" class="form-control col-2">
+                            <option value="PartyName">Tên bữa tiệc</option>
+                            <option value="Place">Địa điểm</option>
+                        </select>
+                    </div>
+                    <div class="d-flex col-7">
+                        <input type="text" value="@ViewBag.Keyword" name="keyword" class=" m-2 form-control" />
+                            <button type="submit" class=" m-2 btn btn-primary">Search</button>
+                        <button type="button" onclick="window.location.href='/Party/Index'" class=" m-2 btn btn-dark">Reset</button>
+                    </div>
+                </form>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead class="text-center">
+                                <tr>
+                                    <th class="col-1">Id</th>
+                                    <th class="col-2">Party Name</th>
+                                    <th class="col-2">Phone Contact</th>
+                                    <th class="col-2">Place</th>
+                                    <th class="col-2">Image</th>
+                                    <th class="col-1">Status</th>
+                                    <th class="col-2">Function</th>
+                                </tr>
+                            </thead>
 
-       
-@* <div class="page-header">
-    <h3 class="page-title"> Basic Tables </h3>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Tables</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
-        </ol>
-    </nav>
-</div> *@
-<div class="row">
-    <div class="col-lg-12 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-@*                 <h4 class="card-title">Hoverable Table</h4>
-                <p class="card-description">
-                    Add class <code>.table-hover</code>
-                </p> *@
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Party Name</th>
-                            <th>Phone Contact</th>
-                            <th>Place</th>
-                            <th>Image</th>
-                            <th>Status</th>
-                            <th>Funtcion</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Items)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.PartyId)
-                                </td>
-                                @* <td>
-                            @Html.DisplayFor(modelItem => item.PartyHostId)
-                            </td> *@
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.PartyName)
-                                </td>
-
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.PhoneContact)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Place)
-                                </td>
-                                <td>
-                                    <img src="@item.ThumbnailUrl" alt="Pa Image" class="img-fluid" style=" height: 100px;" />
-                                </td>
-                                @* <td>
-                            @Html.DisplayFor(modelItem => item.ThumbnailUrl)
-                            </td> *@
-@*                                 <td>
-                                    @Html.DisplayFor(modelItem => item.DayStart)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.DayEnd)
-                                </td> *@
-                                @* <td>
-                            @Html.DisplayFor(modelItem => item.CreatedDate)
-                            </td> *@
-                                        <td>
+                            <tbody class="text-center">
+                                @foreach (var item in Model.Items)
+                                {
+                                    <tr>
+                                        <td class="col-1">@Html.DisplayFor(modelItem => item.PartyId)</td>
+                                        <td class="col-2">@Html.DisplayFor(modelItem => item.PartyName)</td>
+                                        <td class="col-2">@Html.DisplayFor(modelItem => item.PhoneContact)</td>
+                                        <td class="col-2">@Html.DisplayFor(modelItem => item.Place)</td>
+                                        <td class="col-2"><img src="@item.ThumbnailUrl" alt="Pa Image" class="img-fluid" style="width:80%; height: 80%;" /></td>
+                                        <td class="col-1">
                                             @{
                                                 string badgeClass = string.Empty;
                                                 switch (item.PartyStatus)
@@ -124,15 +102,7 @@
                                             }
                                             <label class="@badgeClass">@Html.DisplayFor(modelItem => item.PartyStatus)</label>
                                         </td>
-
-
-@*                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Description)
-                                </td> *@
-                                <td>
-                                    @* @Html.ActionLink("Edit", "Edit", new { id = item.PartyId }) | *@
-                                    @* @Html.ActionLink("Details", "Details", new { id = item.PartyId }) | *@
-@*                                     @Html.ActionLink("Delete", "Delete", new { id = item.PartyId }) *@
+                                        <td class="col-2">
                                             @if (item.PartyStatus == "Pending")
                                             {
                                                 <button type="button" class="btn btn-success btn-sm" onclick="approveParty(@item.PartyId)">Duyệt</button>
@@ -143,64 +113,80 @@
                                                 <button type="button" class="btn btn-success btn-sm" disabled>Duyệt</button>
                                                 <button type="button" class="btn btn-danger btn-sm" disabled>Hủy</button>
                                             }
-                                            <a href="@Url.Action("Details", new { id = item.PartyId })" style="text-decoration: none;">→</a>
+                                            <a href="@Url.Action("Details", new { id = item.PartyId })" class="arrow-link" style="text-decoration: none;x">
+                                                <i class="fas fa-arrow-right-long"></i>
+                                            </a>
 
-                                </td>
-                            </tr>
-                        }
-                        
-                    </tbody>
-                </table>
-                @await Component.InvokeAsync("Pager", Model)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @await Component.InvokeAsync("Pager", Model)
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-            <script>
-                function approveParty(partyId) {
-                    var approveUrl = "http://localhost:5179/api/Parties/Approve?partyId=" + partyId;
+        <style>
+            .arrow-link {
+                display: inline-block;
+                color: #bd7cff;
+                position: relative;
+                transition: all 0.3s ease;
+            }
 
-                    fetch(approveUrl, {
-                        method: 'POST',
-                        mode: 'cors'
-                    })
-                        .then(response => {
-                            console.log("Status code:", response.status);
-                            if (response.ok) {
-                                alert("Duyệt thành công!");
-                                location.reload();
-                            } else {
-                                alert("Đã xảy ra lỗi khi duyệt bữa tiệc!");
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
+                .arrow-link:hover {
+                    color: #bd7cff;
+                }
+
+                    .arrow-link:hover i {
+                        transform: translateX(15px);
+                    }
+
+        </style>
+
+        <script>
+            function approveParty(partyId) {
+                var approveUrl = "http://localhost:5179/api/Parties/Approve?partyId=" + partyId;
+
+                fetch(approveUrl, {
+                    method: 'POST',
+                    mode: 'cors'
+                })
+                    .then(response => {
+                        console.log("Status code:", response.status);
+                        if (response.ok) {
+                            alert("Duyệt thành công!");
+                            location.reload();
+                        } else {
                             alert("Đã xảy ra lỗi khi duyệt bữa tiệc!");
-                        });
-                }
-
-                function rejectParty(partyId) {
-                    var rejectUrl = "http://localhost:5179/api/Parties/Rejected?partyId=" + partyId;
-
-                    fetch(rejectUrl, {
-                        method: 'POST',
-                        mode: 'cors'
+                        }
                     })
-                        .then(response => {
-                            console.log("Status code:", response.status);
-                            if (response.ok) {
-                                alert("Hủy đơn thành công!");
-                                location.reload();
-                            } else {
-                                alert("Đã xảy ra lỗi khi hủy đơn bữa tiệc!");
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert("Đã xảy ra lỗi khi duyệt bữa tiệc!");
+                    });
+            }
+
+            function rejectParty(partyId) {
+                var rejectUrl = "http://localhost:5179/api/Parties/Rejected?partyId=" + partyId;
+
+                fetch(rejectUrl, {
+                    method: 'POST',
+                    mode: 'cors'
+                })
+                    .then(response => {
+                        console.log("Status code:", response.status);
+                        if (response.ok) {
+                            alert("Hủy đơn thành công!");
+                            location.reload();
+                        } else {
                             alert("Đã xảy ra lỗi khi hủy đơn bữa tiệc!");
-                        });
-                }
-            </script>
-
-
-
-
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert("Đã xảy ra lỗi khi hủy đơn bữa tiệc!");
+                    });
+            }
+        </script>
