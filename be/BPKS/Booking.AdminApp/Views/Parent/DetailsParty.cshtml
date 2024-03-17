@@ -63,7 +63,6 @@
                                 </div>
                                 <div>Day Start:@Html.DisplayFor(model => model.DayStart)</div>
                                 <div>Day End:@Html.DisplayFor(model => model.DayEnd)</div>
-
                                 <p>Description: @Html.DisplayFor(model => model.Description)</p>
                             </div>
                         </div>
@@ -125,9 +124,10 @@
                                         @* <li><a href="#"><i class="fa fa-heart"></i></a></li> *@
                                         @* <li><a href="#"><i class="fa fa-retweet"></i></a></li> *@
                                         
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        @* <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> *@
                                         <li><a href="@Url.Action("DetailsRoom",new DetailsRoom{PartyId = Model.PartyId
-                                        , RoomId = room.RoomId})"><i class="fa-solid fa-arrow-right"></i></a></li>
+                                        , RoomId = room.RoomId})"><i class="fa fa-shopping-cart"></i></a>
+                                        </li>
                                     </ulyy>
                                 </div>
                                 <div class="product__item__text">
