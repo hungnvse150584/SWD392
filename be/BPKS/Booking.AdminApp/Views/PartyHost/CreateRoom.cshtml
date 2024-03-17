@@ -6,52 +6,106 @@
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
 
-<h1>Create</h1>
+<!-- Checkout Section Begin -->
+<section class="checkout spad">
+    <div class="container">
+        <div class="checkout__form">
+            <h4 style="margin-left:180px">Create Room</h4>
+            <form asp-action="CreateRoom" enctype="multipart/form-data" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="checkout__input">
+                            <p>Room Name<span>*</span></p>
+                            <input asp-for="RoomName" class="form-control">
+                            <span asp-validation-for="RoomName" class="text-danger"></span>
+                        </div>
 
-<h4>RoomCreateRequest</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="CreateRoom" enctype="multipart/form-data" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-@*             <div class="form-group">
-                <label asp-for="PartyHostId" class="control-label"></label>
-                <input asp-for="PartyHostId" class="form-control" />
-                <span asp-validation-for="PartyHostId" class="text-danger"></span>
-            </div> *@
-            <div class="form-group">
-                <label asp-for="RoomName" class="control-label"></label>
-                <input asp-for="RoomName" class="form-control" />
-                <span asp-validation-for="RoomName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RoomType" class="control-label"></label>
-                <select asp-for="RoomType" class="form-control">
-                    <option value="30">30 người</option>
-                    <option value="40">40 người</option>
-                    <option value="50">50 người</option>
-                </select>
-                <span asp-validation-for="RoomType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
+                        <div class="checkout__input">
+                            <label asp-for="RoomType" class="control-label"></label>
+                            <select asp-for="RoomType" class="form-control">
+                                <option value="small">small</option>
+                                <option value="medium">medium</option>
+                                <option value="large">large</option>
+                            </select>
+                            <span asp-validation-for="RoomType" class="text-danger"></span>
+                        </div>
 
-            <div class="form-group">
-                <label asp-for="ThumbnailImage" class="control-label"></label>
-                <input asp-for="ThumbnailImage" class="form-control" />
-                <span asp-validation-for="ThumbnailImage" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="CreateRoom" class="btn btn-primary" />
-            </div>
-        </form>
+                        <div class="checkout__input">
+                            <label asp-for="Price" class="control-label" style="margin-top:24px !important"></label>
+                            <input asp-for="Price" class="form-control"/>
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="checkout__input">
+                            <label asp-for="ThumbnailImage" class="control-label"></label>
+                            <input asp-for="ThumbnailImage" class="form-control" />
+                            <span asp-validation-for="ThumbnailImage" class="text-danger"></span>
+                        </div>
+                        <!-- Thêm nút xác nhận Create -->
+                        <div class="form-group text-center">
+                            <!-- Căn giữa nút xác nhận Create -->
+                            <button type="submit" value="CreateRoom" class="site-btn">Create Room</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</section>
+<!-- Checkout Section End -->
+<!-- Footer Section Begin -->
+<footer class="footer spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__about__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <ul>
+                        <li>Phone: 09394296xx</li>
+                        <li>Email: partyforkid@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                <div class="footer__widget">
+                    <h6>Useful Links</h6>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="footer__widget">
+                    <h6>Join Our Newsletter Now</h6>
+                    <p>Get E-mail updates about our latest parties and special offers.</p>
+                    <form action="#">
+                        <input type="text" placeholder="Enter your email">
+                        <button type="submit" class="site-btn">Subscribe</button>
+                    </form>
+                    <div class="footer__widget__social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer__copyright">
+                    <p>
+                        © <script>document.write(new Date().getFullYear());</script> Booking Party Kid System. All rights reserved | Made with <i class="fa fa-heart" aria-hidden="true"></i> by Booking Party Kid System
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
 

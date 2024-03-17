@@ -421,9 +421,9 @@ namespace Booking.AdminApp.Controllers
           .Session
           .GetString(SystemConstants.AppSettings.Token);
             var userId = _httpContextAccessor
-    .HttpContext
-    .Session
-    .GetString("UserId");
+            .HttpContext
+            .Session
+            .GetString("UserId");
             Guid guid = Guid.Parse(userId);
 
             var request = new GetPublicPartyPagingRequest()

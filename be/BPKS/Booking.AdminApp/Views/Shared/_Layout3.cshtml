@@ -158,11 +158,11 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="header__cart">
-                        <ul>
+                        @* <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
                             <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                        <div class="header__cart__price">item: <span>$150.00</span></div> *@
                     </div>
                 </div>
             </div>
@@ -186,14 +186,15 @@
                         <ul>
                             <li><a asp-controller="PartyHost" asp-action="IndexHome">Home</a></li>
 
+                            <li><a asp-controller="PartyHost" asp-action="IndexHome">Party List</a></li>
                             <li><a asp-controller="PartyHost" asp-action="CreateParty">Create Party</a></li>
-                            <li><a asp-controller="PartyHost" asp-action="IndexParty">Party List</a></li>
-                            <li><a href="#">Party Posted</a></li>
+                            <li><a asp-controller="PartyHost" asp-action="IndexParty">Party Posted</a></li>
 
-                            <li><a href="CreateProduct">Create Product</a></li>
                             <li><a href="IndexProduct">Product List</a></li>
+                            <li><a href="CreateProduct">Create Product</a></li>
 
-                            <li><a asp-controller="PartyHost" asp-action="IndexRoom">List Room</a></li>
+                            <li><a href="CreateRoom">Create Room</a></li>
+                            <li><a href="IndexRoom">List Room</a></li>
 
                             <li><a href="#">Order</a></li>
                             <li><a href="#">Order Approval</a></li>
@@ -294,7 +295,7 @@
     </section>\
     <!-- Categories Section End -->
 
-    <!-- Product Details Section Begin -->
+    @* <!-- Product Details Section Begin -->
     <section class="product-details spad">
         <div class="container">
             <div class="row-8">
@@ -364,78 +365,12 @@
             </div>
         </div>
     </section>
-    <!-- Product Details Section End -->
+    <!-- Product Details Section End --> *@
 
-    <!-- Footer Section Begin -->
-    <footer class="footer spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                        </div>
-                        <ul>
-                            <li>Phone: 09394296xx</li>
-                            <li>Email: partyforkid@gmail.com</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
-                        <h6>Useful Links</h6>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest parties and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your email">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                        <div class="footer__widget__social">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer__copyright">
-                        <p>
-                            © <script>document.write(new Date().getFullYear());</script> Booking Party Kid System. All rights reserved | Made with <i class="fa fa-heart" aria-hidden="true"></i> by Booking Party Kid System
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
     <div id="layoutSidenav_content">
         <main>
             @RenderBody()
         </main>
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        &middot;
-                        <a href="#">Terms &amp; Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
     <!-- Js Plugins -->
     <script src="/js/jquery-3.3.1.min.js"></script>
