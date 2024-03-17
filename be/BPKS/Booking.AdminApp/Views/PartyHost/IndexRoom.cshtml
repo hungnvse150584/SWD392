@@ -4,11 +4,17 @@
     ViewData["Title"] = "IndexRoom";
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
+@if (TempData["result"] != null)
+{
+    <div id="successMessage" class="alert alert-success" role="alert">
+        @TempData["result"]
+    </div>
+}
 
 <h1>IndexRoom</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CreateRoom">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -27,9 +33,6 @@
             </th>
             <th>
                Price
-            </th>
-            <th>
-               RoomStatus
             </th>
             <th></th>
         </tr>
@@ -53,12 +56,8 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RoomStatus)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "UpdateRoom", new { id=item.RoomId }) |
+                    @Html.ActionLink("Delete", "DeleteRoom", new { id = item.RoomId })
             </td>
         </tr>
 }

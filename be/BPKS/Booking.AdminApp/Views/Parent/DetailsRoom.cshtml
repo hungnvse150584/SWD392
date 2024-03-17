@@ -130,9 +130,11 @@
                                         <img src="@product.ProductUrl" alt="Product Image" class="img-fluid" style="height: 100px;">
                                         <h5>@product.ProductName</h5>
                                     </td>
-                                    <td class="shoping__cart__price">
-                                        $@product.Price
-                                    </td>
+                                        <td class="shoping__cart__price">
+                                            @product.Price ₫
+                                        </td>
+                                       
+
                                         <td class="shoping__cart__quantity">
                                             <div class="quantity">
                                                 <div class="pro-qty" >
@@ -140,9 +142,9 @@
                                                 </div>
                                             </div>
                                         </td>
-                                    <td class="shoping__cart__total">
-                                        $@product.Price
-                                    </td>
+                                        <td class="shoping__cart__total">
+                                            @product.Price ₫
+                                        </td>
                                     <td class="shoping__cart__item__close">
                                         <span class="icon_close"></span>
                                     </td>
@@ -168,7 +170,7 @@
                         <b>Room Type:</b> @Model.RoomType
                     </div>
                     <div>
-                        <b>Price:</b> @Model.Price
+                            <b>Price:</b> @Model.Price ₫
                     </div>
                 </div>
             </div>
@@ -193,7 +195,7 @@
                         <div class="shoping__checkout">
                             <h5>Cart Total</h5>
                             <ul>
-                                <li>Price of Room <span id="roomPrice">$@Model.Price</span></li>
+                                <li>Price of Room <span id="roomPrice">@Model.Price ₫</span></li>
                                 <li>Subtotal <span id="subtotal">$0.00</span></li>
                                 <li>Total <span id="total">$0.00</span></li>
                             </ul>
@@ -337,13 +339,12 @@
                 }
                 console.log(data);
                 console.log($("RoomId").val());
-
                     // Cập nhật giá trị Total của từng sản phẩm
-                    $(this).find('.shoping__cart__total').text('$' + totalItem.toFixed(2));
+                $(this).find('.shoping__cart__total').text(totalItem.toFixed(2) + ('₫'));
                     subtotal += totalItem;
-                });
-                // Hiển thị tổng giá sản phẩm
-                $('#subtotal').text('$' + subtotal.toFixed(2));
+                        });
+                    // Hiển thị tổng giá sản phẩm
+                    $('#subtotal').text (subtotal.toFixed(2) + ('₫'));
                 // Lấy giá của phòng (Room)
                 var roomPrice = parseFloat('@Model.Price');
                 // Lấy số lượng phòng
@@ -352,9 +353,9 @@
                 var roomTotal = roomPrice * roomQuantity;
                 // Cộng giá của phòng vào subtotal
                 subtotal += roomTotal;
-                $('#total').text('$' + subtotal.toFixed(2));
-                total = subtotal;
-            }
+                $('#total').text( subtotal.toFixed(2) + ('₫'));
+                    total = subtotal;
+                }
 
             // Gọi hàm updateTotal khi trang được tải và sau mỗi lần số lượng sản phẩm thay đổi
             $(document).ready(function () {

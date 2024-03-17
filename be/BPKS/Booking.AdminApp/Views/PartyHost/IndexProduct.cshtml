@@ -5,6 +5,13 @@
     ViewData["Title"] = "Danh sách sản phẩm";
     Layout = "~/Views/Shared/_Layout4.cshtml";
 }
+@if (TempData["result"] != null)
+{
+    <div id="successMessage" class="alert alert-success" role="alert">
+        @TempData["result"]
+    </div>
+}
+
 <body>
     <!-- Featured Section Begin -->
     <section class="featured spad">
