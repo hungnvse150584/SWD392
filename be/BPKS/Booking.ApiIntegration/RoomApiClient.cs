@@ -66,6 +66,10 @@ namespace Booking.ApiIntegration
                 .HttpContext
                 .Session
                 .GetString(SystemConstants.AppSettings.Token);
+            var userId = _httpContextAccessor
+               .HttpContext
+               .Session
+               .GetString("UserId");
 
             var languageId = _httpContextAccessor.HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
 
@@ -86,8 +90,8 @@ namespace Booking.ApiIntegration
                 requestContent.Add(bytes, "ProductUrl", request.ThumbnailImage.FileName);
             }
 
-            requestContent.Add(new StringContent(request.PartyHostId.ToString() ?? ""), "PartyHostId");
-            requestContent.Add(new StringContent(request.PartyId.ToString() ?? ""), "PartyId");
+            requestContent.Add(new StringContent(userId), "PartyHostId");
+            //requestContent.Add(new StringContent(request.PartyId.ToString() ?? ""), "PartyId");
             requestContent.Add(new StringContent(request.RoomName ?? ""), "roomName");
             //requestContent.Add(new StringContent(request.ProductUrl ?? ""), "productUrl");
             requestContent.Add(new StringContent(request.RoomType?.ToString() ?? ""), "roomType");

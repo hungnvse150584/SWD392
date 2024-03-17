@@ -354,11 +354,11 @@ namespace Booking.AdminApp.Controllers
             var result = await _productApiClient.UpdateProduct(request);
             if (result)
             {
-                TempData["result"] = "Cập nhật sản phẩm thành công";
+                TempData["result"] = "Cập nhật thành công";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Cập nhật sản phẩm thất bại");
+            ModelState.AddModelError("", "Cập nhật thất bại");
             return View(request);
         }
         [HttpGet]
@@ -405,7 +405,7 @@ namespace Booking.AdminApp.Controllers
             var result = await _productApiClient.DeleteProduct(request.ProductId);
             if (result)
             {
-                TempData["result"] = "Xóa sản phẩm thành công";
+                TempData["result"] = "Xóa thành công";
                 return RedirectToAction("IndexProduct");
             }
 
@@ -500,11 +500,92 @@ namespace Booking.AdminApp.Controllers
             var result = await _partyApiClient.UpdateParty(request);
             if (result)
             {
-                TempData["result"] = "Cập nhật sản phẩm thành công";
+                TempData["result"] = "Cập nhật thành công";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Cập nhật sản phẩm thất bại");
+            ModelState.AddModelError("", "Cập nhật thất bại");
+            return View(request);
+        }
+        [HttpGet]
+        public async Task<IActionResult> CreateRoom()
+        {
+
+            return View();
+        }
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> CreateRoom([FromForm] RoomCreateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View(request);
+
+            var result = await _roomApiClient.CreateRoom(request);
+            if (result)
+            {
+                TempData["result"] = "Thêm mới thành công";
+                return RedirectToAction("IndexRoom");
+            }
+
+            ModelState.AddModelError("", "Thêm thất bại");
+            return View(request);
+        }
+        [HttpGet]
+        public IActionResult DeleteRoom(int id)
+        {
+            return View(new RoomDeleteRequest()
+            {
+                RoomId = id
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteRoom(RoomDeleteRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var result = await _roomApiClient.DeleteRoom(request.RoomId);
+            if (result)
+            {
+                TempData["result"] = "Xóa thành công";
+                return RedirectToAction("IndexRoom");
+            }
+
+            ModelState.AddModelError("", "Xóa không thành công");
+            return View(request);
+        }
+        public async Task<IActionResult> UpdateRoom(int id)
+        {
+            var room = await _roomApiClient.GetById(id);
+            var editVm = new RoomUpdateRequest()
+            {
+                RoomId = room.RoomId,
+                //PartyHostId = product.PartyHostId,
+                RoomName = room.RoomName,
+                //ProductUrl = product.ProductUrl,
+                RoomStatus = room.RoomStatus,
+                RoomType = room.RoomType,
+                Price = room.Price,
+                ThumbnailImage = room.ThumbnailImage,
+            };
+            return View(editVm);
+        }
+
+        [HttpPost]
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> UpdateRoom([FromForm] RoomUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return View(request);
+
+            var result = await _roomApiClient.UpdateRoom(request);
+            if (result)
+            {
+                TempData["result"] = "Cập nhật phòng thành công";
+                return RedirectToAction("IndexRoom");
+            }
+
+            ModelState.AddModelError("", "Cập nhật phòng thất bại");
             return View(request);
         }
     }
