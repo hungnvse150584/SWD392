@@ -133,7 +133,7 @@ namespace Booking.ApiIntegration
         public async Task<PagedResult<PartyVm>> GetPagingsParentParty(GetPublicPartyPagingRequest request)
         {
             // Tạo URL với các tham số yêu cầu
-            var url = $"/api/Parents/paging?pageIndex={request.PageIndex}" +
+            var url = $"/api/Parties/GetPartyApprove?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}";
 
             // Thêm tham số tìm kiếm theo tên bữa tiệc nếu có

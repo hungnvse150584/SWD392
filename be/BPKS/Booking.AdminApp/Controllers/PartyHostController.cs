@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using NuGet.Common;
 using System.Net.Http.Headers;
 using System;
+using System.Drawing.Printing;
 
 namespace Booking.AdminApp.Controllers
 {
@@ -412,9 +413,58 @@ namespace Booking.AdminApp.Controllers
             return View(request);
         }
 
-        public IActionResult IndexHome()
+        public async Task<IActionResult> IndexHome(string searchField, string keyword, int pageIndex = 1, int pageSize = 10)
         {
             var user = User.Identity.Name;
+            var sessions = _httpContextAccessor
+          .HttpContext
+          .Session
+          .GetString(SystemConstants.AppSettings.Token);
+            var userId = _httpContextAccessor
+    .HttpContext
+    .Session
+    .GetString("UserId");
+            Guid guid = Guid.Parse(userId);
+
+            var request = new GetPublicPartyPagingRequest()
+            {
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+                PartyHostId = guid
+
+            };
+
+            // Xác định trường cần tìm kiếm dựa trên searchField
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                switch (searchField)
+                {
+                    case "PartyName":
+                        request.PartyName = keyword;
+                        break;
+                    case "Place":
+                        request.Place = keyword;
+                        break;
+                        //default:
+                        //    // Trả về trang với dữ liệu trống
+                        //    return View(new PagedResult<ProductVm>());
+                }
+            }
+
+            var data = await _partyApiClient.GetPagingsParentParty(request);
+            //ViewBag.ProductName = keyword;
+            //ViewBag.ProductType = keyword;
+            //ViewBag.PartyHostId= keyword;
+
+            ViewBag.searchField = searchField;
+            ViewBag.Keyword = keyword;
+            if (TempData["result"] != null)
+            {
+                ViewBag.SuccessMsg = TempData["result"];
+            }
+
+
+            return View(data);
             return View();
         }
         [HttpGet]
