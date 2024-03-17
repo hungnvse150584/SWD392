@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BookingSolution.Utilities/1.0.0": {
+        "runtime": {
+          "BookingSolution.Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BookingSolution.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
