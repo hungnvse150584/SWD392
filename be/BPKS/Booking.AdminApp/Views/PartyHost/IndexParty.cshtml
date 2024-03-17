@@ -10,29 +10,6 @@
         @TempData["SuccessMessage"]
     </div>
 }
-@if (TempData["result"] != null)
-{
-    <div id="successMessage" class="alert alert-success" role="alert">
-        @TempData["result"]
-    </div>
-}
-
-<script>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        // Select the success message element
-        var successMessage = document.getElementById('successMessage');
-
-        // Check if the success message exists
-        if (successMessage) {
-            // Automatically hide the success message after 4 seconds (4000 milliseconds)
-            setTimeout(function () {
-                // Hide the success message by setting its display property to 'none'
-                successMessage.style.display = 'none';
-            }, 4000); // 4 seconds
-        }
-    });
-</script>
 
 <body>
     <!-- Featured Section Begin -->

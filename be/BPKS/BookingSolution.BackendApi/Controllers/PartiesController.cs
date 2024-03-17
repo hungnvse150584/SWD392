@@ -356,24 +356,5 @@ namespace BookingSolution.BackendApi.Controllers
             var parties = await _managePartyService.GetPartyPartyHostView(request);
             return Ok(parties);
         }
-        //[HttpGet("GetRoomsByPartyId{id}")]
-        //public async Task<IActionResult> GetRoomsByPartyId(int id)
-        //{
-        //    try
-        //    {
-        //        // Assuming your _managePartyService has a method to retrieve rooms by party ID
-        //        var rooms = await _managePartyService.GetRoomsByPartyId(id);
-
-        //        if (rooms == null)
-        //            return BadRequest("No rooms found for the party.");
-
-        //        return Ok(rooms);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Handle exceptions and return appropriate response
-        //        return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-        //    }
-        //}
     }
 }

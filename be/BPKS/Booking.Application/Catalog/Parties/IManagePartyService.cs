@@ -1,5 +1,4 @@
 ﻿using BookingSolution.ViewModels.Catalog.Parties;
-using BookingSolution.ViewModels.Catalog.Rooms;
 using BookingSolution.ViewModels.Common;
 using BookingSolution.ViewModels.System.Services;
 using BookingSolution.ViewModels.System.Users;
@@ -46,7 +45,6 @@ namespace Booking.Application.Catalog.Parties
         
 
         Task<PartyUserView> DetailsRoomBooked(DetailsRoomBookedRequest request);
-        //Task<List<RoomVm>> GetRoomsByPartyId(int partyId);
 
     }
 }

@@ -103,7 +103,7 @@ namespace Booking.AdminApp.Controllers
                 PageIndex = pageIndex,
                 PageSize = pageSize
             };
-            //request.Status = "Active";
+            request.Status = "Active";
 
            
             // Xác định trường cần tìm kiếm dựa trên searchField
@@ -123,7 +123,7 @@ namespace Booking.AdminApp.Controllers
                 }
             }
 
-            var data = await _partyApiClient.GetPagingsParentParty(request);
+            var data = await _partyApiClient.GetPagings(request);
             //ViewBag.ProductName = keyword;
             //ViewBag.ProductType = keyword;
             //ViewBag.PartyHostId= keyword;

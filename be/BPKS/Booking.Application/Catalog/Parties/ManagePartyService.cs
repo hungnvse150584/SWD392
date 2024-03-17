@@ -154,7 +154,7 @@ namespace Booking.Application.Catalog.Parties
                     CreatedDate = p.CreatedDate
                 })
                 .ToListAsync();
-            party = party.Where(x => x.PartyStatus == "Approve").ToList();
+            party = party.Where(x => x.PartyStatus == "Active").ToList();
             return party;
         }
 
@@ -790,14 +790,14 @@ namespace Booking.Application.Catalog.Parties
             var party = _context.Parties.Find(partyId);
             if(party!= null)
             {
-                party.PartyStatus = "Approve";
+                party.PartyStatus = "Active";
 
                 var lp = _context.ListParties.Where(p => p.PartyId == partyId).ToList();
-                lp.ForEach(p => p.ListPartyStatus = "Approve");
+                lp.ForEach(p => p.ListPartyStatus = "Active");
                 var lr = _context.ListRooms.Where(p => p.PartyId == partyId).ToList();
-                lr.ForEach(p => p.ListRoomStatus = "Approve");
+                lr.ForEach(p => p.ListRoomStatus = "Active");
                 var lpr = _context.ListProducts.Where(p => p.PartyId == partyId).ToList();
-                lpr.ForEach(p => p.ListProductStatus = "Approve");
+                lpr.ForEach(p => p.ListProductStatus = "Active");
                 //party.ListParties.ToList().ForEach(p =>  p.ListPartyStatus = "Active");
                 //party.ListRooms.ToList().ForEach(p => p.ListRoomStatus = "Active");
                 //party.ListProducts.ToList().ForEach(p => p.ListProductStatus = "Active");
@@ -926,18 +926,6 @@ namespace Booking.Application.Catalog.Parties
             return partydetail;
         }
 
-        //public async Task<List<RoomVm>> GetRoomsByPartyId(int partyId)
-        //{
-        //    var rooms = await _context.ListRooms
-        //        .Where(lr => lr.PartyId == partyId)
-        //        .Select(lr => new RoomVm
-        //        {
-        //            RoomId = lr.RoomId,
-        //            // Include other properties you need from the Room entity
-        //        })
-        //        .ToListAsync();
 
-        //    return rooms;
-        //}
     }
 }
