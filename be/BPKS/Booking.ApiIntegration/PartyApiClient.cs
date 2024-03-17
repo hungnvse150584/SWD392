@@ -279,7 +279,7 @@ namespace Booking.ApiIntegration
             requestContent.Add(new StringContent(DateTime.Now.ToString()), "CreatedDate");
             requestContent.Add(new StringContent(request.DayStart.ToString()), "DayStart");
             requestContent.Add(new StringContent(request.DayEnd.ToString()), "DayEnd");
-            requestContent.Add(new StringContent("Active"), "PartyStatus");
+            requestContent.Add(new StringContent("Approve"), "PartyStatus");
             var requestContext = new MultipartFormDataContent();
             foreach (var productId in request.ProductId)
             {

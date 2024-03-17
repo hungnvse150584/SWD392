@@ -16,9 +16,9 @@
     <link href="/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-primary">
+<body class="bg-primary" style="background-color: #ff99cc;">
     <div id="layoutAuthentication">
-        <div id="layoutAuthentication_content">
+        <div id="layoutAuthentication_content" style="background-color: #ff99cc;">
             <main>
                 <div class="container">
                     <div class="row justify-content-center">
@@ -45,14 +45,15 @@
                                             </div>
                                         </div>
                                         <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="/User/ForgotPassword">Bạn quên mật khẩu?</a>
-                                            <a class="small" href="/Login/Register">Đăng ký</a>
-                                            <button class="btn btn-primary" type="submit">Đăng nhập</button>
+                                            <div>
+                                                <a class="small col-12" href="/Login/Register">Đăng ký</a>
+                                                <br> <!-- Thẻ br để tạo ra một dòng mới -->
+                                                <a class="small col-12" href="/User/ForgotPassword">Bạn quên mật khẩu?</a>
+                                            </div>
+
+                                            <button id="layoutAuthentication_content" class="btn btn-primary col-4" type="submit">Đăng nhập</button>
                                         </div>
                                     </form>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <div class="small">Liên hệ quản trị</div>
                                 </div>
                             </div>
                         </div>
@@ -79,4 +80,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/js/scripts.js"></script>
 </body>
+
+<
+<style>
+    body.bg-gradient {
+        background: linear-gradient(to bottom right, #007bff, #ff99cc); /* Gradient từ xanh sang hồng */
+    }
+
+    #layoutAuthentication_content {
+        background: linear-gradient(to bottom right, #007bff, #ff99cc); /* Gradient từ xanh sang hồng */
+    }
+</style>
 </html>
