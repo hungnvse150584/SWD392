@@ -745,6 +745,9 @@ namespace Booking.Application.Catalog.Parties
                 where lp.ParentId == request.ParentId 
                 && p.PartyId == request.PartyId
                 select lp;
+          var exits =  _context.ListRooms.FirstOrDefault(x=> x.ParentId ==  request.ParentId&& x.PartyId == request.PartyId && x.RoomId == request.RoomId);
+            if(exits == null )
+                return 0;
            var fb = _context.Feedbacks.FirstOrDefault(x=> x.ParentId == request.ParentId && x.PartyId == request.PartyId);
             if (fb == null) return 0;
             if (query.Count() > 0 && fb != null)

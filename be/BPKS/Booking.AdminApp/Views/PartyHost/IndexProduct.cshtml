@@ -12,6 +12,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
+
                         <h2>Product List</h2>
                     </div>
                 </div>
@@ -19,10 +20,10 @@
 
             <div class="container" style="display: flex; justify-content: center; padding:50px">
                 <div class="col-md-8 col-xs-12" style=" padding-left: 18px; padding-top: 11px;">
-                    <form asp-action="Index" method="get">
+                    <form asp-action="IndexP" method="get">
                         <div class="row">
                             <div class="col-md-2" >
-                                <button id="createProductBtn" style="margin-left: -80px; text-transform: none; " type="button" class="site-btn">Create Product</button>
+                                <button style="margin-left: -80px; text-transform: none; " type="button" class="site-btn">Create Product</button>
                             </div>
                             <div class="col-md-2" style="height: 46px; width: 100%; margin-right:35px">
                                 <select name="searchField" style="font-size: 16px;font-weight: 700;">
@@ -183,9 +184,3 @@
     <!-- Footer Section End -->
 
 </body>
-<script>
-    document.getElementById('createProductBtn').addEventListener('click', function () {
-        // Chuyển hướng người dùng đến trang PartyHost/CreateParty
-        window.location.href = '/PartyHost/CreateProduct';
-    });
-</script>
